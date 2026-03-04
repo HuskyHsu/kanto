@@ -1,144 +1,113 @@
 import { promises as fs } from 'fs';
+import { categoryMap, MAX_PID, TMMap, VERSION_GROUP } from './settings.js';
 
-const categoryMap = {
-  water: 'Special',
-  grass: 'Special',
-  fire: 'Special',
-  ice: 'Special',
-  electric: 'Special',
-  psychic: 'Special',
-  dragon: 'Special',
-  dark: 'Special',
+/**
+ * Generic fetch with file-based caching
+ */
+const fetchWithCache = async (url, cachePath) => {
+  try {
+    const cachedData = await fs.readFile(cachePath, 'utf-8');
+    return JSON.parse(cachedData);
+  } catch (e) {
+    // Cache miss or read error
+  }
 
-  fighting: 'Physical',
-  poison: 'Physical',
-  ground: 'Physical',
-  flying: 'Physical',
-  bug: 'Physical',
-  rock: 'Physical',
-  ghost: 'Physical',
-  steel: 'Physical',
-  fairy: 'Physical',
-  normal: 'Physical',
-};
-
-const TMMap = {
-  真氣拳: '01',
-  龍爪: '02',
-  水之波動: '03',
-  冥想: '04',
-  吼叫: '05',
-  劇毒: '06',
-  冰雹: '07',
-  健美: '08',
-  種子機關槍: '09',
-  覺醒力量: '10',
-  大晴天: '11',
-  挑釁: '12',
-  冰凍光束: '13',
-  暴風雪: '14',
-  破壞光線: '15',
-  光牆: '16',
-  守住: '17',
-  求雨: '18',
-  終極吸取: '19',
-  神秘守護: '20',
-  遷怒: '21',
-  日光束: '22',
-  鐵尾: '23',
-  十萬伏特: '24',
-  打雷: '25',
-  地震: '26',
-  報恩: '27',
-  挖洞: '28',
-  精神強念: '29',
-  暗影球: '30',
-  劈瓦: '31',
-  影子分身: '32',
-  反射壁: '33',
-  電擊波: '34',
-  噴射火焰: '35',
-  污泥炸彈: '36',
-  沙暴: '37',
-  大字爆炎: '38',
-  岩石封鎖: '39',
-  燕返: '40',
-  無理取鬧: '41',
-  硬撐: '42',
-  秘密之力: '43',
-  睡覺: '44',
-  迷人: '45',
-  小偷: '46',
-  鋼翼: '47',
-  特性互換: '48',
-  搶奪: '49',
-  過熱: '50',
-
-  居合斬: '秘傳01',
-  飛翔: '秘傳02',
-  衝浪: '秘傳03',
-  怪力: '秘傳04',
-  閃光: '秘傳05',
-  碎岩: '秘傳06',
-  攀瀑: '秘傳07',
-};
-
-const getData = async (pid) => {
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pid}`);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
+  }
   const data = await response.json();
+
+  const dir = cachePath.substring(0, cachePath.lastIndexOf('/'));
+  await fs.mkdir(dir, { recursive: true });
+  await fs.writeFile(cachePath, JSON.stringify(data, null, 2));
+
   return data;
 };
 
-const getMoveData_ = async (mid) => {
-  const response = await fetch(`https://pokeapi.co/api/v2/move/${mid}`);
-  const data = await response.json();
-  //   console.log(data);
-  return {
-    id: data.id,
-    type: data.type.name.charAt(0).toUpperCase() + data.type.name.slice(1),
-    category: data.damage_class.name === 'status' ? 'Status' : categoryMap[data.type.name],
-    power: data.power,
-    accuracy: data.accuracy,
-    pp: data.pp,
-    name: {
-      jp: data.names.find((name) => name.language.name === 'ja').name,
-      en: data.names.find((name) => name.language.name === 'en').name,
-      zh: data.names.find((name) => name.language.name === 'zh-hant').name,
-    },
-  };
+const getPokemonData = (pid) => {
+  return fetchWithCache(
+    `https://pokeapi.co/api/v2/pokemon/${pid}`,
+    `scripts/cache/pokemon/${pid}.json`
+  );
+};
+
+const getPokemonSpeciesData = (pid) => {
+  return fetchWithCache(
+    `https://pokeapi.co/api/v2/pokemon-species/${pid}`,
+    `scripts/cache/species/${pid}.json`
+  );
 };
 
 const moveCache = new Map();
 
+/**
+ * Fetch and format move data
+ */
 const getMoveData = async (mid) => {
   if (moveCache.has(mid)) {
     return moveCache.get(mid);
   }
-  const data = await getMoveData_(mid);
-  moveCache.set(mid, data);
-  return data;
-};
 
-const main = async () => {
-  const data = await getData(4);
+  const rawData = await fetchWithCache(
+    `https://pokeapi.co/api/v2/move/${mid}`,
+    `scripts/cache/move/${mid}.json`
+  );
 
-  const pm = {
-    levelUpMoves: [],
-    TMMoves: [],
-    HTMMoves: [],
-    eggMoves: [],
-    tutorMoves: [],
+  const formattedMove = {
+    id: rawData.id,
+    type: rawData.type.name.charAt(0).toUpperCase() + rawData.type.name.slice(1),
+    category: rawData.damage_class.name === 'status' ? 'Status' : categoryMap[rawData.type.name],
+    power: rawData.power,
+    accuracy: rawData.accuracy,
+    pp: rawData.pp,
+    name: {
+      jp: rawData.names.find((n) => n.language.name === 'ja').name,
+      en: rawData.names.find((n) => n.language.name === 'en').name,
+      zh: rawData.names.find((n) => n.language.name === 'zh-hant').name,
+    },
   };
 
-  const movePromises = data.moves
-    .filter((move) => {
-      return move.version_group_details.some(
-        (detail) => detail.version_group.name === 'firered-leafgreen',
-      );
-    })
+  moveCache.set(mid, formattedMove);
+  return formattedMove;
+};
+
+const abilityCache = new Map();
+
+/**
+ * Fetch and format ability data
+ */
+const getAbilityData = async (aid) => {
+  if (abilityCache.has(aid)) {
+    return abilityCache.get(aid);
+  }
+
+  const rawData = await fetchWithCache(
+    `https://pokeapi.co/api/v2/ability/${aid}`,
+    `scripts/cache/ability/${aid}.json`
+  );
+
+  const formattedAbility = {
+    id: rawData.id,
+    name: {
+      jp: rawData.names.find((n) => n.language.name === 'ja').name,
+      en: rawData.names.find((n) => n.language.name === 'en').name,
+      zh: rawData.names.find((n) => n.language.name === 'zh-hant').name,
+    },
+  };
+
+  abilityCache.set(aid, formattedAbility);
+  return formattedAbility;
+};
+
+const processMoves = async (rawMoves) => {
+  const versionMoves = rawMoves
+    .filter((move) =>
+      move.version_group_details.some((detail) => detail.version_group.name === VERSION_GROUP)
+    )
     .map((move) => {
       const details = move.version_group_details.find(
-        (d) => d.version_group.name === 'firered-leafgreen',
+        (d) => d.version_group.name === VERSION_GROUP
       );
       return {
         moveId: parseInt(move.move.url.split('/').at(-2)),
@@ -146,44 +115,283 @@ const main = async () => {
         level: details.level_learned_at,
       };
     })
-    .sort((a, b) => a.level - b.level)
-    .map(async (move) => {
-      const data = await getMoveData(move.moveId);
-      return {
-        ...data,
-        level: move.level,
-        method: move.method,
-      };
-    });
+    .sort((a, b) => a.level - b.level);
+
+  const movePromises = versionMoves.map(async (move) => {
+    const moveData = await getMoveData(move.moveId);
+    return {
+      ...moveData,
+      level: move.level,
+      method: move.method,
+    };
+  });
 
   const parsedMoves = await Promise.all(movePromises);
 
+  const moveMap = {
+    levelUpMoves: [],
+    TMMoves: [],
+    HTMMoves: [],
+    eggMoves: [],
+    tutorMoves: [],
+  };
   parsedMoves.forEach((move) => {
     const { level, method, ...rest } = move;
+    const tmMark = TMMap[rest.name.zh];
+
     if (method === 'level-up') {
-      pm.levelUpMoves.push({ ...rest, level });
-    } else if (method === 'machine' && (TMMap[rest.name.zh] ?? '').startsWith('秘傳')) {
-      pm.HTMMoves.push({ tm: TMMap[rest.name.zh], ...rest });
+      moveMap.levelUpMoves.push({ ...rest, level });
     } else if (method === 'machine') {
-      pm.TMMoves.push({ tm: TMMap[rest.name.zh], ...rest });
+      const isHM = tmMark?.startsWith('秘傳');
+      const target = isHM ? moveMap.HTMMoves : moveMap.TMMoves;
+      target.push({ tm: tmMark, ...rest });
     } else if (method === 'egg') {
-      pm.eggMoves.push(rest);
+      moveMap.eggMoves.push(rest);
     } else if (method === 'tutor') {
-      pm.tutorMoves.push(rest);
+      moveMap.tutorMoves.push(rest);
     }
   });
 
-  pm.TMMoves = pm.TMMoves.sort((a, b) => {
-    return parseInt(a.tm) - parseInt(b.tm);
+  // Sorting
+  moveMap.TMMoves.sort((a, b) => {
+    const aNum = parseInt(a.tm) || 0;
+    const bNum = parseInt(b.tm) || 0;
+    return aNum - bNum;
+  });
+  moveMap.HTMMoves.sort((a, b) => {
+    const aNum = parseInt(a.tm?.replace('秘傳', '') || '0');
+    const bNum = parseInt(b.tm?.replace('秘傳', '') || '0');
+    return aNum - bNum;
   });
 
-  pm.HTMMoves = pm.HTMMoves.sort((a, b) => {
-    return parseInt(a.tm.charAt(2)) - parseInt(b.tm.charAt(2));
-  });
+  return moveMap;
+};
 
-  await fs.writeFile(`public/data/pm/${data.id}.json`, JSON.stringify(pm));
+const processAbilities = async (rawAbilities) => {
+  const abilityPromises = rawAbilities
+    .filter((a) => !a.is_hidden)
+    .map((a) => {
+      const aid = parseInt(a.ability.url.split('/').at(-2));
+      return getAbilityData(aid);
+    });
+
+  const abilities = await Promise.all(abilityPromises);
+  return abilities.map((a) => a.name);
+};
+
+const processStats = (rawStats) => {
+  return rawStats.reduce((acc, stat) => {
+    acc.ev.push(stat.effort);
+    acc.base.push(stat.base_stat);
+    return acc;
+  }, {ev: [], base: []});
+};
+
+const processTypes = (rawTypes) => {
+  return rawTypes.map(
+    (t) => t.type.name.charAt(0).toUpperCase() + t.type.name.slice(1)
+  );
+};
+
+const processSpecies = (speciesData) => {
+  const eggGroups = speciesData.egg_groups.map(
+    (g) => g.name.charAt(0).toUpperCase() + g.name.slice(1)
+  );
+
+  const pokemonNames = {
+    zh: speciesData.names.find((n) => n.language.name === 'zh-hant')?.name || '',
+    jp: speciesData.names.find((n) => n.language.name === 'ja')?.name || '',
+    en: speciesData.names.find((n) => n.language.name === 'en')?.name || '',
+  };
+
+  const genderRate = speciesData.gender_rate;
+
+  return { eggGroups, name: pokemonNames, genderRate };
+};
+
+const getEvolutionChainData = (url) => {
+  const chainId = url.split('/').at(-2);
+  return fetchWithCache(url, `scripts/cache/evolution-chain/${chainId}.json`);
+};
+
+const buildEvolutionTree = async (node) => {
+  const pid = parseInt(node.species.url.split('/').at(-2));
+
+  const speciesData = await getPokemonSpeciesData(pid);
+  const pokemonData = await getPokemonData(pid);
+
+  const speciesProcessed = processSpecies(speciesData);
+  const types = processTypes(pokemonData.types);
+
+  const result = {
+    pid: pid,
+    type: types,
+    name: speciesProcessed.name,
+  };
+
+  if (node.evolves_to && node.evolves_to.length > 0) {
+    const validEvolutions = node.evolves_to.filter((evo) => {
+      const evoPid = parseInt(evo.species.url.split('/').at(-2));
+      return evoPid <= MAX_PID;
+    });
+
+    if (validEvolutions.length > 0) {
+      result.to = await Promise.all(validEvolutions.map(async (evo) => {
+        const childNode = await buildEvolutionTree(evo);
+
+      const details = evo.evolution_details[0];
+      if (details) {
+        if (details.min_level) {
+          childNode.level = details.min_level;
+        }
+        if (details.trigger) {
+          const rawMethod = details.trigger.name;
+          const map = {
+            'level-up': 'LevelUp',
+            'use-item': 'UseItem',
+            'trade': 'Trade',
+            'shed': 'Shed',
+          };
+          childNode.method = map[rawMethod] || rawMethod;
+        }
+        const conditions = [];
+
+        if (details.item) {
+          conditions.push(`item ${details.item.name}`);
+        }
+        if (details.time_of_day) {
+          conditions.push(`time ${details.time_of_day}`);
+        }
+        if (details.min_happiness) {
+          conditions.push(`happiness ${details.min_happiness}`);
+        }
+        if (details.known_move) {
+          conditions.push(`move ${details.known_move.name}`);
+        }
+        if (details.location) {
+          conditions.push(`location ${details.location.name}`);
+        }
+
+        if (conditions.length > 0) {
+          childNode.condition = conditions;
+        }
+      }
+      return childNode;
+    }));
+    }
+  }
+
+  return result;
+};
+
+const processPokemon = async (pid) => {
+  console.log(`Processing Pokemon ID: ${pid}...`);
+  const data = await getPokemonData(pid);
+  const speciesData = await getPokemonSpeciesData(pid);
+
+  const moveMap = await processMoves(data.moves);
+  const abilities = await processAbilities(data.abilities);
+  const stats = processStats(data.stats);
+  const types = processTypes(data.types);
+  const species = processSpecies(speciesData);
+
+  const findValidEvolutionRoot = (node) => {
+    const pid = parseInt(node.species.url.split('/').at(-2));
+    if (pid <= MAX_PID) {
+      return node;
+    }
+    // If root > 386 (like Mime Jr. 439), search children
+    if (node.evolves_to && node.evolves_to.length > 0) {
+      for (const evo of node.evolves_to) {
+        const validNode = findValidEvolutionRoot(evo);
+        if (validNode) return validNode;
+      }
+    }
+    return null;
+  };
+
+  let evolutionInfo = null;
+  let isLatest = true;
+
+  const checkIsLatest = (node, targetPid) => {
+    if (node.pid === targetPid) {
+      return !(node.to && node.to.length > 0);
+    }
+    if (node.to && node.to.length > 0) {
+      for (const child of node.to) {
+        const result = checkIsLatest(child, targetPid);
+        if (result !== null) return result;
+      }
+    }
+    return null;
+  };
+
+  if (speciesData.evolution_chain?.url) {
+    const chainData = await getEvolutionChainData(speciesData.evolution_chain.url);
+    const validRoot = findValidEvolutionRoot(chainData.chain);
+    if (validRoot) {
+      const tree = await buildEvolutionTree(validRoot);
+      if (tree.to && tree.to.length > 0) {
+        evolutionInfo = tree;
+      }
+
+      const latestResult = checkIsLatest(tree, pid);
+      if (latestResult !== null) {
+        isLatest = latestResult;
+      }
+    }
+  }
+
+  const pm = {
+    pid,
+    name: species.name,
+    types,
+    eggGroups: species.eggGroups,
+    abilities,
+    base: stats.base,
+    ev: stats.ev,
+    latest: isLatest,
+    genderRate: species.genderRate,
+    evolution: evolutionInfo,
+    ...moveMap,
+  };
+
+  const outDir = 'public/data/pm';
+  await fs.mkdir(outDir, { recursive: true });
+  await fs.writeFile(`${outDir}/${pid}.json`, JSON.stringify(pm, null, 2));
+  console.log(`Saved ${outDir}/${pid}.json`);
+
+  return {
+    pid,
+    name: pm.name,
+    types: pm.types,
+    eggGroups: pm.eggGroups,
+    abilities: pm.abilities,
+    ev: pm.ev,
+    latest: pm.latest,
+  };
+};
+
+const main = async () => {
+  const pids = Array.from({ length: 151 }, (_, i) => i + 1);
+  const basicInfoList = [];
+
+  for (const pid of pids) {
+    try {
+      const basicInfo = await processPokemon(pid);
+      if (basicInfo) {
+        basicInfoList.push(basicInfo);
+      }
+    } catch (error) {
+      console.error(`Error processing Pokemon ${pid}:`, error.message);
+    }
+  }
+
+  const outDir = 'public/data';
+  await fs.mkdir(outDir, { recursive: true });
+  await fs.writeFile(`${outDir}/pokemonList.json`, JSON.stringify(basicInfoList, null, 2));
+  console.log(`Saved ${outDir}/pokemonList.json`);
 };
 
 main();
 
-export {};
