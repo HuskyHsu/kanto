@@ -28,14 +28,14 @@ const fetchWithCache = async (url, cachePath) => {
 const getPokemonData = (pid) => {
   return fetchWithCache(
     `https://pokeapi.co/api/v2/pokemon/${pid}`,
-    `scripts/cache/pokemon/${pid}.json`
+    `scripts/cache/pokemon/${pid}.json`,
   );
 };
 
 const getPokemonSpeciesData = (pid) => {
   return fetchWithCache(
     `https://pokeapi.co/api/v2/pokemon-species/${pid}`,
-    `scripts/cache/species/${pid}.json`
+    `scripts/cache/species/${pid}.json`,
   );
 };
 
@@ -51,7 +51,7 @@ const getMoveData = async (mid) => {
 
   const rawData = await fetchWithCache(
     `https://pokeapi.co/api/v2/move/${mid}`,
-    `scripts/cache/move/${mid}.json`
+    `scripts/cache/move/${mid}.json`,
   );
 
   const formattedMove = {
@@ -62,7 +62,7 @@ const getMoveData = async (mid) => {
     accuracy: rawData.accuracy,
     pp: rawData.pp,
     name: {
-      jp: rawData.names.find((n) => n.language.name === 'ja').name,
+      ja: rawData.names.find((n) => n.language.name === 'ja').name,
       en: rawData.names.find((n) => n.language.name === 'en').name,
       zh: rawData.names.find((n) => n.language.name === 'zh-hant').name,
     },
@@ -84,13 +84,13 @@ const getAbilityData = async (aid) => {
 
   const rawData = await fetchWithCache(
     `https://pokeapi.co/api/v2/ability/${aid}`,
-    `scripts/cache/ability/${aid}.json`
+    `scripts/cache/ability/${aid}.json`,
   );
 
   const formattedAbility = {
     id: rawData.id,
     name: {
-      jp: rawData.names.find((n) => n.language.name === 'ja').name,
+      ja: rawData.names.find((n) => n.language.name === 'ja').name,
       en: rawData.names.find((n) => n.language.name === 'en').name,
       zh: rawData.names.find((n) => n.language.name === 'zh-hant').name,
     },
@@ -103,11 +103,11 @@ const getAbilityData = async (aid) => {
 const processMoves = async (rawMoves) => {
   const versionMoves = rawMoves
     .filter((move) =>
-      move.version_group_details.some((detail) => detail.version_group.name === VERSION_GROUP)
+      move.version_group_details.some((detail) => detail.version_group.name === VERSION_GROUP),
     )
     .map((move) => {
       const details = move.version_group_details.find(
-        (d) => d.version_group.name === VERSION_GROUP
+        (d) => d.version_group.name === VERSION_GROUP,
       );
       return {
         moveId: parseInt(move.move.url.split('/').at(-2)),
@@ -180,27 +180,28 @@ const processAbilities = async (rawAbilities) => {
 };
 
 const processStats = (rawStats) => {
-  return rawStats.reduce((acc, stat) => {
-    acc.ev.push(stat.effort);
-    acc.base.push(stat.base_stat);
-    return acc;
-  }, {ev: [], base: []});
+  return rawStats.reduce(
+    (acc, stat) => {
+      acc.ev.push(stat.effort);
+      acc.base.push(stat.base_stat);
+      return acc;
+    },
+    { ev: [], base: [] },
+  );
 };
 
 const processTypes = (rawTypes) => {
-  return rawTypes.map(
-    (t) => t.type.name.charAt(0).toUpperCase() + t.type.name.slice(1)
-  );
+  return rawTypes.map((t) => t.type.name.charAt(0).toUpperCase() + t.type.name.slice(1));
 };
 
 const processSpecies = (speciesData) => {
   const eggGroups = speciesData.egg_groups.map(
-    (g) => g.name.charAt(0).toUpperCase() + g.name.slice(1)
+    (g) => g.name.charAt(0).toUpperCase() + g.name.slice(1),
   );
 
   const pokemonNames = {
     zh: speciesData.names.find((n) => n.language.name === 'zh-hant')?.name || '',
-    jp: speciesData.names.find((n) => n.language.name === 'ja')?.name || '',
+    ja: speciesData.names.find((n) => n.language.name === 'ja')?.name || '',
     en: speciesData.names.find((n) => n.language.name === 'en')?.name || '',
   };
 
@@ -236,48 +237,50 @@ const buildEvolutionTree = async (node) => {
     });
 
     if (validEvolutions.length > 0) {
-      result.to = await Promise.all(validEvolutions.map(async (evo) => {
-        const childNode = await buildEvolutionTree(evo);
+      result.to = await Promise.all(
+        validEvolutions.map(async (evo) => {
+          const childNode = await buildEvolutionTree(evo);
 
-      const details = evo.evolution_details[0];
-      if (details) {
-        if (details.min_level) {
-          childNode.level = details.min_level;
-        }
-        if (details.trigger) {
-          const rawMethod = details.trigger.name;
-          const map = {
-            'level-up': 'LevelUp',
-            'use-item': 'UseItem',
-            'trade': 'Trade',
-            'shed': 'Shed',
-          };
-          childNode.method = map[rawMethod] || rawMethod;
-        }
-        const conditions = [];
+          const details = evo.evolution_details[0];
+          if (details) {
+            if (details.min_level) {
+              childNode.level = details.min_level;
+            }
+            if (details.trigger) {
+              const rawMethod = details.trigger.name;
+              const map = {
+                'level-up': 'LevelUp',
+                'use-item': 'UseItem',
+                trade: 'Trade',
+                shed: 'Shed',
+              };
+              childNode.method = map[rawMethod] || rawMethod;
+            }
+            const conditions = [];
 
-        if (details.item) {
-          conditions.push(`item ${details.item.name}`);
-        }
-        if (details.time_of_day) {
-          conditions.push(`time ${details.time_of_day}`);
-        }
-        if (details.min_happiness) {
-          conditions.push(`happiness ${details.min_happiness}`);
-        }
-        if (details.known_move) {
-          conditions.push(`move ${details.known_move.name}`);
-        }
-        if (details.location) {
-          conditions.push(`location ${details.location.name}`);
-        }
+            if (details.item) {
+              conditions.push(`item ${details.item.name}`);
+            }
+            if (details.time_of_day) {
+              conditions.push(`time ${details.time_of_day}`);
+            }
+            if (details.min_happiness) {
+              conditions.push(`happiness ${details.min_happiness}`);
+            }
+            if (details.known_move) {
+              conditions.push(`move ${details.known_move.name}`);
+            }
+            if (details.location) {
+              conditions.push(`location ${details.location.name}`);
+            }
 
-        if (conditions.length > 0) {
-          childNode.condition = conditions;
-        }
-      }
-      return childNode;
-    }));
+            if (conditions.length > 0) {
+              childNode.condition = conditions;
+            }
+          }
+          return childNode;
+        }),
+      );
     }
   }
 
@@ -394,4 +397,3 @@ const main = async () => {
 };
 
 main();
-

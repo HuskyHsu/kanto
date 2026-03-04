@@ -1,0 +1,539 @@
+{
+  "pid": 70,
+  "name": {
+    "zh": "口呆花",
+    "ja": "ウツドン",
+    "en": "Weepinbell"
+  },
+  "types": [
+    "Grass",
+    "Poison"
+  ],
+  "eggGroups": [
+    "Plant"
+  ],
+  "abilities": [
+    {
+      "ja": "ようりょくそ",
+      "en": "Chlorophyll",
+      "zh": "葉綠素"
+    }
+  ],
+  "base": [
+    65,
+    90,
+    50,
+    85,
+    45,
+    55
+  ],
+  "ev": [
+    0,
+    2,
+    0,
+    0,
+    0,
+    0
+  ],
+  "latest": false,
+  "genderRate": 4,
+  "evolution": {
+    "pid": 69,
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "name": {
+      "zh": "喇叭芽",
+      "ja": "マダツボミ",
+      "en": "Bellsprout"
+    },
+    "to": [
+      {
+        "pid": 70,
+        "type": [
+          "Grass",
+          "Poison"
+        ],
+        "name": {
+          "zh": "口呆花",
+          "ja": "ウツドン",
+          "en": "Weepinbell"
+        },
+        "to": [
+          {
+            "pid": 71,
+            "type": [
+              "Grass",
+              "Poison"
+            ],
+            "name": {
+              "zh": "大食花",
+              "ja": "ウツボット",
+              "en": "Victreebel"
+            },
+            "method": "UseItem",
+            "condition": [
+              "item leaf-stone"
+            ]
+          }
+        ],
+        "level": 21,
+        "method": "LevelUp"
+      }
+    ]
+  },
+  "levelUpMoves": [
+    {
+      "id": 22,
+      "type": "Grass",
+      "category": "Special",
+      "power": 45,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "つるのムチ",
+        "en": "Vine Whip",
+        "zh": "藤鞭"
+      },
+      "level": 1
+    },
+    {
+      "id": 35,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 15,
+      "accuracy": 90,
+      "pp": 20,
+      "name": {
+        "ja": "まきつく",
+        "en": "Wrap",
+        "zh": "緊束"
+      },
+      "level": 1
+    },
+    {
+      "id": 74,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "せいちょう",
+        "en": "Growth",
+        "zh": "生長"
+      },
+      "level": 1
+    },
+    {
+      "id": 79,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 15,
+      "name": {
+        "ja": "ねむりごな",
+        "en": "Sleep Powder",
+        "zh": "催眠粉"
+      },
+      "level": 15
+    },
+    {
+      "id": 77,
+      "type": "Poison",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 35,
+      "name": {
+        "ja": "どくのこな",
+        "en": "Poison Powder",
+        "zh": "毒粉"
+      },
+      "level": 17
+    },
+    {
+      "id": 78,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 30,
+      "name": {
+        "ja": "しびれごな",
+        "en": "Stun Spore",
+        "zh": "麻痺粉"
+      },
+      "level": 19
+    },
+    {
+      "id": 51,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "ようかいえき",
+        "en": "Acid",
+        "zh": "溶解液"
+      },
+      "level": 24
+    },
+    {
+      "id": 230,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまいかおり",
+        "en": "Sweet Scent",
+        "zh": "甜甜香氣"
+      },
+      "level": 33
+    },
+    {
+      "id": 75,
+      "type": "Grass",
+      "category": "Special",
+      "power": 55,
+      "accuracy": 95,
+      "pp": 25,
+      "name": {
+        "ja": "はっぱカッター",
+        "en": "Razor Leaf",
+        "zh": "飛葉快刀"
+      },
+      "level": 42
+    },
+    {
+      "id": 21,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 75,
+      "pp": 20,
+      "name": {
+        "ja": "たたきつける",
+        "en": "Slam",
+        "zh": "摔打"
+      },
+      "level": 54
+    }
+  ],
+  "TMMoves": [
+    {
+      "tm": "06",
+      "id": 92,
+      "type": "Poison",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "どくどく",
+        "en": "Toxic",
+        "zh": "劇毒"
+      }
+    },
+    {
+      "tm": "09",
+      "id": 331,
+      "type": "Grass",
+      "category": "Special",
+      "power": 25,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "タネマシンガン",
+        "en": "Bullet Seed",
+        "zh": "種子機關槍"
+      }
+    },
+    {
+      "tm": "10",
+      "id": 237,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "めざめるパワー",
+        "en": "Hidden Power",
+        "zh": "覺醒力量"
+      }
+    },
+    {
+      "tm": "11",
+      "id": 241,
+      "type": "Fire",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "にほんばれ",
+        "en": "Sunny Day",
+        "zh": "大晴天"
+      }
+    },
+    {
+      "tm": "17",
+      "id": 182,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "まもる",
+        "en": "Protect",
+        "zh": "守住"
+      }
+    },
+    {
+      "tm": "19",
+      "id": 202,
+      "type": "Grass",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ギガドレイン",
+        "en": "Giga Drain",
+        "zh": "終極吸取"
+      }
+    },
+    {
+      "tm": "21",
+      "id": 218,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "やつあたり",
+        "en": "Frustration",
+        "zh": "遷怒"
+      }
+    },
+    {
+      "tm": "22",
+      "id": 76,
+      "type": "Grass",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ソーラービーム",
+        "en": "Solar Beam",
+        "zh": "日光束"
+      }
+    },
+    {
+      "tm": "27",
+      "id": 216,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おんがえし",
+        "en": "Return",
+        "zh": "報恩"
+      }
+    },
+    {
+      "tm": "32",
+      "id": 104,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "かげぶんしん",
+        "en": "Double Team",
+        "zh": "影子分身"
+      }
+    },
+    {
+      "tm": "36",
+      "id": 188,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ヘドロばくだん",
+        "en": "Sludge Bomb",
+        "zh": "污泥炸彈"
+      }
+    },
+    {
+      "tm": "42",
+      "id": 263,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "からげんき",
+        "en": "Facade",
+        "zh": "硬撐"
+      }
+    },
+    {
+      "tm": "43",
+      "id": 290,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ひみつのちから",
+        "en": "Secret Power",
+        "zh": "秘密之力"
+      }
+    },
+    {
+      "tm": "44",
+      "id": 156,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ねむる",
+        "en": "Rest",
+        "zh": "睡覺"
+      }
+    },
+    {
+      "tm": "45",
+      "id": 213,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "メロメロ",
+        "en": "Attract",
+        "zh": "迷人"
+      }
+    },
+    {
+      "tm": "46",
+      "id": 168,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "どろぼう",
+        "en": "Thief",
+        "zh": "小偷"
+      }
+    }
+  ],
+  "HTMMoves": [
+    {
+      "tm": "秘傳01",
+      "id": 15,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 95,
+      "pp": 30,
+      "name": {
+        "ja": "いあいぎり",
+        "en": "Cut",
+        "zh": "居合斬"
+      }
+    },
+    {
+      "tm": "秘傳05",
+      "id": 148,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "フラッシュ",
+        "en": "Flash",
+        "zh": "閃光"
+      }
+    }
+  ],
+  "eggMoves": [],
+  "tutorMoves": [
+    {
+      "id": 14,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "つるぎのまい",
+        "en": "Swords Dance",
+        "zh": "劍舞"
+      }
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      }
+    },
+    {
+      "id": 102,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ものまね",
+        "en": "Mimic",
+        "zh": "模仿"
+      }
+    },
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    }
+  ]
+}

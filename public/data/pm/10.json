@@ -1,0 +1,115 @@
+{
+  "pid": 10,
+  "name": {
+    "zh": "綠毛蟲",
+    "ja": "キャタピー",
+    "en": "Caterpie"
+  },
+  "types": [
+    "Bug"
+  ],
+  "eggGroups": [
+    "Bug"
+  ],
+  "abilities": [
+    {
+      "ja": "りんぷん",
+      "en": "Shield Dust",
+      "zh": "鱗粉"
+    }
+  ],
+  "base": [
+    45,
+    30,
+    35,
+    20,
+    20,
+    45
+  ],
+  "ev": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "latest": false,
+  "genderRate": 4,
+  "evolution": {
+    "pid": 10,
+    "type": [
+      "Bug"
+    ],
+    "name": {
+      "zh": "綠毛蟲",
+      "ja": "キャタピー",
+      "en": "Caterpie"
+    },
+    "to": [
+      {
+        "pid": 11,
+        "type": [
+          "Bug"
+        ],
+        "name": {
+          "zh": "鐵甲蛹",
+          "ja": "トランセル",
+          "en": "Metapod"
+        },
+        "to": [
+          {
+            "pid": 12,
+            "type": [
+              "Bug",
+              "Flying"
+            ],
+            "name": {
+              "zh": "巴大蝶",
+              "ja": "バタフリー",
+              "en": "Butterfree"
+            },
+            "level": 10,
+            "method": "LevelUp"
+          }
+        ],
+        "level": 7,
+        "method": "LevelUp"
+      }
+    ]
+  },
+  "levelUpMoves": [
+    {
+      "id": 33,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "たいあたり",
+        "en": "Tackle",
+        "zh": "撞擊"
+      },
+      "level": 1
+    },
+    {
+      "id": 81,
+      "type": "Bug",
+      "category": "Status",
+      "power": null,
+      "accuracy": 95,
+      "pp": 40,
+      "name": {
+        "ja": "いとをはく",
+        "en": "String Shot",
+        "zh": "吐絲"
+      },
+      "level": 1
+    }
+  ],
+  "TMMoves": [],
+  "HTMMoves": [],
+  "eggMoves": [],
+  "tutorMoves": []
+}

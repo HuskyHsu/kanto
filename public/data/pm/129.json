@@ -1,0 +1,115 @@
+{
+  "pid": 129,
+  "name": {
+    "zh": "鯉魚王",
+    "ja": "コイキング",
+    "en": "Magikarp"
+  },
+  "types": [
+    "Water"
+  ],
+  "eggGroups": [
+    "Water2",
+    "Dragon"
+  ],
+  "abilities": [
+    {
+      "ja": "すいすい",
+      "en": "Swift Swim",
+      "zh": "悠游自如"
+    }
+  ],
+  "base": [
+    20,
+    10,
+    55,
+    15,
+    20,
+    80
+  ],
+  "ev": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "latest": false,
+  "genderRate": 4,
+  "evolution": {
+    "pid": 129,
+    "type": [
+      "Water"
+    ],
+    "name": {
+      "zh": "鯉魚王",
+      "ja": "コイキング",
+      "en": "Magikarp"
+    },
+    "to": [
+      {
+        "pid": 130,
+        "type": [
+          "Water",
+          "Flying"
+        ],
+        "name": {
+          "zh": "暴鯉龍",
+          "ja": "ギャラドス",
+          "en": "Gyarados"
+        },
+        "level": 20,
+        "method": "LevelUp"
+      }
+    ]
+  },
+  "levelUpMoves": [
+    {
+      "id": 150,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "はねる",
+        "en": "Splash",
+        "zh": "躍起"
+      },
+      "level": 1
+    },
+    {
+      "id": 33,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "たいあたり",
+        "en": "Tackle",
+        "zh": "撞擊"
+      },
+      "level": 15
+    },
+    {
+      "id": 175,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "じたばた",
+        "en": "Flail",
+        "zh": "抓狂"
+      },
+      "level": 30
+    }
+  ],
+  "TMMoves": [],
+  "HTMMoves": [],
+  "eggMoves": [],
+  "tutorMoves": []
+}

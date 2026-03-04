@@ -1,0 +1,60 @@
+{
+  "pid": 132,
+  "name": {
+    "zh": "百變怪",
+    "ja": "メタモン",
+    "en": "Ditto"
+  },
+  "types": [
+    "Normal"
+  ],
+  "eggGroups": [
+    "Ditto"
+  ],
+  "abilities": [
+    {
+      "ja": "じゅうなん",
+      "en": "Limber",
+      "zh": "柔軟"
+    }
+  ],
+  "base": [
+    48,
+    48,
+    48,
+    48,
+    48,
+    48
+  ],
+  "ev": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "latest": true,
+  "genderRate": -1,
+  "evolution": null,
+  "levelUpMoves": [
+    {
+      "id": 144,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "へんしん",
+        "en": "Transform",
+        "zh": "變身"
+      },
+      "level": 1
+    }
+  ],
+  "TMMoves": [],
+  "HTMMoves": [],
+  "eggMoves": [],
+  "tutorMoves": []
+}

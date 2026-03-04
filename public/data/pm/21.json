@@ -1,0 +1,544 @@
+{
+  "pid": 21,
+  "name": {
+    "zh": "烈雀",
+    "ja": "オニスズメ",
+    "en": "Spearow"
+  },
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "eggGroups": [
+    "Flying"
+  ],
+  "abilities": [
+    {
+      "ja": "するどいめ",
+      "en": "Keen Eye",
+      "zh": "銳利目光"
+    }
+  ],
+  "base": [
+    40,
+    60,
+    30,
+    31,
+    31,
+    70
+  ],
+  "ev": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "latest": false,
+  "genderRate": 4,
+  "evolution": {
+    "pid": 21,
+    "type": [
+      "Normal",
+      "Flying"
+    ],
+    "name": {
+      "zh": "烈雀",
+      "ja": "オニスズメ",
+      "en": "Spearow"
+    },
+    "to": [
+      {
+        "pid": 22,
+        "type": [
+          "Normal",
+          "Flying"
+        ],
+        "name": {
+          "zh": "大嘴雀",
+          "ja": "オニドリル",
+          "en": "Fearow"
+        },
+        "level": 20,
+        "method": "LevelUp"
+      }
+    ]
+  },
+  "levelUpMoves": [
+    {
+      "id": 45,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "なきごえ",
+        "en": "Growl",
+        "zh": "叫聲"
+      },
+      "level": 1
+    },
+    {
+      "id": 64,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 35,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "つつく",
+        "en": "Peck",
+        "zh": "啄"
+      },
+      "level": 1
+    },
+    {
+      "id": 43,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "にらみつける",
+        "en": "Leer",
+        "zh": "瞪眼"
+      },
+      "level": 7
+    },
+    {
+      "id": 31,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 15,
+      "accuracy": 85,
+      "pp": 20,
+      "name": {
+        "ja": "みだれづき",
+        "en": "Fury Attack",
+        "zh": "亂擊"
+      },
+      "level": 13
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      },
+      "level": 19
+    },
+    {
+      "id": 332,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "つばめがえし",
+        "en": "Aerial Ace",
+        "zh": "燕返"
+      },
+      "level": 25
+    },
+    {
+      "id": 119,
+      "type": "Flying",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "オウムがえし",
+        "en": "Mirror Move",
+        "zh": "鸚鵡學舌"
+      },
+      "level": 31
+    },
+    {
+      "id": 65,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ドリルくちばし",
+        "en": "Drill Peck",
+        "zh": "啄鑽"
+      },
+      "level": 37
+    },
+    {
+      "id": 97,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "こうそくいどう",
+        "en": "Agility",
+        "zh": "高速移動"
+      },
+      "level": 43
+    }
+  ],
+  "TMMoves": [
+    {
+      "tm": "06",
+      "id": 92,
+      "type": "Poison",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "どくどく",
+        "en": "Toxic",
+        "zh": "劇毒"
+      }
+    },
+    {
+      "tm": "10",
+      "id": 237,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "めざめるパワー",
+        "en": "Hidden Power",
+        "zh": "覺醒力量"
+      }
+    },
+    {
+      "tm": "11",
+      "id": 241,
+      "type": "Fire",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "にほんばれ",
+        "en": "Sunny Day",
+        "zh": "大晴天"
+      }
+    },
+    {
+      "tm": "17",
+      "id": 182,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "まもる",
+        "en": "Protect",
+        "zh": "守住"
+      }
+    },
+    {
+      "tm": "18",
+      "id": 240,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "あまごい",
+        "en": "Rain Dance",
+        "zh": "求雨"
+      }
+    },
+    {
+      "tm": "21",
+      "id": 218,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "やつあたり",
+        "en": "Frustration",
+        "zh": "遷怒"
+      }
+    },
+    {
+      "tm": "27",
+      "id": 216,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おんがえし",
+        "en": "Return",
+        "zh": "報恩"
+      }
+    },
+    {
+      "tm": "32",
+      "id": 104,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "かげぶんしん",
+        "en": "Double Team",
+        "zh": "影子分身"
+      }
+    },
+    {
+      "tm": "42",
+      "id": 263,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "からげんき",
+        "en": "Facade",
+        "zh": "硬撐"
+      }
+    },
+    {
+      "tm": "43",
+      "id": 290,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ひみつのちから",
+        "en": "Secret Power",
+        "zh": "秘密之力"
+      }
+    },
+    {
+      "tm": "44",
+      "id": 156,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ねむる",
+        "en": "Rest",
+        "zh": "睡覺"
+      }
+    },
+    {
+      "tm": "45",
+      "id": 213,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "メロメロ",
+        "en": "Attract",
+        "zh": "迷人"
+      }
+    },
+    {
+      "tm": "46",
+      "id": 168,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "どろぼう",
+        "en": "Thief",
+        "zh": "小偷"
+      }
+    },
+    {
+      "tm": "47",
+      "id": 211,
+      "type": "Steel",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 90,
+      "pp": 25,
+      "name": {
+        "ja": "はがねのつばさ",
+        "en": "Steel Wing",
+        "zh": "鋼翼"
+      }
+    }
+  ],
+  "HTMMoves": [
+    {
+      "tm": "秘傳02",
+      "id": 19,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 95,
+      "pp": 15,
+      "name": {
+        "ja": "そらをとぶ",
+        "en": "Fly",
+        "zh": "飛翔"
+      }
+    }
+  ],
+  "eggMoves": [
+    {
+      "id": 98,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "でんこうせっか",
+        "en": "Quick Attack",
+        "zh": "電光一閃"
+      }
+    },
+    {
+      "id": 143,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 140,
+      "accuracy": 90,
+      "pp": 5,
+      "name": {
+        "ja": "ゴッドバード",
+        "en": "Sky Attack",
+        "zh": "神鳥猛擊"
+      }
+    },
+    {
+      "id": 161,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "トライアタック",
+        "en": "Tri Attack",
+        "zh": "三重攻擊"
+      }
+    },
+    {
+      "id": 184,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "こわいかお",
+        "en": "Scary Face",
+        "zh": "鬼面"
+      }
+    },
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      }
+    },
+    {
+      "id": 206,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "みねうち",
+        "en": "False Swipe",
+        "zh": "點到為止"
+      }
+    },
+    {
+      "id": 310,
+      "type": "Ghost",
+      "category": "Physical",
+      "power": 30,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "おどろかす",
+        "en": "Astonish",
+        "zh": "驚嚇"
+      }
+    }
+  ],
+  "tutorMoves": [
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      }
+    },
+    {
+      "id": 102,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ものまね",
+        "en": "Mimic",
+        "zh": "模仿"
+      }
+    },
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    }
+  ]
+}

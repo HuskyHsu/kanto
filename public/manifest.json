@@ -1,0 +1,16 @@
+{
+  "name": "Kanto Pokédex App",
+  "short_name": "Kanto Pokédex App",
+  "icons": [
+    {
+      "src": "images/appIcon/pwa-maskable-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable any"
+    }
+  ],
+  "display": "standalone",
+  "background_color": "#1E2841",
+  "theme_color": "#D4F4D6",
+  "start_url": "."
+}
