@@ -9,11 +9,12 @@ function PokemonNumber({ number }: PokemonNumberProps) {
     <span
       className={cn(
         'group-hover:text-yellow-400 mb-2',
-        'text-white text-center font-bold text-4xl drop-shadow-lg',
-        'transition-all duration-300',
+        'text-white text-center text-2xl mt-2',
+        'transition-colors duration-100 ease-linear',
+        'font-press-start',
       )}
       style={{
-        textShadow: '2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.5)',
+        textShadow: '3px 3px 0px rgba(0,0,0,1)',
       }}
     >
       {number.toString().padStart(3, '0')}

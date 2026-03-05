@@ -66,24 +66,23 @@ const PokemonCard = memo(function PokemonCard({
       <div
         className={cn(
           'w-36 p-2 pt-6 flex flex-col items-center',
-          'rounded-xl',
-          'shadow-list-items',
           'bg-white',
+          'border-4 border-black',
+          'shadow-[6px_6px_0_0_rgba(0,0,0,1)]',
+          'hover:shadow-[10px_10px_0_0_rgba(0,0,0,1)]',
           'relative',
           'bg-linear-to-tl',
           colorClasses,
-          'transition-all duration-300 ease-in-out',
-          'hover:shadow-xl hover:-translate-y-2 hover:bg-sky-200/60',
+          'transition-all duration-100 ease-linear',
+          'hover:-translate-y-1 hover:-translate-x-1',
+          '[&_img]:[image-rendering:pixelated]',
         )}
-        style={{
-          boxShadow: 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px',
-        }}
       >
-        <div className='absolute -top-4 -left-2 group-hover:-translate-x-2 group-hover:-translate-y-1 transition-all duration-300'>
+        <div className='absolute -top-4 -left-2 group-hover:-translate-x-1 group-hover:-translate-y-1 transition-transform duration-100 ease-linear'>
           <PokemonNumber number={pokedexId} />
         </div>
         <PokemonImage pokemon={pokemon} pokedexId={pokedexId} isShiny={isShiny} />
-        <div className='flex flex-col gap-2 mb-2'>
+        <div className='flex flex-col gap-2 mb-2 font-mono tracking-tighter'>
           <PokemonName name={pokemon.name} />
           <PokemonTypes types={pokemon.types} />
           {isShowAbility && <PokemonAbilities abilities={pokemon.abilities} />}

@@ -4,15 +4,15 @@ import { useUrlParams } from './useUrlParams';
 export function useAbilityToggle() {
   const { getBooleanParam, setBooleanParam } = useUrlParams();
 
-  const isShowAbility = getBooleanParam('ability', true); // default to true to match previous behavior
+  const isShowAbility = getBooleanParam('ability', false);
 
   const toggleAbility = useCallback(() => {
-    setBooleanParam('ability', !isShowAbility, true);
+    setBooleanParam('ability', !isShowAbility, false);
   }, [setBooleanParam, isShowAbility]);
 
   const setShowAbility = useCallback(
     (show: boolean) => {
-      setBooleanParam('ability', show, true);
+      setBooleanParam('ability', show, false);
     },
     [setBooleanParam],
   );

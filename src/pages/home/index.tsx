@@ -15,10 +15,9 @@ import {
   EVFilter,
   EVToggle,
   FinalFormToggle,
-  PWAInstallButton,
   SearchFilter,
   ShinyToggle,
-  TypeFilter,
+  TypeFilter
 } from './components';
 
 function Home() {
@@ -47,7 +46,7 @@ function Home() {
   return (
     <div className='space-y-6'>
       <PageHeader />
-      <PWAInstallButton />
+      {/* <PWAInstallButton /> */}
       {/* <PageViewToggle /> */}
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
@@ -72,9 +71,9 @@ function Home() {
 
 function PageHeader() {
   return (
-    <h1 className='flex items-end gap-2 text-3xl font-bold'>
-      <img src={`${import.meta.env.BASE_URL}images/appIcon/mega_symbol.svg`} className='w-8 h-8' />
-      <Link to={`/`}>Kanto Pokédex</Link>
+    <h1 className='flex items-center gap-2 text-3xl font-bold'>
+      <img src={`${import.meta.env.BASE_URL}images/logo.png`} className='w-16 h-16' />
+      <Link to={`/`} className='font-press-start text-xl'>Kanto Pokédex</Link>
       <ShareButton title='Kanto Pokédex' />
     </h1>
   );

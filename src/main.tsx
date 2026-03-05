@@ -1,3 +1,4 @@
+import { LanguageProvider } from '@/contexts/LanguageContext';
 import { MoveProvider } from '@/contexts/MoveContext';
 import { PokemonProvider } from '@/contexts/PokemonContext';
 import { StrictMode } from 'react';
@@ -9,11 +10,13 @@ import './index.css';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HashRouter>
-      <PokemonProvider>
-        <MoveProvider>
-          <App />
-        </MoveProvider>
-      </PokemonProvider>
+      <LanguageProvider>
+        <PokemonProvider>
+          <MoveProvider>
+            <App />
+          </MoveProvider>
+        </PokemonProvider>
+      </LanguageProvider>
     </HashRouter>
   </StrictMode>
 );
