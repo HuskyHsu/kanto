@@ -29,7 +29,7 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
         onSearchChange(value);
       }, 300);
     },
-    [onSearchChange]
+    [onSearchChange],
   );
 
   const handleInputChange = useCallback(
@@ -57,7 +57,7 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
         }, 1000);
       }
     },
-    [debouncedSearch, isComposing]
+    [debouncedSearch, isComposing],
   );
 
   const handleCompositionStart = useCallback(() => {
@@ -71,7 +71,7 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
       setInputValue(value);
       debouncedSearch(value);
     },
-    [debouncedSearch]
+    [debouncedSearch],
   );
 
   const handleClearSearch = useCallback(() => {
@@ -105,10 +105,13 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
   }, []);
 
   return (
-    <div className='mb-4'>
-      <div className='flex items-center justify-between mb-4'>
-        <h2 className='flex items-center text-lg font-semibold text-slate-700'>
-          <img src={`${import.meta.env.BASE_URL}images/type/PokemonBall_.png`} className='w-10 h-10' />
+    <div className='mb-4 font-press-start'>
+      <div className='flex items-center justify-between mb-2'>
+        <h2 className='flex items-center text-sm font-semibold text-slate-700'>
+          <img
+            src={`${import.meta.env.BASE_URL}images/type/PokemonBall_.png`}
+            className='w-10 h-10'
+          />
           Search Keywords
         </h2>
       </div>
@@ -136,12 +139,12 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
           onChange={handleInputChange}
           onCompositionStart={handleCompositionStart}
           onCompositionEnd={handleCompositionEnd}
-          placeholder='Search by name, or ID...'
+          placeholder='Search by name(en, ja, zh-hant), or ID...'
           className='
             w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg
             focus:ring-2 focus:ring-blue-500 focus:border-blue-500
             transition-colors duration-200 outline-none
-            bg-white text-slate-700 placeholder-gray-400
+            bg-white text-slate-700 placeholder-gray-400 text-xs
           '
         />
         {inputValue && (

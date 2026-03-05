@@ -25,11 +25,11 @@ const EVFilter = ({ selectedEVStat, onSelectEVStat }: EVFilterProps) => {
           type='button'
           onClick={() => handleStatClick(stat)}
           className={cn(
-            'px-3 py-1 text-sm font-medium rounded-full transition-all duration-200',
-            'border shadow-xs hover:shadow-md active:scale-95',
+            'px-3 py-2 text-[10px] font-press-start leading-none rounded-md transition-all duration-100 ease-linear cursor-pointer',
+            'border-2 border-[#34925e] shadow-[2px_2px_0_0_rgba(52,146,94,0.3)] active:translate-y-[2px] active:shadow-none',
             selectedEVStat === stat
-              ? 'bg-green-600 text-white border-green-600 ring-2 ring-green-200'
-              : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+              ? 'bg-[#34925e] text-white'
+              : 'bg-white text-slate-700 hover:bg-slate-50',
           )}
         >
           {stat}

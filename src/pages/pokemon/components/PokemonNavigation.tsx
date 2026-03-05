@@ -22,7 +22,7 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
         setPokemonList(data);
 
         // Find current Pokemon index
-        const index = data.findIndex((pokemon) => pokemon.link === currentPokemonLink);
+        const index = data.findIndex((pokemon) => pokemon.pid.toString() === currentPokemonLink);
         setCurrentIndex(index);
       } catch (error) {
         console.error('Failed to load Pokemon list:', error);
@@ -101,7 +101,7 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
     <div className='flex items-center justify-center gap-4 py-4 bg-linear-to-r from-purple-100 to-blue-100 rounded-lg shadow-sm'>
       {/* Previous Arrow */}
       <button
-        onClick={() => handlePokemonNavigation(previousPokemon.link)}
+        onClick={() => handlePokemonNavigation(previousPokemon.pid.toString())}
         className='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 hover:bg-gray-50'
         title={`to ${previousPokemon.name.zh}`}
       >
@@ -114,18 +114,12 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
           const sideCount = isMobile ? 2 : 3;
           const isCurrent = index === sideCount; // Middle item is current (mobile: index 2, desktop: index 3)
 
-          const isLumioseForm = pokemon.lumioseId <= 232;
-
-          const pokemonNumber =
-            (isLumioseForm ? 'L' : 'H') +
-            (isLumioseForm ? pokemon.lumioseId : pokemon.hyperspaceId || pokemon.lumioseId)
-              .toString()
-              .padStart(3, '0');
+          const pokemonNumber = pokemon.pid.toString().padStart(3, '0');
 
           return (
             <button
-              key={pokemon.link}
-              onClick={() => handlePokemonNavigation(pokemon.link)}
+              key={pokemon.pid}
+              onClick={() => handlePokemonNavigation(pokemon.pid.toString())}
               className={`flex flex-col items-center p-1 md:p-2 rounded-lg ${
                 isCurrent
                   ? 'bg-yellow-200 shadow-md scale-110 border-2 border-yellow-400'
@@ -140,7 +134,7 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
                 } flex items-center justify-center`}
               >
                 <img
-                  src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
+                  src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.pid}.png`}
                   alt={pokemon.name.zh}
                   className='w-full h-full object-contain'
                   onError={(e) => {
@@ -155,9 +149,6 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
                 <div className='text-gray-500'>#{pokemonNumber}</div>
                 <div className={`font-medium ${isCurrent ? 'text-yellow-800' : 'text-gray-700'}`}>
                   {pokemon.name.zh}
-                  {pokemon.altForm && (
-                    <span className='font-light text-[10px]'>({pokemon.altForm})</span>
-                  )}
                 </div>
               </div>
             </button>
@@ -167,7 +158,7 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
 
       {/* Next Arrow */}
       <button
-        onClick={() => handlePokemonNavigation(nextPokemon.link)}
+        onClick={() => handlePokemonNavigation(String(nextPokemon.pid))}
         className='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 hover:bg-gray-50'
         title={`to ${nextPokemon.name.zh}`}
       >

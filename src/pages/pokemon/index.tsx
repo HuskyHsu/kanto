@@ -45,9 +45,9 @@ function PokemonDetail() {
         // Track custom event for Pokemon detail view
         trackCustomEvent('pokemon_detail_view', {
           pokemon_name: data.name.en,
-          pokemon_id: data.lumioseId,
-          pokemon_type_primary: data.type[0],
-          pokemon_type_secondary: data.type[1] || null,
+          pokemon_id: data.pid,
+          pokemon_type_primary: data.types[0],
+          pokemon_type_secondary: data.types[1] || null,
         });
       }
     } catch (err) {

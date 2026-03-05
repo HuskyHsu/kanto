@@ -17,7 +17,7 @@ import {
   FinalFormToggle,
   SearchFilter,
   ShinyToggle,
-  TypeFilter
+  TypeFilter,
 } from './components';
 
 function Home() {
@@ -50,7 +50,7 @@ function Home() {
       {/* <PageViewToggle /> */}
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
-      <div className='flex gap-4 mb-2'>
+      <div className='flex gap-4 mb-2 flex-wrap'>
         <ShinyToggle isShiny={isShiny} onToggle={toggleShiny} />
         <FinalFormToggle isFinalFormOnly={isFinalFormOnly} onToggle={toggleFinalFormOnly} />
         <AbilityToggle isShowAbility={isShowAbility} onToggle={toggleAbility} />
@@ -72,8 +72,10 @@ function Home() {
 function PageHeader() {
   return (
     <h1 className='flex items-center gap-2 text-3xl font-bold'>
-      <img src={`${import.meta.env.BASE_URL}images/logo.png`} className='w-16 h-16' />
-      <Link to={`/`} className='font-press-start text-xl'>Kanto Pokédex</Link>
+      <img src={`${import.meta.env.BASE_URL}images/logo.png`} className='w-20 h-20' />
+      <Link to={`/`} className='font-press-start text-xl'>
+        Kanto Pokédex
+      </Link>
       <ShareButton title='Kanto Pokédex' />
     </h1>
   );
@@ -128,7 +130,7 @@ const PokemonGrid = memo(function PokemonGrid({
   isShowAbility,
 }: PokemonGridProps) {
   return (
-    <div className='mt-12 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 justify-items-center gap-x-3 gap-y-16 text-slate-800 transition-all duration-200 ease-in-out'>
+    <div className='mt-6 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 justify-items-center gap-x-3 gap-y-6 text-slate-800 transition-all duration-200 ease-in-out'>
       {pokemonList
         .sort((a, b) => {
           return a.pid - b.pid;

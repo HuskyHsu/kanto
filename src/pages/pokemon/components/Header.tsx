@@ -8,12 +8,12 @@ interface PokemonHeaderProps {
 }
 
 export default function PokemonHeader({ pokemon }: PokemonHeaderProps) {
-  const primaryType = pokemon.type[0];
-  const secondaryType = pokemon.type[1] || pokemon.type[0];
+  const primaryType = pokemon.types[0];
+  const secondaryType = pokemon.types[1] || pokemon.types[0];
 
   const colorClasses = cn(
     FromClass[primaryType as keyof typeof FromClass],
-    ToClass[secondaryType as keyof typeof ToClass]
+    ToClass[secondaryType as keyof typeof ToClass],
   );
 
   return (
@@ -29,11 +29,11 @@ export default function PokemonHeader({ pokemon }: PokemonHeaderProps) {
         </div>
         <div className='flex justify-around'>
           <img
-            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
+            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.pid}.png`}
             alt={pokemon.name.zh}
           />
           <img
-            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}s.png`}
+            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.pid}s.png`}
             alt={pokemon.name.zh}
           />
         </div>

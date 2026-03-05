@@ -39,7 +39,7 @@ export function TypeWeakness({ pokemon }: TypeWeaknessProps) {
   return (
     <>
       <span className='text-sm text-gray-500'>Weakness Type:</span>
-      <Weakness types={pokemon.type} />
+      <Weakness types={pokemon.types} />
     </>
   );
 }

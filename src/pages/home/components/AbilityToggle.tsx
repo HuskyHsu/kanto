@@ -18,28 +18,29 @@ function AbilityToggle({ isShowAbility, onToggle }: AbilityToggleProps) {
   };
 
   return (
-    <div className='flex gap-2 items-center'>
+    <div className='flex gap-3 items-center font-press-start'>
       <div className='flex flex-col justify-center h-10'>
         <button
           type='button'
           onClick={handleToggle}
           className={cn(
-            'relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ease-in-out',
-            'focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
-            isShowAbility ? 'bg-green-600' : 'bg-slate-300',
+            'relative inline-flex h-6 w-10 items-center border-2 border-[#34925e] rounded-md',
+            'transition-colors duration-100 ease-linear cursor-pointer',
+            'focus:outline-none shadow-[2px_2px_0_0_rgba(52,146,94,0.3)]',
+            isShowAbility ? 'bg-[#34925e]' : 'bg-white',
           )}
           role='switch'
           aria-checked={isShowAbility}
         >
           <span
             className={cn(
-              'inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ease-in-out',
-              isShowAbility ? 'translate-x-6' : 'translate-x-1',
+              'inline-block h-[14px] w-[14px] transform transition-transform duration-100 ease-linear rounded-xs',
+              isShowAbility ? 'translate-x-[18px] bg-white' : 'translate-x-[4px] bg-[#34925e]',
             )}
           />
         </button>
       </div>
-      <span>特性</span>
+      <span className='text-[10px] text-slate-700 font-semibold leading-none'>Ability</span>
     </div>
   );
 }

@@ -65,17 +65,9 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
       title: 'Name(jp)',
       Content: ({ pokemon }: ContentProps) => <>{pokemon.name.ja}</>,
     },
-    ...(pokemon.altForm !== undefined
-      ? [
-          {
-            title: 'altForm',
-            Content: ({ pokemon }: ContentProps) => <>{pokemon.altForm}</>,
-          },
-        ]
-      : []),
     {
       title: 'Types',
-      Content: ({ pokemon }: ContentProps) => <PokemonTypes types={pokemon.type} />,
+      Content: ({ pokemon }: ContentProps) => <PokemonTypes types={pokemon.types} />,
     },
     {
       title: 'Gender Ratio',
@@ -102,41 +94,6 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
       title: 'Experience Group',
       Content: ({ pokemon }: ContentProps) => <>{pokemon.expGroup}</>,
     },
-    ...(pokemon.zone !== undefined
-      ? [
-          {
-            title: 'Wild Zone',
-            Content: ({ pokemon }: ContentProps) => (
-              <>
-                {pokemon.zone
-                  ?.map(
-                    (zone) =>
-                      `${zone.id}${zone.weather[0] === 'any' ? '' : `(${zone.weather.join(', ')})`}`,
-                  )
-                  .join('; ')}
-              </>
-            ),
-          },
-        ]
-      : []),
-    ...(pokemon.alphaZone !== undefined
-      ? [
-          {
-            title: 'Wild Zone(alpha)',
-            Content: ({ pokemon }: ContentProps) => <>{pokemon.alphaZone?.join('; ')}</>,
-          },
-        ]
-      : []),
-    ...(pokemon.distortions !== undefined
-      ? [
-          {
-            title: 'Hyperspace Distortions',
-            Content: ({ pokemon }: ContentProps) => (
-              <>{pokemon.distortions?.map((r) => `${r} ★ ⬆`).join('; ')}</>
-            ),
-          },
-        ]
-      : []),
   ];
 
   return (

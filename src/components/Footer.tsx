@@ -20,7 +20,7 @@ export const Footer = () => {
                 />
                 <span className='text-sm font-medium text-gray-700'>Kanto Pokédex</span>
               </div>
-              <span className='text-xs text-gray-500'>© 2025-2026</span>
+              <span className='text-xs text-gray-500'>© 2026</span>
             </div>
 
             {/* Center - Links */}

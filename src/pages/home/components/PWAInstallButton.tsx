@@ -56,10 +56,10 @@ export default function PWAInstallButton({ preloadPokemonImages = true }: PWAIns
         if (preloadPokemonImages && pokemonList.length > 0) {
           setIsPreloading(true);
           try {
-            const pokemonIds = pokemonList.map((pokemon) => pokemon.link);
+            const pokemonIds = pokemonList.map((pokemon) => String(pokemon.pid));
 
             console.log(
-              `Starting to preload ${pokemonIds.length} Pokemon images (normal + shiny)...`
+              `Starting to preload ${pokemonIds.length} Pokemon images (normal + shiny)...`,
             );
             await PWAImageCache.preloadPokemonImages(pokemonIds);
             console.log('Pokemon images preloaded successfully');
@@ -91,8 +91,8 @@ export default function PWAInstallButton({ preloadPokemonImages = true }: PWAIns
         isPreloading
           ? 'Preloading Pokemon images...'
           : isInstalling
-          ? 'Installing...'
-          : 'Install to Desktop'
+            ? 'Installing...'
+            : 'Install to Desktop'
       }
     >
       {isInstalling || isPreloading ? (
