@@ -1,0 +1,130 @@
+{
+  "pid": 268,
+  "name": {
+    "zh": "盾甲繭",
+    "ja": "マユルド",
+    "en": "Cascoon"
+  },
+  "types": [
+    "Bug"
+  ],
+  "eggGroups": [
+    "Bug"
+  ],
+  "abilities": [
+    {
+      "ja": "だっぴ",
+      "en": "Shed Skin",
+      "zh": "蛻皮"
+    }
+  ],
+  "base": [
+    50,
+    35,
+    55,
+    25,
+    25,
+    15
+  ],
+  "ev": [
+    0,
+    0,
+    2,
+    0,
+    0,
+    0
+  ],
+  "latest": false,
+  "genderRate": 4,
+  "evolution": {
+    "pid": 265,
+    "type": [
+      "Bug"
+    ],
+    "name": {
+      "zh": "刺尾蟲",
+      "ja": "ケムッソ",
+      "en": "Wurmple"
+    },
+    "to": [
+      {
+        "pid": 266,
+        "type": [
+          "Bug"
+        ],
+        "name": {
+          "zh": "甲殼繭",
+          "ja": "カラサリス",
+          "en": "Silcoon"
+        },
+        "to": [
+          {
+            "pid": 267,
+            "type": [
+              "Bug",
+              "Flying"
+            ],
+            "name": {
+              "zh": "狩獵鳳蝶",
+              "ja": "アゲハント",
+              "en": "Beautifly"
+            },
+            "level": 10,
+            "method": "LevelUp"
+          }
+        ],
+        "level": 7,
+        "method": "LevelUp"
+      },
+      {
+        "pid": 268,
+        "type": [
+          "Bug"
+        ],
+        "name": {
+          "zh": "盾甲繭",
+          "ja": "マユルド",
+          "en": "Cascoon"
+        },
+        "to": [
+          {
+            "pid": 269,
+            "type": [
+              "Bug",
+              "Poison"
+            ],
+            "name": {
+              "zh": "毒粉蛾",
+              "ja": "ドクケイル",
+              "en": "Dustox"
+            },
+            "level": 10,
+            "method": "LevelUp"
+          }
+        ],
+        "level": 7,
+        "method": "LevelUp"
+      }
+    ]
+  },
+  "levelUpMoves": [
+    {
+      "id": 106,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "かたくなる",
+        "en": "Harden",
+        "zh": "變硬"
+      },
+      "level": 1
+    }
+  ],
+  "TMMoves": [],
+  "HTMMoves": [],
+  "eggMoves": [],
+  "tutorMoves": []
+}

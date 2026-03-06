@@ -106,4 +106,4 @@ export interface ExpandedMoveData {
   alphaPm?: MinimalPokemon[];
 }
 
-export type Pokedex = 'kanto' | 'hyperspace' | 'national';
+export type Pokedex = 'kanto' | 'johto' | 'hoenn';

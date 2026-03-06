@@ -51,8 +51,10 @@ export function usePokemonFilter(pokemonList: PokemonList) {
   const pokedexMatches = useCallback((pokemon: Pokemon, pokedex: Pokedex) => {
     if (pokedex === 'kanto') {
       return pokemon.pid <= 151;
-    } else if (pokedex === 'national') {
-      return true;
+    } else if (pokedex === 'johto') {
+      return pokemon.pid >= 152 && pokemon.pid <= 251;
+    } else if (pokedex === 'hoenn') {
+      return pokemon.pid >= 252 && pokemon.pid <= 386;
     }
     return true;
   }, []);
@@ -134,26 +136,14 @@ export function usePokemonFilter(pokemonList: PokemonList) {
 
   const memoizedSetSelectedPokedex = useCallback(
     (Pokedex: Pokedex) => {
-      if (Pokedex === 'hyperspace' || Pokedex === 'national') {
-        // Use a single setSearchParams call to update all parameters at once
-        setSearchParams((prev) => {
-          const newParams = new URLSearchParams(prev);
-          newParams.set('Pokedex', Pokedex);
-          newParams.delete('zone');
-          newParams.delete('alphaZone');
-          return newParams;
-        });
-      } else {
-        // Clear hyperspace specific params when switching back to kanto
-        setSearchParams((prev) => {
-          const newParams = new URLSearchParams(prev);
-          newParams.set('Pokedex', 'kanto');
-          return newParams;
-        });
-      }
+      setSearchParams((prev) => {
+        const newParams = new URLSearchParams(prev);
+        newParams.set('Pokedex', Pokedex);
+        return newParams;
+      });
     },
 
-    [setParam, setSearchParams],
+    [setSearchParams],
   );
 
   const memoizedSetSelectedEVStat = useCallback(

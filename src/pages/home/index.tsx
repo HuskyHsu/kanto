@@ -14,6 +14,7 @@ import {
   EVFilter,
   EVToggle,
   FinalFormToggle,
+  PokedexToggle,
   SearchFilter,
   ShinyToggle,
   TypeFilter,
@@ -28,8 +29,8 @@ function Home() {
     setSearchKeyword,
     isFinalFormOnly,
     toggleFinalFormOnly,
-    // selectedPokedex,
-    // setSelectedPokedex,
+    selectedPokedex,
+    setSelectedPokedex,
     filteredPokemonList,
     selectedEVStat,
     setSelectedEVStat,
@@ -47,6 +48,7 @@ function Home() {
       <PageHeader />
       {/* <PWAInstallButton /> */}
       {/* <PageViewToggle /> */}
+      <PokedexToggle selectedPokedex={selectedPokedex} onPokedexChange={setSelectedPokedex} />
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
       <div className='flex gap-y-0 gap-x-4 mb-2 flex-wrap'>

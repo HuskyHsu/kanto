@@ -1,0 +1,781 @@
+{
+  "pid": 254,
+  "name": {
+    "zh": "蜥蜴王",
+    "ja": "ジュカイン",
+    "en": "Sceptile"
+  },
+  "types": [
+    "Grass"
+  ],
+  "eggGroups": [
+    "Monster",
+    "Dragon"
+  ],
+  "abilities": [
+    {
+      "ja": "しんりょく",
+      "en": "Overgrow",
+      "zh": "茂盛"
+    }
+  ],
+  "base": [
+    70,
+    85,
+    65,
+    105,
+    85,
+    120
+  ],
+  "ev": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    3
+  ],
+  "latest": true,
+  "genderRate": 1,
+  "evolution": {
+    "pid": 252,
+    "type": [
+      "Grass"
+    ],
+    "name": {
+      "zh": "木守宮",
+      "ja": "キモリ",
+      "en": "Treecko"
+    },
+    "to": [
+      {
+        "pid": 253,
+        "type": [
+          "Grass"
+        ],
+        "name": {
+          "zh": "森林蜥蜴",
+          "ja": "ジュプトル",
+          "en": "Grovyle"
+        },
+        "to": [
+          {
+            "pid": 254,
+            "type": [
+              "Grass"
+            ],
+            "name": {
+              "zh": "蜥蜴王",
+              "ja": "ジュカイン",
+              "en": "Sceptile"
+            },
+            "level": 36,
+            "method": "LevelUp"
+          }
+        ],
+        "level": 16,
+        "method": "LevelUp"
+      }
+    ]
+  },
+  "levelUpMoves": [
+    {
+      "id": 1,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "はたく",
+        "en": "Pound",
+        "zh": "拍擊"
+      },
+      "level": 1
+    },
+    {
+      "id": 43,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "にらみつける",
+        "en": "Leer",
+        "zh": "瞪眼"
+      },
+      "level": 1
+    },
+    {
+      "id": 71,
+      "type": "Grass",
+      "category": "Special",
+      "power": 20,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "すいとる",
+        "en": "Absorb",
+        "zh": "吸取"
+      },
+      "level": 1
+    },
+    {
+      "id": 98,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "でんこうせっか",
+        "en": "Quick Attack",
+        "zh": "電光一閃"
+      },
+      "level": 1
+    },
+    {
+      "id": 210,
+      "type": "Bug",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 95,
+      "pp": 20,
+      "name": {
+        "ja": "れんぞくぎり",
+        "en": "Fury Cutter",
+        "zh": "連斬"
+      },
+      "level": 16
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      },
+      "level": 17
+    },
+    {
+      "id": 103,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "name": {
+        "ja": "いやなおと",
+        "en": "Screech",
+        "zh": "刺耳聲"
+      },
+      "level": 23
+    },
+    {
+      "id": 348,
+      "type": "Grass",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "リーフブレード",
+        "en": "Leaf Blade",
+        "zh": "葉刃"
+      },
+      "level": 29
+    },
+    {
+      "id": 97,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "こうそくいどう",
+        "en": "Agility",
+        "zh": "高速移動"
+      },
+      "level": 35
+    },
+    {
+      "id": 21,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 75,
+      "pp": 20,
+      "name": {
+        "ja": "たたきつける",
+        "en": "Slam",
+        "zh": "摔打"
+      },
+      "level": 43
+    },
+    {
+      "id": 197,
+      "type": "Fighting",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "みきり",
+        "en": "Detect",
+        "zh": "看穿"
+      },
+      "level": 51
+    },
+    {
+      "id": 206,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "みねうち",
+        "en": "False Swipe",
+        "zh": "點到為止"
+      },
+      "level": 59
+    }
+  ],
+  "TMMoves": [
+    {
+      "tm": "01",
+      "id": 264,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 150,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "きあいパンチ",
+        "en": "Focus Punch",
+        "zh": "真氣拳"
+      }
+    },
+    {
+      "tm": "02",
+      "id": 337,
+      "type": "Dragon",
+      "category": "Special",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "ドラゴンクロー",
+        "en": "Dragon Claw",
+        "zh": "龍爪"
+      }
+    },
+    {
+      "tm": "05",
+      "id": 46,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ほえる",
+        "en": "Roar",
+        "zh": "吼叫"
+      }
+    },
+    {
+      "tm": "06",
+      "id": 92,
+      "type": "Poison",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "どくどく",
+        "en": "Toxic",
+        "zh": "劇毒"
+      }
+    },
+    {
+      "tm": "09",
+      "id": 331,
+      "type": "Grass",
+      "category": "Special",
+      "power": 25,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "タネマシンガン",
+        "en": "Bullet Seed",
+        "zh": "種子機關槍"
+      }
+    },
+    {
+      "tm": "10",
+      "id": 237,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "めざめるパワー",
+        "en": "Hidden Power",
+        "zh": "覺醒力量"
+      }
+    },
+    {
+      "tm": "11",
+      "id": 241,
+      "type": "Fire",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "にほんばれ",
+        "en": "Sunny Day",
+        "zh": "大晴天"
+      }
+    },
+    {
+      "tm": "15",
+      "id": 63,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 150,
+      "accuracy": 90,
+      "pp": 5,
+      "name": {
+        "ja": "はかいこうせん",
+        "en": "Hyper Beam",
+        "zh": "破壞光線"
+      }
+    },
+    {
+      "tm": "17",
+      "id": 182,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "まもる",
+        "en": "Protect",
+        "zh": "守住"
+      }
+    },
+    {
+      "tm": "19",
+      "id": 202,
+      "type": "Grass",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ギガドレイン",
+        "en": "Giga Drain",
+        "zh": "終極吸取"
+      }
+    },
+    {
+      "tm": "20",
+      "id": 219,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 25,
+      "name": {
+        "ja": "しんぴのまもり",
+        "en": "Safeguard",
+        "zh": "神秘守護"
+      }
+    },
+    {
+      "tm": "21",
+      "id": 218,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "やつあたり",
+        "en": "Frustration",
+        "zh": "遷怒"
+      }
+    },
+    {
+      "tm": "22",
+      "id": 76,
+      "type": "Grass",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ソーラービーム",
+        "en": "Solar Beam",
+        "zh": "日光束"
+      }
+    },
+    {
+      "tm": "23",
+      "id": 231,
+      "type": "Steel",
+      "category": "Physical",
+      "power": 100,
+      "accuracy": 75,
+      "pp": 15,
+      "name": {
+        "ja": "アイアンテール",
+        "en": "Iron Tail",
+        "zh": "鐵尾"
+      }
+    },
+    {
+      "tm": "26",
+      "id": 89,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 100,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "じしん",
+        "en": "Earthquake",
+        "zh": "地震"
+      }
+    },
+    {
+      "tm": "27",
+      "id": 216,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おんがえし",
+        "en": "Return",
+        "zh": "報恩"
+      }
+    },
+    {
+      "tm": "28",
+      "id": 91,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あなをほる",
+        "en": "Dig",
+        "zh": "挖洞"
+      }
+    },
+    {
+      "tm": "31",
+      "id": 280,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かわらわり",
+        "en": "Brick Break",
+        "zh": "劈瓦"
+      }
+    },
+    {
+      "tm": "32",
+      "id": 104,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "かげぶんしん",
+        "en": "Double Team",
+        "zh": "影子分身"
+      }
+    },
+    {
+      "tm": "39",
+      "id": 317,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 95,
+      "pp": 15,
+      "name": {
+        "ja": "がんせきふうじ",
+        "en": "Rock Tomb",
+        "zh": "岩石封鎖"
+      }
+    },
+    {
+      "tm": "40",
+      "id": 332,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "つばめがえし",
+        "en": "Aerial Ace",
+        "zh": "燕返"
+      }
+    },
+    {
+      "tm": "42",
+      "id": 263,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "からげんき",
+        "en": "Facade",
+        "zh": "硬撐"
+      }
+    },
+    {
+      "tm": "43",
+      "id": 290,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ひみつのちから",
+        "en": "Secret Power",
+        "zh": "秘密之力"
+      }
+    },
+    {
+      "tm": "44",
+      "id": 156,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ねむる",
+        "en": "Rest",
+        "zh": "睡覺"
+      }
+    },
+    {
+      "tm": "45",
+      "id": 213,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "メロメロ",
+        "en": "Attract",
+        "zh": "迷人"
+      }
+    }
+  ],
+  "HTMMoves": [
+    {
+      "tm": "秘傳01",
+      "id": 15,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 95,
+      "pp": 30,
+      "name": {
+        "ja": "いあいぎり",
+        "en": "Cut",
+        "zh": "居合斬"
+      }
+    },
+    {
+      "tm": "秘傳04",
+      "id": 70,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かいりき",
+        "en": "Strength",
+        "zh": "怪力"
+      }
+    },
+    {
+      "tm": "秘傳05",
+      "id": 148,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "フラッシュ",
+        "en": "Flash",
+        "zh": "閃光"
+      }
+    },
+    {
+      "tm": "秘傳06",
+      "id": 249,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "いわくだき",
+        "en": "Rock Smash",
+        "zh": "碎岩"
+      }
+    }
+  ],
+  "eggMoves": [],
+  "tutorMoves": [
+    {
+      "id": 5,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 85,
+      "pp": 20,
+      "name": {
+        "ja": "メガトンパンチ",
+        "en": "Mega Punch",
+        "zh": "百萬噸重拳"
+      }
+    },
+    {
+      "id": 14,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "つるぎのまい",
+        "en": "Swords Dance",
+        "zh": "劍舞"
+      }
+    },
+    {
+      "id": 25,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 75,
+      "pp": 5,
+      "name": {
+        "ja": "メガトンキック",
+        "en": "Mega Kick",
+        "zh": "百萬噸重踢"
+      }
+    },
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      }
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      }
+    },
+    {
+      "id": 68,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "カウンター",
+        "en": "Counter",
+        "zh": "雙倍奉還"
+      }
+    },
+    {
+      "id": 69,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ちきゅうなげ",
+        "en": "Seismic Toss",
+        "zh": "地球上投"
+      }
+    },
+    {
+      "id": 102,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ものまね",
+        "en": "Mimic",
+        "zh": "模仿"
+      }
+    },
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    }
+  ]
+}

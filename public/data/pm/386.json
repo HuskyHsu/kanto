@@ -1,0 +1,45 @@
+{
+  "pid": 386,
+  "name": {
+    "zh": "代歐奇希斯",
+    "ja": "デオキシス",
+    "en": "Deoxys"
+  },
+  "types": [
+    "Psychic"
+  ],
+  "eggGroups": [
+    "No-eggs"
+  ],
+  "abilities": [
+    {
+      "ja": "プレッシャー",
+      "en": "Pressure",
+      "zh": "壓迫感"
+    }
+  ],
+  "base": [
+    50,
+    150,
+    50,
+    150,
+    50,
+    150
+  ],
+  "ev": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "latest": true,
+  "genderRate": -1,
+  "evolution": null,
+  "levelUpMoves": [],
+  "TMMoves": [],
+  "HTMMoves": [],
+  "eggMoves": [],
+  "tutorMoves": []
+}

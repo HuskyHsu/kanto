@@ -1,0 +1,636 @@
+{
+  "pid": 229,
+  "name": {
+    "zh": "黑魯加",
+    "ja": "ヘルガー",
+    "en": "Houndoom"
+  },
+  "types": [
+    "Dark",
+    "Fire"
+  ],
+  "eggGroups": [
+    "Ground"
+  ],
+  "abilities": [
+    {
+      "ja": "はやおき",
+      "en": "Early Bird",
+      "zh": "早起"
+    },
+    {
+      "ja": "もらいび",
+      "en": "Flash Fire",
+      "zh": "引火"
+    }
+  ],
+  "base": [
+    75,
+    90,
+    50,
+    110,
+    80,
+    95
+  ],
+  "ev": [
+    0,
+    0,
+    0,
+    2,
+    0,
+    0
+  ],
+  "latest": true,
+  "genderRate": 4,
+  "evolution": {
+    "pid": 228,
+    "type": [
+      "Dark",
+      "Fire"
+    ],
+    "name": {
+      "zh": "戴魯比",
+      "ja": "デルビル",
+      "en": "Houndour"
+    },
+    "to": [
+      {
+        "pid": 229,
+        "type": [
+          "Dark",
+          "Fire"
+        ],
+        "name": {
+          "zh": "黑魯加",
+          "ja": "ヘルガー",
+          "en": "Houndoom"
+        },
+        "level": 24,
+        "method": "LevelUp"
+      }
+    ]
+  },
+  "levelUpMoves": [
+    {
+      "id": 43,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "にらみつける",
+        "en": "Leer",
+        "zh": "瞪眼"
+      },
+      "level": 1
+    },
+    {
+      "id": 52,
+      "type": "Fire",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "ひのこ",
+        "en": "Ember",
+        "zh": "火花"
+      },
+      "level": 1
+    },
+    {
+      "id": 336,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "とおぼえ",
+        "en": "Howl",
+        "zh": "長嚎"
+      },
+      "level": 1
+    },
+    {
+      "id": 123,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 30,
+      "accuracy": 70,
+      "pp": 20,
+      "name": {
+        "ja": "スモッグ",
+        "en": "Smog",
+        "zh": "濁霧"
+      },
+      "level": 13
+    },
+    {
+      "id": 46,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ほえる",
+        "en": "Roar",
+        "zh": "吼叫"
+      },
+      "level": 19
+    },
+    {
+      "id": 44,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "かみつく",
+        "en": "Bite",
+        "zh": "咬住"
+      },
+      "level": 27
+    },
+    {
+      "id": 316,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "かぎわける",
+        "en": "Odor Sleuth",
+        "zh": "氣味偵測"
+      },
+      "level": 35
+    },
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      },
+      "level": 43
+    },
+    {
+      "id": 53,
+      "type": "Fire",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かえんほうしゃ",
+        "en": "Flamethrower",
+        "zh": "噴射火焰"
+      },
+      "level": 51
+    },
+    {
+      "id": 242,
+      "type": "Dark",
+      "category": "Special",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かみくだく",
+        "en": "Crunch",
+        "zh": "咬碎"
+      },
+      "level": 59
+    }
+  ],
+  "TMMoves": [
+    {
+      "tm": "06",
+      "id": 92,
+      "type": "Poison",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "どくどく",
+        "en": "Toxic",
+        "zh": "劇毒"
+      }
+    },
+    {
+      "tm": "10",
+      "id": 237,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "めざめるパワー",
+        "en": "Hidden Power",
+        "zh": "覺醒力量"
+      }
+    },
+    {
+      "tm": "11",
+      "id": 241,
+      "type": "Fire",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "にほんばれ",
+        "en": "Sunny Day",
+        "zh": "大晴天"
+      }
+    },
+    {
+      "tm": "12",
+      "id": 269,
+      "type": "Dark",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ちょうはつ",
+        "en": "Taunt",
+        "zh": "挑釁"
+      }
+    },
+    {
+      "tm": "15",
+      "id": 63,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 150,
+      "accuracy": 90,
+      "pp": 5,
+      "name": {
+        "ja": "はかいこうせん",
+        "en": "Hyper Beam",
+        "zh": "破壞光線"
+      }
+    },
+    {
+      "tm": "17",
+      "id": 182,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "まもる",
+        "en": "Protect",
+        "zh": "守住"
+      }
+    },
+    {
+      "tm": "21",
+      "id": 218,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "やつあたり",
+        "en": "Frustration",
+        "zh": "遷怒"
+      }
+    },
+    {
+      "tm": "22",
+      "id": 76,
+      "type": "Grass",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ソーラービーム",
+        "en": "Solar Beam",
+        "zh": "日光束"
+      }
+    },
+    {
+      "tm": "23",
+      "id": 231,
+      "type": "Steel",
+      "category": "Physical",
+      "power": 100,
+      "accuracy": 75,
+      "pp": 15,
+      "name": {
+        "ja": "アイアンテール",
+        "en": "Iron Tail",
+        "zh": "鐵尾"
+      }
+    },
+    {
+      "tm": "27",
+      "id": 216,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おんがえし",
+        "en": "Return",
+        "zh": "報恩"
+      }
+    },
+    {
+      "tm": "30",
+      "id": 247,
+      "type": "Ghost",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "シャドーボール",
+        "en": "Shadow Ball",
+        "zh": "暗影球"
+      }
+    },
+    {
+      "tm": "32",
+      "id": 104,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "かげぶんしん",
+        "en": "Double Team",
+        "zh": "影子分身"
+      }
+    },
+    {
+      "tm": "36",
+      "id": 188,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ヘドロばくだん",
+        "en": "Sludge Bomb",
+        "zh": "污泥炸彈"
+      }
+    },
+    {
+      "tm": "38",
+      "id": 126,
+      "type": "Fire",
+      "category": "Special",
+      "power": 110,
+      "accuracy": 85,
+      "pp": 5,
+      "name": {
+        "ja": "だいもんじ",
+        "en": "Fire Blast",
+        "zh": "大字爆炎"
+      }
+    },
+    {
+      "tm": "41",
+      "id": 259,
+      "type": "Dark",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "いちゃもん",
+        "en": "Torment",
+        "zh": "無理取鬧"
+      }
+    },
+    {
+      "tm": "42",
+      "id": 263,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "からげんき",
+        "en": "Facade",
+        "zh": "硬撐"
+      }
+    },
+    {
+      "tm": "43",
+      "id": 290,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ひみつのちから",
+        "en": "Secret Power",
+        "zh": "秘密之力"
+      }
+    },
+    {
+      "tm": "44",
+      "id": 156,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ねむる",
+        "en": "Rest",
+        "zh": "睡覺"
+      }
+    },
+    {
+      "tm": "45",
+      "id": 213,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "メロメロ",
+        "en": "Attract",
+        "zh": "迷人"
+      }
+    },
+    {
+      "tm": "46",
+      "id": 168,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "どろぼう",
+        "en": "Thief",
+        "zh": "小偷"
+      }
+    },
+    {
+      "tm": "49",
+      "id": 289,
+      "type": "Dark",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "よこどり",
+        "en": "Snatch",
+        "zh": "搶奪"
+      }
+    },
+    {
+      "tm": "50",
+      "id": 315,
+      "type": "Fire",
+      "category": "Special",
+      "power": 130,
+      "accuracy": 90,
+      "pp": 5,
+      "name": {
+        "ja": "オーバーヒート",
+        "en": "Overheat",
+        "zh": "過熱"
+      }
+    }
+  ],
+  "HTMMoves": [
+    {
+      "tm": "秘傳04",
+      "id": 70,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かいりき",
+        "en": "Strength",
+        "zh": "怪力"
+      }
+    },
+    {
+      "tm": "秘傳06",
+      "id": 249,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "いわくだき",
+        "en": "Rock Smash",
+        "zh": "碎岩"
+      }
+    }
+  ],
+  "eggMoves": [],
+  "tutorMoves": [
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      }
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      }
+    },
+    {
+      "id": 68,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "カウンター",
+        "en": "Counter",
+        "zh": "雙倍奉還"
+      }
+    },
+    {
+      "id": 102,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ものまね",
+        "en": "Mimic",
+        "zh": "模仿"
+      }
+    },
+    {
+      "id": 138,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 100,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "ゆめくい",
+        "en": "Dream Eater",
+        "zh": "食夢"
+      }
+    },
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    }
+  ]
+}

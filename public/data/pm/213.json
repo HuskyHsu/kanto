@@ -1,0 +1,484 @@
+{
+  "pid": 213,
+  "name": {
+    "zh": "壺壺",
+    "ja": "ツボツボ",
+    "en": "Shuckle"
+  },
+  "types": [
+    "Bug",
+    "Rock"
+  ],
+  "eggGroups": [
+    "Bug"
+  ],
+  "abilities": [
+    {
+      "ja": "がんじょう",
+      "en": "Sturdy",
+      "zh": "結實"
+    },
+    {
+      "ja": "くいしんぼう",
+      "en": "Gluttony",
+      "zh": "貪吃鬼"
+    }
+  ],
+  "base": [
+    20,
+    10,
+    230,
+    10,
+    230,
+    5
+  ],
+  "ev": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    0
+  ],
+  "latest": true,
+  "genderRate": 4,
+  "evolution": null,
+  "levelUpMoves": [
+    {
+      "id": 110,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "からにこもる",
+        "en": "Withdraw",
+        "zh": "縮入殼中"
+      },
+      "level": 1
+    },
+    {
+      "id": 132,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 10,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "からみつく",
+        "en": "Constrict",
+        "zh": "纏繞"
+      },
+      "level": 1
+    },
+    {
+      "id": 35,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 15,
+      "accuracy": 90,
+      "pp": 20,
+      "name": {
+        "ja": "まきつく",
+        "en": "Wrap",
+        "zh": "緊束"
+      },
+      "level": 9
+    },
+    {
+      "id": 227,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "アンコール",
+        "en": "Encore",
+        "zh": "再來一次"
+      },
+      "level": 14
+    },
+    {
+      "id": 219,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 25,
+      "name": {
+        "ja": "しんぴのまもり",
+        "en": "Safeguard",
+        "zh": "神秘守護"
+      },
+      "level": 23
+    },
+    {
+      "id": 117,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "がまん",
+        "en": "Bide",
+        "zh": "忍耐"
+      },
+      "level": 28
+    },
+    {
+      "id": 156,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ねむる",
+        "en": "Rest",
+        "zh": "睡覺"
+      },
+      "level": 37
+    }
+  ],
+  "TMMoves": [
+    {
+      "tm": "06",
+      "id": 92,
+      "type": "Poison",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "どくどく",
+        "en": "Toxic",
+        "zh": "劇毒"
+      }
+    },
+    {
+      "tm": "10",
+      "id": 237,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "めざめるパワー",
+        "en": "Hidden Power",
+        "zh": "覺醒力量"
+      }
+    },
+    {
+      "tm": "11",
+      "id": 241,
+      "type": "Fire",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "にほんばれ",
+        "en": "Sunny Day",
+        "zh": "大晴天"
+      }
+    },
+    {
+      "tm": "17",
+      "id": 182,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "まもる",
+        "en": "Protect",
+        "zh": "守住"
+      }
+    },
+    {
+      "tm": "21",
+      "id": 218,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "やつあたり",
+        "en": "Frustration",
+        "zh": "遷怒"
+      }
+    },
+    {
+      "tm": "26",
+      "id": 89,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 100,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "じしん",
+        "en": "Earthquake",
+        "zh": "地震"
+      }
+    },
+    {
+      "tm": "27",
+      "id": 216,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おんがえし",
+        "en": "Return",
+        "zh": "報恩"
+      }
+    },
+    {
+      "tm": "28",
+      "id": 91,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あなをほる",
+        "en": "Dig",
+        "zh": "挖洞"
+      }
+    },
+    {
+      "tm": "32",
+      "id": 104,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "かげぶんしん",
+        "en": "Double Team",
+        "zh": "影子分身"
+      }
+    },
+    {
+      "tm": "36",
+      "id": 188,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ヘドロばくだん",
+        "en": "Sludge Bomb",
+        "zh": "污泥炸彈"
+      }
+    },
+    {
+      "tm": "37",
+      "id": 201,
+      "type": "Rock",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "すなあらし",
+        "en": "Sandstorm",
+        "zh": "沙暴"
+      }
+    },
+    {
+      "tm": "39",
+      "id": 317,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 95,
+      "pp": 15,
+      "name": {
+        "ja": "がんせきふうじ",
+        "en": "Rock Tomb",
+        "zh": "岩石封鎖"
+      }
+    },
+    {
+      "tm": "42",
+      "id": 263,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "からげんき",
+        "en": "Facade",
+        "zh": "硬撐"
+      }
+    },
+    {
+      "tm": "43",
+      "id": 290,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ひみつのちから",
+        "en": "Secret Power",
+        "zh": "秘密之力"
+      }
+    },
+    {
+      "tm": "45",
+      "id": 213,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "メロメロ",
+        "en": "Attract",
+        "zh": "迷人"
+      }
+    }
+  ],
+  "HTMMoves": [
+    {
+      "tm": "秘傳04",
+      "id": 70,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かいりき",
+        "en": "Strength",
+        "zh": "怪力"
+      }
+    },
+    {
+      "tm": "秘傳05",
+      "id": 148,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "フラッシュ",
+        "en": "Flash",
+        "zh": "閃光"
+      }
+    },
+    {
+      "tm": "秘傳06",
+      "id": 249,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "いわくだき",
+        "en": "Rock Smash",
+        "zh": "碎岩"
+      }
+    }
+  ],
+  "eggMoves": [
+    {
+      "id": 230,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまいかおり",
+        "en": "Sweet Scent",
+        "zh": "甜甜香氣"
+      }
+    }
+  ],
+  "tutorMoves": [
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      }
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      }
+    },
+    {
+      "id": 102,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ものまね",
+        "en": "Mimic",
+        "zh": "模仿"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    }
+  ]
+}

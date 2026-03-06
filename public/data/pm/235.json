@@ -1,0 +1,65 @@
+{
+  "pid": 235,
+  "name": {
+    "zh": "圖圖犬",
+    "ja": "ドーブル",
+    "en": "Smeargle"
+  },
+  "types": [
+    "Normal"
+  ],
+  "eggGroups": [
+    "Ground"
+  ],
+  "abilities": [
+    {
+      "ja": "マイペース",
+      "en": "Own Tempo",
+      "zh": "我行我素"
+    },
+    {
+      "ja": "テクニシャン",
+      "en": "Technician",
+      "zh": "技術高手"
+    }
+  ],
+  "base": [
+    55,
+    20,
+    35,
+    20,
+    45,
+    75
+  ],
+  "ev": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "latest": true,
+  "genderRate": 4,
+  "evolution": null,
+  "levelUpMoves": [
+    {
+      "id": 166,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 1,
+      "name": {
+        "ja": "スケッチ",
+        "en": "Sketch",
+        "zh": "寫生"
+      },
+      "level": 1
+    }
+  ],
+  "TMMoves": [],
+  "HTMMoves": [],
+  "eggMoves": [],
+  "tutorMoves": []
+}

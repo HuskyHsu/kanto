@@ -5130,5 +5130,7740 @@
       0
     ],
     "latest": true
+  },
+  {
+    "pid": 153,
+    "name": {
+      "zh": "月桂葉",
+      "ja": "ベイリーフ",
+      "en": "Bayleef"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "しんりょく",
+        "en": "Overgrow",
+        "zh": "茂盛"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 154,
+    "name": {
+      "zh": "大竺葵",
+      "ja": "メガニウム",
+      "en": "Meganium"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "しんりょく",
+        "en": "Overgrow",
+        "zh": "茂盛"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 155,
+    "name": {
+      "zh": "火球鼠",
+      "ja": "ヒノアラシ",
+      "en": "Cyndaquil"
+    },
+    "types": [
+      "Fire"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "もうか",
+        "en": "Blaze",
+        "zh": "猛火"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 156,
+    "name": {
+      "zh": "火岩鼠",
+      "ja": "マグマラシ",
+      "en": "Quilava"
+    },
+    "types": [
+      "Fire"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "もうか",
+        "en": "Blaze",
+        "zh": "猛火"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 157,
+    "name": {
+      "zh": "火爆獸",
+      "ja": "バクフーン",
+      "en": "Typhlosion"
+    },
+    "types": [
+      "Fire"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "もうか",
+        "en": "Blaze",
+        "zh": "猛火"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 158,
+    "name": {
+      "zh": "小鋸鱷",
+      "ja": "ワニノコ",
+      "en": "Totodile"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "げきりゅう",
+        "en": "Torrent",
+        "zh": "激流"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 159,
+    "name": {
+      "zh": "藍鱷",
+      "ja": "アリゲイツ",
+      "en": "Croconaw"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "げきりゅう",
+        "en": "Torrent",
+        "zh": "激流"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 160,
+    "name": {
+      "zh": "大力鱷",
+      "ja": "オーダイル",
+      "en": "Feraligatr"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "げきりゅう",
+        "en": "Torrent",
+        "zh": "激流"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 161,
+    "name": {
+      "zh": "尾立",
+      "ja": "オタチ",
+      "en": "Sentret"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "にげあし",
+        "en": "Run Away",
+        "zh": "逃跑"
+      },
+      {
+        "ja": "するどいめ",
+        "en": "Keen Eye",
+        "zh": "銳利目光"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 162,
+    "name": {
+      "zh": "大尾立",
+      "ja": "オオタチ",
+      "en": "Furret"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "にげあし",
+        "en": "Run Away",
+        "zh": "逃跑"
+      },
+      {
+        "ja": "するどいめ",
+        "en": "Keen Eye",
+        "zh": "銳利目光"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": true
+  },
+  {
+    "pid": 163,
+    "name": {
+      "zh": "咕咕",
+      "ja": "ホーホー",
+      "en": "Hoothoot"
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "ふみん",
+        "en": "Insomnia",
+        "zh": "不眠"
+      },
+      {
+        "ja": "するどいめ",
+        "en": "Keen Eye",
+        "zh": "銳利目光"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 164,
+    "name": {
+      "zh": "貓頭夜鷹",
+      "ja": "ヨルノズク",
+      "en": "Noctowl"
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "ふみん",
+        "en": "Insomnia",
+        "zh": "不眠"
+      },
+      {
+        "ja": "するどいめ",
+        "en": "Keen Eye",
+        "zh": "銳利目光"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 165,
+    "name": {
+      "zh": "芭瓢蟲",
+      "ja": "レディバ",
+      "en": "Ledyba"
+    },
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "むしのしらせ",
+        "en": "Swarm",
+        "zh": "蟲之預感"
+      },
+      {
+        "ja": "はやおき",
+        "en": "Early Bird",
+        "zh": "早起"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 166,
+    "name": {
+      "zh": "安瓢蟲",
+      "ja": "レディアン",
+      "en": "Ledian"
+    },
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "むしのしらせ",
+        "en": "Swarm",
+        "zh": "蟲之預感"
+      },
+      {
+        "ja": "はやおき",
+        "en": "Early Bird",
+        "zh": "早起"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 167,
+    "name": {
+      "zh": "圓絲蛛",
+      "ja": "イトマル",
+      "en": "Spinarak"
+    },
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "むしのしらせ",
+        "en": "Swarm",
+        "zh": "蟲之預感"
+      },
+      {
+        "ja": "ふみん",
+        "en": "Insomnia",
+        "zh": "不眠"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 168,
+    "name": {
+      "zh": "阿利多斯",
+      "ja": "アリアドス",
+      "en": "Ariados"
+    },
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "むしのしらせ",
+        "en": "Swarm",
+        "zh": "蟲之預感"
+      },
+      {
+        "ja": "ふみん",
+        "en": "Insomnia",
+        "zh": "不眠"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 169,
+    "name": {
+      "zh": "叉字蝠",
+      "ja": "クロバット",
+      "en": "Crobat"
+    },
+    "types": [
+      "Poison",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "せいしんりょく",
+        "en": "Inner Focus",
+        "zh": "精神力"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ],
+    "latest": true
+  },
+  {
+    "pid": 170,
+    "name": {
+      "zh": "燈籠魚",
+      "ja": "チョンチー",
+      "en": "Chinchou"
+    },
+    "types": [
+      "Water",
+      "Electric"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "ちくでん",
+        "en": "Volt Absorb",
+        "zh": "蓄電"
+      },
+      {
+        "ja": "はっこう",
+        "en": "Illuminate",
+        "zh": "發光"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 171,
+    "name": {
+      "zh": "電燈怪",
+      "ja": "ランターン",
+      "en": "Lanturn"
+    },
+    "types": [
+      "Water",
+      "Electric"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "ちくでん",
+        "en": "Volt Absorb",
+        "zh": "蓄電"
+      },
+      {
+        "ja": "はっこう",
+        "en": "Illuminate",
+        "zh": "發光"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 172,
+    "name": {
+      "zh": "皮丘",
+      "ja": "ピチュー",
+      "en": "Pichu"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "せいでんき",
+        "en": "Static",
+        "zh": "靜電"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 173,
+    "name": {
+      "zh": "皮寶寶",
+      "ja": "ピィ",
+      "en": "Cleffa"
+    },
+    "types": [
+      "Fairy"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "メロメロボディ",
+        "en": "Cute Charm",
+        "zh": "迷人之軀"
+      },
+      {
+        "ja": "マジックガード",
+        "en": "Magic Guard",
+        "zh": "魔法防守"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 174,
+    "name": {
+      "zh": "寶寶丁",
+      "ja": "ププリン",
+      "en": "Igglybuff"
+    },
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "メロメロボディ",
+        "en": "Cute Charm",
+        "zh": "迷人之軀"
+      },
+      {
+        "ja": "かちき",
+        "en": "Competitive",
+        "zh": "好勝"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 175,
+    "name": {
+      "zh": "波克比",
+      "ja": "トゲピー",
+      "en": "Togepi"
+    },
+    "types": [
+      "Fairy"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "はりきり",
+        "en": "Hustle",
+        "zh": "活力"
+      },
+      {
+        "ja": "てんのめぐみ",
+        "en": "Serene Grace",
+        "zh": "天恩"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 176,
+    "name": {
+      "zh": "波克基古",
+      "ja": "トゲチック",
+      "en": "Togetic"
+    },
+    "types": [
+      "Fairy",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying",
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "はりきり",
+        "en": "Hustle",
+        "zh": "活力"
+      },
+      {
+        "ja": "てんのめぐみ",
+        "en": "Serene Grace",
+        "zh": "天恩"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 177,
+    "name": {
+      "zh": "天然雀",
+      "ja": "ネイティ",
+      "en": "Natu"
+    },
+    "types": [
+      "Psychic",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "シンクロ",
+        "en": "Synchronize",
+        "zh": "同步"
+      },
+      {
+        "ja": "はやおき",
+        "en": "Early Bird",
+        "zh": "早起"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 178,
+    "name": {
+      "zh": "天然鳥",
+      "ja": "ネイティオ",
+      "en": "Xatu"
+    },
+    "types": [
+      "Psychic",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "シンクロ",
+        "en": "Synchronize",
+        "zh": "同步"
+      },
+      {
+        "ja": "はやおき",
+        "en": "Early Bird",
+        "zh": "早起"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 179,
+    "name": {
+      "zh": "咩利羊",
+      "ja": "メリープ",
+      "en": "Mareep"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "せいでんき",
+        "en": "Static",
+        "zh": "靜電"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 180,
+    "name": {
+      "zh": "茸茸羊",
+      "ja": "モココ",
+      "en": "Flaaffy"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "せいでんき",
+        "en": "Static",
+        "zh": "靜電"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 181,
+    "name": {
+      "zh": "電龍",
+      "ja": "デンリュウ",
+      "en": "Ampharos"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "せいでんき",
+        "en": "Static",
+        "zh": "靜電"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 182,
+    "name": {
+      "zh": "美麗花",
+      "ja": "キレイハナ",
+      "en": "Bellossom"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 183,
+    "name": {
+      "zh": "瑪力露",
+      "ja": "マリル",
+      "en": "Marill"
+    },
+    "types": [
+      "Water",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "ちからもち",
+        "en": "Huge Power",
+        "zh": "大力士"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 184,
+    "name": {
+      "zh": "瑪力露麗",
+      "ja": "マリルリ",
+      "en": "Azumarill"
+    },
+    "types": [
+      "Water",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "ちからもち",
+        "en": "Huge Power",
+        "zh": "大力士"
+      }
+    ],
+    "ev": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 185,
+    "name": {
+      "zh": "樹才怪",
+      "ja": "ウソッキー",
+      "en": "Sudowoodo"
+    },
+    "types": [
+      "Rock"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      },
+      {
+        "ja": "いしあたま",
+        "en": "Rock Head",
+        "zh": "堅硬腦袋"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 186,
+    "name": {
+      "zh": "蚊香蛙皇",
+      "ja": "ニョロトノ",
+      "en": "Politoed"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "ちょすい",
+        "en": "Water Absorb",
+        "zh": "儲水"
+      },
+      {
+        "ja": "しめりけ",
+        "en": "Damp",
+        "zh": "濕氣"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 187,
+    "name": {
+      "zh": "毽子草",
+      "ja": "ハネッコ",
+      "en": "Hoppip"
+    },
+    "types": [
+      "Grass",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Fairy",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      },
+      {
+        "ja": "リーフガード",
+        "en": "Leaf Guard",
+        "zh": "葉子防守"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 188,
+    "name": {
+      "zh": "毽子花",
+      "ja": "ポポッコ",
+      "en": "Skiploom"
+    },
+    "types": [
+      "Grass",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Fairy",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      },
+      {
+        "ja": "リーフガード",
+        "en": "Leaf Guard",
+        "zh": "葉子防守"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": false
+  },
+  {
+    "pid": 189,
+    "name": {
+      "zh": "毽子棉",
+      "ja": "ワタッコ",
+      "en": "Jumpluff"
+    },
+    "types": [
+      "Grass",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Fairy",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      },
+      {
+        "ja": "リーフガード",
+        "en": "Leaf Guard",
+        "zh": "葉子防守"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ],
+    "latest": true
+  },
+  {
+    "pid": 190,
+    "name": {
+      "zh": "長尾怪手",
+      "ja": "エイパム",
+      "en": "Aipom"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "にげあし",
+        "en": "Run Away",
+        "zh": "逃跑"
+      },
+      {
+        "ja": "ものひろい",
+        "en": "Pickup",
+        "zh": "撿拾"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 191,
+    "name": {
+      "zh": "向日種子",
+      "ja": "ヒマナッツ",
+      "en": "Sunkern"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      },
+      {
+        "ja": "サンパワー",
+        "en": "Solar Power",
+        "zh": "太陽之力"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 192,
+    "name": {
+      "zh": "向日花怪",
+      "ja": "キマワリ",
+      "en": "Sunflora"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      },
+      {
+        "ja": "サンパワー",
+        "en": "Solar Power",
+        "zh": "太陽之力"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 193,
+    "name": {
+      "zh": "蜻蜻蜓",
+      "ja": "ヤンヤンマ",
+      "en": "Yanma"
+    },
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "かそく",
+        "en": "Speed Boost",
+        "zh": "加速"
+      },
+      {
+        "ja": "ふくがん",
+        "en": "Compound Eyes",
+        "zh": "複眼"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 194,
+    "name": {
+      "zh": "烏波",
+      "ja": "ウパー",
+      "en": "Wooper"
+    },
+    "types": [
+      "Water",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "しめりけ",
+        "en": "Damp",
+        "zh": "濕氣"
+      },
+      {
+        "ja": "ちょすい",
+        "en": "Water Absorb",
+        "zh": "儲水"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 195,
+    "name": {
+      "zh": "沼王",
+      "ja": "ヌオー",
+      "en": "Quagsire"
+    },
+    "types": [
+      "Water",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "しめりけ",
+        "en": "Damp",
+        "zh": "濕氣"
+      },
+      {
+        "ja": "ちょすい",
+        "en": "Water Absorb",
+        "zh": "儲水"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 196,
+    "name": {
+      "zh": "太陽伊布",
+      "ja": "エーフィ",
+      "en": "Espeon"
+    },
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "シンクロ",
+        "en": "Synchronize",
+        "zh": "同步"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 197,
+    "name": {
+      "zh": "月亮伊布",
+      "ja": "ブラッキー",
+      "en": "Umbreon"
+    },
+    "types": [
+      "Dark"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "シンクロ",
+        "en": "Synchronize",
+        "zh": "同步"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 198,
+    "name": {
+      "zh": "黑暗鴉",
+      "ja": "ヤミカラス",
+      "en": "Murkrow"
+    },
+    "types": [
+      "Dark",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "ふみん",
+        "en": "Insomnia",
+        "zh": "不眠"
+      },
+      {
+        "ja": "きょううん",
+        "en": "Super Luck",
+        "zh": "超幸運"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 199,
+    "name": {
+      "zh": "呆呆王",
+      "ja": "ヤドキング",
+      "en": "Slowking"
+    },
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      },
+      {
+        "ja": "マイペース",
+        "en": "Own Tempo",
+        "zh": "我行我素"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 200,
+    "name": {
+      "zh": "夢妖",
+      "ja": "ムウマ",
+      "en": "Misdreavus"
+    },
+    "types": [
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 201,
+    "name": {
+      "zh": "未知圖騰",
+      "ja": "アンノーン",
+      "en": "Unown"
+    },
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 202,
+    "name": {
+      "zh": "果然翁",
+      "ja": "ソーナンス",
+      "en": "Wobbuffet"
+    },
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "かげふみ",
+        "en": "Shadow Tag",
+        "zh": "踩影"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 203,
+    "name": {
+      "zh": "麒麟奇",
+      "ja": "キリンリキ",
+      "en": "Girafarig"
+    },
+    "types": [
+      "Normal",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "せいしんりょく",
+        "en": "Inner Focus",
+        "zh": "精神力"
+      },
+      {
+        "ja": "はやおき",
+        "en": "Early Bird",
+        "zh": "早起"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 204,
+    "name": {
+      "zh": "榛果球",
+      "ja": "クヌギダマ",
+      "en": "Pineco"
+    },
+    "types": [
+      "Bug"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 205,
+    "name": {
+      "zh": "佛烈托斯",
+      "ja": "フォレトス",
+      "en": "Forretress"
+    },
+    "types": [
+      "Bug",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 206,
+    "name": {
+      "zh": "土龍弟弟",
+      "ja": "ノコッチ",
+      "en": "Dunsparce"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "てんのめぐみ",
+        "en": "Serene Grace",
+        "zh": "天恩"
+      },
+      {
+        "ja": "にげあし",
+        "en": "Run Away",
+        "zh": "逃跑"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 207,
+    "name": {
+      "zh": "天蠍",
+      "ja": "グライガー",
+      "en": "Gligar"
+    },
+    "types": [
+      "Ground",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "かいりきバサミ",
+        "en": "Hyper Cutter",
+        "zh": "怪力鉗"
+      },
+      {
+        "ja": "すながくれ",
+        "en": "Sand Veil",
+        "zh": "沙隱"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 208,
+    "name": {
+      "zh": "大鋼蛇",
+      "ja": "ハガネール",
+      "en": "Steelix"
+    },
+    "types": [
+      "Steel",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "いしあたま",
+        "en": "Rock Head",
+        "zh": "堅硬腦袋"
+      },
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 209,
+    "name": {
+      "zh": "布魯",
+      "ja": "ブルー",
+      "en": "Snubbull"
+    },
+    "types": [
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "いかく",
+        "en": "Intimidate",
+        "zh": "威嚇"
+      },
+      {
+        "ja": "にげあし",
+        "en": "Run Away",
+        "zh": "逃跑"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 210,
+    "name": {
+      "zh": "布魯皇",
+      "ja": "グランブル",
+      "en": "Granbull"
+    },
+    "types": [
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "いかく",
+        "en": "Intimidate",
+        "zh": "威嚇"
+      },
+      {
+        "ja": "はやあし",
+        "en": "Quick Feet",
+        "zh": "飛毛腿"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 211,
+    "name": {
+      "zh": "千針魚",
+      "ja": "ハリーセン",
+      "en": "Qwilfish"
+    },
+    "types": [
+      "Water",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "どくのトゲ",
+        "en": "Poison Point",
+        "zh": "毒刺"
+      },
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 212,
+    "name": {
+      "zh": "巨鉗螳螂",
+      "ja": "ハッサム",
+      "en": "Scizor"
+    },
+    "types": [
+      "Bug",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "むしのしらせ",
+        "en": "Swarm",
+        "zh": "蟲之預感"
+      },
+      {
+        "ja": "テクニシャン",
+        "en": "Technician",
+        "zh": "技術高手"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 213,
+    "name": {
+      "zh": "壺壺",
+      "ja": "ツボツボ",
+      "en": "Shuckle"
+    },
+    "types": [
+      "Bug",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      },
+      {
+        "ja": "くいしんぼう",
+        "en": "Gluttony",
+        "zh": "貪吃鬼"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 214,
+    "name": {
+      "zh": "赫拉克羅斯",
+      "ja": "ヘラクロス",
+      "en": "Heracross"
+    },
+    "types": [
+      "Bug",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "むしのしらせ",
+        "en": "Swarm",
+        "zh": "蟲之預感"
+      },
+      {
+        "ja": "こんじょう",
+        "en": "Guts",
+        "zh": "毅力"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 215,
+    "name": {
+      "zh": "狃拉",
+      "ja": "ニューラ",
+      "en": "Sneasel"
+    },
+    "types": [
+      "Dark",
+      "Ice"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "せいしんりょく",
+        "en": "Inner Focus",
+        "zh": "精神力"
+      },
+      {
+        "ja": "するどいめ",
+        "en": "Keen Eye",
+        "zh": "銳利目光"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 216,
+    "name": {
+      "zh": "熊寶寶",
+      "ja": "ヒメグマ",
+      "en": "Teddiursa"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "ものひろい",
+        "en": "Pickup",
+        "zh": "撿拾"
+      },
+      {
+        "ja": "はやあし",
+        "en": "Quick Feet",
+        "zh": "飛毛腿"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 217,
+    "name": {
+      "zh": "圈圈熊",
+      "ja": "リングマ",
+      "en": "Ursaring"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "こんじょう",
+        "en": "Guts",
+        "zh": "毅力"
+      },
+      {
+        "ja": "はやあし",
+        "en": "Quick Feet",
+        "zh": "飛毛腿"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 218,
+    "name": {
+      "zh": "熔岩蟲",
+      "ja": "マグマッグ",
+      "en": "Slugma"
+    },
+    "types": [
+      "Fire"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "マグマのよろい",
+        "en": "Magma Armor",
+        "zh": "熔岩鎧甲"
+      },
+      {
+        "ja": "ほのおのからだ",
+        "en": "Flame Body",
+        "zh": "火焰之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 219,
+    "name": {
+      "zh": "熔岩蝸牛",
+      "ja": "マグカルゴ",
+      "en": "Magcargo"
+    },
+    "types": [
+      "Fire",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "マグマのよろい",
+        "en": "Magma Armor",
+        "zh": "熔岩鎧甲"
+      },
+      {
+        "ja": "ほのおのからだ",
+        "en": "Flame Body",
+        "zh": "火焰之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 220,
+    "name": {
+      "zh": "小山豬",
+      "ja": "ウリムー",
+      "en": "Swinub"
+    },
+    "types": [
+      "Ice",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      },
+      {
+        "ja": "ゆきがくれ",
+        "en": "Snow Cloak",
+        "zh": "雪隱"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 221,
+    "name": {
+      "zh": "長毛豬",
+      "ja": "イノムー",
+      "en": "Piloswine"
+    },
+    "types": [
+      "Ice",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      },
+      {
+        "ja": "ゆきがくれ",
+        "en": "Snow Cloak",
+        "zh": "雪隱"
+      }
+    ],
+    "ev": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 222,
+    "name": {
+      "zh": "太陽珊瑚",
+      "ja": "サニーゴ",
+      "en": "Corsola"
+    },
+    "types": [
+      "Water",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Water3"
+    ],
+    "abilities": [
+      {
+        "ja": "はりきり",
+        "en": "Hustle",
+        "zh": "活力"
+      },
+      {
+        "ja": "しぜんかいふく",
+        "en": "Natural Cure",
+        "zh": "自然回復"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 223,
+    "name": {
+      "zh": "鐵炮魚",
+      "ja": "テッポウオ",
+      "en": "Remoraid"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "はりきり",
+        "en": "Hustle",
+        "zh": "活力"
+      },
+      {
+        "ja": "スナイパー",
+        "en": "Sniper",
+        "zh": "狙擊手"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 224,
+    "name": {
+      "zh": "章魚桶",
+      "ja": "オクタン",
+      "en": "Octillery"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "きゅうばん",
+        "en": "Suction Cups",
+        "zh": "吸盤"
+      },
+      {
+        "ja": "スナイパー",
+        "en": "Sniper",
+        "zh": "狙擊手"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 225,
+    "name": {
+      "zh": "信使鳥",
+      "ja": "デリバード",
+      "en": "Delibird"
+    },
+    "types": [
+      "Ice",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "やるき",
+        "en": "Vital Spirit",
+        "zh": "幹勁"
+      },
+      {
+        "ja": "はりきり",
+        "en": "Hustle",
+        "zh": "活力"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 226,
+    "name": {
+      "zh": "巨翅飛魚",
+      "ja": "マンタイン",
+      "en": "Mantine"
+    },
+    "types": [
+      "Water",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      },
+      {
+        "ja": "ちょすい",
+        "en": "Water Absorb",
+        "zh": "儲水"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 227,
+    "name": {
+      "zh": "盔甲鳥",
+      "ja": "エアームド",
+      "en": "Skarmory"
+    },
+    "types": [
+      "Steel",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "するどいめ",
+        "en": "Keen Eye",
+        "zh": "銳利目光"
+      },
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 228,
+    "name": {
+      "zh": "戴魯比",
+      "ja": "デルビル",
+      "en": "Houndour"
+    },
+    "types": [
+      "Dark",
+      "Fire"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "はやおき",
+        "en": "Early Bird",
+        "zh": "早起"
+      },
+      {
+        "ja": "もらいび",
+        "en": "Flash Fire",
+        "zh": "引火"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 229,
+    "name": {
+      "zh": "黑魯加",
+      "ja": "ヘルガー",
+      "en": "Houndoom"
+    },
+    "types": [
+      "Dark",
+      "Fire"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "はやおき",
+        "en": "Early Bird",
+        "zh": "早起"
+      },
+      {
+        "ja": "もらいび",
+        "en": "Flash Fire",
+        "zh": "引火"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 230,
+    "name": {
+      "zh": "刺龍王",
+      "ja": "キングドラ",
+      "en": "Kingdra"
+    },
+    "types": [
+      "Water",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      },
+      {
+        "ja": "スナイパー",
+        "en": "Sniper",
+        "zh": "狙擊手"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 231,
+    "name": {
+      "zh": "小小象",
+      "ja": "ゴマゾウ",
+      "en": "Phanpy"
+    },
+    "types": [
+      "Ground"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "ものひろい",
+        "en": "Pickup",
+        "zh": "撿拾"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 232,
+    "name": {
+      "zh": "頓甲",
+      "ja": "ドンファン",
+      "en": "Donphan"
+    },
+    "types": [
+      "Ground"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 233,
+    "name": {
+      "zh": "多邊獸Ⅱ",
+      "ja": "ポリゴン２",
+      "en": "Porygon2"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "トレース",
+        "en": "Trace",
+        "zh": "複製"
+      },
+      {
+        "ja": "ダウンロード",
+        "en": "Download",
+        "zh": "下載"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 234,
+    "name": {
+      "zh": "驚角鹿",
+      "ja": "オドシシ",
+      "en": "Stantler"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "いかく",
+        "en": "Intimidate",
+        "zh": "威嚇"
+      },
+      {
+        "ja": "おみとおし",
+        "en": "Frisk",
+        "zh": "察覺"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 235,
+    "name": {
+      "zh": "圖圖犬",
+      "ja": "ドーブル",
+      "en": "Smeargle"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "マイペース",
+        "en": "Own Tempo",
+        "zh": "我行我素"
+      },
+      {
+        "ja": "テクニシャン",
+        "en": "Technician",
+        "zh": "技術高手"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 236,
+    "name": {
+      "zh": "無畏小子",
+      "ja": "バルキー",
+      "en": "Tyrogue"
+    },
+    "types": [
+      "Fighting"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "こんじょう",
+        "en": "Guts",
+        "zh": "毅力"
+      },
+      {
+        "ja": "ふくつのこころ",
+        "en": "Steadfast",
+        "zh": "不屈之心"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 237,
+    "name": {
+      "zh": "戰舞郎",
+      "ja": "カポエラー",
+      "en": "Hitmontop"
+    },
+    "types": [
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "いかく",
+        "en": "Intimidate",
+        "zh": "威嚇"
+      },
+      {
+        "ja": "テクニシャン",
+        "en": "Technician",
+        "zh": "技術高手"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 238,
+    "name": {
+      "zh": "迷唇娃",
+      "ja": "ムチュール",
+      "en": "Smoochum"
+    },
+    "types": [
+      "Ice",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      },
+      {
+        "ja": "よちむ",
+        "en": "Forewarn",
+        "zh": "預知夢"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 239,
+    "name": {
+      "zh": "電擊怪",
+      "ja": "エレキッド",
+      "en": "Elekid"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "せいでんき",
+        "en": "Static",
+        "zh": "靜電"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 240,
+    "name": {
+      "zh": "鴨嘴寶寶",
+      "ja": "ブビィ",
+      "en": "Magby"
+    },
+    "types": [
+      "Fire"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "ほのおのからだ",
+        "en": "Flame Body",
+        "zh": "火焰之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 241,
+    "name": {
+      "zh": "大奶罐",
+      "ja": "ミルタンク",
+      "en": "Miltank"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "きもったま",
+        "en": "Scrappy",
+        "zh": "膽量"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 242,
+    "name": {
+      "zh": "幸福蛋",
+      "ja": "ハピナス",
+      "en": "Blissey"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "しぜんかいふく",
+        "en": "Natural Cure",
+        "zh": "自然回復"
+      },
+      {
+        "ja": "てんのめぐみ",
+        "en": "Serene Grace",
+        "zh": "天恩"
+      }
+    ],
+    "ev": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 243,
+    "name": {
+      "zh": "雷公",
+      "ja": "ライコウ",
+      "en": "Raikou"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "プレッシャー",
+        "en": "Pressure",
+        "zh": "壓迫感"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      2
+    ],
+    "latest": true
+  },
+  {
+    "pid": 244,
+    "name": {
+      "zh": "炎帝",
+      "ja": "エンテイ",
+      "en": "Entei"
+    },
+    "types": [
+      "Fire"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "プレッシャー",
+        "en": "Pressure",
+        "zh": "壓迫感"
+      }
+    ],
+    "ev": [
+      1,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 245,
+    "name": {
+      "zh": "水君",
+      "ja": "スイクン",
+      "en": "Suicune"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "プレッシャー",
+        "en": "Pressure",
+        "zh": "壓迫感"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 246,
+    "name": {
+      "zh": "幼基拉斯",
+      "ja": "ヨーギラス",
+      "en": "Larvitar"
+    },
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      {
+        "ja": "こんじょう",
+        "en": "Guts",
+        "zh": "毅力"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 247,
+    "name": {
+      "zh": "沙基拉斯",
+      "ja": "サナギラス",
+      "en": "Pupitar"
+    },
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      {
+        "ja": "だっぴ",
+        "en": "Shed Skin",
+        "zh": "蛻皮"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 248,
+    "name": {
+      "zh": "班基拉斯",
+      "ja": "バンギラス",
+      "en": "Tyranitar"
+    },
+    "types": [
+      "Rock",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      {
+        "ja": "すなおこし",
+        "en": "Sand Stream",
+        "zh": "揚沙"
+      }
+    ],
+    "ev": [
+      0,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 249,
+    "name": {
+      "zh": "洛奇亞",
+      "ja": "ルギア",
+      "en": "Lugia"
+    },
+    "types": [
+      "Psychic",
+      "Flying"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "プレッシャー",
+        "en": "Pressure",
+        "zh": "壓迫感"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 250,
+    "name": {
+      "zh": "鳳王",
+      "ja": "ホウオウ",
+      "en": "Ho-Oh"
+    },
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "プレッシャー",
+        "en": "Pressure",
+        "zh": "壓迫感"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 251,
+    "name": {
+      "zh": "時拉比",
+      "ja": "セレビィ",
+      "en": "Celebi"
+    },
+    "types": [
+      "Psychic",
+      "Grass"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "しぜんかいふく",
+        "en": "Natural Cure",
+        "zh": "自然回復"
+      }
+    ],
+    "ev": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 252,
+    "name": {
+      "zh": "木守宮",
+      "ja": "キモリ",
+      "en": "Treecko"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "しんりょく",
+        "en": "Overgrow",
+        "zh": "茂盛"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 253,
+    "name": {
+      "zh": "森林蜥蜴",
+      "ja": "ジュプトル",
+      "en": "Grovyle"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "しんりょく",
+        "en": "Overgrow",
+        "zh": "茂盛"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": false
+  },
+  {
+    "pid": 254,
+    "name": {
+      "zh": "蜥蜴王",
+      "ja": "ジュカイン",
+      "en": "Sceptile"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "しんりょく",
+        "en": "Overgrow",
+        "zh": "茂盛"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ],
+    "latest": true
+  },
+  {
+    "pid": 255,
+    "name": {
+      "zh": "火稚雞",
+      "ja": "アチャモ",
+      "en": "Torchic"
+    },
+    "types": [
+      "Fire"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "もうか",
+        "en": "Blaze",
+        "zh": "猛火"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 256,
+    "name": {
+      "zh": "力壯雞",
+      "ja": "ワカシャモ",
+      "en": "Combusken"
+    },
+    "types": [
+      "Fire",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "もうか",
+        "en": "Blaze",
+        "zh": "猛火"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 257,
+    "name": {
+      "zh": "火焰雞",
+      "ja": "バシャーモ",
+      "en": "Blaziken"
+    },
+    "types": [
+      "Fire",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "もうか",
+        "en": "Blaze",
+        "zh": "猛火"
+      }
+    ],
+    "ev": [
+      0,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 258,
+    "name": {
+      "zh": "水躍魚",
+      "ja": "ミズゴロウ",
+      "en": "Mudkip"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "げきりゅう",
+        "en": "Torrent",
+        "zh": "激流"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 259,
+    "name": {
+      "zh": "沼躍魚",
+      "ja": "ヌマクロー",
+      "en": "Marshtomp"
+    },
+    "types": [
+      "Water",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "げきりゅう",
+        "en": "Torrent",
+        "zh": "激流"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 260,
+    "name": {
+      "zh": "巨沼怪",
+      "ja": "ラグラージ",
+      "en": "Swampert"
+    },
+    "types": [
+      "Water",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "げきりゅう",
+        "en": "Torrent",
+        "zh": "激流"
+      }
+    ],
+    "ev": [
+      0,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 261,
+    "name": {
+      "zh": "土狼犬",
+      "ja": "ポチエナ",
+      "en": "Poochyena"
+    },
+    "types": [
+      "Dark"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "にげあし",
+        "en": "Run Away",
+        "zh": "逃跑"
+      },
+      {
+        "ja": "はやあし",
+        "en": "Quick Feet",
+        "zh": "飛毛腿"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 262,
+    "name": {
+      "zh": "大狼犬",
+      "ja": "グラエナ",
+      "en": "Mightyena"
+    },
+    "types": [
+      "Dark"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "いかく",
+        "en": "Intimidate",
+        "zh": "威嚇"
+      },
+      {
+        "ja": "はやあし",
+        "en": "Quick Feet",
+        "zh": "飛毛腿"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 263,
+    "name": {
+      "zh": "蛇紋熊",
+      "ja": "ジグザグマ",
+      "en": "Zigzagoon"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "ものひろい",
+        "en": "Pickup",
+        "zh": "撿拾"
+      },
+      {
+        "ja": "くいしんぼう",
+        "en": "Gluttony",
+        "zh": "貪吃鬼"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 264,
+    "name": {
+      "zh": "直衝熊",
+      "ja": "マッスグマ",
+      "en": "Linoone"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "ものひろい",
+        "en": "Pickup",
+        "zh": "撿拾"
+      },
+      {
+        "ja": "くいしんぼう",
+        "en": "Gluttony",
+        "zh": "貪吃鬼"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": true
+  },
+  {
+    "pid": 266,
+    "name": {
+      "zh": "甲殼繭",
+      "ja": "カラサリス",
+      "en": "Silcoon"
+    },
+    "types": [
+      "Bug"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "だっぴ",
+        "en": "Shed Skin",
+        "zh": "蛻皮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 267,
+    "name": {
+      "zh": "狩獵鳳蝶",
+      "ja": "アゲハント",
+      "en": "Beautifly"
+    },
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "むしのしらせ",
+        "en": "Swarm",
+        "zh": "蟲之預感"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 268,
+    "name": {
+      "zh": "盾甲繭",
+      "ja": "マユルド",
+      "en": "Cascoon"
+    },
+    "types": [
+      "Bug"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "だっぴ",
+        "en": "Shed Skin",
+        "zh": "蛻皮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 269,
+    "name": {
+      "zh": "毒粉蛾",
+      "ja": "ドクケイル",
+      "en": "Dustox"
+    },
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "りんぷん",
+        "en": "Shield Dust",
+        "zh": "鱗粉"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 270,
+    "name": {
+      "zh": "蓮葉童子",
+      "ja": "ハスボー",
+      "en": "Lotad"
+    },
+    "types": [
+      "Water",
+      "Grass"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      },
+      {
+        "ja": "あめうけざら",
+        "en": "Rain Dish",
+        "zh": "雨盤"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 271,
+    "name": {
+      "zh": "蓮帽小童",
+      "ja": "ハスブレロ",
+      "en": "Lombre"
+    },
+    "types": [
+      "Water",
+      "Grass"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      },
+      {
+        "ja": "あめうけざら",
+        "en": "Rain Dish",
+        "zh": "雨盤"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 272,
+    "name": {
+      "zh": "樂天河童",
+      "ja": "ルンパッパ",
+      "en": "Ludicolo"
+    },
+    "types": [
+      "Water",
+      "Grass"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      },
+      {
+        "ja": "あめうけざら",
+        "en": "Rain Dish",
+        "zh": "雨盤"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 273,
+    "name": {
+      "zh": "橡實果",
+      "ja": "タネボー",
+      "en": "Seedot"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      },
+      {
+        "ja": "はやおき",
+        "en": "Early Bird",
+        "zh": "早起"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 274,
+    "name": {
+      "zh": "長鼻葉",
+      "ja": "コノハナ",
+      "en": "Nuzleaf"
+    },
+    "types": [
+      "Grass",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      },
+      {
+        "ja": "はやおき",
+        "en": "Early Bird",
+        "zh": "早起"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 276,
+    "name": {
+      "zh": "傲骨燕",
+      "ja": "スバメ",
+      "en": "Taillow"
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "こんじょう",
+        "en": "Guts",
+        "zh": "毅力"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 277,
+    "name": {
+      "zh": "大王燕",
+      "ja": "オオスバメ",
+      "en": "Swellow"
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "こんじょう",
+        "en": "Guts",
+        "zh": "毅力"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": true
+  },
+  {
+    "pid": 278,
+    "name": {
+      "zh": "長翅鷗",
+      "ja": "キャモメ",
+      "en": "Wingull"
+    },
+    "types": [
+      "Water",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "するどいめ",
+        "en": "Keen Eye",
+        "zh": "銳利目光"
+      },
+      {
+        "ja": "うるおいボディ",
+        "en": "Hydration",
+        "zh": "濕潤之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 279,
+    "name": {
+      "zh": "大嘴鷗",
+      "ja": "ペリッパー",
+      "en": "Pelipper"
+    },
+    "types": [
+      "Water",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Flying"
+    ],
+    "abilities": [
+      {
+        "ja": "するどいめ",
+        "en": "Keen Eye",
+        "zh": "銳利目光"
+      },
+      {
+        "ja": "あめふらし",
+        "en": "Drizzle",
+        "zh": "降雨"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 280,
+    "name": {
+      "zh": "拉魯拉絲",
+      "ja": "ラルトス",
+      "en": "Ralts"
+    },
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Humanshape",
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "シンクロ",
+        "en": "Synchronize",
+        "zh": "同步"
+      },
+      {
+        "ja": "トレース",
+        "en": "Trace",
+        "zh": "複製"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 281,
+    "name": {
+      "zh": "奇魯莉安",
+      "ja": "キルリア",
+      "en": "Kirlia"
+    },
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Humanshape",
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "シンクロ",
+        "en": "Synchronize",
+        "zh": "同步"
+      },
+      {
+        "ja": "トレース",
+        "en": "Trace",
+        "zh": "複製"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 282,
+    "name": {
+      "zh": "沙奈朵",
+      "ja": "サーナイト",
+      "en": "Gardevoir"
+    },
+    "types": [
+      "Psychic",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Humanshape",
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "シンクロ",
+        "en": "Synchronize",
+        "zh": "同步"
+      },
+      {
+        "ja": "トレース",
+        "en": "Trace",
+        "zh": "複製"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 283,
+    "name": {
+      "zh": "溜溜糖球",
+      "ja": "アメタマ",
+      "en": "Surskit"
+    },
+    "types": [
+      "Bug",
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 284,
+    "name": {
+      "zh": "雨翅蛾",
+      "ja": "アメモース",
+      "en": "Masquerain"
+    },
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "いかく",
+        "en": "Intimidate",
+        "zh": "威嚇"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 285,
+    "name": {
+      "zh": "蘑蘑菇",
+      "ja": "キノココ",
+      "en": "Shroomish"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Fairy",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ほうし",
+        "en": "Effect Spore",
+        "zh": "孢子"
+      },
+      {
+        "ja": "ポイズンヒール",
+        "en": "Poison Heal",
+        "zh": "毒療"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 286,
+    "name": {
+      "zh": "斗笠菇",
+      "ja": "キノガッサ",
+      "en": "Breloom"
+    },
+    "types": [
+      "Grass",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Fairy",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ほうし",
+        "en": "Effect Spore",
+        "zh": "孢子"
+      },
+      {
+        "ja": "ポイズンヒール",
+        "en": "Poison Heal",
+        "zh": "毒療"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 287,
+    "name": {
+      "zh": "懶人獺",
+      "ja": "ナマケロ",
+      "en": "Slakoth"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "なまけ",
+        "en": "Truant",
+        "zh": "懶惰"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 288,
+    "name": {
+      "zh": "過動猿",
+      "ja": "ヤルキモノ",
+      "en": "Vigoroth"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "やるき",
+        "en": "Vital Spirit",
+        "zh": "幹勁"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": false
+  },
+  {
+    "pid": 289,
+    "name": {
+      "zh": "請假王",
+      "ja": "ケッキング",
+      "en": "Slaking"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "なまけ",
+        "en": "Truant",
+        "zh": "懶惰"
+      }
+    ],
+    "ev": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 290,
+    "name": {
+      "zh": "土居忍士",
+      "ja": "ツチニン",
+      "en": "Nincada"
+    },
+    "types": [
+      "Bug",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "ふくがん",
+        "en": "Compound Eyes",
+        "zh": "複眼"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 291,
+    "name": {
+      "zh": "鐵面忍者",
+      "ja": "テッカニン",
+      "en": "Ninjask"
+    },
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "かそく",
+        "en": "Speed Boost",
+        "zh": "加速"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": true
+  },
+  {
+    "pid": 292,
+    "name": {
+      "zh": "脫殼忍者",
+      "ja": "ヌケニン",
+      "en": "Shedinja"
+    },
+    "types": [
+      "Bug",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "ふしぎなまもり",
+        "en": "Wonder Guard",
+        "zh": "神奇守護"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 293,
+    "name": {
+      "zh": "咕妞妞",
+      "ja": "ゴニョニョ",
+      "en": "Whismur"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "ぼうおん",
+        "en": "Soundproof",
+        "zh": "隔音"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 294,
+    "name": {
+      "zh": "吼爆彈",
+      "ja": "ドゴーム",
+      "en": "Loudred"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "ぼうおん",
+        "en": "Soundproof",
+        "zh": "隔音"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 295,
+    "name": {
+      "zh": "爆音怪",
+      "ja": "バクオング",
+      "en": "Exploud"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "ぼうおん",
+        "en": "Soundproof",
+        "zh": "隔音"
+      }
+    ],
+    "ev": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 296,
+    "name": {
+      "zh": "幕下力士",
+      "ja": "マクノシタ",
+      "en": "Makuhita"
+    },
+    "types": [
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "こんじょう",
+        "en": "Guts",
+        "zh": "毅力"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 297,
+    "name": {
+      "zh": "鐵掌力士",
+      "ja": "ハリテヤマ",
+      "en": "Hariyama"
+    },
+    "types": [
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "こんじょう",
+        "en": "Guts",
+        "zh": "毅力"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 298,
+    "name": {
+      "zh": "露力麗",
+      "ja": "ルリリ",
+      "en": "Azurill"
+    },
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "ちからもち",
+        "en": "Huge Power",
+        "zh": "大力士"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 299,
+    "name": {
+      "zh": "朝北鼻",
+      "ja": "ノズパス",
+      "en": "Nosepass"
+    },
+    "types": [
+      "Rock"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      },
+      {
+        "ja": "じりょく",
+        "en": "Magnet Pull",
+        "zh": "磁力"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 300,
+    "name": {
+      "zh": "向尾喵",
+      "ja": "エネコ",
+      "en": "Skitty"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "メロメロボディ",
+        "en": "Cute Charm",
+        "zh": "迷人之軀"
+      },
+      {
+        "ja": "ノーマルスキン",
+        "en": "Normalize",
+        "zh": "一般皮膚"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 301,
+    "name": {
+      "zh": "優雅貓",
+      "ja": "エネコロロ",
+      "en": "Delcatty"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "メロメロボディ",
+        "en": "Cute Charm",
+        "zh": "迷人之軀"
+      },
+      {
+        "ja": "ノーマルスキン",
+        "en": "Normalize",
+        "zh": "一般皮膚"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 302,
+    "name": {
+      "zh": "勾魂眼",
+      "ja": "ヤミラミ",
+      "en": "Sableye"
+    },
+    "types": [
+      "Dark",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "するどいめ",
+        "en": "Keen Eye",
+        "zh": "銳利目光"
+      },
+      {
+        "ja": "あとだし",
+        "en": "Stall",
+        "zh": "慢出"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 303,
+    "name": {
+      "zh": "大嘴娃",
+      "ja": "クチート",
+      "en": "Mawile"
+    },
+    "types": [
+      "Steel",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "かいりきバサミ",
+        "en": "Hyper Cutter",
+        "zh": "怪力鉗"
+      },
+      {
+        "ja": "いかく",
+        "en": "Intimidate",
+        "zh": "威嚇"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 304,
+    "name": {
+      "zh": "可可多拉",
+      "ja": "ココドラ",
+      "en": "Aron"
+    },
+    "types": [
+      "Steel",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      },
+      {
+        "ja": "いしあたま",
+        "en": "Rock Head",
+        "zh": "堅硬腦袋"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 305,
+    "name": {
+      "zh": "可多拉",
+      "ja": "コドラ",
+      "en": "Lairon"
+    },
+    "types": [
+      "Steel",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      },
+      {
+        "ja": "いしあたま",
+        "en": "Rock Head",
+        "zh": "堅硬腦袋"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 306,
+    "name": {
+      "zh": "波士可多拉",
+      "ja": "ボスゴドラ",
+      "en": "Aggron"
+    },
+    "types": [
+      "Steel",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      {
+        "ja": "がんじょう",
+        "en": "Sturdy",
+        "zh": "結實"
+      },
+      {
+        "ja": "いしあたま",
+        "en": "Rock Head",
+        "zh": "堅硬腦袋"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      3,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 307,
+    "name": {
+      "zh": "瑪沙那",
+      "ja": "アサナン",
+      "en": "Meditite"
+    },
+    "types": [
+      "Fighting",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "ヨガパワー",
+        "en": "Pure Power",
+        "zh": "瑜伽之力"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 308,
+    "name": {
+      "zh": "恰雷姆",
+      "ja": "チャーレム",
+      "en": "Medicham"
+    },
+    "types": [
+      "Fighting",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "ヨガパワー",
+        "en": "Pure Power",
+        "zh": "瑜伽之力"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": true
+  },
+  {
+    "pid": 309,
+    "name": {
+      "zh": "落雷獸",
+      "ja": "ラクライ",
+      "en": "Electrike"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "せいでんき",
+        "en": "Static",
+        "zh": "靜電"
+      },
+      {
+        "ja": "ひらいしん",
+        "en": "Lightning Rod",
+        "zh": "避雷針"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 310,
+    "name": {
+      "zh": "雷電獸",
+      "ja": "ライボルト",
+      "en": "Manectric"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "せいでんき",
+        "en": "Static",
+        "zh": "靜電"
+      },
+      {
+        "ja": "ひらいしん",
+        "en": "Lightning Rod",
+        "zh": "避雷針"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": true
+  },
+  {
+    "pid": 311,
+    "name": {
+      "zh": "正電拍拍",
+      "ja": "プラスル",
+      "en": "Plusle"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "プラス",
+        "en": "Plus",
+        "zh": "正電"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 312,
+    "name": {
+      "zh": "負電拍拍",
+      "ja": "マイナン",
+      "en": "Minun"
+    },
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Fairy"
+    ],
+    "abilities": [
+      {
+        "ja": "マイナス",
+        "en": "Minus",
+        "zh": "負電"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 313,
+    "name": {
+      "zh": "電螢蟲",
+      "ja": "バルビート",
+      "en": "Volbeat"
+    },
+    "types": [
+      "Bug"
+    ],
+    "eggGroups": [
+      "Bug",
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "はっこう",
+        "en": "Illuminate",
+        "zh": "發光"
+      },
+      {
+        "ja": "むしのしらせ",
+        "en": "Swarm",
+        "zh": "蟲之預感"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 314,
+    "name": {
+      "zh": "甜甜螢",
+      "ja": "イルミーゼ",
+      "en": "Illumise"
+    },
+    "types": [
+      "Bug"
+    ],
+    "eggGroups": [
+      "Bug",
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      },
+      {
+        "ja": "いろめがね",
+        "en": "Tinted Lens",
+        "zh": "有色眼鏡"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 315,
+    "name": {
+      "zh": "毒薔薇",
+      "ja": "ロゼリア",
+      "en": "Roselia"
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Fairy",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "しぜんかいふく",
+        "en": "Natural Cure",
+        "zh": "自然回復"
+      },
+      {
+        "ja": "どくのトゲ",
+        "en": "Poison Point",
+        "zh": "毒刺"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 316,
+    "name": {
+      "zh": "溶食獸",
+      "ja": "ゴクリン",
+      "en": "Gulpin"
+    },
+    "types": [
+      "Poison"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "ヘドロえき",
+        "en": "Liquid Ooze",
+        "zh": "污泥漿"
+      },
+      {
+        "ja": "ねんちゃく",
+        "en": "Sticky Hold",
+        "zh": "黏著"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 317,
+    "name": {
+      "zh": "吞食獸",
+      "ja": "マルノーム",
+      "en": "Swalot"
+    },
+    "types": [
+      "Poison"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "ヘドロえき",
+        "en": "Liquid Ooze",
+        "zh": "污泥漿"
+      },
+      {
+        "ja": "ねんちゃく",
+        "en": "Sticky Hold",
+        "zh": "黏著"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 318,
+    "name": {
+      "zh": "利牙魚",
+      "ja": "キバニア",
+      "en": "Carvanha"
+    },
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "さめはだ",
+        "en": "Rough Skin",
+        "zh": "粗糙皮膚"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 319,
+    "name": {
+      "zh": "巨牙鯊",
+      "ja": "サメハダー",
+      "en": "Sharpedo"
+    },
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "さめはだ",
+        "en": "Rough Skin",
+        "zh": "粗糙皮膚"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 320,
+    "name": {
+      "zh": "吼吼鯨",
+      "ja": "ホエルコ",
+      "en": "Wailmer"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "みずのベール",
+        "en": "Water Veil",
+        "zh": "水幕"
+      },
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 321,
+    "name": {
+      "zh": "吼鯨王",
+      "ja": "ホエルオー",
+      "en": "Wailord"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "みずのベール",
+        "en": "Water Veil",
+        "zh": "水幕"
+      },
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 322,
+    "name": {
+      "zh": "呆火駝",
+      "ja": "ドンメル",
+      "en": "Numel"
+    },
+    "types": [
+      "Fire",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      },
+      {
+        "ja": "たんじゅん",
+        "en": "Simple",
+        "zh": "單純"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 323,
+    "name": {
+      "zh": "噴火駝",
+      "ja": "バクーダ",
+      "en": "Camerupt"
+    },
+    "types": [
+      "Fire",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "マグマのよろい",
+        "en": "Magma Armor",
+        "zh": "熔岩鎧甲"
+      },
+      {
+        "ja": "ハードロック",
+        "en": "Solid Rock",
+        "zh": "堅硬岩石"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 325,
+    "name": {
+      "zh": "跳跳豬",
+      "ja": "バネブー",
+      "en": "Spoink"
+    },
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "マイペース",
+        "en": "Own Tempo",
+        "zh": "我行我素"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 326,
+    "name": {
+      "zh": "噗噗豬",
+      "ja": "ブーピッグ",
+      "en": "Grumpig"
+    },
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "マイペース",
+        "en": "Own Tempo",
+        "zh": "我行我素"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 327,
+    "name": {
+      "zh": "晃晃斑",
+      "ja": "パッチール",
+      "en": "Spinda"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "マイペース",
+        "en": "Own Tempo",
+        "zh": "我行我素"
+      },
+      {
+        "ja": "ちどりあし",
+        "en": "Tangled Feet",
+        "zh": "蹣跚"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 328,
+    "name": {
+      "zh": "大顎蟻",
+      "ja": "ナックラー",
+      "en": "Trapinch"
+    },
+    "types": [
+      "Ground"
+    ],
+    "eggGroups": [
+      "Bug",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "かいりきバサミ",
+        "en": "Hyper Cutter",
+        "zh": "怪力鉗"
+      },
+      {
+        "ja": "ありじごく",
+        "en": "Arena Trap",
+        "zh": "沙穴"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 329,
+    "name": {
+      "zh": "超音波幼蟲",
+      "ja": "ビブラーバ",
+      "en": "Vibrava"
+    },
+    "types": [
+      "Ground",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Bug",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 330,
+    "name": {
+      "zh": "沙漠蜻蜓",
+      "ja": "フライゴン",
+      "en": "Flygon"
+    },
+    "types": [
+      "Ground",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Bug",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      2
+    ],
+    "latest": true
+  },
+  {
+    "pid": 331,
+    "name": {
+      "zh": "刺球仙人掌",
+      "ja": "サボネア",
+      "en": "Cacnea"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Plant",
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "すながくれ",
+        "en": "Sand Veil",
+        "zh": "沙隱"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 332,
+    "name": {
+      "zh": "夢歌仙人掌",
+      "ja": "ノクタス",
+      "en": "Cacturne"
+    },
+    "types": [
+      "Grass",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Plant",
+      "Humanshape"
+    ],
+    "abilities": [
+      {
+        "ja": "すながくれ",
+        "en": "Sand Veil",
+        "zh": "沙隱"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 333,
+    "name": {
+      "zh": "青綿鳥",
+      "ja": "チルット",
+      "en": "Swablu"
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "しぜんかいふく",
+        "en": "Natural Cure",
+        "zh": "自然回復"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 334,
+    "name": {
+      "zh": "七夕青鳥",
+      "ja": "チルタリス",
+      "en": "Altaria"
+    },
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "しぜんかいふく",
+        "en": "Natural Cure",
+        "zh": "自然回復"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 335,
+    "name": {
+      "zh": "貓鼬斬",
+      "ja": "ザングース",
+      "en": "Zangoose"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "めんえき",
+        "en": "Immunity",
+        "zh": "免疫"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 336,
+    "name": {
+      "zh": "飯匙蛇",
+      "ja": "ハブネーク",
+      "en": "Seviper"
+    },
+    "types": [
+      "Poison"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "だっぴ",
+        "en": "Shed Skin",
+        "zh": "蛻皮"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 337,
+    "name": {
+      "zh": "月石",
+      "ja": "ルナトーン",
+      "en": "Lunatone"
+    },
+    "types": [
+      "Rock",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 338,
+    "name": {
+      "zh": "太陽岩",
+      "ja": "ソルロック",
+      "en": "Solrock"
+    },
+    "types": [
+      "Rock",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 339,
+    "name": {
+      "zh": "泥泥鰍",
+      "ja": "ドジョッチ",
+      "en": "Barboach"
+    },
+    "types": [
+      "Water",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      },
+      {
+        "ja": "きけんよち",
+        "en": "Anticipation",
+        "zh": "危險預知"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 340,
+    "name": {
+      "zh": "鯰魚王",
+      "ja": "ナマズン",
+      "en": "Whiscash"
+    },
+    "types": [
+      "Water",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      },
+      {
+        "ja": "きけんよち",
+        "en": "Anticipation",
+        "zh": "危險預知"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 341,
+    "name": {
+      "zh": "龍蝦小兵",
+      "ja": "ヘイガニ",
+      "en": "Corphish"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Water3"
+    ],
+    "abilities": [
+      {
+        "ja": "かいりきバサミ",
+        "en": "Hyper Cutter",
+        "zh": "怪力鉗"
+      },
+      {
+        "ja": "シェルアーマー",
+        "en": "Shell Armor",
+        "zh": "硬殼盔甲"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 342,
+    "name": {
+      "zh": "鐵螯龍蝦",
+      "ja": "シザリガー",
+      "en": "Crawdaunt"
+    },
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Water3"
+    ],
+    "abilities": [
+      {
+        "ja": "かいりきバサミ",
+        "en": "Hyper Cutter",
+        "zh": "怪力鉗"
+      },
+      {
+        "ja": "シェルアーマー",
+        "en": "Shell Armor",
+        "zh": "硬殼盔甲"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 343,
+    "name": {
+      "zh": "天秤偶",
+      "ja": "ヤジロン",
+      "en": "Baltoy"
+    },
+    "types": [
+      "Ground",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 344,
+    "name": {
+      "zh": "念力土偶",
+      "ja": "ネンドール",
+      "en": "Claydol"
+    },
+    "types": [
+      "Ground",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 345,
+    "name": {
+      "zh": "觸手百合",
+      "ja": "リリーラ",
+      "en": "Lileep"
+    },
+    "types": [
+      "Rock",
+      "Grass"
+    ],
+    "eggGroups": [
+      "Water3"
+    ],
+    "abilities": [
+      {
+        "ja": "きゅうばん",
+        "en": "Suction Cups",
+        "zh": "吸盤"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 346,
+    "name": {
+      "zh": "搖籃百合",
+      "ja": "ユレイドル",
+      "en": "Cradily"
+    },
+    "types": [
+      "Rock",
+      "Grass"
+    ],
+    "eggGroups": [
+      "Water3"
+    ],
+    "abilities": [
+      {
+        "ja": "きゅうばん",
+        "en": "Suction Cups",
+        "zh": "吸盤"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 347,
+    "name": {
+      "zh": "太古羽蟲",
+      "ja": "アノプス",
+      "en": "Anorith"
+    },
+    "types": [
+      "Rock",
+      "Bug"
+    ],
+    "eggGroups": [
+      "Water3"
+    ],
+    "abilities": [
+      {
+        "ja": "カブトアーマー",
+        "en": "Battle Armor",
+        "zh": "戰鬥盔甲"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 348,
+    "name": {
+      "zh": "太古盔甲",
+      "ja": "アーマルド",
+      "en": "Armaldo"
+    },
+    "types": [
+      "Rock",
+      "Bug"
+    ],
+    "eggGroups": [
+      "Water3"
+    ],
+    "abilities": [
+      {
+        "ja": "カブトアーマー",
+        "en": "Battle Armor",
+        "zh": "戰鬥盔甲"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 349,
+    "name": {
+      "zh": "醜醜魚",
+      "ja": "ヒンバス",
+      "en": "Feebas"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      },
+      {
+        "ja": "どんかん",
+        "en": "Oblivious",
+        "zh": "遲鈍"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": false
+  },
+  {
+    "pid": 350,
+    "name": {
+      "zh": "美納斯",
+      "ja": "ミロカロス",
+      "en": "Milotic"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "ふしぎなうろこ",
+        "en": "Marvel Scale",
+        "zh": "神奇鱗片"
+      },
+      {
+        "ja": "かちき",
+        "en": "Competitive",
+        "zh": "好勝"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 351,
+    "name": {
+      "zh": "飄浮泡泡",
+      "ja": "ポワルン",
+      "en": "Castform"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Fairy",
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "てんきや",
+        "en": "Forecast",
+        "zh": "陰晴不定"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 352,
+    "name": {
+      "zh": "變隱龍",
+      "ja": "カクレオン",
+      "en": "Kecleon"
+    },
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "へんしょく",
+        "en": "Color Change",
+        "zh": "變色"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 353,
+    "name": {
+      "zh": "怨影娃娃",
+      "ja": "カゲボウズ",
+      "en": "Shuppet"
+    },
+    "types": [
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "ふみん",
+        "en": "Insomnia",
+        "zh": "不眠"
+      },
+      {
+        "ja": "おみとおし",
+        "en": "Frisk",
+        "zh": "察覺"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 354,
+    "name": {
+      "zh": "詛咒娃娃",
+      "ja": "ジュペッタ",
+      "en": "Banette"
+    },
+    "types": [
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "ふみん",
+        "en": "Insomnia",
+        "zh": "不眠"
+      },
+      {
+        "ja": "おみとおし",
+        "en": "Frisk",
+        "zh": "察覺"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 355,
+    "name": {
+      "zh": "夜巡靈",
+      "ja": "ヨマワル",
+      "en": "Duskull"
+    },
+    "types": [
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 356,
+    "name": {
+      "zh": "彷徨夜靈",
+      "ja": "サマヨール",
+      "en": "Dusclops"
+    },
+    "types": [
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "プレッシャー",
+        "en": "Pressure",
+        "zh": "壓迫感"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 357,
+    "name": {
+      "zh": "熱帶龍",
+      "ja": "トロピウス",
+      "en": "Tropius"
+    },
+    "types": [
+      "Grass",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      },
+      {
+        "ja": "サンパワー",
+        "en": "Solar Power",
+        "zh": "太陽之力"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 358,
+    "name": {
+      "zh": "風鈴鈴",
+      "ja": "チリーン",
+      "en": "Chimecho"
+    },
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Indeterminate"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 359,
+    "name": {
+      "zh": "阿勃梭魯",
+      "ja": "アブソル",
+      "en": "Absol"
+    },
+    "types": [
+      "Dark"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "プレッシャー",
+        "en": "Pressure",
+        "zh": "壓迫感"
+      },
+      {
+        "ja": "きょううん",
+        "en": "Super Luck",
+        "zh": "超幸運"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 360,
+    "name": {
+      "zh": "小果然",
+      "ja": "ソーナノ",
+      "en": "Wynaut"
+    },
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "かげふみ",
+        "en": "Shadow Tag",
+        "zh": "踩影"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 361,
+    "name": {
+      "zh": "雪童子",
+      "ja": "ユキワラシ",
+      "en": "Snorunt"
+    },
+    "types": [
+      "Ice"
+    ],
+    "eggGroups": [
+      "Fairy",
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "せいしんりょく",
+        "en": "Inner Focus",
+        "zh": "精神力"
+      },
+      {
+        "ja": "アイスボディ",
+        "en": "Ice Body",
+        "zh": "冰凍之軀"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 362,
+    "name": {
+      "zh": "冰鬼護",
+      "ja": "オニゴーリ",
+      "en": "Glalie"
+    },
+    "types": [
+      "Ice"
+    ],
+    "eggGroups": [
+      "Fairy",
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "せいしんりょく",
+        "en": "Inner Focus",
+        "zh": "精神力"
+      },
+      {
+        "ja": "アイスボディ",
+        "en": "Ice Body",
+        "zh": "冰凍之軀"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 363,
+    "name": {
+      "zh": "海豹球",
+      "ja": "タマザラシ",
+      "en": "Spheal"
+    },
+    "types": [
+      "Ice",
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "アイスボディ",
+        "en": "Ice Body",
+        "zh": "冰凍之軀"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 364,
+    "name": {
+      "zh": "海魔獅",
+      "ja": "トドグラー",
+      "en": "Sealeo"
+    },
+    "types": [
+      "Ice",
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "アイスボディ",
+        "en": "Ice Body",
+        "zh": "冰凍之軀"
+      }
+    ],
+    "ev": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 365,
+    "name": {
+      "zh": "帝牙海獅",
+      "ja": "トドゼルガ",
+      "en": "Walrein"
+    },
+    "types": [
+      "Ice",
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "あついしぼう",
+        "en": "Thick Fat",
+        "zh": "厚脂肪"
+      },
+      {
+        "ja": "アイスボディ",
+        "en": "Ice Body",
+        "zh": "冰凍之軀"
+      }
+    ],
+    "ev": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 366,
+    "name": {
+      "zh": "珍珠貝",
+      "ja": "パールル",
+      "en": "Clamperl"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "シェルアーマー",
+        "en": "Shell Armor",
+        "zh": "硬殼盔甲"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 367,
+    "name": {
+      "zh": "獵斑魚",
+      "ja": "ハンテール",
+      "en": "Huntail"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 368,
+    "name": {
+      "zh": "櫻花魚",
+      "ja": "サクラビス",
+      "en": "Gorebyss"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 369,
+    "name": {
+      "zh": "古空棘魚",
+      "ja": "ジーランス",
+      "en": "Relicanth"
+    },
+    "types": [
+      "Water",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      },
+      {
+        "ja": "いしあたま",
+        "en": "Rock Head",
+        "zh": "堅硬腦袋"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 370,
+    "name": {
+      "zh": "愛心魚",
+      "ja": "ラブカス",
+      "en": "Luvdisc"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      {
+        "ja": "すいすい",
+        "en": "Swift Swim",
+        "zh": "悠游自如"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "latest": true
+  },
+  {
+    "pid": 371,
+    "name": {
+      "zh": "寶貝龍",
+      "ja": "タツベイ",
+      "en": "Bagon"
+    },
+    "types": [
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "いしあたま",
+        "en": "Rock Head",
+        "zh": "堅硬腦袋"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 372,
+    "name": {
+      "zh": "甲殼龍",
+      "ja": "コモルー",
+      "en": "Shelgon"
+    },
+    "types": [
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "いしあたま",
+        "en": "Rock Head",
+        "zh": "堅硬腦袋"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 373,
+    "name": {
+      "zh": "暴飛龍",
+      "ja": "ボーマンダ",
+      "en": "Salamence"
+    },
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Dragon"
+    ],
+    "abilities": [
+      {
+        "ja": "いかく",
+        "en": "Intimidate",
+        "zh": "威嚇"
+      }
+    ],
+    "ev": [
+      0,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 374,
+    "name": {
+      "zh": "鐵啞鈴",
+      "ja": "ダンバル",
+      "en": "Beldum"
+    },
+    "types": [
+      "Steel",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "クリアボディ",
+        "en": "Clear Body",
+        "zh": "恆淨之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 375,
+    "name": {
+      "zh": "金屬怪",
+      "ja": "メタング",
+      "en": "Metang"
+    },
+    "types": [
+      "Steel",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "クリアボディ",
+        "en": "Clear Body",
+        "zh": "恆淨之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
+    "pid": 376,
+    "name": {
+      "zh": "巨金怪",
+      "ja": "メタグロス",
+      "en": "Metagross"
+    },
+    "types": [
+      "Steel",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      {
+        "ja": "クリアボディ",
+        "en": "Clear Body",
+        "zh": "恆淨之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      3,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 377,
+    "name": {
+      "zh": "雷吉洛克",
+      "ja": "レジロック",
+      "en": "Regirock"
+    },
+    "types": [
+      "Rock"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "クリアボディ",
+        "en": "Clear Body",
+        "zh": "恆淨之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      3,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 378,
+    "name": {
+      "zh": "雷吉艾斯",
+      "ja": "レジアイス",
+      "en": "Regice"
+    },
+    "types": [
+      "Ice"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "クリアボディ",
+        "en": "Clear Body",
+        "zh": "恆淨之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 379,
+    "name": {
+      "zh": "雷吉斯奇魯",
+      "ja": "レジスチル",
+      "en": "Registeel"
+    },
+    "types": [
+      "Steel"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "クリアボディ",
+        "en": "Clear Body",
+        "zh": "恆淨之軀"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
+      1,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 380,
+    "name": {
+      "zh": "拉帝亞斯",
+      "ja": "ラティアス",
+      "en": "Latias"
+    },
+    "types": [
+      "Dragon",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 381,
+    "name": {
+      "zh": "拉帝歐斯",
+      "ja": "ラティオス",
+      "en": "Latios"
+    },
+    "types": [
+      "Dragon",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "ふゆう",
+        "en": "Levitate",
+        "zh": "飄浮"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 382,
+    "name": {
+      "zh": "蓋歐卡",
+      "ja": "カイオーガ",
+      "en": "Kyogre"
+    },
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "あめふらし",
+        "en": "Drizzle",
+        "zh": "降雨"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 383,
+    "name": {
+      "zh": "固拉多",
+      "ja": "グラードン",
+      "en": "Groudon"
+    },
+    "types": [
+      "Ground"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "ひでり",
+        "en": "Drought",
+        "zh": "日照"
+      }
+    ],
+    "ev": [
+      0,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 384,
+    "name": {
+      "zh": "烈空坐",
+      "ja": "レックウザ",
+      "en": "Rayquaza"
+    },
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "エアロック",
+        "en": "Air Lock",
+        "zh": "氣閘"
+      }
+    ],
+    "ev": [
+      0,
+      2,
+      0,
+      1,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 385,
+    "name": {
+      "zh": "基拉祈",
+      "ja": "ジラーチ",
+      "en": "Jirachi"
+    },
+    "types": [
+      "Steel",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "てんのめぐみ",
+        "en": "Serene Grace",
+        "zh": "天恩"
+      }
+    ],
+    "ev": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 386,
+    "name": {
+      "zh": "代歐奇希斯",
+      "ja": "デオキシス",
+      "en": "Deoxys"
+    },
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "No-eggs"
+    ],
+    "abilities": [
+      {
+        "ja": "プレッシャー",
+        "en": "Pressure",
+        "zh": "壓迫感"
+      }
+    ],
+    "ev": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "latest": true
   }
 ]
