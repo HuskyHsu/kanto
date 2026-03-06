@@ -1,7 +1,6 @@
 import { PokemonCard } from '@/components/pokemon';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import { ShareButton } from '@/components/ui/share-button';
 import { useAbilityToggle } from '@/hooks/useAbilityToggle';
 import { useEVToggle } from '@/hooks/useEVToggle';
 import { usePokemonData } from '@/hooks/usePokemonData';
@@ -71,12 +70,12 @@ function Home() {
 
 function PageHeader() {
   return (
-    <h1 className='flex items-center gap-2 text-3xl font-bold'>
-      <img src={`${import.meta.env.BASE_URL}images/logo.png`} className='w-20 h-20' />
-      <Link to={`/`} className='font-press-start text-xl'>
-        Kanto Pokédex
+    <h1 className='flex items-center gap-2 text-2xl font-bold'>
+      <img src={`${import.meta.env.BASE_URL}images/logo.png`} className='w-16 h-16 md:w-20 md:h-20' />
+      <Link to={`/`} className='font-press-start text-base md:text-xl tracking-tighter text-slate-700'>
+        FireRed & LeafGreen Pokédex
       </Link>
-      <ShareButton title='Kanto Pokédex' />
+      {/* <ShareButton title='Kanto Pokédex' /> */}
     </h1>
   );
 }

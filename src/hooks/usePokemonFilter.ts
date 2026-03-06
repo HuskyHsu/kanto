@@ -37,7 +37,14 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     // Search in pid (convert to string for searching)
     const pidMatches = pokemon.pid.toString().includes(normalizedKeyword);
 
-    return nameMatches || pidMatches;
+    const abilitiesMatches =
+      pokemon.abilities.some((ability) =>
+        ability.zh.toLowerCase().includes(normalizedKeyword) ||
+        ability.ja.toLowerCase().includes(normalizedKeyword) ||
+        ability.en.toLowerCase().includes(normalizedKeyword)
+      );
+
+    return nameMatches || pidMatches || abilitiesMatches;
   }, []);
 
   // Memoize the pokedex matching function

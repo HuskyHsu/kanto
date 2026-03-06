@@ -139,12 +139,12 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
           onChange={handleInputChange}
           onCompositionStart={handleCompositionStart}
           onCompositionEnd={handleCompositionEnd}
-          placeholder='Search by name(en, ja, zh-hant), or ID...'
+          placeholder='Name, Ability, or ID...'
           className='
             w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg
             focus:ring-2 focus:ring-blue-500 focus:border-blue-500
             transition-colors duration-200 outline-none
-            bg-white text-slate-700 placeholder-gray-400 text-xs
+            bg-white text-slate-700 placeholder-gray-400 text-[10px] tracking-tighter
           '
         />
         {inputValue && (
