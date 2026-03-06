@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import type { DetailedPokemon } from '@/types/pokemon';
 import { useState } from 'react';
@@ -18,6 +19,8 @@ interface MovesCardProps {
 }
 
 export default function MovesCard({ pokemon }: MovesCardProps) {
+  const { displayLanguage } = useLanguage();
+
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -114,27 +117,22 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-2/12'>Lv</TableHead>
-                  <TableHead className='w-1/12'>TM</TableHead>
-                  <TableHead className='w-3/12'>Name</TableHead>
+                  <TableHead className='w-3/12'>Lv</TableHead>
+                  <TableHead className='w-4/12'>Name</TableHead>
                   <TableHead className='w-1/12'>Type</TableHead>
                   <TableHead className='w-1/12'>Cat.</TableHead>
-                  <TableHead className='w-2/12'>Att.</TableHead>
-                  <TableHead className='w-2/12'>Acc.</TableHead>
-                  <TableHead className='w-2/12'>PP</TableHead>
+                  <TableHead className='w-1/12'>Att.</TableHead>
+                  <TableHead className='w-1/12'>Acc.</TableHead>
+                  <TableHead className='w-1/12'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {pokemon.levelUpMoves.filter(filterMove).map((move) => {
                   const from = move.level > 1 ? move.level : move.level === 0 ? 'Evolve' : '—';
-                  const TM = [...pokemon.TMMoves, ...pokemon.HTMMoves].find(
-                    (tm) => tm.id === move.id,
-                  );
 
                   return (
                     <MoveRow key={move.id} moveId={move.id} colSpan={7}>
                       <TableCell className='flex gap-0 justify-center items-end'>{from}</TableCell>
-                      <TableCell>{TM?.tm.toString().padStart(3, '0')}</TableCell>
                       <TableCell>
                         <a
                           href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
@@ -144,6 +142,8 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                         >
                           {move.name.zh}
                         </a>
+                        <br />
+                        {displayLanguage === 'ja' ? move.name.ja : move.name.en}
                       </TableCell>
                       <TableCell>
                         <div className='flex justify-center'>
@@ -170,19 +170,19 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className='w-2/12'>TM</TableHead>
-                  <TableHead className='w-3/12'>Name</TableHead>
+                  <TableHead className='w-3/12'>TM</TableHead>
+                  <TableHead className='w-4/12'>Name</TableHead>
                   <TableHead className='w-1/12'>Type</TableHead>
-                  <TableHead className='w-2/12'>Cat.</TableHead>
-                  <TableHead className='w-2/12'>Att.</TableHead>
-                  <TableHead className='w-2/12'>Acc.</TableHead>
-                  <TableHead className='w-2/12'>PP</TableHead>
+                  <TableHead className='w-1/12'>Cat.</TableHead>
+                  <TableHead className='w-1/12'>Att.</TableHead>
+                  <TableHead className='w-1/12'>Acc.</TableHead>
+                  <TableHead className='w-1/12'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {[...pokemon.HTMMoves, ...pokemon.TMMoves].filter(filterMove).map((move) => (
                   <MoveRow key={move.id} moveId={move.id} colSpan={6}>
-                    <TableCell>{move.tm.toString().padStart(3, '0')}</TableCell>
+                    <TableCell>{move.tm}</TableCell>
                     <TableCell>
                       <a
                         href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
@@ -192,6 +192,8 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                       >
                         {move.name.zh}
                       </a>
+                      <br />
+                      {displayLanguage === 'ja' ? move.name.ja : move.name.en}
                     </TableCell>
                     <TableCell>
                       <div className='flex justify-center'>
