@@ -64,7 +64,10 @@ const getMoveData = async (mid) => {
     name: {
       ja: rawData.names.find((n) => n.language.name === 'ja')?.name || rawData.name,
       en: rawData.names.find((n) => n.language.name === 'en')?.name || rawData.name,
-      zh: rawData.names.find((n) => n.language.name === 'zh-hant')?.name || rawData.names.find((n) => n.language.name === 'en')?.name || rawData.name,
+      zh:
+        rawData.names.find((n) => n.language.name === 'zh-hant')?.name ||
+        rawData.names.find((n) => n.language.name === 'en')?.name ||
+        rawData.name,
     },
   };
 
@@ -92,12 +95,36 @@ const getAbilityData = async (aid) => {
     name: {
       ja: rawData.names.find((n) => n.language.name === 'ja')?.name || rawData.name,
       en: rawData.names.find((n) => n.language.name === 'en')?.name || rawData.name,
-      zh: rawData.name === 'wind-rider' ? '乘風' : (rawData.names.find((n) => n.language.name === 'zh-hant')?.name || rawData.names.find((n) => n.language.name === 'en')?.name || rawData.name),
+      zh:
+        rawData.name === 'wind-rider'
+          ? '乘風'
+          : rawData.names.find((n) => n.language.name === 'zh-hant')?.name ||
+            rawData.names.find((n) => n.language.name === 'en')?.name ||
+            rawData.name,
     },
   };
 
   abilityCache.set(aid, formattedAbility);
   return formattedAbility;
+};
+
+const eggGroupCache = new Map();
+
+/**
+ * Fetch and format egg group data
+ */
+const getEggGroupData = async (url) => {
+  const id = url.split('/').filter(Boolean).at(-1);
+  if (eggGroupCache.has(id)) {
+    return eggGroupCache.get(id);
+  }
+
+  const rawData = await fetchWithCache(url, `scripts/cache/egg-group/${id}.json`);
+
+  const zhName = rawData.names.find((n) => n.language.name === 'zh-hant')?.name || rawData.name;
+
+  eggGroupCache.set(id, zhName);
+  return zhName;
 };
 
 const processMoves = async (rawMoves) => {
@@ -194,10 +221,11 @@ const processTypes = (rawTypes) => {
   return rawTypes.map((t) => t.type.name.charAt(0).toUpperCase() + t.type.name.slice(1));
 };
 
-const processSpecies = (speciesData) => {
-  const eggGroups = speciesData.egg_groups.map(
-    (g) => g.name.charAt(0).toUpperCase() + g.name.slice(1),
-  );
+const processSpecies = async (speciesData) => {
+  const eggGroupPromises = speciesData.egg_groups.map(async (g) => {
+    return await getEggGroupData(g.url);
+  });
+  const eggGroups = await Promise.all(eggGroupPromises);
 
   const pokemonNames = {
     zh: speciesData.names.find((n) => n.language.name === 'zh-hant')?.name || '',
@@ -221,7 +249,7 @@ const buildEvolutionTree = async (node) => {
   const speciesData = await getPokemonSpeciesData(pid);
   const pokemonData = await getPokemonData(pid);
 
-  const speciesProcessed = processSpecies(speciesData);
+  const speciesProcessed = await processSpecies(speciesData);
   const types = processTypes(pokemonData.types);
 
   const result = {
@@ -296,7 +324,7 @@ const processPokemon = async (pid) => {
   const abilities = await processAbilities(data.abilities);
   const stats = processStats(data.stats);
   const types = processTypes(data.types);
-  const species = processSpecies(speciesData);
+  const species = await processSpecies(speciesData);
 
   const findValidEvolutionRoot = (node) => {
     const pid = parseInt(node.species.url.split('/').at(-2));

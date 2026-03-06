@@ -15,7 +15,6 @@ export interface Pokemon {
   base: [number, number, number, number, number, number]; // HP, Attack, Defense, Sp.Attack, Sp.Defense, Speed
   ev: [number, number, number, number, number, number]; // EV yields in same order as base stats
   latest: boolean;
-  genderRate: number;
 }
 
 export type PokemonList = Pokemon[];
@@ -23,20 +22,20 @@ export type PokemonList = Pokemon[];
 // Detailed Pokemon types for the detail page
 export interface PokemonMove {
   id: number;
-  name: LanguageName;
   type: string;
+  name: LanguageName;
   category: 'Physical' | 'Special' | 'Status';
+  accuracy: number | null;
   power: number;
-  cooldown: number;
+  pp: number;
 }
 
 export interface LevelUpMove extends PokemonMove {
   level: number;
-  plus: number;
 }
 
 export interface TMMove extends PokemonMove {
-  tm: number;
+  tm: string;
 }
 
 export interface EvolutionNode {
@@ -51,14 +50,12 @@ export interface EvolutionNode {
 }
 
 export interface DetailedPokemon extends Pokemon {
-  genderRatio: number;
-  catchRate: number;
-  expGroup: string;
-  height: number;
-  weight: number;
-  alphaMove?: PokemonMove;
+  genderRate: number;
   levelUpMoves: LevelUpMove[];
-  tmMoves: TMMove[];
+  TMMoves: TMMove[];
+  HTMMoves: TMMove[];
+  eggMoves: PokemonMove[];
+  tutorMoves: PokemonMove[];
   evolutionTree?: EvolutionNode;
 }
 

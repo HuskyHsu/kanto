@@ -11,8 +11,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Monster",
-      "Plant"
+      "怪獸",
+      "植物"
     ],
     "abilities": [
       {
@@ -43,8 +43,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Monster",
-      "Plant"
+      "怪獸",
+      "植物"
     ],
     "abilities": [
       {
@@ -75,8 +75,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Monster",
-      "Plant"
+      "怪獸",
+      "植物"
     ],
     "abilities": [
       {
@@ -106,8 +106,8 @@
       "Fire"
     ],
     "eggGroups": [
-      "Monster",
-      "Dragon"
+      "怪獸",
+      "龍"
     ],
     "abilities": [
       {
@@ -137,8 +137,8 @@
       "Fire"
     ],
     "eggGroups": [
-      "Monster",
-      "Dragon"
+      "怪獸",
+      "龍"
     ],
     "abilities": [
       {
@@ -169,8 +169,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Monster",
-      "Dragon"
+      "怪獸",
+      "龍"
     ],
     "abilities": [
       {
@@ -200,8 +200,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -231,8 +231,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -262,8 +262,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -293,7 +293,7 @@
       "Bug"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -323,7 +323,7 @@
       "Bug"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -354,7 +354,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -385,7 +385,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -416,7 +416,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -447,7 +447,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -478,7 +478,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -514,7 +514,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -550,7 +550,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -585,7 +585,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -620,7 +620,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -656,7 +656,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -687,7 +687,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -717,8 +717,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Ground",
-      "Dragon"
+      "陸上",
+      "龍"
     ],
     "abilities": [
       {
@@ -753,8 +753,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Ground",
-      "Dragon"
+      "陸上",
+      "龍"
     ],
     "abilities": [
       {
@@ -789,8 +789,8 @@
       "Electric"
     ],
     "eggGroups": [
-      "Ground",
-      "Fairy"
+      "陸上",
+      "妖精"
     ],
     "abilities": [
       {
@@ -820,8 +820,8 @@
       "Electric"
     ],
     "eggGroups": [
-      "Ground",
-      "Fairy"
+      "陸上",
+      "妖精"
     ],
     "abilities": [
       {
@@ -851,7 +851,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -881,7 +881,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -911,8 +911,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -947,7 +947,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -983,7 +983,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -1018,8 +1018,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -1054,8 +1054,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -1091,8 +1091,8 @@
       "Ground"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -1127,7 +1127,7 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Fairy"
+      "妖精"
     ],
     "abilities": [
       {
@@ -1162,7 +1162,7 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Fairy"
+      "妖精"
     ],
     "abilities": [
       {
@@ -1197,7 +1197,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1227,7 +1227,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1258,7 +1258,7 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Fairy"
+      "妖精"
     ],
     "abilities": [
       {
@@ -1294,7 +1294,7 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Fairy"
+      "妖精"
     ],
     "abilities": [
       {
@@ -1330,7 +1330,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -1361,7 +1361,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -1392,7 +1392,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -1423,7 +1423,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -1454,7 +1454,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -1485,8 +1485,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Bug",
-      "Plant"
+      "蟲",
+      "植物"
     ],
     "abilities": [
       {
@@ -1522,8 +1522,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Bug",
-      "Plant"
+      "蟲",
+      "植物"
     ],
     "abilities": [
       {
@@ -1559,7 +1559,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -1595,7 +1595,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -1630,7 +1630,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1665,7 +1665,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1700,7 +1700,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1735,7 +1735,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1770,8 +1770,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -1806,8 +1806,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -1842,7 +1842,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1877,7 +1877,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1912,7 +1912,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1947,7 +1947,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -1982,7 +1982,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1"
+      "水中1"
     ],
     "abilities": [
       {
@@ -2017,7 +2017,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1"
+      "水中1"
     ],
     "abilities": [
       {
@@ -2053,7 +2053,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Water1"
+      "水中1"
     ],
     "abilities": [
       {
@@ -2088,7 +2088,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -2123,7 +2123,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -2158,7 +2158,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -2193,7 +2193,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -2228,7 +2228,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -2263,7 +2263,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -2299,7 +2299,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -2330,7 +2330,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -2361,7 +2361,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -2392,7 +2392,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -2428,7 +2428,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -2464,7 +2464,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -2500,7 +2500,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -2536,7 +2536,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -2571,7 +2571,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -2606,7 +2606,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -2642,8 +2642,8 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -2679,8 +2679,8 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -2716,7 +2716,7 @@
       "Steel"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -2752,7 +2752,7 @@
       "Steel"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -2788,8 +2788,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying",
-      "Ground"
+      "飛行",
+      "陸上"
     ],
     "abilities": [
       {
@@ -2825,7 +2825,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -2861,7 +2861,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -2896,8 +2896,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -2933,8 +2933,8 @@
       "Ice"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -2969,7 +2969,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -3004,7 +3004,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -3039,7 +3039,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -3075,7 +3075,7 @@
       "Ice"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -3111,7 +3111,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -3142,7 +3142,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -3173,7 +3173,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -3204,7 +3204,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -3239,7 +3239,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -3274,7 +3274,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -3309,7 +3309,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -3344,7 +3344,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -3379,7 +3379,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -3414,7 +3414,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -3450,7 +3450,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -3481,7 +3481,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -3511,7 +3511,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -3546,7 +3546,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -3581,7 +3581,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -3616,7 +3616,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -3651,7 +3651,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -3686,7 +3686,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -3721,7 +3721,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -3757,8 +3757,8 @@
       "Rock"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -3794,8 +3794,8 @@
       "Rock"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -3830,7 +3830,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Fairy"
+      "妖精"
     ],
     "abilities": [
       {
@@ -3865,7 +3865,7 @@
       "Grass"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -3900,7 +3900,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -3935,8 +3935,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Dragon"
+      "水中1",
+      "龍"
     ],
     "abilities": [
       {
@@ -3971,8 +3971,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Dragon"
+      "水中1",
+      "龍"
     ],
     "abilities": [
       {
@@ -4007,7 +4007,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -4042,7 +4042,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -4077,7 +4077,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -4113,7 +4113,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -4149,7 +4149,7 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -4185,7 +4185,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -4221,7 +4221,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -4256,7 +4256,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -4286,7 +4286,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -4316,7 +4316,7 @@
       "Bug"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -4351,7 +4351,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -4386,8 +4386,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water2",
-      "Dragon"
+      "水中2",
+      "龍"
     ],
     "abilities": [
       {
@@ -4418,8 +4418,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Water2",
-      "Dragon"
+      "水中2",
+      "龍"
     ],
     "abilities": [
       {
@@ -4450,8 +4450,8 @@
       "Ice"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -4486,7 +4486,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ditto"
+      "百變怪"
     ],
     "abilities": [
       {
@@ -4516,7 +4516,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -4551,7 +4551,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -4581,7 +4581,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -4611,7 +4611,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -4641,7 +4641,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -4677,8 +4677,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Water3"
+      "水中1",
+      "水中3"
     ],
     "abilities": [
       {
@@ -4714,8 +4714,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Water3"
+      "水中1",
+      "水中3"
     ],
     "abilities": [
       {
@@ -4751,8 +4751,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Water3"
+      "水中1",
+      "水中3"
     ],
     "abilities": [
       {
@@ -4788,8 +4788,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Water3"
+      "水中1",
+      "水中3"
     ],
     "abilities": [
       {
@@ -4825,7 +4825,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -4860,7 +4860,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -4896,7 +4896,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -4927,7 +4927,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -4958,7 +4958,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -4988,8 +4988,8 @@
       "Dragon"
     ],
     "eggGroups": [
-      "Water1",
-      "Dragon"
+      "水中1",
+      "龍"
     ],
     "abilities": [
       {
@@ -5019,8 +5019,8 @@
       "Dragon"
     ],
     "eggGroups": [
-      "Water1",
-      "Dragon"
+      "水中1",
+      "龍"
     ],
     "abilities": [
       {
@@ -5051,8 +5051,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Water1",
-      "Dragon"
+      "水中1",
+      "龍"
     ],
     "abilities": [
       {
@@ -5082,7 +5082,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -5112,7 +5112,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -5142,8 +5142,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Monster",
-      "Plant"
+      "怪獸",
+      "植物"
     ],
     "abilities": [
       {
@@ -5173,8 +5173,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Monster",
-      "Plant"
+      "怪獸",
+      "植物"
     ],
     "abilities": [
       {
@@ -5204,8 +5204,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Monster",
-      "Plant"
+      "怪獸",
+      "植物"
     ],
     "abilities": [
       {
@@ -5235,7 +5235,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -5265,7 +5265,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -5295,7 +5295,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -5325,8 +5325,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -5356,8 +5356,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -5387,8 +5387,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -5418,7 +5418,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -5453,7 +5453,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -5489,7 +5489,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -5525,7 +5525,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -5561,7 +5561,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -5597,7 +5597,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -5633,7 +5633,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -5669,7 +5669,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -5705,7 +5705,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -5736,7 +5736,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -5772,7 +5772,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -5807,7 +5807,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -5837,7 +5837,7 @@
       "Fairy"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -5873,7 +5873,7 @@
       "Fairy"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -5908,7 +5908,7 @@
       "Fairy"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -5944,8 +5944,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying",
-      "Fairy"
+      "飛行",
+      "妖精"
     ],
     "abilities": [
       {
@@ -5981,7 +5981,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -6017,7 +6017,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -6052,8 +6052,8 @@
       "Electric"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -6083,8 +6083,8 @@
       "Electric"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -6114,8 +6114,8 @@
       "Electric"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -6145,7 +6145,7 @@
       "Grass"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -6176,8 +6176,8 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Water1",
-      "Fairy"
+      "水中1",
+      "妖精"
     ],
     "abilities": [
       {
@@ -6213,8 +6213,8 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Water1",
-      "Fairy"
+      "水中1",
+      "妖精"
     ],
     "abilities": [
       {
@@ -6249,7 +6249,7 @@
       "Rock"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -6284,7 +6284,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1"
+      "水中1"
     ],
     "abilities": [
       {
@@ -6320,8 +6320,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Fairy",
-      "Plant"
+      "妖精",
+      "植物"
     ],
     "abilities": [
       {
@@ -6357,8 +6357,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Fairy",
-      "Plant"
+      "妖精",
+      "植物"
     ],
     "abilities": [
       {
@@ -6394,8 +6394,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Fairy",
-      "Plant"
+      "妖精",
+      "植物"
     ],
     "abilities": [
       {
@@ -6430,7 +6430,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -6465,7 +6465,7 @@
       "Grass"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -6500,7 +6500,7 @@
       "Grass"
     ],
     "eggGroups": [
-      "Plant"
+      "植物"
     ],
     "abilities": [
       {
@@ -6536,7 +6536,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -6572,8 +6572,8 @@
       "Ground"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -6609,8 +6609,8 @@
       "Ground"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -6645,7 +6645,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -6675,7 +6675,7 @@
       "Dark"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -6706,7 +6706,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -6742,8 +6742,8 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -6778,7 +6778,7 @@
       "Ghost"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -6808,7 +6808,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -6838,7 +6838,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -6869,7 +6869,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -6904,7 +6904,7 @@
       "Bug"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -6935,7 +6935,7 @@
       "Steel"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -6965,7 +6965,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7001,7 +7001,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -7037,7 +7037,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -7072,8 +7072,8 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Ground",
-      "Fairy"
+      "陸上",
+      "妖精"
     ],
     "abilities": [
       {
@@ -7108,8 +7108,8 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Ground",
-      "Fairy"
+      "陸上",
+      "妖精"
     ],
     "abilities": [
       {
@@ -7145,7 +7145,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -7181,7 +7181,7 @@
       "Steel"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -7217,7 +7217,7 @@
       "Rock"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -7253,7 +7253,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -7289,7 +7289,7 @@
       "Ice"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7324,7 +7324,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7359,7 +7359,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7394,7 +7394,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -7430,7 +7430,7 @@
       "Rock"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -7466,7 +7466,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7502,7 +7502,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7538,8 +7538,8 @@
       "Rock"
     ],
     "eggGroups": [
-      "Water1",
-      "Water3"
+      "水中1",
+      "水中3"
     ],
     "abilities": [
       {
@@ -7574,8 +7574,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Water2"
+      "水中1",
+      "水中2"
     ],
     "abilities": [
       {
@@ -7610,8 +7610,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Water2"
+      "水中1",
+      "水中2"
     ],
     "abilities": [
       {
@@ -7647,8 +7647,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -7684,7 +7684,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Water1"
+      "水中1"
     ],
     "abilities": [
       {
@@ -7720,7 +7720,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -7756,7 +7756,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7792,7 +7792,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7828,8 +7828,8 @@
       "Dragon"
     ],
     "eggGroups": [
-      "Water1",
-      "Dragon"
+      "水中1",
+      "龍"
     ],
     "abilities": [
       {
@@ -7864,7 +7864,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7894,7 +7894,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7924,7 +7924,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -7959,7 +7959,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -7994,7 +7994,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -8029,7 +8029,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8064,7 +8064,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -8100,7 +8100,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8135,7 +8135,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8165,7 +8165,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8195,7 +8195,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -8230,7 +8230,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Fairy"
+      "妖精"
     ],
     "abilities": [
       {
@@ -8265,7 +8265,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8295,7 +8295,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8325,7 +8325,7 @@
       "Water"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8356,7 +8356,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -8387,7 +8387,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -8418,7 +8418,7 @@
       "Dark"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -8449,7 +8449,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8480,7 +8480,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8511,7 +8511,7 @@
       "Grass"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -8541,8 +8541,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Monster",
-      "Dragon"
+      "怪獸",
+      "龍"
     ],
     "abilities": [
       {
@@ -8572,8 +8572,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Monster",
-      "Dragon"
+      "怪獸",
+      "龍"
     ],
     "abilities": [
       {
@@ -8603,8 +8603,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Monster",
-      "Dragon"
+      "怪獸",
+      "龍"
     ],
     "abilities": [
       {
@@ -8634,7 +8634,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -8665,7 +8665,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -8696,7 +8696,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -8726,8 +8726,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -8758,8 +8758,8 @@
       "Ground"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -8790,8 +8790,8 @@
       "Ground"
     ],
     "eggGroups": [
-      "Monster",
-      "Water1"
+      "怪獸",
+      "水中1"
     ],
     "abilities": [
       {
@@ -8821,7 +8821,7 @@
       "Dark"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -8856,7 +8856,7 @@
       "Dark"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -8891,7 +8891,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -8926,7 +8926,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -8961,7 +8961,7 @@
       "Bug"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -8991,7 +8991,7 @@
       "Bug"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -9022,7 +9022,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -9052,7 +9052,7 @@
       "Bug"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -9083,7 +9083,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -9114,8 +9114,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Water1",
-      "Plant"
+      "水中1",
+      "植物"
     ],
     "abilities": [
       {
@@ -9151,8 +9151,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Water1",
-      "Plant"
+      "水中1",
+      "植物"
     ],
     "abilities": [
       {
@@ -9188,8 +9188,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Water1",
-      "Plant"
+      "水中1",
+      "植物"
     ],
     "abilities": [
       {
@@ -9224,8 +9224,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Ground",
-      "Plant"
+      "陸上",
+      "植物"
     ],
     "abilities": [
       {
@@ -9261,8 +9261,8 @@
       "Dark"
     ],
     "eggGroups": [
-      "Ground",
-      "Plant"
+      "陸上",
+      "植物"
     ],
     "abilities": [
       {
@@ -9298,8 +9298,8 @@
       "Dark"
     ],
     "eggGroups": [
-      "Ground",
-      "Plant"
+      "陸上",
+      "植物"
     ],
     "abilities": [
       {
@@ -9335,7 +9335,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -9366,7 +9366,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying"
+      "飛行"
     ],
     "abilities": [
       {
@@ -9397,8 +9397,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Water1",
-      "Flying"
+      "水中1",
+      "飛行"
     ],
     "abilities": [
       {
@@ -9434,8 +9434,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Water1",
-      "Flying"
+      "水中1",
+      "飛行"
     ],
     "abilities": [
       {
@@ -9471,8 +9471,8 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Humanshape",
-      "Indeterminate"
+      "人型",
+      "不定形"
     ],
     "abilities": [
       {
@@ -9508,8 +9508,8 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Humanshape",
-      "Indeterminate"
+      "人型",
+      "不定形"
     ],
     "abilities": [
       {
@@ -9545,8 +9545,8 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Humanshape",
-      "Indeterminate"
+      "人型",
+      "不定形"
     ],
     "abilities": [
       {
@@ -9582,8 +9582,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Bug"
+      "水中1",
+      "蟲"
     ],
     "abilities": [
       {
@@ -9614,8 +9614,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Water1",
-      "Bug"
+      "水中1",
+      "蟲"
     ],
     "abilities": [
       {
@@ -9645,8 +9645,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Fairy",
-      "Plant"
+      "妖精",
+      "植物"
     ],
     "abilities": [
       {
@@ -9682,8 +9682,8 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Fairy",
-      "Plant"
+      "妖精",
+      "植物"
     ],
     "abilities": [
       {
@@ -9718,7 +9718,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -9748,7 +9748,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -9778,7 +9778,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -9809,7 +9809,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -9840,7 +9840,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Bug"
+      "蟲"
     ],
     "abilities": [
       {
@@ -9871,7 +9871,7 @@
       "Ghost"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -9901,8 +9901,8 @@
       "Normal"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -9932,8 +9932,8 @@
       "Normal"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -9963,8 +9963,8 @@
       "Normal"
     ],
     "eggGroups": [
-      "Monster",
-      "Ground"
+      "怪獸",
+      "陸上"
     ],
     "abilities": [
       {
@@ -9994,7 +9994,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -10029,7 +10029,7 @@
       "Fighting"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -10065,7 +10065,7 @@
       "Fairy"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -10100,7 +10100,7 @@
       "Rock"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -10135,8 +10135,8 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground",
-      "Fairy"
+      "陸上",
+      "妖精"
     ],
     "abilities": [
       {
@@ -10171,8 +10171,8 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground",
-      "Fairy"
+      "陸上",
+      "妖精"
     ],
     "abilities": [
       {
@@ -10208,7 +10208,7 @@
       "Ghost"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -10244,8 +10244,8 @@
       "Fairy"
     ],
     "eggGroups": [
-      "Ground",
-      "Fairy"
+      "陸上",
+      "妖精"
     ],
     "abilities": [
       {
@@ -10281,7 +10281,7 @@
       "Rock"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -10317,7 +10317,7 @@
       "Rock"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -10353,7 +10353,7 @@
       "Rock"
     ],
     "eggGroups": [
-      "Monster"
+      "怪獸"
     ],
     "abilities": [
       {
@@ -10389,7 +10389,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -10420,7 +10420,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Humanshape"
+      "人型"
     ],
     "abilities": [
       {
@@ -10450,7 +10450,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -10485,7 +10485,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -10520,7 +10520,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Fairy"
+      "妖精"
     ],
     "abilities": [
       {
@@ -10550,7 +10550,7 @@
       "Electric"
     ],
     "eggGroups": [
-      "Fairy"
+      "妖精"
     ],
     "abilities": [
       {
@@ -10580,8 +10580,8 @@
       "Bug"
     ],
     "eggGroups": [
-      "Bug",
-      "Humanshape"
+      "蟲",
+      "人型"
     ],
     "abilities": [
       {
@@ -10616,8 +10616,8 @@
       "Bug"
     ],
     "eggGroups": [
-      "Bug",
-      "Humanshape"
+      "蟲",
+      "人型"
     ],
     "abilities": [
       {
@@ -10653,8 +10653,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Fairy",
-      "Plant"
+      "妖精",
+      "植物"
     ],
     "abilities": [
       {
@@ -10689,7 +10689,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -10724,7 +10724,7 @@
       "Poison"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -10760,7 +10760,7 @@
       "Dark"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -10791,7 +10791,7 @@
       "Dark"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -10821,8 +10821,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Ground",
-      "Water2"
+      "陸上",
+      "水中2"
     ],
     "abilities": [
       {
@@ -10857,8 +10857,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Ground",
-      "Water2"
+      "陸上",
+      "水中2"
     ],
     "abilities": [
       {
@@ -10894,7 +10894,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -10930,7 +10930,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -10965,7 +10965,7 @@
       "Fire"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -11000,7 +11000,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -11035,7 +11035,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -11070,8 +11070,8 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground",
-      "Humanshape"
+      "陸上",
+      "人型"
     ],
     "abilities": [
       {
@@ -11106,8 +11106,8 @@
       "Ground"
     ],
     "eggGroups": [
-      "Bug",
-      "Dragon"
+      "蟲",
+      "龍"
     ],
     "abilities": [
       {
@@ -11143,8 +11143,8 @@
       "Dragon"
     ],
     "eggGroups": [
-      "Bug",
-      "Dragon"
+      "蟲",
+      "龍"
     ],
     "abilities": [
       {
@@ -11175,8 +11175,8 @@
       "Dragon"
     ],
     "eggGroups": [
-      "Bug",
-      "Dragon"
+      "蟲",
+      "龍"
     ],
     "abilities": [
       {
@@ -11206,8 +11206,8 @@
       "Grass"
     ],
     "eggGroups": [
-      "Plant",
-      "Humanshape"
+      "植物",
+      "人型"
     ],
     "abilities": [
       {
@@ -11238,8 +11238,8 @@
       "Dark"
     ],
     "eggGroups": [
-      "Plant",
-      "Humanshape"
+      "植物",
+      "人型"
     ],
     "abilities": [
       {
@@ -11270,8 +11270,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying",
-      "Dragon"
+      "飛行",
+      "龍"
     ],
     "abilities": [
       {
@@ -11302,8 +11302,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Flying",
-      "Dragon"
+      "飛行",
+      "龍"
     ],
     "abilities": [
       {
@@ -11333,7 +11333,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -11363,8 +11363,8 @@
       "Poison"
     ],
     "eggGroups": [
-      "Ground",
-      "Dragon"
+      "陸上",
+      "龍"
     ],
     "abilities": [
       {
@@ -11395,7 +11395,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -11426,7 +11426,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -11457,7 +11457,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -11493,7 +11493,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -11528,8 +11528,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Water3"
+      "水中1",
+      "水中3"
     ],
     "abilities": [
       {
@@ -11565,8 +11565,8 @@
       "Dark"
     ],
     "eggGroups": [
-      "Water1",
-      "Water3"
+      "水中1",
+      "水中3"
     ],
     "abilities": [
       {
@@ -11602,7 +11602,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -11633,7 +11633,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -11664,7 +11664,7 @@
       "Grass"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -11695,7 +11695,7 @@
       "Grass"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -11726,7 +11726,7 @@
       "Bug"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -11757,7 +11757,7 @@
       "Bug"
     ],
     "eggGroups": [
-      "Water3"
+      "水中3"
     ],
     "abilities": [
       {
@@ -11787,8 +11787,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Dragon"
+      "水中1",
+      "龍"
     ],
     "abilities": [
       {
@@ -11823,8 +11823,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Dragon"
+      "水中1",
+      "龍"
     ],
     "abilities": [
       {
@@ -11859,8 +11859,8 @@
       "Normal"
     ],
     "eggGroups": [
-      "Fairy",
-      "Indeterminate"
+      "妖精",
+      "不定形"
     ],
     "abilities": [
       {
@@ -11890,7 +11890,7 @@
       "Normal"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -11920,7 +11920,7 @@
       "Ghost"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -11955,7 +11955,7 @@
       "Ghost"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -11990,7 +11990,7 @@
       "Ghost"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -12020,7 +12020,7 @@
       "Ghost"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -12051,8 +12051,8 @@
       "Flying"
     ],
     "eggGroups": [
-      "Monster",
-      "Plant"
+      "怪獸",
+      "植物"
     ],
     "abilities": [
       {
@@ -12087,7 +12087,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Indeterminate"
+      "不定形"
     ],
     "abilities": [
       {
@@ -12117,7 +12117,7 @@
       "Dark"
     ],
     "eggGroups": [
-      "Ground"
+      "陸上"
     ],
     "abilities": [
       {
@@ -12152,7 +12152,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12182,8 +12182,8 @@
       "Ice"
     ],
     "eggGroups": [
-      "Fairy",
-      "Mineral"
+      "妖精",
+      "礦物"
     ],
     "abilities": [
       {
@@ -12218,8 +12218,8 @@
       "Ice"
     ],
     "eggGroups": [
-      "Fairy",
-      "Mineral"
+      "妖精",
+      "礦物"
     ],
     "abilities": [
       {
@@ -12255,8 +12255,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -12292,8 +12292,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -12329,8 +12329,8 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1",
-      "Ground"
+      "水中1",
+      "陸上"
     ],
     "abilities": [
       {
@@ -12365,7 +12365,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1"
+      "水中1"
     ],
     "abilities": [
       {
@@ -12395,7 +12395,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1"
+      "水中1"
     ],
     "abilities": [
       {
@@ -12425,7 +12425,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water1"
+      "水中1"
     ],
     "abilities": [
       {
@@ -12456,8 +12456,8 @@
       "Rock"
     ],
     "eggGroups": [
-      "Water1",
-      "Water2"
+      "水中1",
+      "水中2"
     ],
     "abilities": [
       {
@@ -12492,7 +12492,7 @@
       "Water"
     ],
     "eggGroups": [
-      "Water2"
+      "水中2"
     ],
     "abilities": [
       {
@@ -12522,7 +12522,7 @@
       "Dragon"
     ],
     "eggGroups": [
-      "Dragon"
+      "龍"
     ],
     "abilities": [
       {
@@ -12552,7 +12552,7 @@
       "Dragon"
     ],
     "eggGroups": [
-      "Dragon"
+      "龍"
     ],
     "abilities": [
       {
@@ -12583,7 +12583,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "Dragon"
+      "龍"
     ],
     "abilities": [
       {
@@ -12614,7 +12614,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -12645,7 +12645,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -12676,7 +12676,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "Mineral"
+      "礦物"
     ],
     "abilities": [
       {
@@ -12706,7 +12706,7 @@
       "Rock"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12736,7 +12736,7 @@
       "Ice"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12766,7 +12766,7 @@
       "Steel"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12797,7 +12797,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12828,7 +12828,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12858,7 +12858,7 @@
       "Water"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12888,7 +12888,7 @@
       "Ground"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12919,7 +12919,7 @@
       "Flying"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12950,7 +12950,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {
@@ -12980,7 +12980,7 @@
       "Psychic"
     ],
     "eggGroups": [
-      "No-eggs"
+      "未發現"
     ],
     "abilities": [
       {

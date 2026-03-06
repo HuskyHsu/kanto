@@ -15,13 +15,13 @@ type ContentProps = { pokemon: DetailedPokemon };
 
 const genderRatioMap = {
   0: [100, 0],
-  31: [87.5, 12.5],
-  63: [75, 25],
-  127: [50, 50],
-  191: [25, 75],
-  225: [12.5, 87.5],
-  254: [0, 100],
-  255: [0, 0],
+  1: [87.5, 12.5],
+  2: [75, 25],
+  4: [50, 50],
+  6: [25, 75],
+  7: [12.5, 87.5],
+  8: [0, 100],
+  '-1': [0, 0],
 };
 
 type Render = {
@@ -52,7 +52,7 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
       title: 'Name(en)',
       Content: ({ pokemon }: ContentProps) => (
         <a
-          href={`https://www.serebii.net/pokedex-sv/${pokemon.name.en.toLocaleLowerCase()}/`}
+          href={`https://www.serebii.net/pokedex-rs/${pokemon.pid.toString().padStart(3, '0')}.shtml`}
           target='_blank'
           rel='noreferrer'
           className='inline text-blue-800 underline'
@@ -70,29 +70,49 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
       Content: ({ pokemon }: ContentProps) => <PokemonTypes types={pokemon.types} />,
     },
     {
-      title: 'Gender Ratio',
+      title: 'Abilities',
       Content: ({ pokemon }: ContentProps) => (
-        <span className='flex gap-4 whitespace-nowrap'>
-          <span>♂：{genderRatioMap[pokemon.genderRatio as keyof typeof genderRatioMap][0]}%</span>
-          <span>♀：{genderRatioMap[pokemon.genderRatio as keyof typeof genderRatioMap][1]}%</span>
-        </span>
+        <div className='flex gap-2'>
+          {pokemon.abilities.map((ability) => (
+            <a
+              key={ability.en}
+              href={`https://wiki.52poke.com/zh-hant/${ability.zh}（特性）`}
+              target='_blank'
+              rel='noreferrer'
+              className='inline text-blue-800 underline'
+            >
+              {ability.zh}
+            </a>
+          ))}
+        </div>
       ),
     },
     {
-      title: 'Height',
-      Content: ({ pokemon }: ContentProps) => <>{pokemon.height}m</>,
+      title: 'Egg Groups',
+      Content: ({ pokemon }: ContentProps) => (
+        <div className='flex gap-2'>
+          {pokemon.eggGroups.map((eggGroup) => (
+            <a
+              key={eggGroup}
+              href={`https://wiki.52poke.com/zh-hant/${eggGroup}（蛋群）`}
+              target='_blank'
+              rel='noreferrer'
+              className='inline text-blue-800 underline'
+            >
+              {eggGroup}
+            </a>
+          ))}
+        </div>
+      ),
     },
     {
-      title: 'Weight',
-      Content: ({ pokemon }: ContentProps) => <>{pokemon.weight}kg</>,
-    },
-    {
-      title: 'Catch Rate(0~255)',
-      Content: ({ pokemon }: ContentProps) => <>{pokemon.catchRate}</>,
-    },
-    {
-      title: 'Experience Group',
-      Content: ({ pokemon }: ContentProps) => <>{pokemon.expGroup}</>,
+      title: 'Gender Ratio',
+      Content: ({ pokemon }: ContentProps) => (
+        <span className='flex gap-4 whitespace-nowrap'>
+          <span>♂：{genderRatioMap[pokemon.genderRate as keyof typeof genderRatioMap][0]}%</span>
+          <span>♀：{genderRatioMap[pokemon.genderRate as keyof typeof genderRatioMap][1]}%</span>
+        </span>
+      ),
     },
   ];
 

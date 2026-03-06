@@ -8,14 +8,7 @@ import { trackCustomEvent, trackPageView } from '@/lib/analytics';
 import { fetchPokemonDetail } from '@/services/pokemonService';
 import type { DetailedPokemon } from '@/types/pokemon';
 
-import {
-  BackButton,
-  BasicInfo,
-  EvolutionCard,
-  MovesCard,
-  PokemonNavigation,
-  StatsCard,
-} from './components';
+import { BackButton, BasicInfo, MovesCard, PokemonNavigation, StatsCard } from './components';
 import QuickNavigation from './components/QuickNavigation';
 
 function PokemonDetail() {
@@ -135,11 +128,11 @@ function PokemonDetail() {
         <div id='moves' className='col-span-1 md:col-span-2'>
           <MovesCard pokemon={pokemon} />
         </div>
-        {pokemon.evolutionTree && (
+        {/* {pokemon.evolutionTree && (
           <div id='evolution' className='col-span-1 md:col-span-2'>
             <EvolutionCard pokemon={pokemon} onPokemonChange={handlePokemonChange} />
           </div>
-        )}
+        )} */}
       </div>
       <QuickNavigation hasEvolution={!!pokemon.evolutionTree} />
     </div>

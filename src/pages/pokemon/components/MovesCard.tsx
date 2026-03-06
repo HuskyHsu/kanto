@@ -22,9 +22,11 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const allMoves = [
-    ...(pokemon.alphaMove ? [pokemon.alphaMove] : []),
     ...pokemon.levelUpMoves,
-    ...pokemon.tmMoves,
+    ...pokemon.TMMoves,
+    ...pokemon.HTMMoves,
+    ...pokemon.eggMoves,
+    ...pokemon.tutorMoves,
   ];
 
   const uniqueTypes = Array.from(new Set(allMoves.map((m) => m.type))).sort();
@@ -33,8 +35,10 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
   const filterMove = (
     move:
       | DetailedPokemon['levelUpMoves'][0]
-      | DetailedPokemon['tmMoves'][0]
-      | DetailedPokemon['alphaMove'],
+      | DetailedPokemon['TMMoves'][0]
+      | DetailedPokemon['HTMMoves'][0]
+      | DetailedPokemon['eggMoves'][0]
+      | DetailedPokemon['tutorMoves'][0],
   ) => {
     if (!move) return false;
     const typeMatch = selectedType === null || move.type === selectedType;
@@ -110,71 +114,26 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-2/12'>
-                    Lv<span className='text-xs font-light italic'>+plus</span>
-                  </TableHead>
+                  <TableHead className='w-2/12'>Lv</TableHead>
                   <TableHead className='w-1/12'>TM</TableHead>
                   <TableHead className='w-3/12'>Name</TableHead>
                   <TableHead className='w-1/12'>Type</TableHead>
                   <TableHead className='w-1/12'>Cat.</TableHead>
                   <TableHead className='w-2/12'>Att.</TableHead>
-                  <TableHead className='w-2/12'>CD</TableHead>
+                  <TableHead className='w-2/12'>Acc.</TableHead>
+                  <TableHead className='w-2/12'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {pokemon.alphaMove && filterMove(pokemon.alphaMove) && (
-                  <MoveRow moveId={pokemon.alphaMove.id} colSpan={7}>
-                    <TableCell>
-                      <div className='flex justify-center'>
-                        <PokemonTypes types={['Alpha']} />
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      {pokemon.tmMoves
-                        .find((tm) => tm.id === pokemon.alphaMove?.id)
-                        ?.tm.toString()
-                        .padStart(3, '0')}
-                    </TableCell>
-                    <TableCell>
-                      {
-                        <a
-                          href={`https://wiki.52poke.com/zh-hant/${pokemon.alphaMove.name.zh}（招式）`}
-                          target='_blank'
-                          rel='noreferrer'
-                          className='inline text-blue-800 underline'
-                        >
-                          {pokemon.alphaMove.name.zh}
-                        </a>
-                      }
-                    </TableCell>
-                    <TableCell>
-                      <div className='flex justify-center'>
-                        <PokemonTypes types={[pokemon.alphaMove.type]} />
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <div className='flex justify-center'>
-                        <PokemonTypes types={[pokemon.alphaMove.category]} />
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      {pokemon.alphaMove.power <= 0 ? '—' : pokemon.alphaMove.power}
-                    </TableCell>
-                    <TableCell>{pokemon.alphaMove.cooldown}</TableCell>
-                  </MoveRow>
-                )}
-
                 {pokemon.levelUpMoves.filter(filterMove).map((move) => {
                   const from = move.level > 1 ? move.level : move.level === 0 ? 'Evolve' : '—';
-                  const subInfo = `+${move.plus}`;
-                  const TM = pokemon.tmMoves.find((tm) => tm.id === move.id);
+                  const TM = [...pokemon.TMMoves, ...pokemon.HTMMoves].find(
+                    (tm) => tm.id === move.id,
+                  );
 
                   return (
                     <MoveRow key={move.id} moveId={move.id} colSpan={7}>
-                      <TableCell className='flex gap-0 justify-center items-end'>
-                        {from}
-                        <span className='text-xs font-light italic'>{subInfo}</span>
-                      </TableCell>
+                      <TableCell className='flex gap-0 justify-center items-end'>{from}</TableCell>
                       <TableCell>{TM?.tm.toString().padStart(3, '0')}</TableCell>
                       <TableCell>
                         <a
@@ -197,7 +156,8 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                         </div>
                       </TableCell>
                       <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
-                      <TableCell>{move.cooldown}</TableCell>
+                      <TableCell>{move.accuracy ?? '—'}</TableCell>
+                      <TableCell>{move.pp}</TableCell>
                     </MoveRow>
                   );
                 })}
@@ -215,11 +175,12 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                   <TableHead className='w-1/12'>Type</TableHead>
                   <TableHead className='w-2/12'>Cat.</TableHead>
                   <TableHead className='w-2/12'>Att.</TableHead>
-                  <TableHead className='w-2/12'>CD</TableHead>
+                  <TableHead className='w-2/12'>Acc.</TableHead>
+                  <TableHead className='w-2/12'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {pokemon.tmMoves.filter(filterMove).map((move) => (
+                {[...pokemon.HTMMoves, ...pokemon.TMMoves].filter(filterMove).map((move) => (
                   <MoveRow key={move.id} moveId={move.id} colSpan={6}>
                     <TableCell>{move.tm.toString().padStart(3, '0')}</TableCell>
                     <TableCell>
@@ -243,7 +204,8 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                       </div>
                     </TableCell>
                     <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
-                    <TableCell>{move.cooldown}</TableCell>
+                    <TableCell>{move.accuracy ?? '—'}</TableCell>
+                    <TableCell>{move.pp}</TableCell>
                   </MoveRow>
                 ))}
               </TableBody>
