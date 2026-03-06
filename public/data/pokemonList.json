@@ -5132,6 +5132,37 @@
     "latest": true
   },
   {
+    "pid": 152,
+    "name": {
+      "zh": "菊草葉",
+      "ja": "チコリータ",
+      "en": "Chikorita"
+    },
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "しんりょく",
+        "en": "Overgrow",
+        "zh": "茂盛"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "latest": false
+  },
+  {
     "pid": 153,
     "name": {
       "zh": "月桂葉",
@@ -8920,6 +8951,36 @@
     "latest": true
   },
   {
+    "pid": 265,
+    "name": {
+      "zh": "刺尾蟲",
+      "ja": "ケムッソ",
+      "en": "Wurmple"
+    },
+    "types": [
+      "Bug"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      {
+        "ja": "りんぷん",
+        "en": "Shield Dust",
+        "zh": "鱗粉"
+      }
+    ],
+    "ev": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": false
+  },
+  {
     "pid": 266,
     "name": {
       "zh": "甲殼繭",
@@ -9224,6 +9285,43 @@
       0
     ],
     "latest": false
+  },
+  {
+    "pid": 275,
+    "name": {
+      "zh": "狡猾天狗",
+      "ja": "ダーテング",
+      "en": "Shiftry"
+    },
+    "types": [
+      "Grass",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Ground",
+      "Plant"
+    ],
+    "abilities": [
+      {
+        "ja": "ようりょくそ",
+        "en": "Chlorophyll",
+        "zh": "葉綠素"
+      },
+      {
+        "ja": "かぜのり",
+        "en": "Wind Rider",
+        "zh": "乘風"
+      }
+    ],
+    "ev": [
+      0,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    "latest": true
   },
   {
     "pid": 276,
@@ -10851,6 +10949,41 @@
       1,
       0,
       1,
+      0,
+      0
+    ],
+    "latest": true
+  },
+  {
+    "pid": 324,
+    "name": {
+      "zh": "煤炭龜",
+      "ja": "コータス",
+      "en": "Torkoal"
+    },
+    "types": [
+      "Fire"
+    ],
+    "eggGroups": [
+      "Ground"
+    ],
+    "abilities": [
+      {
+        "ja": "しろいけむり",
+        "en": "White Smoke",
+        "zh": "白色煙霧"
+      },
+      {
+        "ja": "ひでり",
+        "en": "Drought",
+        "zh": "日照"
+      }
+    ],
+    "ev": [
+      0,
+      0,
+      2,
+      0,
       0,
       0
     ],

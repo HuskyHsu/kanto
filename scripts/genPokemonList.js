@@ -62,9 +62,9 @@ const getMoveData = async (mid) => {
     accuracy: rawData.accuracy,
     pp: rawData.pp,
     name: {
-      ja: rawData.names.find((n) => n.language.name === 'ja').name,
-      en: rawData.names.find((n) => n.language.name === 'en').name,
-      zh: rawData.names.find((n) => n.language.name === 'zh-hant').name,
+      ja: rawData.names.find((n) => n.language.name === 'ja')?.name || rawData.name,
+      en: rawData.names.find((n) => n.language.name === 'en')?.name || rawData.name,
+      zh: rawData.names.find((n) => n.language.name === 'zh-hant')?.name || rawData.names.find((n) => n.language.name === 'en')?.name || rawData.name,
     },
   };
 
@@ -90,9 +90,9 @@ const getAbilityData = async (aid) => {
   const formattedAbility = {
     id: rawData.id,
     name: {
-      ja: rawData.names.find((n) => n.language.name === 'ja').name,
-      en: rawData.names.find((n) => n.language.name === 'en').name,
-      zh: rawData.names.find((n) => n.language.name === 'zh-hant').name,
+      ja: rawData.names.find((n) => n.language.name === 'ja')?.name || rawData.name,
+      en: rawData.names.find((n) => n.language.name === 'en')?.name || rawData.name,
+      zh: rawData.name === 'wind-rider' ? '乘風' : (rawData.names.find((n) => n.language.name === 'zh-hant')?.name || rawData.names.find((n) => n.language.name === 'en')?.name || rawData.name),
     },
   };
 
@@ -376,7 +376,7 @@ const processPokemon = async (pid) => {
 };
 
 const main = async () => {
-  const pids = Array.from({ length: 151 }, (_, i) => i + 1);
+  const pids = Array.from({ length: 386 }, (_, i) => i + 1);
   const basicInfoList = [];
 
   for (const pid of pids) {
@@ -386,7 +386,7 @@ const main = async () => {
         basicInfoList.push(basicInfo);
       }
     } catch (error) {
-      console.error(`Error processing Pokemon ${pid}:`, error.message);
+      console.error(`Error processing Pokemon ${pid}:`, error.stack);
     }
   }
 
