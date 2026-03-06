@@ -49,7 +49,7 @@ function Home() {
       {/* <PageViewToggle /> */}
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
-      <div className='flex gap-4 mb-2 flex-wrap'>
+      <div className='flex gap-y-0 gap-x-4 mb-2 flex-wrap'>
         <ShinyToggle isShiny={isShiny} onToggle={toggleShiny} />
         <FinalFormToggle isFinalFormOnly={isFinalFormOnly} onToggle={toggleFinalFormOnly} />
         <AbilityToggle isShowAbility={isShowAbility} onToggle={toggleAbility} />

@@ -107,7 +107,7 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
   return (
     <div className='mb-4 font-press-start'>
       <div className='flex items-center justify-between mb-2'>
-        <h2 className='flex items-center text-sm font-semibold text-slate-700'>
+        <h2 className='-ml-2 flex items-center text-sm font-semibold text-slate-700'>
           <img
             src={`${import.meta.env.BASE_URL}images/type/PokemonBall_.png`}
             className='w-10 h-10'
