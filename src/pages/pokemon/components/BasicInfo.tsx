@@ -117,15 +117,15 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
   ];
 
   return (
-    <Card>
+    <Card className='border-[3px] border-[#34925e] rounded-[10px] bg-white shadow-none'>
       <CardHeader>
-        <CardTitle className='flex items-center gap-2'>
+        <CardTitle className='flex items-center gap-2 font-press-start text-lg uppercase tracking-wider text-slate-800 relative pl-4 before:content-[""] before:absolute before:left-0 before:top-[15%] before:h-[70%] before:w-1 before:bg-[#e05038]'>
           Basic Information
-          <ShareButton title={`${pokemon.name.zh}`} className='w-6 h-6' />
+          <ShareButton title={`${pokemon.name.zh}`} className='w-6 h-6 ml-auto' />
         </CardTitle>
       </CardHeader>
       <CardContent className='space-y-4'>
-        <div className='flex justify-around'>
+        <div className='flex justify-around bg-slate-100 rounded-lg p-2 border-2 border-slate-200'>
           {loading ? (
             <>
               <Loading size='h-[160px]' />
@@ -136,24 +136,31 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
               <img
                 src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.pid}.png`}
                 alt={pokemon.name.zh}
+                className='[image-rendering:pixelated] w-32 object-contain filter drop-shadow-[0_4px_0_rgba(0,0,0,0.1)]'
               />
               <img
                 src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.pid}s.png`}
                 alt={pokemon.name.zh}
+                className='[image-rendering:pixelated] w-32 object-contain filter drop-shadow-[0_4px_0_rgba(0,0,0,0.1)]'
               />
             </>
           )}
         </div>
-        <div className='space-y-2'>
+        <div className='space-y-3 font-mono tracking-tighter'>
           {renderData.map((data, index) => (
-            <div className='flex justify-between' key={index}>
-              <span className='text-sm text-gray-500'>{data.title}:</span>
-              <span className='font-medium'>
+            <div
+              className='flex justify-between items-center bg-gray-50/50 p-2 rounded'
+              key={index}
+            >
+              <span className='text-sm text-gray-500 font-bold uppercase'>{data.title}:</span>
+              <span className='font-medium text-slate-700'>
                 <data.Content pokemon={pokemon} />
               </span>
             </div>
           ))}
-          <TypeWeakness pokemon={pokemon} />
+          <div className='pt-2 mt-2 border-t border-dashed border-gray-300'>
+            <TypeWeakness pokemon={pokemon} />
+          </div>
         </div>
       </CardContent>
     </Card>

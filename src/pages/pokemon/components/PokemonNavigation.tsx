@@ -98,14 +98,14 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
   };
 
   return (
-    <div className='flex items-center justify-center gap-4 py-4 bg-linear-to-r from-purple-100 to-blue-100 rounded-lg shadow-sm'>
+    <div className='flex items-center justify-between md:justify-center gap-2 md:gap-4 py-3 px-2 md:px-4 bg-white border-[3px] border-[#34925e] rounded-[10px]'>
       {/* Previous Arrow */}
       <button
         onClick={() => handlePokemonNavigation(previousPokemon.pid.toString())}
-        className='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 hover:bg-gray-50'
+        className='flex shrink-0 items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-sm border-2 border-slate-300 bg-white shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-none hover:translate-y-[2px] hover:translate-x-[2px] transition-all duration-100'
         title={`to ${previousPokemon.name.zh}`}
       >
-        <ChevronLeft className='w-5 h-5 text-gray-600' />
+        <ChevronLeft className='w-5 h-5 text-slate-700 stroke-3' />
       </button>
 
       {/* Pokemon Navigation List */}
@@ -120,10 +120,10 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
             <button
               key={pokemon.pid}
               onClick={() => handlePokemonNavigation(pokemon.pid.toString())}
-              className={`flex flex-col items-center p-1 md:p-2 rounded-lg ${
+              className={`flex flex-col flex-1 min-w-0 md:flex-none items-center p-1 md:p-2 rounded-lg transition-transform duration-100 ${
                 isCurrent
-                  ? 'bg-yellow-200 shadow-md scale-110 border-2 border-yellow-400'
-                  : 'bg-white hover:bg-gray-50 shadow-sm hover:shadow-md hover:scale-105'
+                  ? 'bg-amber-100 shadow-[0_4px_0_0_rgba(251,191,36,1)] scale-110 border-2 border-amber-400 z-10'
+                  : 'bg-white hover:bg-slate-50 border-2 border-transparent hover:border-slate-200 hover:scale-105'
               }`}
               title={pokemon.name.zh}
             >
@@ -136,7 +136,7 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
                 <img
                   src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.pid}.png`}
                   alt={pokemon.name.zh}
-                  className='w-full h-full object-contain'
+                  className='w-full h-full object-contain [image-rendering:pixelated] drop-shadow-[0_2px_0_rgba(0,0,0,0.1)]'
                   onError={(e) => {
                     // Fallback to a placeholder or hide image
                     e.currentTarget.style.display = 'none';
@@ -145,9 +145,13 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
               </div>
 
               {/* Pokemon Name */}
-              <div className={`${isMobile ? 'text-xs' : 'text-xs'} text-center mt-1`}>
-                <div className='text-gray-500'>#{pokemonNumber}</div>
-                <div className={`font-medium ${isCurrent ? 'text-yellow-800' : 'text-gray-700'}`}>
+              <div
+                className={`text-[10px] md:text-xs text-center mt-1 font-mono tracking-tighter w-full overflow-hidden`}
+              >
+                <div className='text-slate-500 font-bold'>#{pokemonNumber}</div>
+                <div
+                  className={`font-bold truncate ${isCurrent ? 'text-amber-800' : 'text-slate-700'}`}
+                >
                   {pokemon.name.zh}
                 </div>
               </div>
@@ -159,10 +163,10 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
       {/* Next Arrow */}
       <button
         onClick={() => handlePokemonNavigation(String(nextPokemon.pid))}
-        className='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 hover:bg-gray-50'
+        className='flex shrink-0 items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-sm border-2 border-slate-300 bg-white shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-none hover:translate-y-[2px] hover:translate-x-[2px] transition-all duration-100'
         title={`to ${nextPokemon.name.zh}`}
       >
-        <ChevronRight className='w-5 h-5 text-gray-600' />
+        <ChevronRight className='w-5 h-5 text-slate-700 stroke-3' />
       </button>
     </div>
   );

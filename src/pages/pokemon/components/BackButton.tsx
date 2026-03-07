@@ -29,10 +29,10 @@ export default function BackButton() {
   return (
     <button
       onClick={handleBack}
-      className='inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:text-gray-900 hover:border-gray-300 transition-all duration-200 shadow-sm hover:shadow-md'
+      className='inline-flex items-center gap-2 px-4 py-2 text-xs md:text-sm font-press-start text-slate-700 bg-white border-[3px] border-slate-300 rounded-[8px] hover:bg-slate-100 hover:border-slate-400 hover:-translate-y-1 transition-all duration-100 shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_4px_0_0_rgba(148,163,184,1)] active:translate-y-0 active:shadow-none'
     >
-      <ArrowLeft size={16} />
-      Back to Pokédex
+      <ArrowLeft size={16} className='stroke-3' />
+      Back
     </button>
   );
 }

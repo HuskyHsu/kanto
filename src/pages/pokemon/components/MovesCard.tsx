@@ -58,11 +58,13 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
   };
 
   return (
-    <Card className='lg:col-span-2'>
+    <Card className='lg:col-span-2 border-[3px] border-[#34925e] rounded-[10px] bg-white shadow-none'>
       <CardHeader>
-        <CardTitle>Moves</CardTitle>
+        <CardTitle className='font-press-start text-lg uppercase tracking-wider text-slate-800 relative pl-4 before:content-[""] before:absolute before:left-0 before:top-[15%] before:h-[70%] before:w-1 before:bg-[#e05038]'>
+          Moves
+        </CardTitle>
       </CardHeader>
-      <CardContent className='px-0 md:px-6'>
+      <CardContent className='px-0 md:px-6 font-mono tracking-tighter'>
         <div className='mb-6 -mt-4 space-y-4 px-6 md:px-0'>
           <p className='text-sm font-semibold'>Type:</p>
           <div className='flex flex-wrap gap-2 items-center'>
@@ -98,7 +100,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                   onClick={() => toggleCategory(category)}
                   className={cn(
                     'flex items-center justify-center rounded-lg transition-all duration-100',
-                    'border-gray-200 bg-white hover:border-gray-300 border',
+                    'border-2 border-[#34925e] bg-white hover:border-[#2a754b]',
                     shouldFade ? 'opacity-30' : 'opacity-100',
                     'hover:scale-110 active:scale-90',
                   )}
@@ -111,9 +113,11 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
           </div>
         </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 text-center'>
-          <div>
-            <h4 className='font-semibold mb-3'>Level Up Moves</h4>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 text-center mt-4'>
+          <div className='bg-slate-50 p-2 sm:p-4 rounded-xl border-2 border-slate-200'>
+            <h4 className='font-press-start text-sm mb-4 text-slate-700 bg-white inline-block px-4 py-2 border-2 border-[#34925e] rounded shadow-[2px_2px_0_0_#34925e]'>
+              Level Up Moves
+            </h4>
             <Table>
               <TableHeader>
                 <TableRow className=''>
@@ -165,8 +169,10 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             </Table>
           </div>
 
-          <div>
-            <h4 className='font-semibold mb-3'>TM Moves</h4>
+          <div className='bg-slate-50 p-2 sm:p-4 rounded-xl border-2 border-slate-200'>
+            <h4 className='font-press-start text-sm mb-4 text-slate-700 bg-white inline-block px-4 py-2 border-2 border-[#34925e] rounded shadow-[2px_2px_0_0_#34925e]'>
+              TM Moves
+            </h4>
             <Table>
               <TableHeader>
                 <TableRow>
@@ -214,8 +220,10 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             </Table>
           </div>
 
-          <div>
-            <h4 className='font-semibold mb-3'>Egg Moves</h4>
+          <div className='bg-slate-50 p-2 sm:p-4 rounded-xl border-2 border-slate-200'>
+            <h4 className='font-press-start text-sm mb-4 text-slate-700 bg-white inline-block px-4 py-2 border-2 border-[#34925e] rounded shadow-[2px_2px_0_0_#34925e]'>
+              Egg Moves
+            </h4>
             <Table>
               <TableHeader>
                 <TableRow>
@@ -261,8 +269,10 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             </Table>
           </div>
 
-          <div>
-            <h4 className='font-semibold mb-3'>Tutor Moves</h4>
+          <div className='bg-slate-50 p-2 sm:p-4 rounded-xl border-2 border-slate-200'>
+            <h4 className='font-press-start text-sm mb-4 text-slate-700 bg-white inline-block px-4 py-2 border-2 border-[#34925e] rounded shadow-[2px_2px_0_0_#34925e]'>
+              Tutor Moves
+            </h4>
             <Table>
               <TableHeader>
                 <TableRow>

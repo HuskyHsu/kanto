@@ -37,9 +37,9 @@ function Weakness({ types }: WeaknessDisplayProps) {
 
 export function TypeWeakness({ pokemon }: TypeWeaknessProps) {
   return (
-    <>
-      <span className='text-sm text-gray-500'>Weakness Type:</span>
+    <div className='flex flex-col gap-2'>
+      <span className='text-sm text-gray-500 font-bold uppercase'>Weakness Type:</span>
       <Weakness types={pokemon.types} />
-    </>
+    </div>
   );
 }

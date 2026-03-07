@@ -69,8 +69,8 @@ function SubCard({ pm, className = '', onClick }: SubCardProps) {
         ></div>
 
         {/* Pokemon Name */}
-        <div className='text-xs text-center font-mono tracking-tighter mt-1'>
-          <span className='font-bold text-gray-700'>{pm.name.zh}</span>
+        <div className='text-[10px] md:text-xs text-center font-press-start tracking-tighter mt-1'>
+          <span className='font-normal text-slate-700'>{pm.name.zh}</span>
         </div>
       </div>
     </button>
@@ -83,11 +83,16 @@ const Condition = ({ pm, className = '' }: { pm: EvolutionNode; className?: stri
   const condition = pm.condition?.join(', ');
 
   return (
-    <div className={cn('text-center text-sm flex flex-col', className)}>
+    <div
+      className={cn(
+        'text-center text-[10px] md:text-xs flex flex-col font-mono tracking-tighter font-bold text-slate-600',
+        className,
+      )}
+    >
       <span>{translatedMethod}</span>
-      <span className={cn('text-xs')}>{level}</span>
+      <span className={cn('text-[10px]')}>{level}</span>
       <span>{condition}</span>
-      <span className='text-xl'>⇨</span>
+      <span className='text-xl text-[#34925e]'>⇨</span>
     </div>
   );
 };

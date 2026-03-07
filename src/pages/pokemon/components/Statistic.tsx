@@ -14,7 +14,7 @@ function calStatistic(
   base: number,
   lv: number,
   isHp = false,
-  nature?: string
+  nature?: string,
 ) {
   if (isHp) {
     return Math.floor((Math.floor(species * 2 + individual + base / 4) * lv) / 100 + 10 + lv);
@@ -136,9 +136,8 @@ export function Statistic({ pokemon }: Props) {
 
   return (
     <>
-      <div className='space-y-3'>
-        <p>能力值</p>
-        <label className='block font-medium'>Lv： {lv}</label>
+      <div className='space-y-4 font-mono tracking-tighter'>
+        <label className='block font-bold text-slate-700 uppercase'>Lv: {lv}</label>
         <input
           type='range'
           value={lv}
@@ -152,20 +151,23 @@ export function Statistic({ pokemon }: Props) {
             [&::-moz-range-thumb]:bg-green-500 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:border-none'
           onChange={(e) => setLv(parseInt(e.target.value))}
         />
-        <table className='w-full table-fixed text-center text-sm'>
-          <thead className='bg-gray-100 text-xs'>
-            <tr className='bg-custom-gold/50'>
-              <th scope='col' className='whitespace-nowrap py-1'>
+        <table className='w-full table-fixed text-center text-sm border-2 border-[#34925e] bg-white border-separate border-spacing-0'>
+          <thead className='bg-[#34925e] text-white text-[10px] sm:text-xs font-press-start uppercase'>
+            <tr>
+              <th
+                scope='col'
+                className='whitespace-nowrap py-2 border-r border-[#34925e] bg-black/10'
+              >
                 case
               </th>
               {['HP', 'Attack', 'Defense', 'Sp.Atk', 'Sp.Def', 'Speed'].map((type) => (
-                <th scope='col' className='whitespace-nowrap py-1' key={type}>
+                <th scope='col' className='whitespace-nowrap py-2 font-normal' key={type}>
                   {type}
                 </th>
               ))}
             </tr>
           </thead>
-          <tbody>
+          <tbody className='text-slate-800 font-bold'>
             {[cases[0]].map((c) => (
               <tr
                 className={cn('border-b text-center', 'hover:bg-gray-100 hover:text-gray-900')}
@@ -193,8 +195,8 @@ export function Statistic({ pokemon }: Props) {
                       nature[key as keyof typeof nature] === 0
                         ? undefined
                         : nature[key as keyof typeof nature] > 0
-                        ? 'up'
-                        : 'down'
+                          ? 'up'
+                          : 'down',
                     )}
                   </td>
                 );
@@ -215,22 +217,25 @@ export function Statistic({ pokemon }: Props) {
             ))}
           </tbody>
         </table>
-        <div>
-          <label className='block font-medium'>自訂參數</label>
-          <table className='w-full table-fixed text-center text-sm'>
-            <thead className='bg-gray-100 text-xs'>
-              <tr className='bg-custom-gold/50'>
-                <th scope='col' className='whitespace-nowrap py-1'>
+        <div className='pt-4 border-t-2 border-dashed border-gray-300'>
+          <label className='block font-bold text-slate-700 uppercase mb-2'>自訂參數</label>
+          <table className='w-full table-fixed text-center text-sm border-2 border-[#34925e] bg-white border-separate border-spacing-0'>
+            <thead className='bg-[#34925e] text-white text-[10px] sm:text-xs font-press-start uppercase'>
+              <tr>
+                <th
+                  scope='col'
+                  className='whitespace-nowrap py-2 border-r border-[#34925e] bg-black/10'
+                >
                   {}
                 </th>
                 {['HP', 'Attack', 'Defense', 'Sp.Atk', 'Sp.Def', 'Speed'].map((type) => (
-                  <th scope='col' className='whitespace-nowrap py-1' key={type}>
+                  <th scope='col' className='whitespace-nowrap py-2 font-normal' key={type}>
                     {type}
                   </th>
                 ))}
               </tr>
             </thead>
-            <tbody>
+            <tbody className='text-slate-800 font-bold'>
               <tr className={cn('border-b text-center')}>
                 <td className=''>個體值</td>
               </tr>
@@ -248,9 +253,9 @@ export function Statistic({ pokemon }: Props) {
                     <td key={key}>
                       <input
                         className={cn(
-                          'block w-full rounded border border-gray-300',
-                          'bg-gray-50 px-2.5 py-0.5 text-sm text-gray-900',
-                          'text-center'
+                          'block w-full rounded-sm border-2 border-gray-300/50',
+                          'bg-gray-50 px-1 py-1 text-sm text-gray-900',
+                          'text-center focus:border-[#34925e] focus:ring-0 outline-none transition-colors',
                         )}
                         value={customIndividual[key as keyof typeof customIndividual] ?? ''}
                         onChange={(e) => {
@@ -273,9 +278,9 @@ export function Statistic({ pokemon }: Props) {
                     <td key={key}>
                       <input
                         className={cn(
-                          'block w-full rounded border border-gray-300',
-                          'bg-gray-50 px-2.5 py-0.5 text-sm text-gray-900',
-                          'text-center'
+                          'block w-full rounded-sm border-2 border-gray-300/50',
+                          'bg-gray-50 px-1 py-1 text-sm text-gray-900',
+                          'text-center focus:border-[#34925e] focus:ring-0 outline-none transition-colors',
                         )}
                         value={customBase[key as keyof typeof customBase] ?? ''}
                         onChange={(e) => {
@@ -305,7 +310,7 @@ export function Statistic({ pokemon }: Props) {
                             ? 'bg-red-500 border-red-500 text-white focus:ring-grredeen-300'
                             : 'bg-gray-50 border-gray-300 hover:border-red-400 focus:ring-red-300',
                           'text-center font-medium',
-                          'flex items-center justify-center'
+                          'flex items-center justify-center',
                         )}
                         onClick={() => {
                           setNature((prev) => {
@@ -336,7 +341,7 @@ export function Statistic({ pokemon }: Props) {
                             : 'bg-gray-50 border-gray-300 hover:border-blue-400 focus:ring-blue-300',
                           'text-center font-medium',
 
-                          'flex items-center justify-center'
+                          'flex items-center justify-center',
                         )}
                         onClick={() => {
                           setNature((prev) => {

@@ -13,8 +13,9 @@ export default function MoveRow({ className, children }: MoveRowProps) {
     <>
       <TableRow
         className={cn(
-          'cursor-pointer hover:bg-muted/50 transition-colors',
-          'bg-muted/50',
+          'cursor-pointer transition-colors',
+          'bg-white hover:bg-slate-100',
+          'border-b-2 border-slate-200',
           className,
         )}
       >

@@ -12,12 +12,16 @@ export default function StatsCard({ pokemon }: StatsCardProps) {
   // const maxStat = Math.max(...pokemon.base);
 
   return (
-    <Card>
+    <Card className='border-[3px] border-[#34925e] rounded-[10px] bg-white shadow-none'>
       <CardHeader>
-        <CardTitle>Base Stats</CardTitle>
+        <CardTitle className='font-press-start text-lg uppercase tracking-wider text-slate-800 relative pl-4 before:content-[""] before:absolute before:left-0 before:top-[15%] before:h-[70%] before:w-1 before:bg-[#e05038]'>
+          Base Stats
+        </CardTitle>
       </CardHeader>
       <CardContent>
-        <CardTitle className='text-sm mb-4'>Individual Values & Base points</CardTitle>
+        <CardTitle className='text-sm mb-4 font-press-start text-slate-600'>
+          Individual Values & Base points
+        </CardTitle>
         <div className='flex justify-center'>
           <div className=''>
             <div className='w-4/5 md:w-2/3 mx-auto'>

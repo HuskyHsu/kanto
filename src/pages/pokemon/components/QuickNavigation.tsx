@@ -86,14 +86,14 @@ const QuickNavigation = ({ hasEvolution }: QuickNavigationProps) => {
         isNearBottom ? 'bottom-36 md:bottom-24' : 'bottom-8'
       } left-1/2 transform -translate-x-1/2 z-50 lg:hidden transition-all duration-600`}
     >
-      <div className='bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 p-2 flex items-center space-x-1'>
+      <div className='bg-white rounded-xl shadow-[4px_4px_0_0_rgba(0,0,0,0.1)] border-[3px] border-[#34925e] p-2 flex items-center space-x-1 sm:space-x-2'>
         {/* Scroll to top */}
         <button
           onClick={scrollToTop}
-          className='w-10 h-10 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 transition-colors duration-200'
+          className='w-10 h-10 flex items-center justify-center bg-white border-2 border-slate-300 hover:bg-slate-100 hover:border-slate-400 rounded-sm shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:translate-y-px hover:translate-x-px hover:shadow-[1px_1px_0_0_rgba(203,213,225,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all duration-100'
           aria-label='Scroll to top'
         >
-          <ChevronUp className='w-5 h-5 text-gray-600' />
+          <ChevronUp className='w-5 h-5 text-slate-700 stroke-3' />
         </button>
 
         {/* Section navigation */}
@@ -101,25 +101,27 @@ const QuickNavigation = ({ hasEvolution }: QuickNavigationProps) => {
           <button
             key={item.id}
             onClick={() => scrollToSection(item.id)}
-            className={`w-10 h-10 flex items-center justify-center rounded-xl transition-all duration-200 ${
+            className={`w-10 h-10 flex items-center justify-center transition-all duration-100 font-press-start ${
               activeSection === item.id
-                ? 'bg-green-100 border-2 border-green-300 scale-110'
-                : 'bg-gray-100 hover:bg-gray-200 border-2 border-transparent'
+                ? 'bg-amber-100 border-2 border-amber-400 rounded-sm shadow-[inset_2px_2px_0_0_rgba(0,0,0,0.05)] text-amber-900 scale-110'
+                : 'bg-white border-2 border-slate-300 hover:bg-slate-100 hover:border-slate-400 rounded-sm shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:translate-y-px hover:translate-x-px hover:shadow-[1px_1px_0_0_rgba(203,213,225,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none text-slate-600'
             }`}
             aria-label={`Scroll to ${item.label}`}
             title={item.label}
           >
-            <item.icon className='w-5 h-5 text-gray-600' />
+            <item.icon
+              className={`w-5 h-5 ${activeSection === item.id ? 'stroke-3 text-amber-600' : 'stroke-2'}`}
+            />
           </button>
         ))}
 
         {/* Scroll to bottom */}
         <button
           onClick={scrollToBottom}
-          className='w-10 h-10 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 transition-colors duration-200'
+          className='w-10 h-10 flex items-center justify-center bg-white border-2 border-slate-300 hover:bg-slate-100 hover:border-slate-400 rounded-sm shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:translate-y-px hover:translate-x-px hover:shadow-[1px_1px_0_0_rgba(203,213,225,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all duration-100'
           aria-label='Scroll to bottom'
         >
-          <ChevronDown className='w-5 h-5 text-gray-600' />
+          <ChevronDown className='w-5 h-5 text-slate-700 stroke-3' />
         </button>
       </div>
     </div>
