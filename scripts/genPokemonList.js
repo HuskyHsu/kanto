@@ -169,7 +169,7 @@ const processMoves = async (rawMoves) => {
     if (method === 'level-up') {
       moveMap.levelUpMoves.push({ ...rest, level });
     } else if (method === 'machine') {
-      const isHM = tmMark?.startsWith('秘傳');
+      const isHM = tmMark?.startsWith('秘');
       const target = isHM ? moveMap.HTMMoves : moveMap.TMMoves;
       target.push({ tm: tmMark, ...rest });
     } else if (method === 'egg') {
@@ -186,8 +186,8 @@ const processMoves = async (rawMoves) => {
     return aNum - bNum;
   });
   moveMap.HTMMoves.sort((a, b) => {
-    const aNum = parseInt(a.tm?.replace('秘傳', '') || '0');
-    const bNum = parseInt(b.tm?.replace('秘傳', '') || '0');
+    const aNum = parseInt(a.tm?.replace('秘', '') || '0');
+    const bNum = parseInt(b.tm?.replace('秘', '') || '0');
     return aNum - bNum;
   });
 

@@ -117,10 +117,10 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-3/12'>Lv</TableHead>
-                  <TableHead className='w-4/12'>Name</TableHead>
-                  <TableHead className='w-1/12'>Type</TableHead>
-                  <TableHead className='w-1/12'>Cat.</TableHead>
+                  <TableHead className='w-2/12'>Lv</TableHead>
+                  <TableHead className='w-3/12'>Name</TableHead>
+                  <TableHead className='w-2/12'>Type</TableHead>
+                  <TableHead className='w-2/12'>Cat.</TableHead>
                   <TableHead className='w-1/12'>Att.</TableHead>
                   <TableHead className='w-1/12'>Acc.</TableHead>
                   <TableHead className='w-1/12'>PP</TableHead>
@@ -132,7 +132,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
 
                   return (
                     <MoveRow key={move.id} moveId={move.id} colSpan={7}>
-                      <TableCell className='flex gap-0 justify-center items-end'>{from}</TableCell>
+                      <TableCell>{from}</TableCell>
                       <TableCell>
                         <a
                           href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
@@ -170,10 +170,10 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className='w-3/12'>TM</TableHead>
-                  <TableHead className='w-4/12'>Name</TableHead>
-                  <TableHead className='w-1/12'>Type</TableHead>
-                  <TableHead className='w-1/12'>Cat.</TableHead>
+                  <TableHead className='w-2/12'>TM</TableHead>
+                  <TableHead className='w-3/12'>Name</TableHead>
+                  <TableHead className='w-2/12'>Type</TableHead>
+                  <TableHead className='w-2/12'>Cat.</TableHead>
                   <TableHead className='w-1/12'>Att.</TableHead>
                   <TableHead className='w-1/12'>Acc.</TableHead>
                   <TableHead className='w-1/12'>PP</TableHead>

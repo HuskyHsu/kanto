@@ -497,7 +497,7 @@
   ],
   "HTMMoves": [
     {
-      "tm": "秘傳02",
+      "tm": "秘2",
       "id": 19,
       "type": "Flying",
       "category": "Physical",
@@ -511,7 +511,7 @@
       }
     },
     {
-      "tm": "秘傳04",
+      "tm": "秘4",
       "id": 70,
       "type": "Normal",
       "category": "Physical",
@@ -525,7 +525,7 @@
       }
     },
     {
-      "tm": "秘傳06",
+      "tm": "秘6",
       "id": 249,
       "type": "Fighting",
       "category": "Physical",

@@ -577,7 +577,7 @@
   ],
   "HTMMoves": [
     {
-      "tm": "秘傳01",
+      "tm": "秘1",
       "id": 15,
       "type": "Normal",
       "category": "Physical",
@@ -591,7 +591,7 @@
       }
     },
     {
-      "tm": "秘傳05",
+      "tm": "秘5",
       "id": 148,
       "type": "Normal",
       "category": "Status",
