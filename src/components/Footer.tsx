@@ -7,20 +7,26 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className='mt-16 border-t border-gray-200 bg-gray-50/80 backdrop-blur-sm'>
-        <div className='container mx-auto px-4 py-4 max-w-3xl'>
+      <footer className='mt-16 w-full bg-[#dcf1f1]'>
+        {/* Pallet Town Shore (Grass & Sand) */}
+        <div className='w-full opacity-90'>
+          <div className='h-[3px] bg-[#78c850] w-full'></div>
+          <div className='h-[4px] bg-[#f8d878] w-full'></div>
+        </div>
+
+        <div className='container mx-auto px-4 py-8 max-w-3xl'>
           <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
             {/* Left side - App info */}
             <div className='flex items-center gap-4'>
               <div className='flex items-center gap-2'>
                 <img
-                  src={`${import.meta.env.BASE_URL}images/appIcon/mega_symbol.svg`}
-                  className='w-6 h-6'
+                  src={`${import.meta.env.BASE_URL}images/logo.png`}
+                  className='w-6 h-6 opacity-70 mix-blend-multiply'
                   alt='Kanto'
                 />
-                <span className='text-sm font-medium text-gray-700'>Kanto Pokédex</span>
+                <span className='text-sm font-medium text-[#115e59]'>Kanto Pokédex</span>
               </div>
-              <span className='text-xs text-gray-500'>© 2026</span>
+              <span className='text-xs text-[#115e59]/60'>© 2026</span>
             </div>
 
             {/* Center - Links */}
@@ -28,7 +34,7 @@ export const Footer = () => {
               <button
                 onClick={checkRelease}
                 disabled={isLoading}
-                className='flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-colors disabled:opacity-50 cursor-pointer'
+                className='flex items-center gap-1 text-[#134e4a] hover:text-[#0d9488] transition-colors disabled:opacity-50 cursor-pointer'
               >
                 <FileText size={16} />
                 {isLoading ? 'Loading...' : 'Release Notes'}
@@ -38,7 +44,7 @@ export const Footer = () => {
                 href='https://github.com/HuskyHsu/kanto'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-colors'
+                className='flex items-center gap-1 text-[#134e4a] hover:text-[#0d9488] transition-colors'
               >
                 <Github size={16} />
                 GitHub
@@ -47,7 +53,7 @@ export const Footer = () => {
             </div>
 
             {/* Right side - Additional info */}
-            <div className='text-xs text-gray-500'>Made with ❤️ for Pokémon fans</div>
+            <div className='text-xs text-[#115e59]/60'>Made with ❤️ for Pokémon fans</div>
           </div>
         </div>
       </footer>
