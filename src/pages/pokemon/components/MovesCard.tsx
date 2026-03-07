@@ -117,7 +117,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-2/12'>Lv</TableHead>
+                  <TableHead className='w-2/12 min-w-[60px]'>Lv</TableHead>
                   <TableHead className='w-3/12'>Name</TableHead>
                   <TableHead className='w-2/12'>Type</TableHead>
                   <TableHead className='w-2/12'>Cat.</TableHead>
@@ -132,8 +132,8 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
 
                   return (
                     <MoveRow key={move.id} moveId={move.id} colSpan={7}>
-                      <TableCell>{from}</TableCell>
-                      <TableCell>
+                      <TableCell className='px-0'>{from}</TableCell>
+                      <TableCell className='px-0'>
                         <a
                           href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
                           target='_blank'
@@ -170,7 +170,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className='w-2/12'>TM</TableHead>
+                  <TableHead className='w-2/12 min-w-[60px]'>TM</TableHead>
                   <TableHead className='w-3/12'>Name</TableHead>
                   <TableHead className='w-2/12'>Type</TableHead>
                   <TableHead className='w-2/12'>Cat.</TableHead>
@@ -182,8 +182,8 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
               <TableBody>
                 {[...pokemon.HTMMoves, ...pokemon.TMMoves].filter(filterMove).map((move) => (
                   <MoveRow key={move.id} moveId={move.id} colSpan={6}>
-                    <TableCell>{move.tm}</TableCell>
-                    <TableCell>
+                    <TableCell className='px-0'>{move.tm}</TableCell>
+                    <TableCell className='px-0'>
                       <a
                         href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
                         target='_blank'

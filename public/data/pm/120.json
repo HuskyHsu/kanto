@@ -509,7 +509,7 @@
   ],
   "HTMMoves": [
     {
-      "tm": "秘3",
+      "tm": "秘傳03",
       "id": 57,
       "type": "Water",
       "category": "Special",
@@ -523,7 +523,7 @@
       }
     },
     {
-      "tm": "秘5",
+      "tm": "秘傳05",
       "id": 148,
       "type": "Normal",
       "category": "Status",
@@ -537,7 +537,7 @@
       }
     },
     {
-      "tm": "秘7",
+      "tm": "秘傳07",
       "id": 127,
       "type": "Water",
       "category": "Special",

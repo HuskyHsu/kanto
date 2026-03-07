@@ -602,7 +602,7 @@
   ],
   "HTMMoves": [
     {
-      "tm": "秘1",
+      "tm": "秘傳01",
       "id": 15,
       "type": "Normal",
       "category": "Physical",
@@ -616,7 +616,7 @@
       }
     },
     {
-      "tm": "秘4",
+      "tm": "秘傳04",
       "id": 70,
       "type": "Normal",
       "category": "Physical",
@@ -630,7 +630,7 @@
       }
     },
     {
-      "tm": "秘5",
+      "tm": "秘傳05",
       "id": 148,
       "type": "Normal",
       "category": "Status",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "tm": "秘6",
+      "tm": "秘傳06",
       "id": 249,
       "type": "Fighting",
       "category": "Physical",

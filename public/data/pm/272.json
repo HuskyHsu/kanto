@@ -486,7 +486,7 @@
   ],
   "HTMMoves": [
     {
-      "tm": "秘3",
+      "tm": "秘傳03",
       "id": 57,
       "type": "Water",
       "category": "Special",
@@ -500,7 +500,7 @@
       }
     },
     {
-      "tm": "秘4",
+      "tm": "秘傳04",
       "id": 70,
       "type": "Normal",
       "category": "Physical",
@@ -514,7 +514,7 @@
       }
     },
     {
-      "tm": "秘5",
+      "tm": "秘傳05",
       "id": 148,
       "type": "Normal",
       "category": "Status",
@@ -528,7 +528,7 @@
       }
     },
     {
-      "tm": "秘6",
+      "tm": "秘傳06",
       "id": 249,
       "type": "Fighting",
       "category": "Physical",
@@ -542,7 +542,7 @@
       }
     },
     {
-      "tm": "秘7",
+      "tm": "秘傳07",
       "id": 127,
       "type": "Water",
       "category": "Special",

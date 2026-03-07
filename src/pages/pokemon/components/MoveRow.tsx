@@ -105,11 +105,7 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
         </h5>
         <div className='flex flex-wrap gap-x-2 gap-y-4'>
           {list.map((pm, idx) => (
-            <PokemonIconLink
-              key={`${pm.link}-${idx}`}
-              pokemon={pm}
-              showLevel={true}
-            />
+            <PokemonIconLink key={`${pm.link}-${idx}`} pokemon={pm} showLevel={true} />
           ))}
         </div>
       </div>
@@ -124,7 +120,7 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
           isExpanded && 'bg-muted/50',
           className,
         )}
-        onClick={toggleExpand}
+        // onClick={toggleExpand}
       >
         {children}
       </TableRow>
