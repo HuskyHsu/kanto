@@ -533,7 +533,7 @@ const main = async () => {
   await fs.mkdir(pmOutDir, { recursive: true });
 
   for (const pm of pmMap.values()) {
-    await fs.writeFile(`${pmOutDir}/${pm.pid}.json`, JSON.stringify(pm, null, 2));
+    await fs.writeFile(`${pmOutDir}/${pm.pid}.json`, JSON.stringify(pm));
     console.log(`Saved ${pmOutDir}/${pm.pid}.json`);
 
     basicInfoList.push({
@@ -549,7 +549,7 @@ const main = async () => {
 
   const outDir = 'public/data';
   await fs.mkdir(outDir, { recursive: true });
-  await fs.writeFile(`${outDir}/pokemonList.json`, JSON.stringify(basicInfoList, null, 2));
+  await fs.writeFile(`${outDir}/pokemonList.json`, JSON.stringify(basicInfoList));
   console.log(`Saved ${outDir}/pokemonList.json`);
 };
 
