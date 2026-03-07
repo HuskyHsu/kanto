@@ -7,14 +7,14 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className='mt-16 w-full bg-[#dcf1f1]'>
+      <footer className='mt-12 w-full bg-[#dcf1f1]'>
         {/* Pallet Town Shore (Grass & Sand) */}
         <div className='w-full opacity-90'>
           <div className='h-[3px] bg-[#78c850] w-full'></div>
           <div className='h-[4px] bg-[#f8d878] w-full'></div>
         </div>
 
-        <div className='container mx-auto px-4 py-8 max-w-3xl'>
+        <div className='container mx-auto px-4 py-4 max-w-3xl'>
           <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
             {/* Left side - App info */}
             <div className='flex items-center gap-4'>
