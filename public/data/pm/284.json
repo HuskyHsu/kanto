@@ -124,6 +124,26 @@
       "level": 1
     },
     {
+      "id": 61,
+      "type": "Water",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "バブルこうせん",
+        "en": "Bubble Beam",
+        "zh": "泡沫光線"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "溜溜糖球",
+        "ja": "アメタマ",
+        "en": "Surskit"
+      }
+    },
+    {
       "id": 16,
       "type": "Flying",
       "category": "Physical",
@@ -138,6 +158,26 @@
       "level": 26
     },
     {
+      "id": 97,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "こうそくいどう",
+        "en": "Agility",
+        "zh": "高速移動"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "溜溜糖球",
+        "ja": "アメタマ",
+        "en": "Surskit"
+      }
+    },
+    {
       "id": 184,
       "type": "Normal",
       "category": "Status",
@@ -150,6 +190,46 @@
         "zh": "鬼面"
       },
       "level": 33
+    },
+    {
+      "id": 54,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "しろいきり",
+        "en": "Mist",
+        "zh": "白霧"
+      },
+      "level": -37,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "溜溜糖球",
+        "ja": "アメタマ",
+        "en": "Surskit"
+      }
+    },
+    {
+      "id": 114,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "くろいきり",
+        "en": "Haze",
+        "zh": "黑霧"
+      },
+      "level": -37,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "溜溜糖球",
+        "ja": "アメタマ",
+        "en": "Surskit"
+      }
     },
     {
       "id": 78,
@@ -506,7 +586,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 56,
+      "type": "Water",
+      "category": "Special",
+      "power": 110,
+      "accuracy": 80,
+      "pp": 5,
+      "name": {
+        "ja": "ハイドロポンプ",
+        "en": "Hydro Pump",
+        "zh": "水炮"
+      }
+    },
+    {
+      "id": 60,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "サイケこうせん",
+        "en": "Psybeam",
+        "zh": "幻象光線"
+      }
+    },
+    {
+      "id": 170,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "こころのめ",
+        "en": "Mind Reader",
+        "zh": "心之眼"
+      }
+    },
+    {
+      "id": 193,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "みやぶる",
+        "en": "Foresight",
+        "zh": "識破"
+      }
+    },
+    {
+      "id": 341,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 55,
+      "accuracy": 95,
+      "pp": 15,
+      "name": {
+        "ja": "マッドショット",
+        "en": "Mud Shot",
+        "zh": "泥巴射擊"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

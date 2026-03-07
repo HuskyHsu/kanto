@@ -387,35 +387,163 @@ const processPokemon = async (pid) => {
     ...moveMap,
   };
 
-  const outDir = 'public/data/pm';
-  await fs.mkdir(outDir, { recursive: true });
-  await fs.writeFile(`${outDir}/${pid}.json`, JSON.stringify(pm, null, 2));
-  console.log(`Saved ${outDir}/${pid}.json`);
-
-  return {
-    pid,
-    name: pm.name,
-    types: pm.types,
-    eggGroups: pm.eggGroups,
-    abilities: pm.abilities,
-    ev: pm.ev,
-    latest: pm.latest,
-  };
+  return pm;
 };
 
 const main = async () => {
   const pids = Array.from({ length: 386 }, (_, i) => i + 1);
-  const basicInfoList = [];
+  const pmMap = new Map();
 
   for (const pid of pids) {
     try {
-      const basicInfo = await processPokemon(pid);
-      if (basicInfo) {
-        basicInfoList.push(basicInfo);
+      const pm = await processPokemon(pid);
+      if (pm) {
+        pmMap.set(pid, pm);
       }
     } catch (error) {
       console.error(`Error processing Pokemon ${pid}:`, error.stack);
     }
+  }
+
+  const getAllPidsInTree = (node) => {
+    let pids = [node.pid];
+    if (node.to) {
+      for (const child of node.to) {
+        pids = pids.concat(getAllPidsInTree(child));
+      }
+    }
+    return pids;
+  };
+
+  const processedChains = new Set();
+  for (const pm of pmMap.values()) {
+    if (!pm.evolution) continue;
+
+    const rootPid = pm.evolution.pid;
+    if (processedChains.has(rootPid)) continue;
+    processedChains.add(rootPid);
+
+    // 1. Collect and distribute all egg moves to all family members
+    const familyPids = getAllPidsInTree(pm.evolution);
+    const validFamilyPids = familyPids.filter((fPid) => pmMap.has(fPid));
+
+    const allEggMovesMap = new Map();
+    for (const fPid of validFamilyPids) {
+      const fPm = pmMap.get(fPid);
+      if (fPm && fPm.eggMoves && fPm.eggMoves.length > 0) {
+        for (const move of fPm.eggMoves) {
+          allEggMovesMap.set(move.id, move);
+        }
+      }
+    }
+
+    const allEggMoves = Array.from(allEggMovesMap.values()).sort((a, b) => a.id - b.id);
+    for (const fPid of validFamilyPids) {
+      const fPm = pmMap.get(fPid);
+      fPm.eggMoves = allEggMoves;
+    }
+
+    // 2. Propagate levelUpMoves, TMMoves, HTMMoves, tutorMoves down the evolution tree
+    const propagateMovesDown = (node, parentPm) => {
+      const currentPm = pmMap.get(node.pid);
+      if (currentPm && parentPm) {
+        // Inherit levelUpMoves
+        if (parentPm.levelUpMoves) {
+          const existingIds = new Set(currentPm.levelUpMoves.map((m) => m.id));
+          for (const m of parentPm.levelUpMoves) {
+            if (!existingIds.has(m.id)) {
+              const newLevel = m.level > 0 ? -m.level : m.level;
+              currentPm.levelUpMoves.push({
+                ...m,
+                level: newLevel,
+                isPreEvo: true,
+                preEvoName: m.preEvoName || parentPm.name,
+              });
+            }
+          }
+          currentPm.levelUpMoves.sort((a, b) => Math.abs(a.level) - Math.abs(b.level));
+        }
+
+        // Inherit TMMoves
+        if (parentPm.TMMoves) {
+          const existingIds = new Set(currentPm.TMMoves.map((m) => m.id));
+          for (const m of parentPm.TMMoves) {
+            if (!existingIds.has(m.id)) {
+              currentPm.TMMoves.push({
+                ...m,
+                isPreEvo: true,
+                preEvoName: m.preEvoName || parentPm.name,
+              });
+            }
+          }
+          currentPm.TMMoves.sort((a, b) => {
+            const aNum = parseInt(a.tm) || 0;
+            const bNum = parseInt(b.tm) || 0;
+            return aNum - bNum;
+          });
+        }
+
+        // Inherit HTMMoves
+        if (parentPm.HTMMoves) {
+          const existingIds = new Set(currentPm.HTMMoves.map((m) => m.id));
+          for (const m of parentPm.HTMMoves) {
+            if (!existingIds.has(m.id)) {
+              currentPm.HTMMoves.push({
+                ...m,
+                isPreEvo: true,
+                preEvoName: m.preEvoName || parentPm.name,
+              });
+            }
+          }
+          currentPm.HTMMoves.sort((a, b) => {
+            const aNum = parseInt(a.tm?.replace('秘傳', '')) || 0;
+            const bNum = parseInt(b.tm?.replace('秘傳0', '')) || 0;
+            return aNum - bNum;
+          });
+        }
+
+        // Inherit tutorMoves
+        if (parentPm.tutorMoves) {
+          const existingIds = new Set(currentPm.tutorMoves.map((m) => m.id));
+          for (const m of parentPm.tutorMoves) {
+            if (!existingIds.has(m.id)) {
+              currentPm.tutorMoves.push({
+                ...m,
+                isPreEvo: true,
+                preEvoName: m.preEvoName || parentPm.name,
+              });
+            }
+          }
+        }
+      }
+
+      if (node.to) {
+        for (const child of node.to) {
+          propagateMovesDown(child, currentPm || parentPm);
+        }
+      }
+    };
+
+    propagateMovesDown(pm.evolution, null);
+  }
+
+  const basicInfoList = [];
+  const pmOutDir = 'public/data/pm';
+  await fs.mkdir(pmOutDir, { recursive: true });
+
+  for (const pm of pmMap.values()) {
+    await fs.writeFile(`${pmOutDir}/${pm.pid}.json`, JSON.stringify(pm, null, 2));
+    console.log(`Saved ${pmOutDir}/${pm.pid}.json`);
+
+    basicInfoList.push({
+      pid: pm.pid,
+      name: pm.name,
+      types: pm.types,
+      eggGroups: pm.eggGroups,
+      abilities: pm.abilities,
+      ev: pm.ev,
+      latest: pm.latest,
+    });
   }
 
   const outDir = 'public/data';

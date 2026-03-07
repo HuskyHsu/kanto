@@ -171,6 +171,26 @@
       "level": 25
     },
     {
+      "id": 98,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "でんこうせっか",
+        "en": "Quick Attack",
+        "zh": "電光一閃"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "長翅鷗",
+        "ja": "キャモメ",
+        "en": "Wingull"
+      }
+    },
+    {
       "id": 254,
       "type": "Normal",
       "category": "Status",
@@ -199,6 +219,26 @@
       "level": 33
     },
     {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      },
+      "level": -43,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "長翅鷗",
+        "ja": "キャモメ",
+        "en": "Wingull"
+      }
+    },
+    {
       "id": 255,
       "type": "Normal",
       "category": "Physical",
@@ -211,6 +251,26 @@
         "zh": "噴出"
       },
       "level": 47
+    },
+    {
+      "id": 97,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "こうそくいどう",
+        "en": "Agility",
+        "zh": "高速移動"
+      },
+      "level": -55,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "長翅鷗",
+        "ja": "キャモメ",
+        "en": "Wingull"
+      }
     },
     {
       "id": 56,
@@ -324,6 +384,26 @@
         "ja": "はかいこうせん",
         "en": "Hyper Beam",
         "zh": "破壞光線"
+      }
+    },
+    {
+      "tm": "17",
+      "id": 182,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "まもる",
+        "en": "Protect",
+        "zh": "守住"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "長翅鷗",
+        "ja": "キャモメ",
+        "en": "Wingull"
       }
     },
     {
@@ -525,7 +605,47 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 16,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "かぜおこし",
+        "en": "Gust",
+        "zh": "起風"
+      }
+    },
+    {
+      "id": 239,
+      "type": "Dragon",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "たつまき",
+        "en": "Twister",
+        "zh": "龍捲風"
+      }
+    },
+    {
+      "id": 346,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "みずあそび",
+        "en": "Water Sport",
+        "zh": "玩水"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

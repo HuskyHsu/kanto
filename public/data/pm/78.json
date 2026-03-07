@@ -465,7 +465,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 24,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 30,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "にどげり",
+        "en": "Double Kick",
+        "zh": "二連踢"
+      }
+    },
+    {
+      "id": 37,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あばれる",
+        "en": "Thrash",
+        "zh": "大鬧一番"
+      }
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      }
+    },
+    {
+      "id": 95,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": 60,
+      "pp": 20,
+      "name": {
+        "ja": "さいみんじゅつ",
+        "en": "Hypnosis",
+        "zh": "催眠術"
+      }
+    },
+    {
+      "id": 172,
+      "type": "Fire",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "かえんぐるま",
+        "en": "Flame Wheel",
+        "zh": "火焰輪"
+      }
+    },
+    {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

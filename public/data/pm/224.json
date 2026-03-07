@@ -98,6 +98,26 @@
       "level": 11
     },
     {
+      "id": 199,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ロックオン",
+        "en": "Lock-On",
+        "zh": "鎖定"
+      },
+      "level": -11,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "鐵炮魚",
+        "ja": "テッポウオ",
+        "en": "Remoraid"
+      }
+    },
+    {
       "id": 60,
       "type": "Psychic",
       "category": "Special",
@@ -521,7 +541,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 48,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 55,
+      "pp": 20,
+      "name": {
+        "ja": "ちょうおんぱ",
+        "en": "Supersonic",
+        "zh": "超音波"
+      }
+    },
+    {
+      "id": 86,
+      "type": "Electric",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 20,
+      "name": {
+        "ja": "でんじは",
+        "en": "Thunder Wave",
+        "zh": "電磁波"
+      }
+    },
+    {
+      "id": 103,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "name": {
+        "ja": "いやなおと",
+        "en": "Screech",
+        "zh": "刺耳聲"
+      }
+    },
+    {
+      "id": 114,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "くろいきり",
+        "en": "Haze",
+        "zh": "黑霧"
+      }
+    },
+    {
+      "id": 190,
+      "type": "Water",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 85,
+      "pp": 10,
+      "name": {
+        "ja": "オクタンほう",
+        "en": "Octazooka",
+        "zh": "章魚桶炮"
+      }
+    },
+    {
+      "id": 350,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 25,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "ロックブラスト",
+        "en": "Rock Blast",
+        "zh": "岩石爆擊"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

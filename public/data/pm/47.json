@@ -497,7 +497,112 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 60,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "サイケこうせん",
+        "en": "Psybeam",
+        "zh": "幻象光線"
+      }
+    },
+    {
+      "id": 68,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "カウンター",
+        "en": "Counter",
+        "zh": "雙倍奉還"
+      }
+    },
+    {
+      "id": 103,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "name": {
+        "ja": "いやなおと",
+        "en": "Screech",
+        "zh": "刺耳聲"
+      }
+    },
+    {
+      "id": 113,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "ひかりのかべ",
+        "en": "Light Screen",
+        "zh": "光牆"
+      }
+    },
+    {
+      "id": 175,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "じたばた",
+        "en": "Flail",
+        "zh": "抓狂"
+      }
+    },
+    {
+      "id": 206,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "みねうち",
+        "en": "False Swipe",
+        "zh": "點到為止"
+      }
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      }
+    },
+    {
+      "id": 230,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまいかおり",
+        "en": "Sweet Scent",
+        "zh": "甜甜香氣"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 14,

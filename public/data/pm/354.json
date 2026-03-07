@@ -535,7 +535,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 50,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "かなしばり",
+        "en": "Disable",
+        "zh": "定身法"
+      }
+    },
+    {
+      "id": 193,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "みやぶる",
+        "en": "Foresight",
+        "zh": "識破"
+      }
+    },
+    {
+      "id": 194,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "みちづれ",
+        "en": "Destiny Bond",
+        "zh": "同命"
+      }
+    },
+    {
+      "id": 286,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ふういん",
+        "en": "Imprison",
+        "zh": "封印"
+      }
+    },
+    {
+      "id": 310,
+      "type": "Ghost",
+      "category": "Physical",
+      "power": 30,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "おどろかす",
+        "en": "Astonish",
+        "zh": "驚嚇"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

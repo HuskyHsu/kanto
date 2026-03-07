@@ -178,6 +178,26 @@
       "level": 23
     },
     {
+      "id": 72,
+      "type": "Grass",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "メガドレイン",
+        "en": "Mega Drain",
+        "zh": "超級吸取"
+      },
+      "level": -26,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "木守宮",
+        "ja": "キモリ",
+        "en": "Treecko"
+      }
+    },
+    {
       "id": 348,
       "type": "Grass",
       "category": "Special",
@@ -218,6 +238,26 @@
         "zh": "摔打"
       },
       "level": 43
+    },
+    {
+      "id": 202,
+      "type": "Grass",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ギガドレイン",
+        "en": "Giga Drain",
+        "zh": "終極吸取"
+      },
+      "level": -46,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "木守宮",
+        "ja": "キモリ",
+        "en": "Treecko"
+      }
     },
     {
       "id": 197,
@@ -658,7 +698,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 73,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "やどりぎのタネ",
+        "en": "Leech Seed",
+        "zh": "寄生種子"
+      }
+    },
+    {
+      "id": 225,
+      "type": "Dragon",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "りゅうのいぶき",
+        "en": "Dragon Breath",
+        "zh": "龍息"
+      }
+    },
+    {
+      "id": 242,
+      "type": "Dark",
+      "category": "Special",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かみくだく",
+        "en": "Crunch",
+        "zh": "咬碎"
+      }
+    },
+    {
+      "id": 283,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "がむしゃら",
+        "en": "Endeavor",
+        "zh": "蠻幹"
+      }
+    },
+    {
+      "id": 300,
+      "type": "Ground",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "どろあそび",
+        "en": "Mud Sport",
+        "zh": "玩泥巴"
+      }
+    },
+    {
+      "id": 306,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 95,
+      "pp": 10,
+      "name": {
+        "ja": "ブレイククロー",
+        "en": "Crush Claw",
+        "zh": "撕裂爪"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

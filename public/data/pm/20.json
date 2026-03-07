@@ -139,6 +139,26 @@
       "level": 20
     },
     {
+      "id": 116,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "きあいだめ",
+        "en": "Focus Energy",
+        "zh": "聚氣"
+      },
+      "level": -20,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "小拉達",
+        "ja": "コラッタ",
+        "en": "Rattata"
+      }
+    },
+    {
       "id": 228,
       "type": "Dark",
       "category": "Special",
@@ -563,7 +583,112 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 44,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "かみつく",
+        "en": "Bite",
+        "zh": "咬住"
+      }
+    },
+    {
+      "id": 68,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "カウンター",
+        "en": "Counter",
+        "zh": "雙倍奉還"
+      }
+    },
+    {
+      "id": 103,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "name": {
+        "ja": "いやなおと",
+        "en": "Screech",
+        "zh": "刺耳聲"
+      }
+    },
+    {
+      "id": 154,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 18,
+      "accuracy": 80,
+      "pp": 15,
+      "name": {
+        "ja": "みだれひっかき",
+        "en": "Fury Swipes",
+        "zh": "亂抓"
+      }
+    },
+    {
+      "id": 172,
+      "type": "Fire",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "かえんぐるま",
+        "en": "Flame Wheel",
+        "zh": "火焰輪"
+      }
+    },
+    {
+      "id": 179,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "きしかいせい",
+        "en": "Reversal",
+        "zh": "起死回生"
+      }
+    },
+    {
+      "id": 207,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "いばる",
+        "en": "Swagger",
+        "zh": "虛張聲勢"
+      }
+    },
+    {
+      "id": 253,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "さわぐ",
+        "en": "Uproar",
+        "zh": "吵鬧"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

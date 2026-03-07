@@ -493,7 +493,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 103,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "name": {
+        "ja": "いやなおと",
+        "en": "Screech",
+        "zh": "刺耳聲"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      }
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      }
+    },
+    {
+      "id": 246,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "げんしのちから",
+        "en": "Ancient Power",
+        "zh": "原始之力"
+      }
+    },
+    {
+      "id": 251,
+      "type": "Dark",
+      "category": "Special",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ふくろだたき",
+        "en": "Beat Up",
+        "zh": "圍攻"
+      }
+    },
+    {
+      "id": 253,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "さわぐ",
+        "en": "Uproar",
+        "zh": "吵鬧"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

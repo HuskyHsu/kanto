@@ -194,6 +194,26 @@
       "level": 35
     },
     {
+      "id": 119,
+      "type": "Flying",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "オウムがえし",
+        "en": "Mirror Move",
+        "zh": "鸚鵡學舌"
+      },
+      "level": -38,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "青綿鳥",
+        "ja": "チルット",
+        "en": "Swablu"
+      }
+    },
+    {
       "id": 349,
       "type": "Dragon",
       "category": "Status",
@@ -618,7 +638,60 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 97,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "こうそくいどう",
+        "en": "Agility",
+        "zh": "高速移動"
+      }
+    },
+    {
+      "id": 99,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 20,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "いかり",
+        "en": "Rage",
+        "zh": "憤怒"
+      }
+    },
+    {
+      "id": 114,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "くろいきり",
+        "en": "Haze",
+        "zh": "黑霧"
+      }
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

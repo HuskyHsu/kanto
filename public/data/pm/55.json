@@ -591,7 +591,112 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 60,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "サイケこうせん",
+        "en": "Psybeam",
+        "zh": "幻象光線"
+      }
+    },
+    {
+      "id": 94,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "サイコキネシス",
+        "en": "Psychic",
+        "zh": "精神強念"
+      }
+    },
+    {
+      "id": 95,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": 60,
+      "pp": 20,
+      "name": {
+        "ja": "さいみんじゅつ",
+        "en": "Hypnosis",
+        "zh": "催眠術"
+      }
+    },
+    {
+      "id": 113,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "ひかりのかべ",
+        "en": "Light Screen",
+        "zh": "光牆"
+      }
+    },
+    {
+      "id": 193,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "みやぶる",
+        "en": "Foresight",
+        "zh": "識破"
+      }
+    },
+    {
+      "id": 238,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 100,
+      "accuracy": 80,
+      "pp": 5,
+      "name": {
+        "ja": "クロスチョップ",
+        "en": "Cross Chop",
+        "zh": "十字劈"
+      }
+    },
+    {
+      "id": 248,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "みらいよち",
+        "en": "Future Sight",
+        "zh": "預知未來"
+      }
+    },
+    {
+      "id": 287,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "リフレッシュ",
+        "en": "Refresh",
+        "zh": "煥然一新"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

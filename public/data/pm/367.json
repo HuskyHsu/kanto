@@ -89,6 +89,66 @@
       "level": 1
     },
     {
+      "id": 55,
+      "type": "Water",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "みずでっぽう",
+        "en": "Water Gun",
+        "zh": "水槍"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "珍珠貝",
+        "ja": "パールル",
+        "en": "Clamperl"
+      }
+    },
+    {
+      "id": 128,
+      "type": "Water",
+      "category": "Special",
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "からではさむ",
+        "en": "Clamp",
+        "zh": "貝殼夾擊"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "珍珠貝",
+        "ja": "パールル",
+        "en": "Clamperl"
+      }
+    },
+    {
+      "id": 334,
+      "type": "Steel",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "てっぺき",
+        "en": "Iron Defense",
+        "zh": "鐵壁"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "珍珠貝",
+        "ja": "パールル",
+        "en": "Clamperl"
+      }
+    },
+    {
       "id": 44,
       "type": "Dark",
       "category": "Special",
@@ -199,6 +259,26 @@
         "ja": "ダイビング",
         "en": "Dive",
         "zh": "潛水"
+      }
+    },
+    {
+      "tm": "03",
+      "id": 352,
+      "type": "Water",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "みずのはどう",
+        "en": "Water Pulse",
+        "zh": "水之波動"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "珍珠貝",
+        "ja": "パールル",
+        "en": "Clamperl"
       }
     },
     {
@@ -470,7 +550,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      }
+    },
+    {
+      "id": 48,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 55,
+      "pp": 20,
+      "name": {
+        "ja": "ちょうおんぱ",
+        "en": "Supersonic",
+        "zh": "超音波"
+      }
+    },
+    {
+      "id": 109,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あやしいひかり",
+        "en": "Confuse Ray",
+        "zh": "奇異之光"
+      }
+    },
+    {
+      "id": 112,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "バリアー",
+        "en": "Barrier",
+        "zh": "屏障"
+      }
+    },
+    {
+      "id": 287,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "リフレッシュ",
+        "en": "Refresh",
+        "zh": "煥然一新"
+      }
+    },
+    {
+      "id": 300,
+      "type": "Ground",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "どろあそび",
+        "en": "Mud Sport",
+        "zh": "玩泥巴"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

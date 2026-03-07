@@ -517,7 +517,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 37,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あばれる",
+        "en": "Thrash",
+        "zh": "大鬧一番"
+      }
+    },
+    {
+      "id": 154,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 18,
+      "accuracy": 80,
+      "pp": 15,
+      "name": {
+        "ja": "みだれひっかき",
+        "en": "Fury Swipes",
+        "zh": "亂抓"
+      }
+    },
+    {
+      "id": 179,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "きしかいせい",
+        "en": "Reversal",
+        "zh": "起死回生"
+      }
+    },
+    {
+      "id": 193,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "みやぶる",
+        "en": "Foresight",
+        "zh": "識破"
+      }
+    },
+    {
+      "id": 306,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 95,
+      "pp": 10,
+      "name": {
+        "ja": "ブレイククロー",
+        "en": "Crush Claw",
+        "zh": "撕裂爪"
+      }
+    },
+    {
+      "id": 336,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "とおぼえ",
+        "en": "Howl",
+        "zh": "長嚎"
+      }
+    },
+    {
+      "id": 343,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "ほしがる",
+        "en": "Covet",
+        "zh": "渴望"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

@@ -128,6 +128,26 @@
       "level": 1
     },
     {
+      "id": 186,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 10,
+      "name": {
+        "ja": "てんしのキッス",
+        "en": "Sweet Kiss",
+        "zh": "天使之吻"
+      },
+      "level": -9,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "迷唇娃",
+        "ja": "ムチュール",
+        "en": "Smoochum"
+      }
+    },
+    {
       "id": 3,
       "type": "Normal",
       "category": "Physical",
@@ -142,6 +162,26 @@
       "level": 21
     },
     {
+      "id": 93,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "ねんりき",
+        "en": "Confusion",
+        "zh": "念力"
+      },
+      "level": -21,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "迷唇娃",
+        "ja": "ムチュール",
+        "en": "Smoochum"
+      }
+    },
+    {
       "id": 8,
       "type": "Ice",
       "category": "Special",
@@ -154,6 +194,26 @@
         "zh": "冰凍拳"
       },
       "level": 25
+    },
+    {
+      "id": 47,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 55,
+      "pp": 15,
+      "name": {
+        "ja": "うたう",
+        "en": "Sing",
+        "zh": "唱歌"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "迷唇娃",
+        "ja": "ムチュール",
+        "en": "Smoochum"
+      }
     },
     {
       "id": 212,
@@ -182,6 +242,26 @@
         "zh": "假哭"
       },
       "level": 41
+    },
+    {
+      "id": 94,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "サイコキネシス",
+        "en": "Psychic",
+        "zh": "精神強念"
+      },
+      "level": -45,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "迷唇娃",
+        "ja": "ムチュール",
+        "en": "Smoochum"
+      }
     },
     {
       "id": 34,
@@ -608,7 +688,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 8,
+      "type": "Ice",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "れいとうパンチ",
+        "en": "Ice Punch",
+        "zh": "冰凍拳"
+      }
+    },
+    {
+      "id": 96,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "ヨガのポーズ",
+        "en": "Meditate",
+        "zh": "瑜伽姿勢"
+      }
+    },
+    {
+      "id": 244,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "じこあんじ",
+        "en": "Psych Up",
+        "zh": "自我暗示"
+      }
+    },
+    {
+      "id": 252,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ねこだまし",
+        "en": "Fake Out",
+        "zh": "擊掌奇襲"
+      }
+    },
+    {
+      "id": 273,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ねがいごと",
+        "en": "Wish",
+        "zh": "祈願"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,
@@ -725,6 +871,25 @@
         "ja": "みがわり",
         "en": "Substitute",
         "zh": "替身"
+      }
+    },
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "迷唇娃",
+        "ja": "ムチュール",
+        "en": "Smoochum"
       }
     }
   ]

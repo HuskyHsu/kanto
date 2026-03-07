@@ -421,6 +421,26 @@
       }
     },
     {
+      "tm": "29",
+      "id": 94,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "サイコキネシス",
+        "en": "Psychic",
+        "zh": "精神強念"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "凱西",
+        "ja": "ケーシィ",
+        "en": "Abra"
+      }
+    },
+    {
       "tm": "30",
       "id": 247,
       "type": "Ghost",
@@ -446,6 +466,26 @@
         "ja": "かげぶんしん",
         "en": "Double Team",
         "zh": "影子分身"
+      }
+    },
+    {
+      "tm": "33",
+      "id": 115,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "リフレクター",
+        "en": "Reflect",
+        "zh": "反射壁"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "凱西",
+        "ja": "ケーシィ",
+        "en": "Abra"
       }
     },
     {
@@ -591,7 +631,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 7,
+      "type": "Fire",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "ほのおのパンチ",
+        "en": "Fire Punch",
+        "zh": "火焰拳"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Ice",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "れいとうパンチ",
+        "en": "Ice Punch",
+        "zh": "冰凍拳"
+      }
+    },
+    {
+      "id": 9,
+      "type": "Electric",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かみなりパンチ",
+        "en": "Thunder Punch",
+        "zh": "雷電拳"
+      }
+    },
+    {
+      "id": 112,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "バリアー",
+        "en": "Barrier",
+        "zh": "屏障"
+      }
+    },
+    {
+      "id": 227,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "アンコール",
+        "en": "Encore",
+        "zh": "再來一次"
+      }
+    },
+    {
+      "id": 282,
+      "type": "Dark",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "はたきおとす",
+        "en": "Knock Off",
+        "zh": "拍落"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

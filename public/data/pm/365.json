@@ -582,7 +582,112 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 90,
+      "type": "Ground",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 30,
+      "pp": 5,
+      "name": {
+        "ja": "じわれ",
+        "en": "Fissure",
+        "zh": "地裂"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 174,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "のろい",
+        "en": "Curse",
+        "zh": "詛咒"
+      }
+    },
+    {
+      "id": 254,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "たくわえる",
+        "en": "Stockpile",
+        "zh": "蓄力"
+      }
+    },
+    {
+      "id": 255,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "はきだす",
+        "en": "Spit Up",
+        "zh": "噴出"
+      }
+    },
+    {
+      "id": 256,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "のみこむ",
+        "en": "Swallow",
+        "zh": "吞下"
+      }
+    },
+    {
+      "id": 281,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "あくび",
+        "en": "Yawn",
+        "zh": "哈欠"
+      }
+    },
+    {
+      "id": 346,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "みずあそび",
+        "en": "Water Sport",
+        "zh": "玩水"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

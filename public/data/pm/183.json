@@ -105,6 +105,26 @@
       "level": 1
     },
     {
+      "id": 150,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "はねる",
+        "en": "Splash",
+        "zh": "躍起"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "露力麗",
+        "ja": "ルリリ",
+        "en": "Azurill"
+      }
+    },
+    {
       "id": 111,
       "type": "Normal",
       "category": "Status",
@@ -117,6 +137,26 @@
         "zh": "變圓"
       },
       "level": 3
+    },
+    {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      },
+      "level": -3,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "露力麗",
+        "ja": "ルリリ",
+        "en": "Azurill"
+      }
     },
     {
       "id": 39,
@@ -147,6 +187,26 @@
       "level": 10
     },
     {
+      "id": 145,
+      "type": "Water",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "あわ",
+        "en": "Bubble",
+        "zh": "泡沫"
+      },
+      "level": -10,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "露力麗",
+        "ja": "ルリリ",
+        "en": "Azurill"
+      }
+    },
+    {
       "id": 205,
       "type": "Rock",
       "category": "Physical",
@@ -159,6 +219,26 @@
         "zh": "滾動"
       },
       "level": 15
+    },
+    {
+      "id": 21,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 75,
+      "pp": 20,
+      "name": {
+        "ja": "たたきつける",
+        "en": "Slam",
+        "zh": "摔打"
+      },
+      "level": -15,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "露力麗",
+        "ja": "ルリリ",
+        "en": "Azurill"
+      }
     },
     {
       "id": 61,
@@ -341,6 +421,26 @@
         "ja": "まもる",
         "en": "Protect",
         "zh": "守住"
+      }
+    },
+    {
+      "tm": "18",
+      "id": 240,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "あまごい",
+        "en": "Rain Dance",
+        "zh": "求雨"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "露力麗",
+        "ja": "ルリリ",
+        "en": "Azurill"
       }
     },
     {
@@ -544,6 +644,19 @@
   ],
   "eggMoves": [
     {
+      "id": 47,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 55,
+      "pp": 15,
+      "name": {
+        "ja": "うたう",
+        "en": "Sing",
+        "zh": "唱歌"
+      }
+    },
+    {
       "id": 48,
       "type": "Normal",
       "category": "Status",
@@ -635,6 +748,19 @@
       }
     },
     {
+      "id": 227,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "アンコール",
+        "en": "Encore",
+        "zh": "再來一次"
+      }
+    },
+    {
       "id": 248,
       "type": "Psychic",
       "category": "Special",
@@ -645,6 +771,32 @@
         "ja": "みらいよち",
         "en": "Future Sight",
         "zh": "預知未來"
+      }
+    },
+    {
+      "id": 287,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "リフレッシュ",
+        "en": "Refresh",
+        "zh": "煥然一新"
+      }
+    },
+    {
+      "id": 321,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "くすぐる",
+        "en": "Tickle",
+        "zh": "搔癢"
       }
     }
   ],
@@ -712,6 +864,44 @@
         "ja": "ものまね",
         "en": "Mimic",
         "zh": "模仿"
+      }
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "露力麗",
+        "ja": "ルリリ",
+        "en": "Azurill"
+      }
+    },
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "露力麗",
+        "ja": "ルリリ",
+        "en": "Azurill"
       }
     }
   ]

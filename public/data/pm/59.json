@@ -127,6 +127,106 @@
       "level": 1
     },
     {
+      "id": 43,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "にらみつける",
+        "en": "Leer",
+        "zh": "瞪眼"
+      },
+      "level": -13,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "卡蒂狗",
+        "ja": "ガーディ",
+        "en": "Growlithe"
+      }
+    },
+    {
+      "id": 36,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 85,
+      "pp": 20,
+      "name": {
+        "ja": "とっしん",
+        "en": "Take Down",
+        "zh": "猛撞"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "卡蒂狗",
+        "ja": "ガーディ",
+        "en": "Growlithe"
+      }
+    },
+    {
+      "id": 172,
+      "type": "Fire",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "かえんぐるま",
+        "en": "Flame Wheel",
+        "zh": "火焰輪"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "卡蒂狗",
+        "ja": "ガーディ",
+        "en": "Growlithe"
+      }
+    },
+    {
+      "id": 270,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "てだすけ",
+        "en": "Helping Hand",
+        "zh": "幫助"
+      },
+      "level": -37,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "卡蒂狗",
+        "ja": "ガーディ",
+        "en": "Growlithe"
+      }
+    },
+    {
+      "id": 97,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "こうそくいどう",
+        "en": "Agility",
+        "zh": "高速移動"
+      },
+      "level": -43,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "卡蒂狗",
+        "ja": "ガーディ",
+        "en": "Growlithe"
+      }
+    },
+    {
       "id": 245,
       "type": "Normal",
       "category": "Physical",
@@ -139,6 +239,26 @@
         "zh": "神速"
       },
       "level": 49
+    },
+    {
+      "id": 53,
+      "type": "Fire",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かえんほうしゃ",
+        "en": "Flamethrower",
+        "zh": "噴射火焰"
+      },
+      "level": -49,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "卡蒂狗",
+        "ja": "ガーディ",
+        "en": "Growlithe"
+      }
     }
   ],
   "TMMoves": [
@@ -439,7 +559,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      }
+    },
+    {
+      "id": 37,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あばれる",
+        "en": "Thrash",
+        "zh": "大鬧一番"
+      }
+    },
+    {
+      "id": 83,
+      "type": "Fire",
+      "category": "Special",
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "ほのおのうず",
+        "en": "Fire Spin",
+        "zh": "火焰旋渦"
+      }
+    },
+    {
+      "id": 219,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 25,
+      "name": {
+        "ja": "しんぴのまもり",
+        "en": "Safeguard",
+        "zh": "神秘守護"
+      }
+    },
+    {
+      "id": 242,
+      "type": "Dark",
+      "category": "Special",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かみくだく",
+        "en": "Crunch",
+        "zh": "咬碎"
+      }
+    },
+    {
+      "id": 257,
+      "type": "Fire",
+      "category": "Special",
+      "power": 95,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "ねっぷう",
+        "en": "Heat Wave",
+        "zh": "熱風"
+      }
+    },
+    {
+      "id": 336,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "とおぼえ",
+        "en": "Howl",
+        "zh": "長嚎"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

@@ -156,6 +156,86 @@
       "level": 1
     },
     {
+      "id": 145,
+      "type": "Water",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "あわ",
+        "en": "Bubble",
+        "zh": "泡沫"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蚊香君",
+        "ja": "ニョロゾ",
+        "en": "Poliwhirl"
+      }
+    },
+    {
+      "id": 240,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "あまごい",
+        "en": "Rain Dance",
+        "zh": "求雨"
+      },
+      "level": -27,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蚊香君",
+        "ja": "ニョロゾ",
+        "en": "Poliwhirl"
+      }
+    },
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      },
+      "level": -35,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蚊香君",
+        "ja": "ニョロゾ",
+        "en": "Poliwhirl"
+      }
+    },
+    {
+      "id": 187,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "はらだいこ",
+        "en": "Belly Drum",
+        "zh": "腹鼓"
+      },
+      "level": -43,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蚊香君",
+        "ja": "ニョロゾ",
+        "en": "Poliwhirl"
+      }
+    },
+    {
       "id": 170,
       "type": "Normal",
       "category": "Status",
@@ -168,6 +248,26 @@
         "zh": "心之眼"
       },
       "level": 51
+    },
+    {
+      "id": 56,
+      "type": "Water",
+      "category": "Special",
+      "power": 110,
+      "accuracy": 80,
+      "pp": 5,
+      "name": {
+        "ja": "ハイドロポンプ",
+        "en": "Hydro Pump",
+        "zh": "水炮"
+      },
+      "level": -51,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蚊香君",
+        "ja": "ニョロゾ",
+        "en": "Poliwhirl"
+      }
     }
   ],
   "TMMoves": [
@@ -579,7 +679,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 54,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "しろいきり",
+        "en": "Mist",
+        "zh": "白霧"
+      }
+    },
+    {
+      "id": 61,
+      "type": "Water",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "バブルこうせん",
+        "en": "Bubble Beam",
+        "zh": "泡沫光線"
+      }
+    },
+    {
+      "id": 114,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "くろいきり",
+        "en": "Haze",
+        "zh": "黑霧"
+      }
+    },
+    {
+      "id": 150,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "はねる",
+        "en": "Splash",
+        "zh": "躍起"
+      }
+    },
+    {
+      "id": 170,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "こころのめ",
+        "en": "Mind Reader",
+        "zh": "心之眼"
+      }
+    },
+    {
+      "id": 301,
+      "type": "Ice",
+      "category": "Special",
+      "power": 30,
+      "accuracy": 90,
+      "pp": 20,
+      "name": {
+        "ja": "アイスボール",
+        "en": "Ice Ball",
+        "zh": "冰球"
+      }
+    },
+    {
+      "id": 346,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "みずあそび",
+        "en": "Water Sport",
+        "zh": "玩水"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

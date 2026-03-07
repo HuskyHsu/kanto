@@ -481,7 +481,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 14,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "つるぎのまい",
+        "en": "Swords Dance",
+        "zh": "劍舞"
+      }
+    },
+    {
+      "id": 115,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "リフレクター",
+        "en": "Reflect",
+        "zh": "反射壁"
+      }
+    },
+    {
+      "id": 141,
+      "type": "Bug",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "きゅうけつ",
+        "en": "Leech Life",
+        "zh": "吸血"
+      }
+    },
+    {
+      "id": 227,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "アンコール",
+        "en": "Encore",
+        "zh": "再來一次"
+      }
+    },
+    {
+      "id": 235,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "こうごうせい",
+        "en": "Synthesis",
+        "zh": "光合作用"
+      }
+    },
+    {
+      "id": 275,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ねをはる",
+        "en": "Ingrain",
+        "zh": "扎根"
+      }
+    },
+    {
+      "id": 345,
+      "type": "Grass",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "マジカルリーフ",
+        "en": "Magical Leaf",
+        "zh": "魔法葉"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 14,

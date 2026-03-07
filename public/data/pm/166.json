@@ -496,7 +496,47 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 60,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "サイケこうせん",
+        "en": "Psybeam",
+        "zh": "幻象光線"
+      }
+    },
+    {
+      "id": 117,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "がまん",
+        "en": "Bide",
+        "zh": "忍耐"
+      }
+    },
+    {
+      "id": 318,
+      "type": "Bug",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "ぎんいろのかぜ",
+        "en": "Silver Wind",
+        "zh": "銀色旋風"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

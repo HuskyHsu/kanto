@@ -538,7 +538,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 21,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 75,
+      "pp": 20,
+      "name": {
+        "ja": "たたきつける",
+        "en": "Slam",
+        "zh": "摔打"
+      }
+    },
+    {
+      "id": 48,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 55,
+      "pp": 20,
+      "name": {
+        "ja": "ちょうおんぱ",
+        "en": "Supersonic",
+        "zh": "超音波"
+      }
+    },
+    {
+      "id": 61,
+      "type": "Water",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "バブルこうせん",
+        "en": "Bubble Beam",
+        "zh": "泡沫光線"
+      }
+    },
+    {
+      "id": 62,
+      "type": "Ice",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "オーロラビーム",
+        "en": "Aurora Beam",
+        "zh": "極光束"
+      }
+    },
+    {
+      "id": 114,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "くろいきり",
+        "en": "Haze",
+        "zh": "黑霧"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 191,
+      "type": "Ground",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "まきびし",
+        "en": "Spikes",
+        "zh": "撒菱"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

@@ -666,7 +666,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 64,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 35,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "つつく",
+        "en": "Peck",
+        "zh": "啄"
+      }
+    },
+    {
+      "id": 119,
+      "type": "Flying",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "オウムがえし",
+        "en": "Mirror Move",
+        "zh": "鸚鵡學舌"
+      }
+    },
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    },
+    {
+      "id": 193,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "みやぶる",
+        "en": "Foresight",
+        "zh": "識破"
+      }
+    },
+    {
+      "id": 217,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 90,
+      "pp": 15,
+      "name": {
+        "ja": "プレゼント",
+        "en": "Present",
+        "zh": "禮物"
+      }
+    },
+    {
+      "id": 244,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "じこあんじ",
+        "en": "Psych Up",
+        "zh": "自我暗示"
+      }
+    },
+    {
+      "id": 248,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "みらいよち",
+        "en": "Future Sight",
+        "zh": "預知未來"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

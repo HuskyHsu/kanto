@@ -145,6 +145,186 @@
         "zh": "驚嚇"
       },
       "level": 1
+    },
+    {
+      "id": 252,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ねこだまし",
+        "en": "Fake Out",
+        "zh": "擊掌奇襲"
+      },
+      "level": -19,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蓮帽小童",
+        "ja": "ハスブレロ",
+        "en": "Lombre"
+      }
+    },
+    {
+      "id": 54,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "しろいきり",
+        "en": "Mist",
+        "zh": "白霧"
+      },
+      "level": -21,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蓮葉童子",
+        "ja": "ハスボー",
+        "en": "Lotad"
+      }
+    },
+    {
+      "id": 154,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 18,
+      "accuracy": 80,
+      "pp": 15,
+      "name": {
+        "ja": "みだれひっかき",
+        "en": "Fury Swipes",
+        "zh": "亂抓"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蓮帽小童",
+        "ja": "ハスブレロ",
+        "en": "Lombre"
+      }
+    },
+    {
+      "id": 346,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "みずあそび",
+        "en": "Water Sport",
+        "zh": "玩水"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蓮帽小童",
+        "ja": "ハスブレロ",
+        "en": "Lombre"
+      }
+    },
+    {
+      "id": 240,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "あまごい",
+        "en": "Rain Dance",
+        "zh": "求雨"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蓮葉童子",
+        "ja": "ハスボー",
+        "en": "Lotad"
+      }
+    },
+    {
+      "id": 168,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "どろぼう",
+        "en": "Thief",
+        "zh": "小偷"
+      },
+      "level": -37,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蓮帽小童",
+        "ja": "ハスブレロ",
+        "en": "Lombre"
+      }
+    },
+    {
+      "id": 253,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "さわぐ",
+        "en": "Uproar",
+        "zh": "吵鬧"
+      },
+      "level": -43,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蓮帽小童",
+        "ja": "ハスブレロ",
+        "en": "Lombre"
+      }
+    },
+    {
+      "id": 72,
+      "type": "Grass",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "メガドレイン",
+        "en": "Mega Drain",
+        "zh": "超級吸取"
+      },
+      "level": -43,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蓮葉童子",
+        "ja": "ハスボー",
+        "en": "Lotad"
+      }
+    },
+    {
+      "id": 56,
+      "type": "Water",
+      "category": "Special",
+      "power": 110,
+      "accuracy": 80,
+      "pp": 5,
+      "name": {
+        "ja": "ハイドロポンプ",
+        "en": "Hydro Pump",
+        "zh": "水炮"
+      },
+      "level": -49,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蓮帽小童",
+        "ja": "ハスブレロ",
+        "en": "Lombre"
+      }
     }
   ],
   "TMMoves": [
@@ -556,7 +736,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 55,
+      "type": "Water",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "みずでっぽう",
+        "en": "Water Gun",
+        "zh": "水槍"
+      }
+    },
+    {
+      "id": 73,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "やどりぎのタネ",
+        "en": "Leech Seed",
+        "zh": "寄生種子"
+      }
+    },
+    {
+      "id": 75,
+      "type": "Grass",
+      "category": "Special",
+      "power": 55,
+      "accuracy": 95,
+      "pp": 25,
+      "name": {
+        "ja": "はっぱカッター",
+        "en": "Razor Leaf",
+        "zh": "飛葉快刀"
+      }
+    },
+    {
+      "id": 175,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "じたばた",
+        "en": "Flail",
+        "zh": "抓狂"
+      }
+    },
+    {
+      "id": 230,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまいかおり",
+        "en": "Sweet Scent",
+        "zh": "甜甜香氣"
+      }
+    },
+    {
+      "id": 235,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "こうごうせい",
+        "en": "Synthesis",
+        "zh": "光合作用"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

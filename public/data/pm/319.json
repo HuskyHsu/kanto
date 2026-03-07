@@ -165,6 +165,26 @@
       "level": 28
     },
     {
+      "id": 36,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 85,
+      "pp": 20,
+      "name": {
+        "ja": "とっしん",
+        "en": "Take Down",
+        "zh": "猛撞"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "利牙魚",
+        "ja": "キバニア",
+        "en": "Carvanha"
+      }
+    },
+    {
       "id": 163,
       "type": "Normal",
       "category": "Physical",
@@ -317,6 +337,26 @@
         "ja": "めざめるパワー",
         "en": "Hidden Power",
         "zh": "覺醒力量"
+      }
+    },
+    {
+      "tm": "12",
+      "id": 269,
+      "type": "Dark",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ちょうはつ",
+        "en": "Taunt",
+        "zh": "挑釁"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "利牙魚",
+        "ja": "キバニア",
+        "en": "Carvanha"
       }
     },
     {
@@ -602,7 +642,47 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 37,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あばれる",
+        "en": "Thrash",
+        "zh": "大鬧一番"
+      }
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      }
+    },
+    {
+      "id": 56,
+      "type": "Water",
+      "category": "Special",
+      "power": 110,
+      "accuracy": 80,
+      "pp": 5,
+      "name": {
+        "ja": "ハイドロポンプ",
+        "en": "Hydro Pump",
+        "zh": "水炮"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

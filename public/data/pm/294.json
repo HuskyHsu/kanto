@@ -602,7 +602,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 36,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 85,
+      "pp": 20,
+      "name": {
+        "ja": "とっしん",
+        "en": "Take Down",
+        "zh": "猛撞"
+      }
+    },
+    {
+      "id": 173,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "いびき",
+        "en": "Snore",
+        "zh": "打鼾"
+      }
+    },
+    {
+      "id": 207,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "いばる",
+        "en": "Swagger",
+        "zh": "虛張聲勢"
+      }
+    },
+    {
+      "id": 265,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "きつけ",
+        "en": "Smelling Salts",
+        "zh": "清醒"
+      }
+    },
+    {
+      "id": 326,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "じんつうりき",
+        "en": "Extrasensory",
+        "zh": "神通力"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

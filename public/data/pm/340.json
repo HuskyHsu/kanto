@@ -551,7 +551,47 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 37,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あばれる",
+        "en": "Thrash",
+        "zh": "大鬧一番"
+      }
+    },
+    {
+      "id": 209,
+      "type": "Electric",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "スパーク",
+        "en": "Spark",
+        "zh": "電光"
+      }
+    },
+    {
+      "id": 250,
+      "type": "Water",
+      "category": "Special",
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "うずしお",
+        "en": "Whirlpool",
+        "zh": "潮旋"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

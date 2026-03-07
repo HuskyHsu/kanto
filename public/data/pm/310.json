@@ -479,7 +479,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 29,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "ずつき",
+        "en": "Headbutt",
+        "zh": "頭錘"
+      }
+    },
+    {
+      "id": 129,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "スピードスター",
+        "en": "Swift",
+        "zh": "高速星星"
+      }
+    },
+    {
+      "id": 174,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "のろい",
+        "en": "Curse",
+        "zh": "詛咒"
+      }
+    },
+    {
+      "id": 242,
+      "type": "Dark",
+      "category": "Special",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かみくだく",
+        "en": "Crunch",
+        "zh": "咬碎"
+      }
+    },
+    {
+      "id": 253,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "さわぐ",
+        "en": "Uproar",
+        "zh": "吵鬧"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

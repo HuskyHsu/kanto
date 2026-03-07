@@ -28,6 +28,8 @@ export interface PokemonMove {
   accuracy: number | null;
   power: number;
   pp: number;
+  isPreEvo?: boolean;
+  preEvoName?: LanguageName;
 }
 
 export interface LevelUpMove extends PokemonMove {

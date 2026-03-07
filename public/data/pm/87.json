@@ -467,7 +467,112 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 21,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 75,
+      "pp": 20,
+      "name": {
+        "ja": "たたきつける",
+        "en": "Slam",
+        "zh": "摔打"
+      }
+    },
+    {
+      "id": 32,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 30,
+      "pp": 5,
+      "name": {
+        "ja": "つのドリル",
+        "en": "Horn Drill",
+        "zh": "角鑽"
+      }
+    },
+    {
+      "id": 50,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "かなしばり",
+        "en": "Disable",
+        "zh": "定身法"
+      }
+    },
+    {
+      "id": 122,
+      "type": "Ghost",
+      "category": "Physical",
+      "power": 30,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "したでなめる",
+        "en": "Lick",
+        "zh": "舌舔"
+      }
+    },
+    {
+      "id": 195,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ほろびのうた",
+        "en": "Perish Song",
+        "zh": "滅亡之歌"
+      }
+    },
+    {
+      "id": 227,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "アンコール",
+        "en": "Encore",
+        "zh": "再來一次"
+      }
+    },
+    {
+      "id": 252,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ねこだまし",
+        "en": "Fake Out",
+        "zh": "擊掌奇襲"
+      }
+    },
+    {
+      "id": 333,
+      "type": "Ice",
+      "category": "Special",
+      "power": 25,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "つららばり",
+        "en": "Icicle Spear",
+        "zh": "冰錐"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

@@ -619,7 +619,112 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      }
+    },
+    {
+      "id": 116,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "きあいだめ",
+        "en": "Focus Energy",
+        "zh": "聚氣"
+      }
+    },
+    {
+      "id": 163,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "きりさく",
+        "en": "Slash",
+        "zh": "劈開"
+      }
+    },
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    },
+    {
+      "id": 179,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "きしかいせい",
+        "en": "Reversal",
+        "zh": "起死回生"
+      }
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      }
+    },
+    {
+      "id": 271,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "トリック",
+        "en": "Trick",
+        "zh": "戲法"
+      }
+    },
+    {
+      "id": 274,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ねこのて",
+        "en": "Assist",
+        "zh": "借助"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

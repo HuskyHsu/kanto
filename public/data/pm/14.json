@@ -95,6 +95,46 @@
         "zh": "變硬"
       },
       "level": 1
+    },
+    {
+      "id": 40,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 15,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "どくばり",
+        "en": "Poison Sting",
+        "zh": "毒針"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "獨角蟲",
+        "ja": "ビードル",
+        "en": "Weedle"
+      }
+    },
+    {
+      "id": 81,
+      "type": "Bug",
+      "category": "Status",
+      "power": null,
+      "accuracy": 95,
+      "pp": 40,
+      "name": {
+        "ja": "いとをはく",
+        "en": "String Shot",
+        "zh": "吐絲"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "獨角蟲",
+        "ja": "ビードル",
+        "en": "Weedle"
+      }
     }
   ],
   "TMMoves": [],

@@ -478,7 +478,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 56,
+      "type": "Water",
+      "category": "Special",
+      "power": 110,
+      "accuracy": 80,
+      "pp": 5,
+      "name": {
+        "ja": "ハイドロポンプ",
+        "en": "Hydro Pump",
+        "zh": "水炮"
+      }
+    },
+    {
+      "id": 60,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "サイケこうせん",
+        "en": "Psybeam",
+        "zh": "幻象光線"
+      }
+    },
+    {
+      "id": 114,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "くろいきり",
+        "en": "Haze",
+        "zh": "黑霧"
+      }
+    },
+    {
+      "id": 214,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ねごと",
+        "en": "Sleep Talk",
+        "zh": "夢話"
+      }
+    },
+    {
+      "id": 300,
+      "type": "Ground",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "どろあそび",
+        "en": "Mud Sport",
+        "zh": "玩泥巴"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

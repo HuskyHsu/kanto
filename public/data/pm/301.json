@@ -126,6 +126,166 @@
         "zh": "迷人"
       },
       "level": 1
+    },
+    {
+      "id": 33,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "たいあたり",
+        "en": "Tackle",
+        "zh": "撞擊"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "向尾喵",
+        "ja": "エネコ",
+        "en": "Skitty"
+      }
+    },
+    {
+      "id": 39,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "しっぽをふる",
+        "en": "Tail Whip",
+        "zh": "搖尾巴"
+      },
+      "level": -3,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "向尾喵",
+        "ja": "エネコ",
+        "en": "Skitty"
+      }
+    },
+    {
+      "id": 274,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ねこのて",
+        "en": "Assist",
+        "zh": "借助"
+      },
+      "level": -19,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "向尾喵",
+        "ja": "エネコ",
+        "en": "Skitty"
+      }
+    },
+    {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "向尾喵",
+        "ja": "エネコ",
+        "en": "Skitty"
+      }
+    },
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      },
+      "level": -27,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "向尾喵",
+        "ja": "エネコ",
+        "en": "Skitty"
+      }
+    },
+    {
+      "id": 343,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "ほしがる",
+        "en": "Covet",
+        "zh": "渴望"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "向尾喵",
+        "ja": "エネコ",
+        "en": "Skitty"
+      }
+    },
+    {
+      "id": 215,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "いやしのすず",
+        "en": "Heal Bell",
+        "zh": "治癒鈴聲"
+      },
+      "level": -37,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "向尾喵",
+        "ja": "エネコ",
+        "en": "Skitty"
+      }
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      },
+      "level": -39,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "向尾喵",
+        "ja": "エネコ",
+        "en": "Skitty"
+      }
     }
   ],
   "TMMoves": [
@@ -510,7 +670,112 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    },
+    {
+      "id": 226,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "バトンタッチ",
+        "en": "Baton Pass",
+        "zh": "接棒"
+      }
+    },
+    {
+      "id": 244,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "じこあんじ",
+        "en": "Psych Up",
+        "zh": "自我暗示"
+      }
+    },
+    {
+      "id": 253,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "さわぐ",
+        "en": "Uproar",
+        "zh": "吵鬧"
+      }
+    },
+    {
+      "id": 270,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "てだすけ",
+        "en": "Helping Hand",
+        "zh": "幫助"
+      }
+    },
+    {
+      "id": 273,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ねがいごと",
+        "en": "Wish",
+        "zh": "祈願"
+      }
+    },
+    {
+      "id": 313,
+      "type": "Dark",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "うそなき",
+        "en": "Fake Tears",
+        "zh": "假哭"
+      }
+    },
+    {
+      "id": 321,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "くすぐる",
+        "en": "Tickle",
+        "zh": "搔癢"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

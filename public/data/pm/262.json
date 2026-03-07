@@ -521,7 +521,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 43,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "にらみつける",
+        "en": "Leer",
+        "zh": "瞪眼"
+      }
+    },
+    {
+      "id": 281,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "あくび",
+        "en": "Yawn",
+        "zh": "哈欠"
+      }
+    },
+    {
+      "id": 305,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "どくどくのキバ",
+        "en": "Poison Fang",
+        "zh": "劇毒牙"
+      }
+    },
+    {
+      "id": 310,
+      "type": "Ghost",
+      "category": "Physical",
+      "power": 30,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "おどろかす",
+        "en": "Astonish",
+        "zh": "驚嚇"
+      }
+    },
+    {
+      "id": 343,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "ほしがる",
+        "en": "Covet",
+        "zh": "渴望"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

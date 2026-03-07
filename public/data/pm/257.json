@@ -194,6 +194,26 @@
       "level": 21
     },
     {
+      "id": 83,
+      "type": "Fire",
+      "category": "Special",
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "ほのおのうず",
+        "en": "Fire Spin",
+        "zh": "火焰旋渦"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "火稚雞",
+        "ja": "アチャモ",
+        "en": "Torchic"
+      }
+    },
+    {
       "id": 339,
       "type": "Fighting",
       "category": "Status",
@@ -248,6 +268,26 @@
         "zh": "劈開"
       },
       "level": 42
+    },
+    {
+      "id": 53,
+      "type": "Fire",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かえんほうしゃ",
+        "en": "Flamethrower",
+        "zh": "噴射火焰"
+      },
+      "level": -43,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "火稚雞",
+        "ja": "アチャモ",
+        "en": "Torchic"
+      }
     },
     {
       "id": 119,
@@ -632,7 +672,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 68,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "カウンター",
+        "en": "Counter",
+        "zh": "雙倍奉還"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 179,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "きしかいせい",
+        "en": "Reversal",
+        "zh": "起死回生"
+      }
+    },
+    {
+      "id": 203,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "こらえる",
+        "en": "Endure",
+        "zh": "挺住"
+      }
+    },
+    {
+      "id": 207,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "いばる",
+        "en": "Swagger",
+        "zh": "虛張聲勢"
+      }
+    },
+    {
+      "id": 265,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "きつけ",
+        "en": "Smelling Salts",
+        "zh": "清醒"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

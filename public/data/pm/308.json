@@ -603,7 +603,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 7,
+      "type": "Fire",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "ほのおのパンチ",
+        "en": "Fire Punch",
+        "zh": "火焰拳"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Ice",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "れいとうパンチ",
+        "en": "Ice Punch",
+        "zh": "冰凍拳"
+      }
+    },
+    {
+      "id": 9,
+      "type": "Electric",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かみなりパンチ",
+        "en": "Thunder Punch",
+        "zh": "雷電拳"
+      }
+    },
+    {
+      "id": 193,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "みやぶる",
+        "en": "Foresight",
+        "zh": "識破"
+      }
+    },
+    {
+      "id": 223,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 100,
+      "accuracy": 50,
+      "pp": 5,
+      "name": {
+        "ja": "ばくれつパンチ",
+        "en": "Dynamic Punch",
+        "zh": "爆裂拳"
+      }
+    },
+    {
+      "id": 226,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "バトンタッチ",
+        "en": "Baton Pass",
+        "zh": "接棒"
+      }
+    },
+    {
+      "id": 252,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ねこだまし",
+        "en": "Fake Out",
+        "zh": "擊掌奇襲"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

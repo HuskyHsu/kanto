@@ -122,6 +122,126 @@
       "level": 1
     },
     {
+      "id": 39,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "しっぽをふる",
+        "en": "Tail Whip",
+        "zh": "搖尾巴"
+      },
+      "level": -5,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "六尾",
+        "ja": "ロコン",
+        "en": "Vulpix"
+      }
+    },
+    {
+      "id": 46,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ほえる",
+        "en": "Roar",
+        "zh": "吼叫"
+      },
+      "level": -9,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "六尾",
+        "ja": "ロコン",
+        "en": "Vulpix"
+      }
+    },
+    {
+      "id": 261,
+      "type": "Fire",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "おにび",
+        "en": "Will-O-Wisp",
+        "zh": "鬼火"
+      },
+      "level": -17,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "六尾",
+        "ja": "ロコン",
+        "en": "Vulpix"
+      }
+    },
+    {
+      "id": 286,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ふういん",
+        "en": "Imprison",
+        "zh": "封印"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "六尾",
+        "ja": "ロコン",
+        "en": "Vulpix"
+      }
+    },
+    {
+      "id": 53,
+      "type": "Fire",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かえんほうしゃ",
+        "en": "Flamethrower",
+        "zh": "噴射火焰"
+      },
+      "level": -29,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "六尾",
+        "ja": "ロコン",
+        "en": "Vulpix"
+      }
+    },
+    {
+      "id": 288,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "おんねん",
+        "en": "Grudge",
+        "zh": "怨念"
+      },
+      "level": -37,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "六尾",
+        "ja": "ロコン",
+        "en": "Vulpix"
+      }
+    },
+    {
       "id": 83,
       "type": "Fire",
       "category": "Special",
@@ -391,7 +511,112 @@
     }
   ],
   "HTMMoves": [],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 50,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "かなしばり",
+        "en": "Disable",
+        "zh": "定身法"
+      }
+    },
+    {
+      "id": 95,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": 60,
+      "pp": 20,
+      "name": {
+        "ja": "さいみんじゅつ",
+        "en": "Hypnosis",
+        "zh": "催眠術"
+      }
+    },
+    {
+      "id": 175,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "じたばた",
+        "en": "Flail",
+        "zh": "抓狂"
+      }
+    },
+    {
+      "id": 180,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "うらみ",
+        "en": "Spite",
+        "zh": "怨恨"
+      }
+    },
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      }
+    },
+    {
+      "id": 244,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "じこあんじ",
+        "en": "Psych Up",
+        "zh": "自我暗示"
+      }
+    },
+    {
+      "id": 257,
+      "type": "Fire",
+      "category": "Special",
+      "power": 95,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "ねっぷう",
+        "en": "Heat Wave",
+        "zh": "熱風"
+      }
+    },
+    {
+      "id": 336,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "とおぼえ",
+        "en": "Howl",
+        "zh": "長嚎"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

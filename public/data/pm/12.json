@@ -95,6 +95,66 @@
       "level": 1
     },
     {
+      "id": 106,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "かたくなる",
+        "en": "Harden",
+        "zh": "變硬"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "鐵甲蛹",
+        "ja": "トランセル",
+        "en": "Metapod"
+      }
+    },
+    {
+      "id": 33,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "たいあたり",
+        "en": "Tackle",
+        "zh": "撞擊"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "綠毛蟲",
+        "ja": "キャタピー",
+        "en": "Caterpie"
+      }
+    },
+    {
+      "id": 81,
+      "type": "Bug",
+      "category": "Status",
+      "power": null,
+      "accuracy": 95,
+      "pp": 40,
+      "name": {
+        "ja": "いとをはく",
+        "en": "String Shot",
+        "zh": "吐絲"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "綠毛蟲",
+        "ja": "キャタピー",
+        "en": "Caterpie"
+      }
+    },
+    {
       "id": 77,
       "type": "Poison",
       "category": "Status",

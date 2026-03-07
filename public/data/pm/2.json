@@ -494,7 +494,112 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 80,
+      "type": "Grass",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "はなびらのまい",
+        "en": "Petal Dance",
+        "zh": "花瓣舞"
+      }
+    },
+    {
+      "id": 113,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "ひかりのかべ",
+        "en": "Light Screen",
+        "zh": "光牆"
+      }
+    },
+    {
+      "id": 130,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 130,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ロケットずつき",
+        "en": "Skull Bash",
+        "zh": "火箭頭錘"
+      }
+    },
+    {
+      "id": 174,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "のろい",
+        "en": "Curse",
+        "zh": "詛咒"
+      }
+    },
+    {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      }
+    },
+    {
+      "id": 219,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 25,
+      "name": {
+        "ja": "しんぴのまもり",
+        "en": "Safeguard",
+        "zh": "神秘守護"
+      }
+    },
+    {
+      "id": 320,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 55,
+      "pp": 15,
+      "name": {
+        "ja": "くさぶえ",
+        "en": "Grass Whistle",
+        "zh": "草笛"
+      }
+    },
+    {
+      "id": 345,
+      "type": "Grass",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "マジカルリーフ",
+        "en": "Magical Leaf",
+        "zh": "魔法葉"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 14,

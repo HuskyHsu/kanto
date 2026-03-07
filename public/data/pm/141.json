@@ -636,7 +636,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 61,
+      "type": "Water",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "バブルこうせん",
+        "en": "Bubble Beam",
+        "zh": "泡沫光線"
+      }
+    },
+    {
+      "id": 62,
+      "type": "Ice",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "オーロラビーム",
+        "en": "Aurora Beam",
+        "zh": "極光束"
+      }
+    },
+    {
+      "id": 91,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あなをほる",
+        "en": "Dig",
+        "zh": "挖洞"
+      }
+    },
+    {
+      "id": 109,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あやしいひかり",
+        "en": "Confuse Ray",
+        "zh": "奇異之光"
+      }
+    },
+    {
+      "id": 175,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "じたばた",
+        "en": "Flail",
+        "zh": "抓狂"
+      }
+    },
+    {
+      "id": 229,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "こうそくスピン",
+        "en": "Rapid Spin",
+        "zh": "高速旋轉"
+      }
+    },
+    {
+      "id": 282,
+      "type": "Dark",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "はたきおとす",
+        "en": "Knock Off",
+        "zh": "拍落"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 14,

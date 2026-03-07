@@ -138,6 +138,186 @@
         "zh": "電光一閃"
       },
       "level": 1
+    },
+    {
+      "id": 45,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "なきごえ",
+        "en": "Growl",
+        "zh": "叫聲"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮卡丘",
+        "ja": "ピカチュウ",
+        "en": "Pikachu"
+      }
+    },
+    {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮丘",
+        "ja": "ピチュー",
+        "en": "Pichu"
+      }
+    },
+    {
+      "id": 86,
+      "type": "Electric",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 20,
+      "name": {
+        "ja": "でんじは",
+        "en": "Thunder Wave",
+        "zh": "電磁波"
+      },
+      "level": -8,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮卡丘",
+        "ja": "ピカチュウ",
+        "en": "Pikachu"
+      }
+    },
+    {
+      "id": 186,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 10,
+      "name": {
+        "ja": "てんしのキッス",
+        "en": "Sweet Kiss",
+        "zh": "天使之吻"
+      },
+      "level": -11,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮丘",
+        "ja": "ピチュー",
+        "en": "Pichu"
+      }
+    },
+    {
+      "id": 104,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "かげぶんしん",
+        "en": "Double Team",
+        "zh": "影子分身"
+      },
+      "level": -15,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮卡丘",
+        "ja": "ピカチュウ",
+        "en": "Pikachu"
+      }
+    },
+    {
+      "id": 21,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 75,
+      "pp": 20,
+      "name": {
+        "ja": "たたきつける",
+        "en": "Slam",
+        "zh": "摔打"
+      },
+      "level": -20,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮卡丘",
+        "ja": "ピカチュウ",
+        "en": "Pikachu"
+      }
+    },
+    {
+      "id": 97,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "こうそくいどう",
+        "en": "Agility",
+        "zh": "高速移動"
+      },
+      "level": -33,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮卡丘",
+        "ja": "ピカチュウ",
+        "en": "Pikachu"
+      }
+    },
+    {
+      "id": 87,
+      "type": "Electric",
+      "category": "Special",
+      "power": 110,
+      "accuracy": 70,
+      "pp": 10,
+      "name": {
+        "ja": "かみなり",
+        "en": "Thunder",
+        "zh": "打雷"
+      },
+      "level": -41,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮卡丘",
+        "ja": "ピカチュウ",
+        "en": "Pikachu"
+      }
+    },
+    {
+      "id": 113,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "ひかりのかべ",
+        "en": "Light Screen",
+        "zh": "光牆"
+      },
+      "level": -50,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮卡丘",
+        "ja": "ピカチュウ",
+        "en": "Pikachu"
+      }
     }
   ],
   "TMMoves": [
@@ -265,6 +445,26 @@
         "ja": "アイアンテール",
         "en": "Iron Tail",
         "zh": "鐵尾"
+      }
+    },
+    {
+      "tm": "24",
+      "id": 85,
+      "type": "Electric",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "１０まんボルト",
+        "en": "Thunderbolt",
+        "zh": "十萬伏特"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮丘",
+        "ja": "ピチュー",
+        "en": "Pichu"
       }
     },
     {
@@ -466,7 +666,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 3,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 15,
+      "accuracy": 85,
+      "pp": 10,
+      "name": {
+        "ja": "おうふくビンタ",
+        "en": "Double Slap",
+        "zh": "連環巴掌"
+      }
+    },
+    {
+      "id": 117,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "がまん",
+        "en": "Bide",
+        "zh": "忍耐"
+      }
+    },
+    {
+      "id": 179,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "きしかいせい",
+        "en": "Reversal",
+        "zh": "起死回生"
+      }
+    },
+    {
+      "id": 217,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 90,
+      "pp": 15,
+      "name": {
+        "ja": "プレゼント",
+        "en": "Present",
+        "zh": "禮物"
+      }
+    },
+    {
+      "id": 227,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "アンコール",
+        "en": "Encore",
+        "zh": "再來一次"
+      }
+    },
+    {
+      "id": 268,
+      "type": "Electric",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "じゅうでん",
+        "en": "Charge",
+        "zh": "充電"
+      }
+    },
+    {
+      "id": 273,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ねがいごと",
+        "en": "Wish",
+        "zh": "祈願"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

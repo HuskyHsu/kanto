@@ -142,6 +142,246 @@
         "zh": "揮指"
       },
       "level": 1
+    },
+    {
+      "id": 1,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "はたく",
+        "en": "Pound",
+        "zh": "拍擊"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮皮",
+        "ja": "ピッピ",
+        "en": "Clefairy"
+      }
+    },
+    {
+      "id": 45,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "なきごえ",
+        "en": "Growl",
+        "zh": "叫聲"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮皮",
+        "ja": "ピッピ",
+        "en": "Clefairy"
+      }
+    },
+    {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮寶寶",
+        "ja": "ピィ",
+        "en": "Cleffa"
+      }
+    },
+    {
+      "id": 227,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "アンコール",
+        "en": "Encore",
+        "zh": "再來一次"
+      },
+      "level": -5,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮皮",
+        "ja": "ピッピ",
+        "en": "Clefairy"
+      }
+    },
+    {
+      "id": 186,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 10,
+      "name": {
+        "ja": "てんしのキッス",
+        "en": "Sweet Kiss",
+        "zh": "天使之吻"
+      },
+      "level": -13,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮寶寶",
+        "ja": "ピィ",
+        "en": "Cleffa"
+      }
+    },
+    {
+      "id": 266,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "このゆびとまれ",
+        "en": "Follow Me",
+        "zh": "看我嘛"
+      },
+      "level": -17,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮皮",
+        "ja": "ピッピ",
+        "en": "Clefairy"
+      }
+    },
+    {
+      "id": 345,
+      "type": "Grass",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "マジカルリーフ",
+        "en": "Magical Leaf",
+        "zh": "魔法葉"
+      },
+      "level": -17,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮寶寶",
+        "ja": "ピィ",
+        "en": "Cleffa"
+      }
+    },
+    {
+      "id": 111,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "まるくなる",
+        "en": "Defense Curl",
+        "zh": "變圓"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮皮",
+        "ja": "ピッピ",
+        "en": "Clefairy"
+      }
+    },
+    {
+      "id": 322,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "コスモパワー",
+        "en": "Cosmic Power",
+        "zh": "宇宙力量"
+      },
+      "level": -33,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮皮",
+        "ja": "ピッピ",
+        "en": "Clefairy"
+      }
+    },
+    {
+      "id": 236,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "つきのひかり",
+        "en": "Moonlight",
+        "zh": "月光"
+      },
+      "level": -37,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮皮",
+        "ja": "ピッピ",
+        "en": "Clefairy"
+      }
+    },
+    {
+      "id": 113,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "ひかりのかべ",
+        "en": "Light Screen",
+        "zh": "光牆"
+      },
+      "level": -41,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮皮",
+        "ja": "ピッピ",
+        "en": "Clefairy"
+      }
+    },
+    {
+      "id": 309,
+      "type": "Steel",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "コメットパンチ",
+        "en": "Meteor Mash",
+        "zh": "彗星拳"
+      },
+      "level": -45,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "皮皮",
+        "ja": "ピッピ",
+        "en": "Clefairy"
+      }
     }
   ],
   "TMMoves": [
@@ -638,7 +878,112 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 102,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ものまね",
+        "en": "Mimic",
+        "zh": "模仿"
+      }
+    },
+    {
+      "id": 118,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ゆびをふる",
+        "en": "Metronome",
+        "zh": "揮指"
+      }
+    },
+    {
+      "id": 133,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ドわすれ",
+        "en": "Amnesia",
+        "zh": "瞬間失憶"
+      }
+    },
+    {
+      "id": 150,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "はねる",
+        "en": "Splash",
+        "zh": "躍起"
+      }
+    },
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    },
+    {
+      "id": 187,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "はらだいこ",
+        "en": "Belly Drum",
+        "zh": "腹鼓"
+      }
+    },
+    {
+      "id": 217,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 90,
+      "pp": 15,
+      "name": {
+        "ja": "プレゼント",
+        "en": "Present",
+        "zh": "禮物"
+      }
+    },
+    {
+      "id": 273,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ねがいごと",
+        "en": "Wish",
+        "zh": "祈願"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

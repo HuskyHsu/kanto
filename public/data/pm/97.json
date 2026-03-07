@@ -605,7 +605,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 7,
+      "type": "Fire",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "ほのおのパンチ",
+        "en": "Fire Punch",
+        "zh": "火焰拳"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Ice",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "れいとうパンチ",
+        "en": "Ice Punch",
+        "zh": "冰凍拳"
+      }
+    },
+    {
+      "id": 9,
+      "type": "Electric",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かみなりパンチ",
+        "en": "Thunder Punch",
+        "zh": "雷電拳"
+      }
+    },
+    {
+      "id": 112,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "バリアー",
+        "en": "Barrier",
+        "zh": "屏障"
+      }
+    },
+    {
+      "id": 272,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "なりきり",
+        "en": "Role Play",
+        "zh": "扮演"
+      }
+    },
+    {
+      "id": 274,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ねこのて",
+        "en": "Assist",
+        "zh": "借助"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

@@ -474,7 +474,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 2,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "からてチョップ",
+        "en": "Karate Chop",
+        "zh": "空手劈"
+      }
+    },
+    {
+      "id": 7,
+      "type": "Fire",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "ほのおのパンチ",
+        "en": "Fire Punch",
+        "zh": "火焰拳"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Ice",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "れいとうパンチ",
+        "en": "Ice Punch",
+        "zh": "冰凍拳"
+      }
+    },
+    {
+      "id": 27,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "まわしげり",
+        "en": "Rolling Kick",
+        "zh": "迴旋踢"
+      }
+    },
+    {
+      "id": 96,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "ヨガのポーズ",
+        "en": "Meditate",
+        "zh": "瑜伽姿勢"
+      }
+    },
+    {
+      "id": 112,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "バリアー",
+        "en": "Barrier",
+        "zh": "屏障"
+      }
+    },
+    {
+      "id": 238,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 100,
+      "accuracy": 80,
+      "pp": 5,
+      "name": {
+        "ja": "クロスチョップ",
+        "en": "Cross Chop",
+        "zh": "十字劈"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

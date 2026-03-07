@@ -656,7 +656,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      }
+    },
+    {
+      "id": 194,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "みちづれ",
+        "en": "Destiny Bond",
+        "zh": "同命"
+      }
+    },
+    {
+      "id": 220,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "いたみわけ",
+        "en": "Pain Split",
+        "zh": "分擔痛楚"
+      }
+    },
+    {
+      "id": 262,
+      "type": "Dark",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "おきみやげ",
+        "en": "Memento",
+        "zh": "臨別禮物"
+      }
+    },
+    {
+      "id": 286,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ふういん",
+        "en": "Imprison",
+        "zh": "封印"
+      }
+    },
+    {
+      "id": 288,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "おんねん",
+        "en": "Grudge",
+        "zh": "怨念"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

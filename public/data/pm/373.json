@@ -335,6 +335,26 @@
       }
     },
     {
+      "tm": "17",
+      "id": 182,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "まもる",
+        "en": "Protect",
+        "zh": "守住"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "寶貝龍",
+        "ja": "タツベイ",
+        "en": "Bagon"
+      }
+    },
+    {
       "tm": "18",
       "id": 240,
       "type": "Water",
@@ -603,7 +623,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 37,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あばれる",
+        "en": "Thrash",
+        "zh": "大鬧一番"
+      }
+    },
+    {
+      "id": 56,
+      "type": "Water",
+      "category": "Special",
+      "power": 110,
+      "accuracy": 80,
+      "pp": 5,
+      "name": {
+        "ja": "ハイドロポンプ",
+        "en": "Hydro Pump",
+        "zh": "水炮"
+      }
+    },
+    {
+      "id": 82,
+      "type": "Dragon",
+      "category": "Special",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "りゅうのいかり",
+        "en": "Dragon Rage",
+        "zh": "龍之怒"
+      }
+    },
+    {
+      "id": 239,
+      "type": "Dragon",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "たつまき",
+        "en": "Twister",
+        "zh": "龍捲風"
+      }
+    },
+    {
+      "id": 349,
+      "type": "Dragon",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "りゅうのまい",
+        "en": "Dragon Dance",
+        "zh": "龍之舞"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

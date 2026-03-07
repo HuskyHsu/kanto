@@ -181,6 +181,126 @@
         "zh": "吞下"
       },
       "level": 1
+    },
+    {
+      "id": 35,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 15,
+      "accuracy": 90,
+      "pp": 20,
+      "name": {
+        "ja": "まきつく",
+        "en": "Wrap",
+        "zh": "緊束"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "口呆花",
+        "ja": "ウツドン",
+        "en": "Weepinbell"
+      }
+    },
+    {
+      "id": 74,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "せいちょう",
+        "en": "Growth",
+        "zh": "生長"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "口呆花",
+        "ja": "ウツドン",
+        "en": "Weepinbell"
+      }
+    },
+    {
+      "id": 77,
+      "type": "Poison",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 35,
+      "name": {
+        "ja": "どくのこな",
+        "en": "Poison Powder",
+        "zh": "毒粉"
+      },
+      "level": -17,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "口呆花",
+        "ja": "ウツドン",
+        "en": "Weepinbell"
+      }
+    },
+    {
+      "id": 78,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 30,
+      "name": {
+        "ja": "しびれごな",
+        "en": "Stun Spore",
+        "zh": "麻痺粉"
+      },
+      "level": -19,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "口呆花",
+        "ja": "ウツドン",
+        "en": "Weepinbell"
+      }
+    },
+    {
+      "id": 51,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "ようかいえき",
+        "en": "Acid",
+        "zh": "溶解液"
+      },
+      "level": -24,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "口呆花",
+        "ja": "ウツドン",
+        "en": "Weepinbell"
+      }
+    },
+    {
+      "id": 21,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 75,
+      "pp": 20,
+      "name": {
+        "ja": "たたきつける",
+        "en": "Slam",
+        "zh": "摔打"
+      },
+      "level": -54,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "口呆花",
+        "ja": "ウツドン",
+        "en": "Weepinbell"
+      }
     }
   ],
   "TMMoves": [
@@ -453,7 +573,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 14,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "つるぎのまい",
+        "en": "Swords Dance",
+        "zh": "劍舞"
+      }
+    },
+    {
+      "id": 115,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "リフレクター",
+        "en": "Reflect",
+        "zh": "反射壁"
+      }
+    },
+    {
+      "id": 141,
+      "type": "Bug",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "きゅうけつ",
+        "en": "Leech Life",
+        "zh": "吸血"
+      }
+    },
+    {
+      "id": 227,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "アンコール",
+        "en": "Encore",
+        "zh": "再來一次"
+      }
+    },
+    {
+      "id": 235,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "こうごうせい",
+        "en": "Synthesis",
+        "zh": "光合作用"
+      }
+    },
+    {
+      "id": 275,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ねをはる",
+        "en": "Ingrain",
+        "zh": "扎根"
+      }
+    },
+    {
+      "id": 345,
+      "type": "Grass",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "マジカルリーフ",
+        "en": "Magical Leaf",
+        "zh": "魔法葉"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 14,

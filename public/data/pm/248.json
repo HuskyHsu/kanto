@@ -703,7 +703,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 23,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ふみつけ",
+        "en": "Stomp",
+        "zh": "踩踏"
+      }
+    },
+    {
+      "id": 116,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "きあいだめ",
+        "en": "Focus Energy",
+        "zh": "聚氣"
+      }
+    },
+    {
+      "id": 174,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "のろい",
+        "en": "Curse",
+        "zh": "詛咒"
+      }
+    },
+    {
+      "id": 200,
+      "type": "Dragon",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "げきりん",
+        "en": "Outrage",
+        "zh": "逆鱗"
+      }
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      }
+    },
+    {
+      "id": 246,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "げんしのちから",
+        "en": "Ancient Power",
+        "zh": "原始之力"
+      }
+    },
+    {
+      "id": 349,
+      "type": "Dragon",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "りゅうのまい",
+        "en": "Dragon Dance",
+        "zh": "龍之舞"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

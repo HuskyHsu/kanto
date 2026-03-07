@@ -523,7 +523,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 62,
+      "type": "Ice",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "オーロラビーム",
+        "en": "Aurora Beam",
+        "zh": "極光束"
+      }
+    },
+    {
+      "id": 109,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あやしいひかり",
+        "en": "Confuse Ray",
+        "zh": "奇異之光"
+      }
+    },
+    {
+      "id": 114,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "くろいきり",
+        "en": "Haze",
+        "zh": "黑霧"
+      }
+    },
+    {
+      "id": 219,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 25,
+      "name": {
+        "ja": "しんぴのまもり",
+        "en": "Safeguard",
+        "zh": "神秘守護"
+      }
+    },
+    {
+      "id": 229,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "こうそくスピン",
+        "en": "Rapid Spin",
+        "zh": "高速旋轉"
+      }
+    },
+    {
+      "id": 243,
+      "type": "Psychic",
+      "category": "Special",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ミラーコート",
+        "en": "Mirror Coat",
+        "zh": "鏡面反射"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 14,

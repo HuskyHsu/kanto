@@ -536,7 +536,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 21,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 75,
+      "pp": 20,
+      "name": {
+        "ja": "たたきつける",
+        "en": "Slam",
+        "zh": "摔打"
+      }
+    },
+    {
+      "id": 180,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "うらみ",
+        "en": "Spite",
+        "zh": "怨恨"
+      }
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      }
+    },
+    {
+      "id": 251,
+      "type": "Dark",
+      "category": "Special",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ふくろだたき",
+        "en": "Beat Up",
+        "zh": "圍攻"
+      }
+    },
+    {
+      "id": 305,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "どくどくのキバ",
+        "en": "Poison Fang",
+        "zh": "劇毒牙"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

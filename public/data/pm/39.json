@@ -106,6 +106,26 @@
       "level": 1
     },
     {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "寶寶丁",
+        "ja": "ププリン",
+        "en": "Igglybuff"
+      }
+    },
+    {
       "id": 111,
       "type": "Normal",
       "category": "Status",
@@ -146,6 +166,26 @@
         "zh": "定身法"
       },
       "level": 14
+    },
+    {
+      "id": 186,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 10,
+      "name": {
+        "ja": "てんしのキッス",
+        "en": "Sweet Kiss",
+        "zh": "天使之吻"
+      },
+      "level": -14,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "寶寶丁",
+        "ja": "ププリン",
+        "en": "Igglybuff"
+      }
     },
     {
       "id": 205,
@@ -626,6 +666,26 @@
       }
     },
     {
+      "tm": "44",
+      "id": 156,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ねむる",
+        "en": "Rest",
+        "zh": "睡覺"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "寶寶丁",
+        "ja": "ププリン",
+        "en": "Igglybuff"
+      }
+    },
+    {
       "tm": "45",
       "id": 213,
       "type": "Normal",
@@ -684,7 +744,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      }
+    },
+    {
+      "id": 195,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ほろびのうた",
+        "en": "Perish Song",
+        "zh": "滅亡之歌"
+      }
+    },
+    {
+      "id": 217,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 90,
+      "pp": 15,
+      "name": {
+        "ja": "プレゼント",
+        "en": "Present",
+        "zh": "禮物"
+      }
+    },
+    {
+      "id": 273,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ねがいごと",
+        "en": "Wish",
+        "zh": "祈願"
+      }
+    },
+    {
+      "id": 313,
+      "type": "Dark",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "うそなき",
+        "en": "Fake Tears",
+        "zh": "假哭"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,
@@ -775,6 +901,63 @@
         "ja": "みがわり",
         "en": "Substitute",
         "zh": "替身"
+      }
+    },
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "寶寶丁",
+        "ja": "ププリン",
+        "en": "Igglybuff"
+      }
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "寶寶丁",
+        "ja": "ププリン",
+        "en": "Igglybuff"
+      }
+    },
+    {
+      "id": 102,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ものまね",
+        "en": "Mimic",
+        "zh": "模仿"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "寶寶丁",
+        "ja": "ププリン",
+        "en": "Igglybuff"
       }
     }
   ]

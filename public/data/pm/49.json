@@ -524,7 +524,60 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 103,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "name": {
+        "ja": "いやなおと",
+        "en": "Screech",
+        "zh": "刺耳聲"
+      }
+    },
+    {
+      "id": 202,
+      "type": "Grass",
+      "category": "Special",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ギガドレイン",
+        "en": "Giga Drain",
+        "zh": "終極吸取"
+      }
+    },
+    {
+      "id": 226,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "バトンタッチ",
+        "en": "Baton Pass",
+        "zh": "接棒"
+      }
+    },
+    {
+      "id": 324,
+      "type": "Bug",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "シグナルビーム",
+        "en": "Signal Beam",
+        "zh": "信號光束"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

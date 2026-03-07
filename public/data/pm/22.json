@@ -123,6 +123,26 @@
       "level": 1
     },
     {
+      "id": 332,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "つばめがえし",
+        "en": "Aerial Ace",
+        "zh": "燕返"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "烈雀",
+        "ja": "オニスズメ",
+        "en": "Spearow"
+      }
+    },
+    {
       "id": 228,
       "type": "Dark",
       "category": "Special",
@@ -421,7 +441,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 98,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "でんこうせっか",
+        "en": "Quick Attack",
+        "zh": "電光一閃"
+      }
+    },
+    {
+      "id": 143,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 140,
+      "accuracy": 90,
+      "pp": 5,
+      "name": {
+        "ja": "ゴッドバード",
+        "en": "Sky Attack",
+        "zh": "神鳥猛擊"
+      }
+    },
+    {
+      "id": 161,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "トライアタック",
+        "en": "Tri Attack",
+        "zh": "三重攻擊"
+      }
+    },
+    {
+      "id": 184,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "こわいかお",
+        "en": "Scary Face",
+        "zh": "鬼面"
+      }
+    },
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      }
+    },
+    {
+      "id": 206,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "みねうち",
+        "en": "False Swipe",
+        "zh": "點到為止"
+      }
+    },
+    {
+      "id": 310,
+      "type": "Ghost",
+      "category": "Physical",
+      "power": 30,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "おどろかす",
+        "en": "Astonish",
+        "zh": "驚嚇"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

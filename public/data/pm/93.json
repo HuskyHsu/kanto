@@ -547,7 +547,99 @@
     }
   ],
   "HTMMoves": [],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 114,
+      "type": "Ice",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "くろいきり",
+        "en": "Haze",
+        "zh": "黑霧"
+      }
+    },
+    {
+      "id": 149,
+      "type": "Psychic",
+      "category": "Special",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "サイコウェーブ",
+        "en": "Psywave",
+        "zh": "精神波"
+      }
+    },
+    {
+      "id": 153,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 250,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "だいばくはつ",
+        "en": "Explosion",
+        "zh": "大爆炸"
+      }
+    },
+    {
+      "id": 195,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ほろびのうた",
+        "en": "Perish Song",
+        "zh": "滅亡之歌"
+      }
+    },
+    {
+      "id": 261,
+      "type": "Fire",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "おにび",
+        "en": "Will-O-Wisp",
+        "zh": "鬼火"
+      }
+    },
+    {
+      "id": 288,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "おんねん",
+        "en": "Grudge",
+        "zh": "怨念"
+      }
+    },
+    {
+      "id": 310,
+      "type": "Ghost",
+      "category": "Physical",
+      "power": 30,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "おどろかす",
+        "en": "Astonish",
+        "zh": "驚嚇"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 102,

@@ -547,7 +547,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 51,
+      "type": "Poison",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "ようかいえき",
+        "en": "Acid",
+        "zh": "溶解液"
+      }
+    },
+    {
+      "id": 68,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "カウンター",
+        "en": "Counter",
+        "zh": "雙倍奉還"
+      }
+    },
+    {
+      "id": 223,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 100,
+      "accuracy": 50,
+      "pp": 5,
+      "name": {
+        "ja": "ばくれつパンチ",
+        "en": "Dynamic Punch",
+        "zh": "爆裂拳"
+      }
+    },
+    {
+      "id": 298,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "フラフラダンス",
+        "en": "Teeter Dance",
+        "zh": "搖晃舞"
+      }
+    },
+    {
+      "id": 320,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 55,
+      "pp": 15,
+      "name": {
+        "ja": "くさぶえ",
+        "en": "Grass Whistle",
+        "zh": "草笛"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

@@ -118,6 +118,66 @@
         "zh": "鏡面反射"
       },
       "level": 1
+    },
+    {
+      "id": 150,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "はねる",
+        "en": "Splash",
+        "zh": "躍起"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "小果然",
+        "ja": "ソーナノ",
+        "en": "Wynaut"
+      }
+    },
+    {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "小果然",
+        "ja": "ソーナノ",
+        "en": "Wynaut"
+      }
+    },
+    {
+      "id": 227,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "アンコール",
+        "en": "Encore",
+        "zh": "再來一次"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "小果然",
+        "ja": "ソーナノ",
+        "en": "Wynaut"
+      }
     }
   ],
   "TMMoves": [],

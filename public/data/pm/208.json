@@ -225,6 +225,26 @@
       "level": 52
     },
     {
+      "id": 328,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "すなじごく",
+        "en": "Sand Tomb",
+        "zh": "流沙地獄"
+      },
+      "level": -52,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "大岩蛇",
+        "ja": "イワーク",
+        "en": "Onix"
+      }
+    },
+    {
       "id": 38,
       "type": "Normal",
       "category": "Physical",
@@ -537,7 +557,60 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 153,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 250,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "だいばくはつ",
+        "en": "Explosion",
+        "zh": "大爆炸"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 175,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "じたばた",
+        "en": "Flail",
+        "zh": "抓狂"
+      }
+    },
+    {
+      "id": 335,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "とおせんぼう",
+        "en": "Block",
+        "zh": "擋路"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

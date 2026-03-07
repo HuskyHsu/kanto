@@ -577,7 +577,60 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 164,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "みがわり",
+        "en": "Substitute",
+        "zh": "替身"
+      }
+    },
+    {
+      "id": 248,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "みらいよち",
+        "en": "Future Sight",
+        "zh": "預知未來"
+      }
+    },
+    {
+      "id": 271,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "トリック",
+        "en": "Trick",
+        "zh": "戲法"
+      }
+    },
+    {
+      "id": 326,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "じんつうりき",
+        "en": "Extrasensory",
+        "zh": "神通力"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

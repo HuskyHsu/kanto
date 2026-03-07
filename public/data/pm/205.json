@@ -490,7 +490,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 42,
+      "type": "Bug",
+      "category": "Physical",
+      "power": 25,
+      "accuracy": 95,
+      "pp": 20,
+      "name": {
+        "ja": "ミサイルばり",
+        "en": "Pin Missile",
+        "zh": "飛彈針"
+      }
+    },
+    {
+      "id": 68,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "カウンター",
+        "en": "Counter",
+        "zh": "雙倍奉還"
+      }
+    },
+    {
+      "id": 115,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "リフレクター",
+        "en": "Reflect",
+        "zh": "反射壁"
+      }
+    },
+    {
+      "id": 129,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "スピードスター",
+        "en": "Swift",
+        "zh": "高速星星"
+      }
+    },
+    {
+      "id": 175,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "じたばた",
+        "en": "Flail",
+        "zh": "抓狂"
+      }
+    },
+    {
+      "id": 328,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "すなじごく",
+        "en": "Sand Tomb",
+        "zh": "流沙地獄"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

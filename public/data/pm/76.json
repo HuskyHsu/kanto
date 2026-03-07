@@ -553,7 +553,47 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 5,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 85,
+      "pp": 20,
+      "name": {
+        "ja": "メガトンパンチ",
+        "en": "Mega Punch",
+        "zh": "百萬噸重拳"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 335,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "とおせんぼう",
+        "en": "Block",
+        "zh": "擋路"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

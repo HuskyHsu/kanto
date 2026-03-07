@@ -132,7 +132,19 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
               </TableHeader>
               <TableBody>
                 {pokemon.levelUpMoves.filter(filterMove).map((move) => {
-                  const from = move.level > 1 ? move.level : move.level === 0 ? 'Evolve' : '—';
+                  let from: React.ReactNode = '—';
+                  if (move.level < 0) {
+                    from = (
+                      <div className='flex flex-col text-[10px] leading-tight text-slate-500 font-bold font-sans'>
+                        <span>{move.preEvoName?.zh}</span>
+                        <span>Lv.{Math.abs(move.level)}</span>
+                      </div>
+                    );
+                  } else if (move.level > 1) {
+                    from = move.level;
+                  } else if (move.level === 0) {
+                    from = 'Evolve';
+                  }
 
                   return (
                     <MoveRow key={move.id} moveId={move.id} colSpan={7}>
@@ -188,7 +200,16 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
               <TableBody>
                 {[...pokemon.HTMMoves, ...pokemon.TMMoves].filter(filterMove).map((move) => (
                   <MoveRow key={move.id} moveId={move.id} colSpan={6}>
-                    <TableCell className='px-0'>{move.tm}</TableCell>
+                    <TableCell className='px-0'>
+                      {!move.isPreEvo ? (
+                        move.tm
+                      ) : (
+                        <div className='flex flex-col text-[10px] leading-tight text-slate-500 font-bold font-sans'>
+                          <span>{move.preEvoName?.zh}</span>
+                          <span>{move.tm}</span>
+                        </div>
+                      )}
+                    </TableCell>
                     <TableCell className='px-0'>
                       <a
                         href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
@@ -298,6 +319,11 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                       </a>
                       <br />
                       {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                      {move.isPreEvo && (
+                        <div className='text-[10px] leading-tight text-slate-500 font-bold font-sans mt-1'>
+                          ({move.preEvoName?.zh} 教授)
+                        </div>
+                      )}
                     </TableCell>
                     <TableCell>
                       <div className='flex justify-center'>

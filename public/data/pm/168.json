@@ -468,7 +468,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 49,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 90,
+      "pp": 20,
+      "name": {
+        "ja": "ソニックブーム",
+        "en": "Sonic Boom",
+        "zh": "音爆"
+      }
+    },
+    {
+      "id": 50,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "かなしばり",
+        "en": "Disable",
+        "zh": "定身法"
+      }
+    },
+    {
+      "id": 60,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "サイケこうせん",
+        "en": "Psybeam",
+        "zh": "幻象光線"
+      }
+    },
+    {
+      "id": 226,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "バトンタッチ",
+        "en": "Baton Pass",
+        "zh": "接棒"
+      }
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      }
+    },
+    {
+      "id": 324,
+      "type": "Bug",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "シグナルビーム",
+        "en": "Signal Beam",
+        "zh": "信號光束"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

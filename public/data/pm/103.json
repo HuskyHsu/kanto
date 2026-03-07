@@ -111,6 +111,66 @@
       "level": 1
     },
     {
+      "id": 253,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "さわぐ",
+        "en": "Uproar",
+        "zh": "吵鬧"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蛋蛋",
+        "ja": "タマタマ",
+        "en": "Exeggcute"
+      }
+    },
+    {
+      "id": 115,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "リフレクター",
+        "en": "Reflect",
+        "zh": "反射壁"
+      },
+      "level": -7,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蛋蛋",
+        "ja": "タマタマ",
+        "en": "Exeggcute"
+      }
+    },
+    {
+      "id": 73,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "やどりぎのタネ",
+        "en": "Leech Seed",
+        "zh": "寄生種子"
+      },
+      "level": -13,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蛋蛋",
+        "ja": "タマタマ",
+        "en": "Exeggcute"
+      }
+    },
+    {
       "id": 23,
       "type": "Normal",
       "category": "Physical",
@@ -125,6 +185,26 @@
       "level": 19
     },
     {
+      "id": 78,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 30,
+      "name": {
+        "ja": "しびれごな",
+        "en": "Stun Spore",
+        "zh": "麻痺粉"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蛋蛋",
+        "ja": "タマタマ",
+        "en": "Exeggcute"
+      }
+    },
+    {
       "id": 121,
       "type": "Normal",
       "category": "Physical",
@@ -137,6 +217,66 @@
         "zh": "炸蛋"
       },
       "level": 31
+    },
+    {
+      "id": 77,
+      "type": "Poison",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 35,
+      "name": {
+        "ja": "どくのこな",
+        "en": "Poison Powder",
+        "zh": "毒粉"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蛋蛋",
+        "ja": "タマタマ",
+        "en": "Exeggcute"
+      }
+    },
+    {
+      "id": 79,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": 75,
+      "pp": 15,
+      "name": {
+        "ja": "ねむりごな",
+        "en": "Sleep Powder",
+        "zh": "催眠粉"
+      },
+      "level": -37,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蛋蛋",
+        "ja": "タマタマ",
+        "en": "Exeggcute"
+      }
+    },
+    {
+      "id": 76,
+      "type": "Grass",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ソーラービーム",
+        "en": "Solar Beam",
+        "zh": "日光束"
+      },
+      "level": -43,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "蛋蛋",
+        "ja": "タマタマ",
+        "en": "Exeggcute"
+      }
     }
   ],
   "TMMoves": [
@@ -465,7 +605,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 174,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "のろい",
+        "en": "Curse",
+        "zh": "詛咒"
+      }
+    },
+    {
+      "id": 235,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "こうごうせい",
+        "en": "Synthesis",
+        "zh": "光合作用"
+      }
+    },
+    {
+      "id": 236,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "つきのひかり",
+        "en": "Moonlight",
+        "zh": "月光"
+      }
+    },
+    {
+      "id": 244,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "じこあんじ",
+        "en": "Psych Up",
+        "zh": "自我暗示"
+      }
+    },
+    {
+      "id": 246,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "げんしのちから",
+        "en": "Ancient Power",
+        "zh": "原始之力"
+      }
+    },
+    {
+      "id": 275,
+      "type": "Grass",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ねをはる",
+        "en": "Ingrain",
+        "zh": "扎根"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

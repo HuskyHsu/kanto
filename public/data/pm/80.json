@@ -719,7 +719,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 23,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ふみつけ",
+        "en": "Stomp",
+        "zh": "踩踏"
+      }
+    },
+    {
+      "id": 173,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "いびき",
+        "en": "Snore",
+        "zh": "打鼾"
+      }
+    },
+    {
+      "id": 187,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "はらだいこ",
+        "en": "Belly Drum",
+        "zh": "腹鼓"
+      }
+    },
+    {
+      "id": 214,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ねごと",
+        "en": "Sleep Talk",
+        "zh": "夢話"
+      }
+    },
+    {
+      "id": 219,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 25,
+      "name": {
+        "ja": "しんぴのまもり",
+        "en": "Safeguard",
+        "zh": "神秘守護"
+      }
+    },
+    {
+      "id": 248,
+      "type": "Psychic",
+      "category": "Special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "みらいよち",
+        "en": "Future Sight",
+        "zh": "預知未來"
+      }
+    },
+    {
+      "id": 300,
+      "type": "Ground",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "どろあそび",
+        "en": "Mud Sport",
+        "zh": "玩泥巴"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

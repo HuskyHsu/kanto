@@ -181,6 +181,26 @@
       "level": 41
     },
     {
+      "id": 91,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あなをほる",
+        "en": "Dig",
+        "zh": "挖洞"
+      },
+      "level": -41,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "大顎蟻",
+        "ja": "ナックラー",
+        "en": "Trapinch"
+      }
+    },
+    {
       "id": 201,
       "type": "Rock",
       "category": "Status",
@@ -549,7 +569,47 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 16,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "かぜおこし",
+        "en": "Gust",
+        "zh": "起風"
+      }
+    },
+    {
+      "id": 98,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "name": {
+        "ja": "でんこうせっか",
+        "en": "Quick Attack",
+        "zh": "電光一閃"
+      }
+    },
+    {
+      "id": 116,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "きあいだめ",
+        "en": "Focus Energy",
+        "zh": "聚氣"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

@@ -209,6 +209,26 @@
       "level": 31
     },
     {
+      "id": 250,
+      "type": "Water",
+      "category": "Special",
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "うずしお",
+        "en": "Whirlpool",
+        "zh": "潮旋"
+      },
+      "level": -33,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "水躍魚",
+        "ja": "ミズゴロウ",
+        "en": "Mudkip"
+      }
+    },
+    {
       "id": 330,
       "type": "Water",
       "category": "Special",
@@ -235,6 +255,26 @@
         "zh": "守住"
       },
       "level": 42
+    },
+    {
+      "id": 56,
+      "type": "Water",
+      "category": "Special",
+      "power": 110,
+      "accuracy": 80,
+      "pp": 5,
+      "name": {
+        "ja": "ハイドロポンプ",
+        "en": "Hydro Pump",
+        "zh": "水炮"
+      },
+      "level": -42,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "水躍魚",
+        "ja": "ミズゴロウ",
+        "en": "Mudkip"
+      }
     },
     {
       "id": 89,
@@ -576,7 +616,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 23,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ふみつけ",
+        "en": "Stomp",
+        "zh": "踩踏"
+      }
+    },
+    {
+      "id": 174,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "のろい",
+        "en": "Curse",
+        "zh": "詛咒"
+      }
+    },
+    {
+      "id": 243,
+      "type": "Psychic",
+      "category": "Special",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ミラーコート",
+        "en": "Mirror Coat",
+        "zh": "鏡面反射"
+      }
+    },
+    {
+      "id": 253,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "さわぐ",
+        "en": "Uproar",
+        "zh": "吵鬧"
+      }
+    },
+    {
+      "id": 287,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "リフレッシュ",
+        "en": "Refresh",
+        "zh": "煥然一新"
+      }
+    },
+    {
+      "id": 301,
+      "type": "Ice",
+      "category": "Special",
+      "power": 30,
+      "accuracy": 90,
+      "pp": 20,
+      "name": {
+        "ja": "アイスボール",
+        "en": "Ice Ball",
+        "zh": "冰球"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

@@ -605,7 +605,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 95,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": 60,
+      "pp": 20,
+      "name": {
+        "ja": "さいみんじゅつ",
+        "en": "Hypnosis",
+        "zh": "催眠術"
+      }
+    },
+    {
+      "id": 133,
+      "type": "Psychic",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ドわすれ",
+        "en": "Amnesia",
+        "zh": "瞬間失憶"
+      }
+    },
+    {
+      "id": 180,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "うらみ",
+        "en": "Spite",
+        "zh": "怨恨"
+      }
+    },
+    {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      }
+    },
+    {
+      "id": 244,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "じこあんじ",
+        "en": "Psych Up",
+        "zh": "自我暗示"
+      }
+    },
+    {
+      "id": 274,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ねこのて",
+        "en": "Assist",
+        "zh": "借助"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

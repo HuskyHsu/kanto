@@ -166,6 +166,26 @@
       "level": 24
     },
     {
+      "id": 159,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "かくばる",
+        "en": "Sharpen",
+        "zh": "稜角化"
+      },
+      "level": -24,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "多邊獸",
+        "ja": "ポリゴン",
+        "en": "Porygon"
+      }
+    },
+    {
       "id": 199,
       "type": "Normal",
       "category": "Status",

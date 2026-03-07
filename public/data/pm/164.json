@@ -482,7 +482,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 17,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "つばさでうつ",
+        "en": "Wing Attack",
+        "zh": "翅膀攻擊"
+      }
+    },
+    {
+      "id": 18,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "ふきとばし",
+        "en": "Whirlwind",
+        "zh": "吹飛"
+      }
+    },
+    {
+      "id": 48,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 55,
+      "pp": 20,
+      "name": {
+        "ja": "ちょうおんぱ",
+        "en": "Supersonic",
+        "zh": "超音波"
+      }
+    },
+    {
+      "id": 119,
+      "type": "Flying",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "オウムがえし",
+        "en": "Mirror Move",
+        "zh": "鸚鵡學舌"
+      }
+    },
+    {
+      "id": 143,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 140,
+      "accuracy": 90,
+      "pp": 5,
+      "name": {
+        "ja": "ゴッドバード",
+        "en": "Sky Attack",
+        "zh": "神鳥猛擊"
+      }
+    },
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      }
+    },
+    {
+      "id": 297,
+      "type": "Flying",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "フェザーダンス",
+        "en": "Feather Dance",
+        "zh": "羽毛舞"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

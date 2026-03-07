@@ -135,6 +135,46 @@
       "level": 1
     },
     {
+      "id": 116,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "name": {
+        "ja": "きあいだめ",
+        "en": "Focus Energy",
+        "zh": "聚氣"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "過動猿",
+        "ja": "ヤルキモノ",
+        "en": "Vigoroth"
+      }
+    },
+    {
+      "id": 253,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "さわぐ",
+        "en": "Uproar",
+        "zh": "吵鬧"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "過動猿",
+        "ja": "ヤルキモノ",
+        "en": "Vigoroth"
+      }
+    },
+    {
       "id": 185,
       "type": "Dark",
       "category": "Special",
@@ -147,6 +187,26 @@
         "zh": "出奇一擊"
       },
       "level": 19
+    },
+    {
+      "id": 154,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 18,
+      "accuracy": 80,
+      "pp": 15,
+      "name": {
+        "ja": "みだれひっかき",
+        "en": "Fury Swipes",
+        "zh": "亂抓"
+      },
+      "level": -19,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "過動猿",
+        "ja": "ヤルキモノ",
+        "en": "Vigoroth"
+      }
     },
     {
       "id": 133,
@@ -163,6 +223,26 @@
       "level": 25
     },
     {
+      "id": 203,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "こらえる",
+        "en": "Endure",
+        "zh": "挺住"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "過動猿",
+        "ja": "ヤルキモノ",
+        "en": "Vigoroth"
+      }
+    },
+    {
       "id": 343,
       "type": "Normal",
       "category": "Physical",
@@ -175,6 +255,26 @@
         "zh": "渴望"
       },
       "level": 31
+    },
+    {
+      "id": 163,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "きりさく",
+        "en": "Slash",
+        "zh": "劈開"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "過動猿",
+        "ja": "ヤルキモノ",
+        "en": "Vigoroth"
+      }
     },
     {
       "id": 207,
@@ -217,6 +317,46 @@
         "zh": "抓狂"
       },
       "level": 43
+    },
+    {
+      "id": 264,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": 150,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "きあいパンチ",
+        "en": "Focus Punch",
+        "zh": "真氣拳"
+      },
+      "level": -43,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "過動猿",
+        "ja": "ヤルキモノ",
+        "en": "Vigoroth"
+      }
+    },
+    {
+      "id": 179,
+      "type": "Fighting",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "きしかいせい",
+        "en": "Reversal",
+        "zh": "起死回生"
+      },
+      "level": -49,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "過動猿",
+        "ja": "ヤルキモノ",
+        "en": "Vigoroth"
+      }
     }
   ],
   "TMMoves": [
@@ -685,7 +825,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      }
+    },
+    {
+      "id": 163,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "きりさく",
+        "en": "Slash",
+        "zh": "劈開"
+      }
+    },
+    {
+      "id": 173,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "いびき",
+        "en": "Snore",
+        "zh": "打鼾"
+      }
+    },
+    {
+      "id": 174,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "のろい",
+        "en": "Curse",
+        "zh": "詛咒"
+      }
+    },
+    {
+      "id": 214,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ねごと",
+        "en": "Sleep Talk",
+        "zh": "夢話"
+      }
+    },
+    {
+      "id": 228,
+      "type": "Dark",
+      "category": "Special",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "おいうち",
+        "en": "Pursuit",
+        "zh": "追打"
+      }
+    },
+    {
+      "id": 306,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 95,
+      "pp": 10,
+      "name": {
+        "ja": "ブレイククロー",
+        "en": "Crush Claw",
+        "zh": "撕裂爪"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

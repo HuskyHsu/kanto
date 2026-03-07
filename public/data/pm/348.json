@@ -519,7 +519,60 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 14,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "つるぎのまい",
+        "en": "Swords Dance",
+        "zh": "劍舞"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 229,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "こうそくスピン",
+        "en": "Rapid Spin",
+        "zh": "高速旋轉"
+      }
+    },
+    {
+      "id": 282,
+      "type": "Dark",
+      "category": "Special",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "はたきおとす",
+        "en": "Knock Off",
+        "zh": "拍落"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 14,

@@ -198,6 +198,26 @@
       "level": 16
     },
     {
+      "id": 45,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "なきごえ",
+        "en": "Growl",
+        "zh": "叫聲"
+      },
+      "level": -16,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "伊布",
+        "ja": "イーブイ",
+        "en": "Eevee"
+      }
+    },
+    {
       "id": 98,
       "type": "Normal",
       "category": "Physical",
@@ -226,6 +246,26 @@
       "level": 30
     },
     {
+      "id": 44,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "name": {
+        "ja": "かみつく",
+        "en": "Bite",
+        "zh": "咬住"
+      },
+      "level": -30,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "伊布",
+        "ja": "イーブイ",
+        "en": "Eevee"
+      }
+    },
+    {
       "id": 185,
       "type": "Dark",
       "category": "Special",
@@ -240,6 +280,26 @@
       "level": 36
     },
     {
+      "id": 226,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "バトンタッチ",
+        "en": "Baton Pass",
+        "zh": "接棒"
+      },
+      "level": -36,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "伊布",
+        "ja": "イーブイ",
+        "en": "Eevee"
+      }
+    },
+    {
       "id": 212,
       "type": "Normal",
       "category": "Status",
@@ -252,6 +312,26 @@
         "zh": "黑色目光"
       },
       "level": 42
+    },
+    {
+      "id": 36,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 90,
+      "accuracy": 85,
+      "pp": 20,
+      "name": {
+        "ja": "とっしん",
+        "en": "Take Down",
+        "zh": "猛撞"
+      },
+      "level": -42,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "伊布",
+        "ja": "イーブイ",
+        "en": "Eevee"
+      }
     },
     {
       "id": 103,
@@ -594,7 +674,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 174,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "のろい",
+        "en": "Curse",
+        "zh": "詛咒"
+      }
+    },
+    {
+      "id": 175,
+      "type": "Normal",
+      "category": "Physical",
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "じたばた",
+        "en": "Flail",
+        "zh": "抓狂"
+      }
+    },
+    {
+      "id": 203,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "こらえる",
+        "en": "Endure",
+        "zh": "挺住"
+      }
+    },
+    {
+      "id": 204,
+      "type": "Fairy",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "あまえる",
+        "en": "Charm",
+        "zh": "撒嬌"
+      }
+    },
+    {
+      "id": 273,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "ねがいごと",
+        "en": "Wish",
+        "zh": "祈願"
+      }
+    },
+    {
+      "id": 321,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "くすぐる",
+        "en": "Tickle",
+        "zh": "搔癢"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

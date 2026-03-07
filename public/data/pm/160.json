@@ -629,7 +629,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 37,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あばれる",
+        "en": "Thrash",
+        "zh": "大鬧一番"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 242,
+      "type": "Dark",
+      "category": "Special",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かみくだく",
+        "en": "Crunch",
+        "zh": "咬碎"
+      }
+    },
+    {
+      "id": 246,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "げんしのちから",
+        "en": "Ancient Power",
+        "zh": "原始之力"
+      }
+    },
+    {
+      "id": 300,
+      "type": "Ground",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "どろあそび",
+        "en": "Mud Sport",
+        "zh": "玩泥巴"
+      }
+    },
+    {
+      "id": 337,
+      "type": "Dragon",
+      "category": "Special",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "ドラゴンクロー",
+        "en": "Dragon Claw",
+        "zh": "龍爪"
+      }
+    },
+    {
+      "id": 346,
+      "type": "Water",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "name": {
+        "ja": "みずあそび",
+        "en": "Water Sport",
+        "zh": "玩水"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,

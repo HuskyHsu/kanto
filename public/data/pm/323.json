@@ -198,6 +198,26 @@
       "level": 37
     },
     {
+      "id": 53,
+      "type": "Fire",
+      "category": "Special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "かえんほうしゃ",
+        "en": "Flamethrower",
+        "zh": "噴射火焰"
+      },
+      "level": -41,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "呆火駝",
+        "ja": "ドンメル",
+        "en": "Numel"
+      }
+    },
+    {
       "id": 284,
       "type": "Fire",
       "category": "Special",
@@ -210,6 +230,26 @@
         "zh": "噴火"
       },
       "level": 45
+    },
+    {
+      "id": 38,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "すてみタックル",
+        "en": "Double-Edge",
+        "zh": "捨身衝撞"
+      },
+      "level": -49,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "呆火駝",
+        "ja": "ドンメル",
+        "en": "Numel"
+      }
     },
     {
       "id": 90,
@@ -524,7 +564,86 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 23,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 65,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "ふみつけ",
+        "en": "Stomp",
+        "zh": "踩踏"
+      }
+    },
+    {
+      "id": 34,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "のしかかり",
+        "en": "Body Slam",
+        "zh": "泰山壓頂"
+      }
+    },
+    {
+      "id": 111,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "まるくなる",
+        "en": "Defense Curl",
+        "zh": "變圓"
+      }
+    },
+    {
+      "id": 184,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "こわいかお",
+        "en": "Scary Face",
+        "zh": "鬼面"
+      }
+    },
+    {
+      "id": 205,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 30,
+      "accuracy": 90,
+      "pp": 20,
+      "name": {
+        "ja": "ころがる",
+        "en": "Rollout",
+        "zh": "滾動"
+      }
+    },
+    {
+      "id": 336,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "name": {
+        "ja": "とおぼえ",
+        "en": "Howl",
+        "zh": "長嚎"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,
@@ -589,6 +708,25 @@
         "ja": "みがわり",
         "en": "Substitute",
         "zh": "替身"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "呆火駝",
+        "ja": "ドンメル",
+        "en": "Numel"
       }
     }
   ]

@@ -495,7 +495,34 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 151,
+      "type": "Poison",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "とける",
+        "en": "Acid Armor",
+        "zh": "溶化"
+      }
+    },
+    {
+      "id": 257,
+      "type": "Fire",
+      "category": "Special",
+      "power": 95,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "ねっぷう",
+        "en": "Heat Wave",
+        "zh": "熱風"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

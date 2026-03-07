@@ -178,6 +178,26 @@
       "level": 25
     },
     {
+      "id": 206,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 40,
+      "name": {
+        "ja": "みねうち",
+        "en": "False Swipe",
+        "zh": "點到為止"
+      },
+      "level": -25,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "土居忍士",
+        "ja": "ツチニン",
+        "en": "Nincada"
+      }
+    },
+    {
       "id": 109,
       "type": "Ghost",
       "category": "Status",
@@ -190,6 +210,26 @@
         "zh": "奇異之光"
       },
       "level": 31
+    },
+    {
+      "id": 189,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 20,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "どろかけ",
+        "en": "Mud-Slap",
+        "zh": "擲泥"
+      },
+      "level": -31,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "土居忍士",
+        "ja": "ツチニン",
+        "en": "Nincada"
+      }
     },
     {
       "id": 247,
@@ -206,6 +246,26 @@
       "level": 38
     },
     {
+      "id": 232,
+      "type": "Steel",
+      "category": "Physical",
+      "power": 50,
+      "accuracy": 95,
+      "pp": 35,
+      "name": {
+        "ja": "メタルクロー",
+        "en": "Metal Claw",
+        "zh": "金屬爪"
+      },
+      "level": -38,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "土居忍士",
+        "ja": "ツチニン",
+        "en": "Nincada"
+      }
+    },
+    {
       "id": 288,
       "type": "Ghost",
       "category": "Status",
@@ -218,6 +278,26 @@
         "zh": "怨念"
       },
       "level": 45
+    },
+    {
+      "id": 91,
+      "type": "Ground",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "あなをほる",
+        "en": "Dig",
+        "zh": "挖洞"
+      },
+      "level": -45,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "土居忍士",
+        "ja": "ツチニン",
+        "en": "Nincada"
+      }
     }
   ],
   "TMMoves": [
@@ -362,6 +442,26 @@
       }
     },
     {
+      "tm": "30",
+      "id": 247,
+      "type": "Ghost",
+      "category": "Physical",
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "name": {
+        "ja": "シャドーボール",
+        "en": "Shadow Ball",
+        "zh": "暗影球"
+      },
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "土居忍士",
+        "ja": "ツチニン",
+        "en": "Nincada"
+      }
+    },
+    {
       "tm": "32",
       "id": 104,
       "type": "Normal",
@@ -490,7 +590,60 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 16,
+      "type": "Flying",
+      "category": "Physical",
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "name": {
+        "ja": "かぜおこし",
+        "en": "Gust",
+        "zh": "起風"
+      }
+    },
+    {
+      "id": 185,
+      "type": "Dark",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "だましうち",
+        "en": "Feint Attack",
+        "zh": "出奇一擊"
+      }
+    },
+    {
+      "id": 203,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "こらえる",
+        "en": "Endure",
+        "zh": "挺住"
+      }
+    },
+    {
+      "id": 318,
+      "type": "Bug",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "ぎんいろのかぜ",
+        "en": "Silver Wind",
+        "zh": "銀色旋風"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 38,

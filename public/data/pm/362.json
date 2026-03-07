@@ -494,7 +494,34 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 191,
+      "type": "Ground",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "まきびし",
+        "en": "Spikes",
+        "zh": "撒菱"
+      }
+    },
+    {
+      "id": 335,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "とおせんぼう",
+        "en": "Block",
+        "zh": "擋路"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

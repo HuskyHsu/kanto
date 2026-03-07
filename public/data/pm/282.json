@@ -145,6 +145,26 @@
       "level": 1
     },
     {
+      "id": 345,
+      "type": "Grass",
+      "category": "Special",
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "マジカルリーフ",
+        "en": "Magical Leaf",
+        "zh": "魔法葉"
+      },
+      "level": -1,
+      "isPreEvo": true,
+      "preEvoName": {
+        "zh": "奇魯莉安",
+        "ja": "キルリア",
+        "en": "Kirlia"
+      }
+    },
+    {
       "id": 347,
       "type": "Psychic",
       "category": "Status",
@@ -569,7 +589,73 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 50,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "name": {
+        "ja": "かなしばり",
+        "en": "Disable",
+        "zh": "定身法"
+      }
+    },
+    {
+      "id": 194,
+      "type": "Ghost",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "みちづれ",
+        "en": "Destiny Bond",
+        "zh": "同命"
+      }
+    },
+    {
+      "id": 212,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "くろいまなざし",
+        "en": "Mean Look",
+        "zh": "黑色目光"
+      }
+    },
+    {
+      "id": 261,
+      "type": "Fire",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 15,
+      "name": {
+        "ja": "おにび",
+        "en": "Will-O-Wisp",
+        "zh": "鬼火"
+      }
+    },
+    {
+      "id": 262,
+      "type": "Dark",
+      "category": "Status",
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "おきみやげ",
+        "en": "Memento",
+        "zh": "臨別禮物"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 34,

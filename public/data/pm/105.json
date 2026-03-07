@@ -619,7 +619,99 @@
       }
     }
   ],
-  "eggMoves": [],
+  "eggMoves": [
+    {
+      "id": 14,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "name": {
+        "ja": "つるぎのまい",
+        "en": "Swords Dance",
+        "zh": "劍舞"
+      }
+    },
+    {
+      "id": 103,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "name": {
+        "ja": "いやなおと",
+        "en": "Screech",
+        "zh": "刺耳聲"
+      }
+    },
+    {
+      "id": 130,
+      "type": "Normal",
+      "category": "Physical",
+      "power": 130,
+      "accuracy": 100,
+      "pp": 10,
+      "name": {
+        "ja": "ロケットずつき",
+        "en": "Skull Bash",
+        "zh": "火箭頭錘"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "name": {
+        "ja": "いわなだれ",
+        "en": "Rock Slide",
+        "zh": "岩崩"
+      }
+    },
+    {
+      "id": 187,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "name": {
+        "ja": "はらだいこ",
+        "en": "Belly Drum",
+        "zh": "腹鼓"
+      }
+    },
+    {
+      "id": 195,
+      "type": "Normal",
+      "category": "Status",
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "name": {
+        "ja": "ほろびのうた",
+        "en": "Perish Song",
+        "zh": "滅亡之歌"
+      }
+    },
+    {
+      "id": 246,
+      "type": "Rock",
+      "category": "Physical",
+      "power": 60,
+      "accuracy": 100,
+      "pp": 5,
+      "name": {
+        "ja": "げんしのちから",
+        "en": "Ancient Power",
+        "zh": "原始之力"
+      }
+    }
+  ],
   "tutorMoves": [
     {
       "id": 5,
