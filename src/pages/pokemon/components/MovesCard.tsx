@@ -213,6 +213,100 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
               </TableBody>
             </Table>
           </div>
+
+          <div>
+            <h4 className='font-semibold mb-3'>Egg Moves</h4>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className='w-3/12'>Name</TableHead>
+                  <TableHead className='w-2/12'>Type</TableHead>
+                  <TableHead className='w-2/12'>Cat.</TableHead>
+                  <TableHead className='w-1/12'>Att.</TableHead>
+                  <TableHead className='w-1/12'>Acc.</TableHead>
+                  <TableHead className='w-1/12'>PP</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {pokemon.eggMoves.filter(filterMove).map((move) => (
+                  <MoveRow key={move.id} moveId={move.id} colSpan={6}>
+                    <TableCell className='px-0'>
+                      <a
+                        href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
+                        target='_blank'
+                        rel='noreferrer'
+                        className='inline text-blue-800 underline'
+                      >
+                        {move.name.zh}
+                      </a>
+                      <br />
+                      {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                    </TableCell>
+                    <TableCell>
+                      <div className='flex justify-center'>
+                        <PokemonTypes types={[move.type]} />
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className='flex justify-center'>
+                        <PokemonTypes types={[move.category]} />
+                      </div>
+                    </TableCell>
+                    <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
+                    <TableCell>{move.accuracy ?? '—'}</TableCell>
+                    <TableCell>{move.pp}</TableCell>
+                  </MoveRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+
+          <div>
+            <h4 className='font-semibold mb-3'>Tutor Moves</h4>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className='w-3/12'>Name</TableHead>
+                  <TableHead className='w-2/12'>Type</TableHead>
+                  <TableHead className='w-2/12'>Cat.</TableHead>
+                  <TableHead className='w-1/12'>Att.</TableHead>
+                  <TableHead className='w-1/12'>Acc.</TableHead>
+                  <TableHead className='w-1/12'>PP</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {pokemon.tutorMoves.filter(filterMove).map((move) => (
+                  <MoveRow key={move.id} moveId={move.id} colSpan={6}>
+                    <TableCell className='px-0'>
+                      <a
+                        href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
+                        target='_blank'
+                        rel='noreferrer'
+                        className='inline text-blue-800 underline'
+                      >
+                        {move.name.zh}
+                      </a>
+                      <br />
+                      {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                    </TableCell>
+                    <TableCell>
+                      <div className='flex justify-center'>
+                        <PokemonTypes types={[move.type]} />
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className='flex justify-center'>
+                        <PokemonTypes types={[move.category]} />
+                      </div>
+                    </TableCell>
+                    <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
+                    <TableCell>{move.accuracy ?? '—'}</TableCell>
+                    <TableCell>{move.pp}</TableCell>
+                  </MoveRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </div>
       </CardContent>
     </Card>
