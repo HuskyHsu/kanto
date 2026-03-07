@@ -6,6 +6,7 @@ import {
   PWAImageCache,
   showInstallPrompt,
 } from '@/utils/pwaUtils';
+import { Download } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 interface PWAInstallButtonProps {
@@ -86,7 +87,7 @@ export default function PWAInstallButton({ preloadPokemonImages = true }: PWAIns
     <button
       onClick={handleInstallApp}
       disabled={isInstalling}
-      className='fixed top-4 right-4 z-50 w-12 h-12 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center'
+      className='flex items-center justify-center gap-2 p-2 h-10 min-w-10 rounded-full bg-white/80 backdrop-blur-md shadow-sm border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all cursor-pointer group disabled:opacity-50 disabled:cursor-not-allowed'
       title={
         isPreloading
           ? 'Preloading Pokemon images...'
@@ -96,22 +97,17 @@ export default function PWAInstallButton({ preloadPokemonImages = true }: PWAIns
       }
     >
       {isInstalling || isPreloading ? (
-        <div className='w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin' />
+        <div className='w-5 h-5 border-2 border-slate-400 border-t-transparent rounded-full animate-spin' />
       ) : (
-        <svg
-          className='w-6 h-6'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth={2}
-            d='M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
+        <>
+          <Download
+            size={20}
+            className='text-green-500 group-hover:scale-110 transition-transform'
           />
-        </svg>
+          <span className='text-xs font-bold font-mono w-6 text-center select-none uppercase hidden md:inline-block'>
+            APP
+          </span>
+        </>
       )}
     </button>
   );

@@ -1,6 +1,6 @@
 {
-  "name": "Kanto Pokédex App",
-  "short_name": "Kanto Pokédex App",
+  "name": "FireRed & LeafGreen Pokédex",
+  "short_name": "FireRed & LeafGreen Pokédex",
   "icons": [
     {
       "src": "images/appIcon/pwa-maskable-512x512.png",
