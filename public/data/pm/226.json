@@ -173,19 +173,6 @@
   ],
   "TMMoves": [
     {
-      "id": 291,
-      "type": "Water",
-      "category": "Special",
-      "power": 80,
-      "accuracy": 100,
-      "pp": 10,
-      "name": {
-        "ja": "ダイビング",
-        "en": "Dive",
-        "zh": "潛水"
-      }
-    },
-    {
       "tm": "06",
       "id": 92,
       "type": "Poison",

@@ -142,6 +142,7 @@ const processMoves = async (rawMoves) => {
         level: details.level_learned_at,
       };
     })
+    .filter((move) => !(move.method === 'machine' && move.moveId === 291))
     .sort((a, b) => a.level - b.level);
 
   const movePromises = versionMoves.map(async (move) => {
