@@ -21,7 +21,7 @@ const rowSpanMap = {
 type SubCardProps = { pm: EvolutionNode; className?: string; onClick?: () => void };
 
 function SubCard({ pm, className = '', onClick }: SubCardProps) {
-  const imagePath = `${import.meta.env.BASE_URL}images/pmIcon/${pm.link}.png`;
+  const imagePath = `${import.meta.env.BASE_URL}images/pmIcon/${pm.pid}.png`;
 
   const colorClasses = () => {
     const primaryType = pm.type[0];
@@ -29,35 +29,49 @@ function SubCard({ pm, className = '', onClick }: SubCardProps) {
 
     return cn(
       FromClass[primaryType as keyof typeof FromClass],
-      ToClass[secondaryType as keyof typeof ToClass]
+      ToClass[secondaryType as keyof typeof ToClass],
     );
   };
 
   return (
     <button
-      key={pm.link}
+      key={pm.pid}
       onClick={onClick}
       className={cn(
-        `flex flex-col items-center p-2 rounded-lg transition-all duration-200`,
-        'hover:bg-gray-50 shadow-sm hover:shadow-md hover:scale-105',
+        'group cursor-pointer relative w-20 md:w-24 p-[3px] flex flex-col',
+        'rounded-[12px]',
+        'border-2 border-[#34925e]',
         'bg-linear-to-tl',
         colorClasses(),
-        className
+        'transition-transform duration-100 ease-linear hover:-translate-y-1 hover:shadow-[0_4px_0_0_rgba(104,144,168,0.2)]',
+        className,
       )}
       title={pm.name.zh}
     >
-      {/* Pokemon Icon */}
-      <div
-        className={cn('w-18 h-18 relative bg-cover rounded-xl', 'bg-stone-700')}
-        style={{
-          backgroundImage: `url(${imagePath})`,
-        }}
-      ></div>
+      {/* Retro Dialog Side Pills */}
+      <div className='absolute left-px top-1/2 -translate-y-1/2 w-[2px] h-4 bg-white/70 rounded-full pointer-events-none' />
+      <div className='absolute right-px top-1/2 -translate-y-1/2 w-[2px] h-4 bg-white/70 rounded-full pointer-events-none' />
 
-      {/* Pokemon Name */}
-      <div className={`text-sm text-center mt-1`}>
-        <span className={`font-medium text-gray-700`}>{pm.name.zh}</span>
-        {pm.altForm && <span className='font-light text-[10px]'>({pm.altForm})</span>}
+      <div
+        className={cn(
+          'w-full h-full bg-white rounded-[8px] border-2 border-[#34925e] p-1 flex flex-col items-center justify-center',
+        )}
+      >
+        {/* Pokemon Icon */}
+        <div
+          className={cn(
+            'w-14 h-14 md:w-16 md:h-16 relative bg-cover',
+            '[image-rendering:pixelated]',
+          )}
+          style={{
+            backgroundImage: `url(${imagePath})`,
+          }}
+        ></div>
+
+        {/* Pokemon Name */}
+        <div className='text-xs text-center font-mono tracking-tighter mt-1'>
+          <span className='font-bold text-gray-700'>{pm.name.zh}</span>
+        </div>
       </div>
     </button>
   );
@@ -65,8 +79,8 @@ function SubCard({ pm, className = '', onClick }: SubCardProps) {
 
 const Condition = ({ pm, className = '' }: { pm: EvolutionNode; className?: string }) => {
   const translatedMethod = getEvolutionMethodTranslation(pm.method);
-  const level = pm.level ?? 0 > 0 ? 'lv' + pm.level : '';
-  const condition = pm.condition?.zh ? '(' + pm.condition?.zh + ')' : '';
+  const level = (pm.level ?? 0 > 0) ? 'lv' + pm.level : '';
+  const condition = pm.condition?.join(', ');
 
   return (
     <div className={cn('text-center text-sm flex flex-col', className)}>
@@ -79,8 +93,8 @@ const Condition = ({ pm, className = '' }: { pm: EvolutionNode; className?: stri
 };
 
 export function Evolution({ pokemon, onPokemonChange }: Props) {
-  const handlePokemonNavigation = (pokemonLink: string) => {
-    onPokemonChange(pokemonLink);
+  const handlePokemonNavigation = (pokemonLink: number) => {
+    onPokemonChange(pokemonLink.toString());
   };
 
   // 1-1-1-1
@@ -99,14 +113,14 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
   // mobile case:
   // if cols >= 3 => transpose grid
 
-  if (pokemon.evolutionTree === undefined) {
+  if (pokemon.evolution === undefined) {
     return;
   }
 
   // Check if we have 3 or 4 level evolution chains
-  const isThree = pokemon.evolutionTree.to?.find((evolve) => evolve.to);
-  const isFour = pokemon.evolutionTree.to?.find((evolve) =>
-    evolve.to?.find((subEvolve) => subEvolve.to)
+  const isThree = pokemon.evolution.to?.find((evolve) => evolve.to);
+  const isFour = pokemon.evolution.to?.find((evolve) =>
+    evolve.to?.find((subEvolve) => subEvolve.to),
   );
 
   // Determine grid columns based on evolution depth
@@ -117,11 +131,11 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
     cols = 'grid-cols-3 md:grid-cols-5'; // 3 levels: pokemon + condition + pokemon + condition + pokemon
   }
 
-  const rows = rowSpanMap[(pokemon.evolutionTree?.to?.length || 1) as keyof typeof rowSpanMap];
+  const rows = rowSpanMap[(pokemon.evolution?.to?.length || 1) as keyof typeof rowSpanMap];
 
   let keyId = 0;
 
-  const evolutionPath = pokemon.evolutionTree?.to?.reduce((acc, evolution, i) => {
+  const evolutionPath = pokemon.evolution?.to?.reduce((acc, evolution, i) => {
     let rowElement = [] as JSX.Element[];
 
     const secRows = rowSpanMap[(evolution.to?.length || 1) as keyof typeof rowSpanMap];
@@ -152,7 +166,7 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
       rowsClass = 'row-span-1';
     }
 
-    if (i === 0 && pokemon.evolutionTree) {
+    if (i === 0 && pokemon.evolution) {
       let firstPokemonRowSpan = rows;
       if (shouldUseRowSpan2) {
         firstPokemonRowSpan = 'row-span-2';
@@ -165,10 +179,10 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
       rowElement.push(
         <SubCard
           key={keyId}
-          pm={pokemon.evolutionTree}
+          pm={pokemon.evolution}
           className={cn('text-xs', firstPokemonRowSpan)}
-          onClick={() => handlePokemonNavigation(pokemon.evolutionTree!.link)}
-        />
+          onClick={() => handlePokemonNavigation(pokemon.evolution!.pid)}
+        />,
       );
     }
 
@@ -178,7 +192,7 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
         key={keyId + 2}
         pm={evolution}
         className={cn('text-xs', rowsClass)}
-        onClick={() => handlePokemonNavigation(evolution.link)}
+        onClick={() => handlePokemonNavigation(evolution.pid)}
       />,
     ]);
 
@@ -199,7 +213,7 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
             key={keyId + 1}
             pm={evolution_}
             className={cn('hidden text-xs md:flex', thirdLevelRowSpan)}
-            onClick={() => handlePokemonNavigation(evolution_.link)}
+            onClick={() => handlePokemonNavigation(evolution_.pid)}
           />,
         ]);
         keyId += 2;
@@ -213,7 +227,7 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
                 key={keyId + 1}
                 pm={fourthEvolution}
                 className={cn('hidden text-xs md:flex')}
-                onClick={() => handlePokemonNavigation(fourthEvolution.link)}
+                onClick={() => handlePokemonNavigation(fourthEvolution.pid)}
               />,
             ]);
             keyId += 2;
@@ -242,7 +256,7 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
 
   let hasHr = false;
   let hasHr4th = false;
-  pokemon.evolutionTree?.to?.forEach((evolution) => {
+  pokemon.evolution?.to?.forEach((evolution) => {
     if (evolution.to) {
       if (hasHr === false) {
         evolutionPath?.push(<hr className='col-span-3 w-full md:hidden' key={999} />);
@@ -260,17 +274,17 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
                 ? i === 0
                   ? rowSpanMap[list.length as keyof typeof rowSpanMap]
                   : 'hidden'
-                : ''
+                : '',
             )}
-            onClick={() => handlePokemonNavigation(evolution.link)}
+            onClick={() => handlePokemonNavigation(evolution.pid)}
           />,
           <Condition key={keyId + 1} pm={evolution_} className='md:hidden' />,
           <SubCard
             key={keyId + 2}
             pm={evolution_}
             className={cn('text-xs md:hidden')}
-            onClick={() => handlePokemonNavigation(evolution_.link)}
-          />
+            onClick={() => handlePokemonNavigation(evolution_.pid)}
+          />,
         );
         keyId += 3;
       });
@@ -290,17 +304,17 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
                 pm={evolution_}
                 className={cn(
                   'text-xs md:hidden',
-                  fourthList.length > 1 ? (j === 0 ? 'row-span-2' : 'hidden') : ''
+                  fourthList.length > 1 ? (j === 0 ? 'row-span-2' : 'hidden') : '',
                 )}
-                onClick={() => handlePokemonNavigation(evolution_.link)}
+                onClick={() => handlePokemonNavigation(evolution_.pid)}
               />,
               <Condition key={keyId + 1} pm={fourthEvolution} className='md:hidden' />,
               <SubCard
                 key={keyId + 2}
                 pm={fourthEvolution}
                 className={cn('text-xs md:hidden')}
-                onClick={() => handlePokemonNavigation(fourthEvolution.link)}
-              />
+                onClick={() => handlePokemonNavigation(fourthEvolution.pid)}
+              />,
             );
             keyId += 3;
           });
@@ -314,7 +328,7 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
       className={cn(
         'grid items-center justify-center gap-y-8 text-center',
         'justify-items-center',
-        cols
+        cols,
       )}
     >
       {evolutionPath}

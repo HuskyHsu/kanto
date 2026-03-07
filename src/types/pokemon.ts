@@ -39,13 +39,12 @@ export interface TMMove extends PokemonMove {
 }
 
 export interface EvolutionNode {
-  link: string;
+  pid: number;
   type: string[];
   name: LanguageName;
-  altForm?: string;
   level: number;
   method: string;
-  condition?: LanguageName;
+  condition?: string[];
   to?: EvolutionNode[];
 }
 
@@ -56,7 +55,7 @@ export interface DetailedPokemon extends Pokemon {
   HTMMoves: TMMove[];
   eggMoves: PokemonMove[];
   tutorMoves: PokemonMove[];
-  evolutionTree?: EvolutionNode;
+  evolution?: EvolutionNode;
 }
 
 // Type weakness related types

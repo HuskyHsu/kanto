@@ -8,7 +8,14 @@ import { trackCustomEvent, trackPageView } from '@/lib/analytics';
 import { fetchPokemonDetail } from '@/services/pokemonService';
 import type { DetailedPokemon } from '@/types/pokemon';
 
-import { BackButton, BasicInfo, MovesCard, PokemonNavigation, StatsCard } from './components';
+import {
+  BackButton,
+  BasicInfo,
+  EvolutionCard,
+  MovesCard,
+  PokemonNavigation,
+  StatsCard,
+} from './components';
 import QuickNavigation from './components/QuickNavigation';
 
 function PokemonDetail() {
@@ -119,22 +126,22 @@ function PokemonDetail() {
       <BackButton />
       <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-        <div id='basic-info'>
+        <div id='basic-info' className='order-1'>
           <BasicInfo pokemon={pokemon} loading={loading} />
         </div>
-        <div id='stats'>
+        <div id='stats' className='order-3 md:order-2'>
           <StatsCard pokemon={pokemon} />
         </div>
-        <div id='moves' className='col-span-1 md:col-span-2'>
+        <div id='moves' className='col-span-1 md:col-span-2 order-2 md:order-3'>
           <MovesCard pokemon={pokemon} />
         </div>
-        {/* {pokemon.evolutionTree && (
-          <div id='evolution' className='col-span-1 md:col-span-2'>
+        {pokemon.evolution && (
+          <div id='evolution' className='col-span-1 md:col-span-2 order-4'>
             <EvolutionCard pokemon={pokemon} onPokemonChange={handlePokemonChange} />
           </div>
-        )} */}
+        )}
       </div>
-      <QuickNavigation hasEvolution={!!pokemon.evolutionTree} />
+      <QuickNavigation hasEvolution={!!pokemon.evolution} />
     </div>
   );
 }
