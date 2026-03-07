@@ -24,7 +24,9 @@ export const Footer = () => {
                   className='w-6 h-6 opacity-70 mix-blend-multiply'
                   alt='Kanto'
                 />
-                <span className='text-sm font-medium text-[#115e59]'>Kanto Pokédex</span>
+                <span className='text-sm font-medium text-[#115e59]'>
+                  FireRed & LeafGreen Pokédex
+                </span>
               </div>
               <span className='text-xs text-[#115e59]/60'>© 2026</span>
             </div>
