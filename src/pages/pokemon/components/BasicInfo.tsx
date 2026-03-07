@@ -146,7 +146,7 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
             </>
           )}
         </div>
-        <div className='space-y-3 font-mono tracking-tighter'>
+        <div className='space-y-1 md:space-y-3 font-mono tracking-tighter'>
           {renderData.map((data, index) => (
             <div
               className='flex justify-between items-center bg-gray-50/50 p-2 rounded'

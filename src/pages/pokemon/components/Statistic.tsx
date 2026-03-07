@@ -152,7 +152,7 @@ export function Statistic({ pokemon }: Props) {
           onChange={(e) => setLv(parseInt(e.target.value))}
         />
         <table className='w-full table-fixed text-center text-sm border-2 border-[#34925e] bg-white border-separate border-spacing-0'>
-          <thead className='bg-[#34925e] text-white text-[10px] sm:text-xs font-press-start uppercase'>
+          <thead className='bg-[#34925e] text-white text-[8px] font-press-start uppercase'>
             <tr>
               <th
                 scope='col'
@@ -220,7 +220,7 @@ export function Statistic({ pokemon }: Props) {
         <div className='pt-4 border-t-2 border-dashed border-gray-300'>
           <label className='block font-bold text-slate-700 uppercase mb-2'>自訂參數</label>
           <table className='w-full table-fixed text-center text-sm border-2 border-[#34925e] bg-white border-separate border-spacing-0'>
-            <thead className='bg-[#34925e] text-white text-[10px] sm:text-xs font-press-start uppercase'>
+            <thead className='bg-[#34925e] text-white text-[8px] font-press-start uppercase'>
               <tr>
                 <th
                   scope='col'
