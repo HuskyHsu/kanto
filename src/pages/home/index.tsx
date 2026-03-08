@@ -41,7 +41,7 @@ function Home() {
   const { isShowAbility, toggleAbility } = useAbilityToggle();
 
   useEffect(() => {
-    document.title = 'Kanto Pokédex App';
+    document.title = 'FireRed & LeafGreen Pokédex';
   }, []);
 
   return (
