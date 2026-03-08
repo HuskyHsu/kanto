@@ -1,6 +1,7 @@
 import { Footer } from '@/components/Footer';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import PWAInstallButton from '@/components/PWAInstallButton';
+import { ShareButton } from '@/components/ui/share-button';
 import { Outlet } from 'react-router-dom';
 
 function MainLayout() {
@@ -12,6 +13,7 @@ function MainLayout() {
       }}
     >
       <div className='fixed bottom-4 right-4 md:top-4 md:bottom-auto md:right-5 z-50 flex flex-col md:flex-row gap-2'>
+        <ShareButton />
         <PWAInstallButton />
         <LanguageToggle />
       </div>

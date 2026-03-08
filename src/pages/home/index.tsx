@@ -1,6 +1,7 @@
 import { PokemonCard } from '@/components/pokemon';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+
 import { useAbilityToggle } from '@/hooks/useAbilityToggle';
 import { useEVToggle } from '@/hooks/useEVToggle';
 import { usePokemonData } from '@/hooks/usePokemonData';
@@ -82,7 +83,6 @@ function PageHeader() {
       >
         FireRed & LeafGreen Pokédex
       </Link>
-      {/* <ShareButton title='Kanto Pokédex' /> */}
     </h1>
   );
 }

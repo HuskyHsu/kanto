@@ -9,7 +9,7 @@ interface ShareButtonProps {
 }
 
 const ShareButton = React.forwardRef<HTMLButtonElement, ShareButtonProps>(
-  ({ title = '', text = '', url = '', className = 'h-8 w-8', ...props }, ref) => {
+  ({ title = '', text = '', url = '', className = '', ...props }, ref) => {
     const handleShare = async () => {
       // Use current URL if no URL is provided
       const shareUrl = url || window.location.href;
@@ -19,7 +19,7 @@ const ShareButton = React.forwardRef<HTMLButtonElement, ShareButtonProps>(
       if (navigator.share) {
         try {
           await navigator.share({
-            title: title,
+            title: title || document.title,
             text: `${fullText}\n`,
             url: shareUrl,
           });
@@ -41,11 +41,21 @@ const ShareButton = React.forwardRef<HTMLButtonElement, ShareButtonProps>(
     };
 
     return (
-      <button ref={ref} onClick={handleShare} type='button' {...props}>
-        <Link className={className} />
+      <button
+        ref={ref}
+        onClick={handleShare}
+        type='button'
+        className={`flex items-center justify-center gap-2 p-2 h-10 min-w-10 rounded-full bg-white/80 backdrop-blur-md shadow-sm border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all cursor-pointer group ${className}`}
+        title='Share Page'
+        {...props}
+      >
+        <Link size={20} className='text-rose-500 group-hover:scale-110 transition-transform' />
+        <span className='text-xs font-bold font-mono w-10 text-center select-none uppercase hidden md:inline-block'>
+          SHARE
+        </span>
       </button>
     );
-  }
+  },
 );
 
 ShareButton.displayName = 'ShareButton';

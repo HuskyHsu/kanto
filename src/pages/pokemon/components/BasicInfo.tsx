@@ -1,7 +1,7 @@
 import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loading } from '@/components/ui/Loading';
-import { ShareButton } from '@/components/ui/share-button';
+
 import type { DetailedPokemon } from '@/types/pokemon';
 import type { JSX } from 'react';
 import { TypeWeakness } from './TypeWeakness';
@@ -121,7 +121,6 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
       <CardHeader>
         <CardTitle className='flex items-center gap-2 font-press-start text-lg uppercase tracking-wider text-slate-800 relative pl-4 before:content-[""] before:absolute before:left-0 before:top-[15%] before:h-[70%] before:w-1 before:bg-[#e05038]'>
           Basic Information
-          <ShareButton title={`${pokemon.name.zh}`} className='w-6 h-6 ml-auto' />
         </CardTitle>
       </CardHeader>
       <CardContent className='space-y-4'>
