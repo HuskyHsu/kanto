@@ -7,7 +7,7 @@ declare global {
 
 // Read Google Analytics Measurement ID from environment variables
 // If no environment variable is set, use default placeholder
-export const GA_MEASUREMENT_ID = 'G-LZ7DT62XZV';
+export const GA_MEASUREMENT_ID = 'G-HZV2D4DBLW';
 
 // Initialize Google Analytics
 export const initGA = () => {
