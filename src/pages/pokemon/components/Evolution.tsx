@@ -1,3 +1,4 @@
+import { useLanguage } from '@/contexts/LanguageContext';
 import { FromClass, ToClass } from '@/lib/color';
 import { getEvolutionMethodTranslation } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
@@ -14,6 +15,7 @@ const rowSpanMap = {
   2: 'row-span-2',
   3: 'row-span-3',
   4: 'row-span-4',
+  5: 'row-span-5',
   8: 'row-[span_8_/_span_8]',
   20: 'row-[span_20_/_span_20]',
 };
@@ -78,9 +80,31 @@ function SubCard({ pm, className = '', onClick }: SubCardProps) {
 }
 
 const Condition = ({ pm, className = '' }: { pm: EvolutionNode; className?: string }) => {
+  const { displayLanguage } = useLanguage();
   const translatedMethod = getEvolutionMethodTranslation(pm.method);
   const level = (pm.level ?? 0 > 0) ? 'lv' + pm.level : '';
-  const condition = pm.condition?.join(', ');
+
+  const renderCondition = (cond: any, index: number) => {
+    if (typeof cond === 'string') {
+      return <span key={index}>{cond}</span>;
+    }
+    if (cond && cond.type === 'item') {
+      const prefix = cond.trigger === 'use-item' ? '使用 ' : '攜帶 ';
+      const localizedItemName = displayLanguage === 'ja' ? cond.item.ja : cond.item.en;
+      return (
+        <span key={index} className='flex flex-col items-center'>
+          <span>
+            {prefix}
+            {cond.item.zh}
+          </span>
+          <span className='text-[9px] text-slate-400 font-sans tracking-tight'>
+            {localizedItemName}
+          </span>
+        </span>
+      );
+    }
+    return null;
+  };
 
   return (
     <div
@@ -91,7 +115,7 @@ const Condition = ({ pm, className = '' }: { pm: EvolutionNode; className?: stri
     >
       <span>{translatedMethod}</span>
       <span className={cn('text-[10px]')}>{level}</span>
-      <span>{condition}</span>
+      {pm.condition?.map((cond, i) => renderCondition(cond, i))}
       <span className='text-xl text-[#34925e]'>⇨</span>
     </div>
   );

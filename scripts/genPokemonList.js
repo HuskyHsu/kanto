@@ -127,6 +127,36 @@ const getEggGroupData = async (url) => {
   return zhName;
 };
 
+const itemCache = new Map();
+
+const getItemName = async (url) => {
+  const id = url.split('/').filter(Boolean).at(-1);
+  if (itemCache.has(id)) {
+    return itemCache.get(id);
+  }
+  const rawData = await fetchWithCache(url, `scripts/cache/item/${id}.json`);
+  const names = {
+    zh: rawData.names.find((n) => n.language.name === 'zh-hant')?.name || rawData.name,
+    en: rawData.names.find((n) => n.language.name === 'en')?.name || rawData.name,
+    ja: rawData.names.find((n) => n.language.name === 'ja')?.name || rawData.name,
+  };
+  itemCache.set(id, names);
+  return names;
+};
+
+const locationCache = new Map();
+
+const getLocationName = async (url) => {
+  const id = url.split('/').filter(Boolean).at(-1);
+  if (locationCache.has(id)) {
+    return locationCache.get(id);
+  }
+  const rawData = await fetchWithCache(url, `scripts/cache/location/${id}.json`);
+  const zhName = rawData.names?.find((n) => n.language.name === 'zh-hant')?.name || rawData.name;
+  locationCache.set(id, zhName);
+  return zhName;
+};
+
 const processMoves = async (rawMoves) => {
   const versionMoves = rawMoves
     .filter((move) =>
@@ -287,20 +317,55 @@ const buildEvolutionTree = async (node) => {
             }
             const conditions = [];
 
+            if (details.trigger?.name === 'shed') {
+              conditions.push('包包中有精靈球，且同行寶可夢中有空位');
+            }
+
             if (details.item) {
-              conditions.push(`item ${details.item.name}`);
+              const itemNames = await getItemName(details.item.url);
+              conditions.push({
+                type: 'item',
+                trigger: details.trigger?.name || 'use-item',
+                item: itemNames,
+              });
+            }
+            if (details.held_item) {
+              const itemNames = await getItemName(details.held_item.url);
+              conditions.push({
+                type: 'item',
+                trigger: 'held-item',
+                item: itemNames,
+              });
             }
             if (details.time_of_day) {
-              conditions.push(`time ${details.time_of_day}`);
+              const timeMap = { day: '白天', night: '夜晚', dusk: '黃昏' };
+              conditions.push(`於${timeMap[details.time_of_day] || details.time_of_day}`);
             }
             if (details.min_happiness) {
-              conditions.push(`happiness ${details.min_happiness}`);
+              conditions.push(`親密度 ${details.min_happiness} 以上`);
+            }
+            if (details.min_beauty) {
+              conditions.push(`美麗度 ${details.min_beauty} 以上`);
             }
             if (details.known_move) {
-              conditions.push(`move ${details.known_move.name}`);
+              const moveId = details.known_move.url.split('/').filter(Boolean).at(-1);
+              const moveData = await getMoveData(moveId);
+              conditions.push(`學會 ${moveData.name.zh}`);
             }
             if (details.location) {
-              conditions.push(`location ${details.location.name}`);
+              const locName = await getLocationName(details.location.url);
+              conditions.push(`在 ${locName}`);
+            }
+            if (
+              details.relative_physical_stats !== null &&
+              details.relative_physical_stats !== undefined
+            ) {
+              const statsMap = {
+                1: '攻擊 > 防禦',
+                [-1]: '攻擊 < 防禦',
+                0: '攻擊 = 防禦',
+              };
+              conditions.push(statsMap[details.relative_physical_stats]);
             }
 
             if (conditions.length > 0) {

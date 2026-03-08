@@ -21,6 +21,7 @@ export const evolutionMethodTranslations = {
     UseItemMale: '使用道具(雄性)',
     MegaEvolution: '超級進化',
     PrimalReversion: '原始回歸',
+    Shed: '蛻皮',
 
     LevelUpNatureAmped:
       '勤奮、固執、頑皮、勇敢、坦率、淘氣、樂天、馬虎、浮躁、自大、急躁、爽朗或天真',
@@ -54,6 +55,7 @@ export const evolutionMethodTranslations = {
     UseItemMale: 'Use Item (Male)',
     MegaEvolution: 'Mega Evolution',
     PrimalReversion: 'Primal Reversion',
+    Shed: 'Shed',
 
     LevelUpNatureAmped:
       '勤奮、固執、頑皮、勇敢、坦率、淘氣、樂天、馬虎、浮躁、自大、急躁、爽朗或天真',
@@ -77,7 +79,7 @@ export const DEFAULT_LANGUAGE: SupportedLanguage = 'zh';
 // Get translation for evolution method
 export function getEvolutionMethodTranslation(
   method: string,
-  language: SupportedLanguage = DEFAULT_LANGUAGE
+  language: SupportedLanguage = DEFAULT_LANGUAGE,
 ): string {
   const translations = evolutionMethodTranslations[language];
   return translations[method as EvolutionMethod] || method;

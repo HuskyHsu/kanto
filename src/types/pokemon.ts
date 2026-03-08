@@ -40,13 +40,21 @@ export interface TMMove extends PokemonMove {
   tm: string;
 }
 
+export interface EvolutionConditionItem {
+  type: 'item';
+  trigger: string;
+  item: LanguageName;
+}
+
+export type EvolutionCondition = string | EvolutionConditionItem;
+
 export interface EvolutionNode {
   pid: number;
   type: string[];
   name: LanguageName;
   level: number;
   method: string;
-  condition?: string[];
+  condition?: EvolutionCondition[];
   to?: EvolutionNode[];
 }
 
