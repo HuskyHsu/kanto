@@ -1,0 +1,1 @@
+{"id":348,"type":"Grass","category":"Special","power":90,"accuracy":100,"pp":15,"name":{"ja":"リーフブレード","en":"Leaf Blade","zh":"葉刃"},"learnedBy":{"levelUp":[{"pid":253,"type":["Grass"],"name":{"zh":"森林蜥蜴","ja":"ジュプトル","en":"Grovyle"},"level":29},{"pid":254,"type":["Grass"],"name":{"zh":"蜥蜴王","ja":"ジュカイン","en":"Sceptile"},"level":29}],"machine":[],"egg":[],"tutor":[]}}

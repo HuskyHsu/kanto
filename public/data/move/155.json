@@ -1,0 +1,1 @@
+{"id":155,"type":"Ground","category":"Physical","power":50,"accuracy":90,"pp":10,"name":{"ja":"ホネブーメラン","en":"Bonemerang","zh":"骨頭回力鏢"},"learnedBy":{"levelUp":[{"pid":104,"type":["Ground"],"name":{"zh":"卡拉卡拉","ja":"カラカラ","en":"Cubone"},"level":25},{"pid":105,"type":["Ground"],"name":{"zh":"嘎啦嘎啦","ja":"ガラガラ","en":"Marowak"},"level":25}],"machine":[],"egg":[],"tutor":[]}}

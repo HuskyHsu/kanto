@@ -1,0 +1,1 @@
+{"id":144,"type":"Normal","category":"Status","power":null,"accuracy":null,"pp":10,"name":{"ja":"へんしん","en":"Transform","zh":"變身"},"learnedBy":{"levelUp":[{"pid":132,"type":["Normal"],"name":{"zh":"百變怪","ja":"メタモン","en":"Ditto"},"level":1},{"pid":151,"type":["Psychic"],"name":{"zh":"夢幻","ja":"ミュウ","en":"Mew"},"level":10}],"machine":[],"egg":[],"tutor":[]}}

@@ -1,0 +1,1 @@
+{"id":146,"type":"Normal","category":"Physical","power":70,"accuracy":100,"pp":10,"name":{"ja":"ピヨピヨパンチ","en":"Dizzy Punch","zh":"迷昏拳"},"learnedBy":{"levelUp":[{"pid":115,"type":["Normal"],"name":{"zh":"袋獸","ja":"ガルーラ","en":"Kangaskhan"},"level":43},{"pid":327,"type":["Normal"],"name":{"zh":"晃晃斑","ja":"パッチール","en":"Spinda"},"level":27}],"machine":[],"egg":[],"tutor":[]}}

@@ -1,0 +1,1 @@
+{"id":342,"type":"Poison","category":"Physical","power":50,"accuracy":100,"pp":25,"name":{"ja":"ポイズンテール","en":"Poison Tail","zh":"毒尾"},"learnedBy":{"levelUp":[{"pid":336,"type":["Poison"],"name":{"zh":"飯匙蛇","ja":"ハブネーク","en":"Seviper"},"level":16}],"machine":[],"egg":[],"tutor":[]}}

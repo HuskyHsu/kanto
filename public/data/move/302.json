@@ -1,0 +1,1 @@
+{"id":302,"type":"Grass","category":"Special","power":60,"accuracy":100,"pp":15,"name":{"ja":"ニードルアーム","en":"Needle Arm","zh":"尖刺臂"},"learnedBy":{"levelUp":[{"pid":331,"type":["Grass"],"name":{"zh":"刺球仙人掌","ja":"サボネア","en":"Cacnea"},"level":37},{"pid":332,"type":["Grass","Dark"],"name":{"zh":"夢歌仙人掌","ja":"ノクタス","en":"Cacturne"},"level":41}],"machine":[],"egg":[],"tutor":[]}}

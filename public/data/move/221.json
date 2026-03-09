@@ -1,0 +1,1 @@
+{"id":221,"type":"Fire","category":"Special","power":100,"accuracy":95,"pp":5,"name":{"ja":"せいなるほのお","en":"Sacred Fire","zh":"神聖之火"},"learnedBy":{"levelUp":[{"pid":250,"type":["Fire","Flying"],"name":{"zh":"鳳王","ja":"ホウオウ","en":"Ho-Oh"},"level":77}],"machine":[],"egg":[],"tutor":[]}}

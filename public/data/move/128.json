@@ -1,0 +1,1 @@
+{"id":128,"type":"Water","category":"Special","power":35,"accuracy":85,"pp":15,"name":{"ja":"からではさむ","en":"Clamp","zh":"貝殼夾擊"},"learnedBy":{"levelUp":[{"pid":90,"type":["Water"],"name":{"zh":"大舌貝","ja":"シェルダー","en":"Shellder"},"level":43},{"pid":366,"type":["Water"],"name":{"zh":"珍珠貝","ja":"パールル","en":"Clamperl"},"level":1}],"machine":[],"egg":[],"tutor":[]}}

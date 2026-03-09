@@ -1,0 +1,1 @@
+{"id":158,"type":"Normal","category":"Physical","power":80,"accuracy":90,"pp":15,"name":{"ja":"ひっさつまえば","en":"Hyper Fang","zh":"必殺門牙"},"learnedBy":{"levelUp":[{"pid":19,"type":["Normal"],"name":{"zh":"小拉達","ja":"コラッタ","en":"Rattata"},"level":13},{"pid":20,"type":["Normal"],"name":{"zh":"拉達","ja":"ラッタ","en":"Raticate"},"level":13}],"machine":[],"egg":[],"tutor":[]}}

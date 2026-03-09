@@ -23,7 +23,7 @@ export function PokemonIconLink({ pokemon, showLevel = false, className }: Pokem
 
   return (
     <Link
-      to={`/pokemon/${pokemon.link}`}
+      to={`/pokemon/${pokemon.pid}`}
       className={cn(
         'group relative flex flex-col items-center justify-center p-8 w-10 h-10',
         'transition-all duration-300',
@@ -34,16 +34,18 @@ export function PokemonIconLink({ pokemon, showLevel = false, className }: Pokem
     >
       <div className='w-10 h-10 relative'>
         <div
-          className={cn('absolute top-6 -left-2 h-4 w-14 bg-linear-to-l rounded', bgClass)}
+          className={cn('absolute -top-1 -left-2 h-4 w-14 bg-linear-to-l rounded', bgClass)}
         ></div>
-        <img
-          src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
-          alt={pokemon.name.zh}
-          className='w-full h-full object-contain filter drop-shadow-md relative z-10'
-          loading='lazy'
+
+        <div
+          style={{
+            backgroundImage: `url(${import.meta.env.BASE_URL}images/pmIcon8Bit/${pokemon.pid}.png)`,
+          }}
+          title={pokemon.name.zh}
+          className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 switchingLeftRight filter drop-shadow-md z-10'
         />
         {showLevel && pokemon.level !== undefined && (
-          <span className='text-black absolute -bottom-6 left-1/2 -translate-x-1/2 text-[12px] whitespace-nowrap z-10'>
+          <span className='text-black absolute -bottom-10 left-1/2 -translate-x-1/2 text-[12px] whitespace-nowrap z-10'>
             {from}
           </span>
         )}

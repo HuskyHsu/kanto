@@ -1,0 +1,1 @@
+{"id":169,"type":"Bug","category":"Status","power":null,"accuracy":null,"pp":10,"name":{"ja":"クモのす","en":"Spider Web","zh":"蛛網"},"learnedBy":{"levelUp":[{"pid":167,"type":["Bug","Poison"],"name":{"zh":"圓絲蛛","ja":"イトマル","en":"Spinarak"},"level":37},{"pid":168,"type":["Bug","Poison"],"name":{"zh":"阿利多斯","ja":"アリアドス","en":"Ariados"},"level":43}],"machine":[],"egg":[],"tutor":[]}}

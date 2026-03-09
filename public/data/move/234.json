@@ -1,0 +1,1 @@
+{"id":234,"type":"Normal","category":"Status","power":null,"accuracy":null,"pp":5,"name":{"ja":"あさのひざし","en":"Morning Sun","zh":"晨光"},"learnedBy":{"levelUp":[{"pid":196,"type":["Psychic"],"name":{"zh":"太陽伊布","ja":"エーフィ","en":"Espeon"},"level":52},{"pid":267,"type":["Bug","Flying"],"name":{"zh":"狩獵鳳蝶","ja":"アゲハント","en":"Beautifly"},"level":20}],"machine":[],"egg":[],"tutor":[]}}

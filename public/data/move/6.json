@@ -1,0 +1,1 @@
+{"id":6,"type":"Normal","category":"Physical","power":40,"accuracy":100,"pp":20,"name":{"ja":"ネコにこばん","en":"Pay Day","zh":"聚寶功"},"learnedBy":{"levelUp":[{"pid":52,"type":["Normal"],"name":{"zh":"喵喵","ja":"ニャース","en":"Meowth"},"level":18},{"pid":53,"type":["Normal"],"name":{"zh":"貓老大","ja":"ペルシアン","en":"Persian"},"level":18}],"machine":[],"egg":[],"tutor":[]}}

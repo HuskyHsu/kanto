@@ -1,0 +1,1 @@
+{"id":307,"type":"Fire","category":"Special","power":150,"accuracy":90,"pp":5,"name":{"ja":"ブラストバーン","en":"Blast Burn","zh":"爆炸烈焰"},"learnedBy":{"levelUp":[],"machine":[],"egg":[],"tutor":[{"pid":6,"type":["Fire","Flying"],"name":{"zh":"噴火龍","ja":"リザードン","en":"Charizard"}}]}}

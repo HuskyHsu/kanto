@@ -1,0 +1,1 @@
+{"id":26,"type":"Fighting","category":"Physical","power":100,"accuracy":95,"pp":10,"name":{"ja":"とびげり","en":"Jump Kick","zh":"飛踢"},"learnedBy":{"levelUp":[{"pid":106,"type":["Fighting"],"name":{"zh":"飛腿郎","ja":"サワムラー","en":"Hitmonlee"},"level":16}],"machine":[],"egg":[],"tutor":[]}}

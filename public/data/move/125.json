@@ -1,0 +1,1 @@
+{"id":125,"type":"Ground","category":"Physical","power":65,"accuracy":85,"pp":20,"name":{"ja":"ホネこんぼう","en":"Bone Club","zh":"骨棒"},"learnedBy":{"levelUp":[{"pid":104,"type":["Ground"],"name":{"zh":"卡拉卡拉","ja":"カラカラ","en":"Cubone"},"level":9},{"pid":105,"type":["Ground"],"name":{"zh":"嘎啦嘎啦","ja":"ガラガラ","en":"Marowak"},"level":1}],"machine":[],"egg":[],"tutor":[]}}

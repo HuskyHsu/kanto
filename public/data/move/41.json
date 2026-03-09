@@ -1,0 +1,1 @@
+{"id":41,"type":"Bug","category":"Physical","power":25,"accuracy":100,"pp":20,"name":{"ja":"ダブルニードル","en":"Twineedle","zh":"雙針"},"learnedBy":{"levelUp":[{"pid":15,"type":["Bug","Poison"],"name":{"zh":"大針蜂","ja":"スピアー","en":"Beedrill"},"level":20}],"machine":[],"egg":[],"tutor":[]}}

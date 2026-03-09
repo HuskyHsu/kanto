@@ -40,6 +40,7 @@ const getPokemonSpeciesData = (pid) => {
 };
 
 const moveCache = new Map();
+const allMovesData = new Map();
 
 /**
  * Fetch and format move data
@@ -72,6 +73,20 @@ const getMoveData = async (mid) => {
   };
 
   moveCache.set(mid, formattedMove);
+
+  // Initialize reverse index data for the move
+  if (!allMovesData.has(mid)) {
+    allMovesData.set(mid, {
+      ...formattedMove,
+      learnedBy: {
+        levelUp: [],
+        machine: [],
+        egg: [],
+        tutor: [],
+      },
+    });
+  }
+
   return formattedMove;
 };
 
@@ -601,6 +616,37 @@ const main = async () => {
     await fs.writeFile(`${pmOutDir}/${pm.pid}.json`, JSON.stringify(pm));
     console.log(`Saved ${pmOutDir}/${pm.pid}.json`);
 
+    const basicPmInfo = {
+      pid: pm.pid,
+      type: pm.types,
+      name: pm.name,
+    };
+
+    // Helper to add distinct pokemon to move's learnedBy array
+    const addToMoveIndex = (moveList, method) => {
+      if (!moveList) return;
+      moveList.forEach((move) => {
+        const moveData = allMovesData.get(move.id);
+        if (moveData) {
+          const isExist = moveData.learnedBy[method].find((p) => p.pid === basicPmInfo.pid);
+          if (!isExist && !move.isPreEvo) {
+            // Exclude inherit moves to avoid duplication across evo tree
+            const insertData = { ...basicPmInfo };
+            if (method === 'levelUp' && move.level !== undefined) {
+              insertData.level = move.level;
+            }
+            moveData.learnedBy[method].push(insertData);
+          }
+        }
+      });
+    };
+
+    addToMoveIndex(pm.levelUpMoves, 'levelUp');
+    addToMoveIndex(pm.TMMoves, 'machine');
+    addToMoveIndex(pm.HTMMoves, 'machine');
+    addToMoveIndex(pm.eggMoves, 'egg');
+    addToMoveIndex(pm.tutorMoves, 'tutor');
+
     basicInfoList.push({
       pid: pm.pid,
       name: pm.name,
@@ -616,6 +662,19 @@ const main = async () => {
   await fs.mkdir(outDir, { recursive: true });
   await fs.writeFile(`${outDir}/pokemonList.json`, JSON.stringify(basicInfoList));
   console.log(`Saved ${outDir}/pokemonList.json`);
+
+  const moveOutDir = 'public/data/move';
+  await fs.mkdir(moveOutDir, { recursive: true });
+  for (const move of allMovesData.values()) {
+    // Sort learnedBy arrays by pid
+    move.learnedBy.levelUp.sort((a, b) => a.pid - b.pid);
+    move.learnedBy.machine.sort((a, b) => a.pid - b.pid);
+    move.learnedBy.egg.sort((a, b) => a.pid - b.pid);
+    move.learnedBy.tutor.sort((a, b) => a.pid - b.pid);
+
+    await fs.writeFile(`${moveOutDir}/${move.id}.json`, JSON.stringify(move));
+    console.log(`Saved ${moveOutDir}/${move.id}.json`);
+  }
 };
 
 main();

@@ -1,0 +1,1 @@
+{"id":198,"type":"Ground","category":"Physical","power":25,"accuracy":90,"pp":10,"name":{"ja":"ボーンラッシュ","en":"Bone Rush","zh":"骨棒亂打"},"learnedBy":{"levelUp":[{"pid":104,"type":["Ground"],"name":{"zh":"卡拉卡拉","ja":"カラカラ","en":"Cubone"},"level":41},{"pid":105,"type":["Ground"],"name":{"zh":"嘎啦嘎啦","ja":"ガラガラ","en":"Marowak"},"level":53}],"machine":[],"egg":[],"tutor":[]}}

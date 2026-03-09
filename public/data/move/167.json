@@ -1,0 +1,1 @@
+{"id":167,"type":"Fighting","category":"Physical","power":10,"accuracy":90,"pp":10,"name":{"ja":"トリプルキック","en":"Triple Kick","zh":"三連踢"},"learnedBy":{"levelUp":[{"pid":237,"type":["Fighting"],"name":{"zh":"戰舞郎","ja":"カポエラー","en":"Hitmontop"},"level":20}],"machine":[],"egg":[],"tutor":[]}}

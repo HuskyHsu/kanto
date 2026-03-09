@@ -44,8 +44,8 @@ export default function MoveIntersectionResult({
         // Intersect with subsequent moves
         for (let i = 1; i < moveDetails.length; i++) {
           const nextMovePokemon = getAllLearningPokemon(moveDetails[i]);
-          const nextMoveConfig = new Set(nextMovePokemon.map((p) => p.link));
-          intersection = intersection.filter((p) => nextMoveConfig.has(p.link));
+          const nextMoveConfig = new Set(nextMovePokemon.map((p) => p.pid));
+          intersection = intersection.filter((p) => nextMoveConfig.has(p.pid));
         }
 
         setResultPokemon(intersection);
@@ -61,15 +61,18 @@ export default function MoveIntersectionResult({
 
   const getAllLearningPokemon = (moveData: ExpandedMoveData): MinimalPokemon[] => {
     const allPokemon: MinimalPokemon[] = [];
-    if (moveData.levelUpPm) allPokemon.push(...moveData.levelUpPm);
-    if (moveData.tmPm) allPokemon.push(...moveData.tmPm);
-    if (moveData.alphaPm) allPokemon.push(...moveData.alphaPm);
+    if (moveData.learnedBy) {
+      if (moveData.learnedBy.levelUp) allPokemon.push(...moveData.learnedBy.levelUp);
+      if (moveData.learnedBy.machine) allPokemon.push(...moveData.learnedBy.machine);
+      if (moveData.learnedBy.egg) allPokemon.push(...moveData.learnedBy.egg);
+      if (moveData.learnedBy.tutor) allPokemon.push(...moveData.learnedBy.tutor);
+    }
 
-    // Remove duplicates based on link
-    const uniquePokemon = new Map<string, MinimalPokemon>();
+    // Remove duplicates based on pid
+    const uniquePokemon = new Map<number, MinimalPokemon>();
     allPokemon.forEach((p) => {
-      if (!uniquePokemon.has(p.link)) {
-        uniquePokemon.set(p.link, p);
+      if (!uniquePokemon.has(p.pid)) {
+        uniquePokemon.set(p.pid, p);
       }
     });
 
@@ -83,7 +86,9 @@ export default function MoveIntersectionResult({
   return (
     <div className='mt-8 flex flex-col gap-4'>
       <div className='flex items-center justify-between'>
-        <h2 className='text-lg font-semibold'>Move Intersection ({selectedMoveIds.length} selected)</h2>
+        <h2 className='text-lg font-semibold'>
+          Move Intersection ({selectedMoveIds.length} selected)
+        </h2>
       </div>
 
       <div className='flex flex-wrap gap-2'>
@@ -95,10 +100,10 @@ export default function MoveIntersectionResult({
             <span className='mr-2 font-medium'>{move.name.zh}</span>
             <PokemonTypes types={[move.type]} />
             <button
-               className="ml-2 rounded-full p-1 hover:bg-gray-100 dark:hover:bg-gray-700"
-               onClick={() => onRemoveMove(move.id)}
+              className='ml-2 rounded-full p-1 hover:bg-gray-100 dark:hover:bg-gray-700'
+              onClick={() => onRemoveMove(move.id)}
             >
-                <X className="h-3 w-3 text-gray-500" />
+              <X className='h-3 w-3 text-gray-500' />
             </button>
           </div>
         ))}
@@ -121,7 +126,7 @@ export default function MoveIntersectionResult({
             <div className='rounded-md border bg-white p-4 -mx-4 md:mx-0 dark:bg-gray-900'>
               <div className='flex flex-wrap gap-x-2 gap-y-4'>
                 {resultPokemon.map((pm, idx) => (
-                  <PokemonIconLink key={`${pm.link}-${idx}`} pokemon={pm} />
+                  <PokemonIconLink key={`${pm.pid}-${idx}`} pokemon={pm} />
                 ))}
               </div>
             </div>

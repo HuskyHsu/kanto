@@ -1,0 +1,1 @@
+{"id":134,"type":"Psychic","category":"Status","power":null,"accuracy":80,"pp":15,"name":{"ja":"スプーンまげ","en":"Kinesis","zh":"折彎湯匙"},"learnedBy":{"levelUp":[{"pid":64,"type":["Psychic"],"name":{"zh":"勇基拉","ja":"ユンゲラー","en":"Kadabra"},"level":1},{"pid":65,"type":["Psychic"],"name":{"zh":"胡地","ja":"フーディン","en":"Alakazam"},"level":1}],"machine":[],"egg":[],"tutor":[]}}

@@ -1,0 +1,1 @@
+{"id":303,"type":"Normal","category":"Status","power":null,"accuracy":null,"pp":5,"name":{"ja":"なまける","en":"Slack Off","zh":"偷懶"},"learnedBy":{"levelUp":[{"pid":287,"type":["Normal"],"name":{"zh":"懶人獺","ja":"ナマケロ","en":"Slakoth"},"level":13},{"pid":289,"type":["Normal"],"name":{"zh":"請假王","ja":"ケッキング","en":"Slaking"},"level":1}],"machine":[],"egg":[],"tutor":[]}}

@@ -93,7 +93,7 @@ export type BasePoint = {
 };
 
 export interface MinimalPokemon {
-  link: string;
+  pid: number;
   type: string[];
   name: LanguageName;
   altForm?: string;
@@ -106,10 +106,14 @@ export interface ExpandedMoveData {
   type: string;
   category: 'Status' | 'Physical' | 'Special';
   power: number;
-  cooldown: number;
-  levelUpPm?: MinimalPokemon[];
-  tmPm?: MinimalPokemon[];
-  alphaPm?: MinimalPokemon[];
+  accuracy: number;
+  pp: number;
+  learnedBy: {
+    levelUp: MinimalPokemon[];
+    machine: MinimalPokemon[];
+    egg: MinimalPokemon[];
+    tutor: MinimalPokemon[];
+  };
 }
 
 export type Pokedex = 'kanto' | 'johto' | 'hoenn';

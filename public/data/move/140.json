@@ -1,0 +1,1 @@
+{"id":140,"type":"Normal","category":"Physical","power":15,"accuracy":85,"pp":20,"name":{"ja":"たまなげ","en":"Barrage","zh":"投球"},"learnedBy":{"levelUp":[{"pid":102,"type":["Grass","Psychic"],"name":{"zh":"蛋蛋","ja":"タマタマ","en":"Exeggcute"},"level":1},{"pid":103,"type":["Grass","Psychic"],"name":{"zh":"椰蛋樹","ja":"ナッシー","en":"Exeggutor"},"level":1}],"machine":[],"egg":[],"tutor":[]}}
