@@ -2,12 +2,12 @@ import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
 } from '@/components/ui/table';
 import MoveRow from '@/pages/pokemon/components/MoveRow';
 import type { MoveList } from '@/types/move';
@@ -41,7 +41,7 @@ export default function MoveListCard({
                 <TableHead className='w-1/12'>Type</TableHead>
                 <TableHead className='w-2/12'>Cat.</TableHead>
                 <TableHead className='w-2/12'>Att.</TableHead>
-                <TableHead className='w-2/12'>CD</TableHead>
+                <TableHead className='w-2/12'>PP</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -58,7 +58,7 @@ export default function MoveListCard({
                         />
                       </div>
                     </TableCell>
-                    <TableCell>{move.tm ? move.tm.toString().padStart(3, '0') : '—'}</TableCell>
+                    <TableCell>{move.tm || '—'}</TableCell>
                     <TableCell>
                       <a
                         href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
@@ -81,7 +81,7 @@ export default function MoveListCard({
                       </div>
                     </TableCell>
                     <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
-                    <TableCell>{move.cooldown}</TableCell>
+                    <TableCell>{move.pp}</TableCell>
                   </MoveRow>
                 );
               })}

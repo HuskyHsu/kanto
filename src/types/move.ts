@@ -6,8 +6,8 @@ export interface Move {
   type: string;
   category: 'Physical' | 'Special' | 'Status';
   power: number;
-  cooldown: number;
-  tm?: number;
+  pp: number;
+  tm?: string | number;
 }
 
 export type MoveList = Move[];

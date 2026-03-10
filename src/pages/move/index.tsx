@@ -1,9 +1,9 @@
+import PageViewToggle from '@/components/PageViewToggle';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
 import { useMoveData } from '@/hooks/useMoveData';
 import { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { MoveFilter, MoveListCard } from './components';
+import { MoveFilter, MoveListCard, PageHeader } from './components';
 import MoveIntersectionResult from './components/MoveIntersectionResult';
 
 export default function MoveList() {
@@ -22,7 +22,21 @@ export default function MoveList() {
     });
 
     if (isTM) {
-      result = result.sort((a, b) => (a.tm || 0) - (b.tm || 0));
+      result = result.sort((a, b) => {
+        const aIsHM = a.tm?.toString().includes('秘傳');
+        const bIsHM = b.tm?.toString().includes('秘傳');
+
+        if (aIsHM && !bIsHM) {
+          return -1;
+        }
+        if (!aIsHM && bIsHM) {
+          return 1;
+        }
+
+        const aNum = parseInt(a.tm?.toString().replace('秘傳', '') || '0', 10);
+        const bNum = parseInt(b.tm?.toString().replace('秘傳', '') || '0', 10);
+        return aNum - bNum;
+      });
     }
 
     return result;
@@ -54,14 +68,8 @@ export default function MoveList() {
 
   return (
     <div className='space-y-6'>
-      <h1 className='flex items-end gap-2 text-3xl font-bold'>
-        <img
-          src={`${import.meta.env.BASE_URL}images/appIcon/mega_symbol.svg`}
-          className='w-8 h-8'
-        />
-        <Link to={`/`}>Move List</Link>
-      </h1>
-      {/* <PageViewToggle /> */}
+      <PageHeader />
+      <PageViewToggle />
 
       <MoveIntersectionResult selectedMoveIds={selectedMoveIds} onRemoveMove={handleToggleMove} />
 

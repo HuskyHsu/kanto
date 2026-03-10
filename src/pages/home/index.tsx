@@ -1,20 +1,17 @@
-import { PokemonCard } from '@/components/pokemon';
-import ErrorMessage from '@/components/ui/ErrorMessage';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
-
+import PageViewToggle from '@/components/PageViewToggle';
 import { useAbilityToggle } from '@/hooks/useAbilityToggle';
 import { useEVToggle } from '@/hooks/useEVToggle';
 import { usePokemonData } from '@/hooks/usePokemonData';
 import { usePokemonFilter } from '@/hooks/usePokemonFilter';
 import { useShinyToggle } from '@/hooks/useShinyToggle';
-import type { PokemonList } from '@/types/pokemon';
-import { memo, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import {
   AbilityToggle,
   EVFilter,
   EVToggle,
   FinalFormToggle,
+  PageContent,
+  PageHeader,
   PokedexToggle,
   SearchFilter,
   ShinyToggle,
@@ -47,7 +44,7 @@ function Home() {
   return (
     <div className='space-y-6'>
       <PageHeader />
-      {/* <PageViewToggle /> */}
+      <PageViewToggle />
       <PokedexToggle selectedPokedex={selectedPokedex} onPokedexChange={setSelectedPokedex} />
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
@@ -69,89 +66,5 @@ function Home() {
     </div>
   );
 }
-
-function PageHeader() {
-  return (
-    <h1 className='flex items-center gap-2 text-2xl font-bold'>
-      <img
-        src={`${import.meta.env.BASE_URL}images/logo.png`}
-        className='w-16 h-16 md:w-20 md:h-20'
-      />
-      <Link
-        to={`/`}
-        className='font-press-start text-base md:text-xl tracking-tighter text-slate-700'
-      >
-        FireRed & LeafGreen Pokédex
-      </Link>
-    </h1>
-  );
-}
-
-interface PageContentProps {
-  loading: boolean;
-  error: string | null;
-  pokemonList: PokemonList;
-  isShiny: boolean;
-  isShowEV: boolean;
-  isShowAbility: boolean;
-}
-
-function PageContent({
-  loading,
-  error,
-  pokemonList,
-  isShiny,
-  isShowEV,
-  isShowAbility,
-}: PageContentProps) {
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-
-  if (error) {
-    return <ErrorMessage message={error} />;
-  }
-
-  return (
-    <PokemonGrid
-      pokemonList={pokemonList}
-      isShiny={isShiny}
-      isShowEV={isShowEV}
-      isShowAbility={isShowAbility}
-    />
-  );
-}
-
-interface PokemonGridProps {
-  pokemonList: PokemonList;
-  isShiny: boolean;
-  isShowEV: boolean;
-  isShowAbility: boolean;
-}
-
-const PokemonGrid = memo(function PokemonGrid({
-  pokemonList,
-  isShiny,
-  isShowEV,
-  isShowAbility,
-}: PokemonGridProps) {
-  return (
-    <div className='mt-6 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 justify-items-center gap-x-3 gap-y-6 text-slate-800 transition-all duration-200 ease-in-out'>
-      {pokemonList
-        .sort((a, b) => {
-          return a.pid - b.pid;
-        })
-        .map((pokemon) => (
-          <PokemonCard
-            key={pokemon.pid}
-            pokemon={pokemon}
-            isShiny={isShiny}
-            isShowEV={isShowEV}
-            isShowAbility={isShowAbility}
-          />
-        ))}
-    </div>
-  );
-});
 
 export default Home;

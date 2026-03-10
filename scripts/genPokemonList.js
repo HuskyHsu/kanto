@@ -663,6 +663,25 @@ const main = async () => {
   await fs.writeFile(`${outDir}/pokemonList.json`, JSON.stringify(basicInfoList));
   console.log(`Saved ${outDir}/pokemonList.json`);
 
+  const basicMoveList = Array.from(allMovesData.values()).map(move => {
+    let tmMark;
+    if (TMMap && move.name && move.name.zh) {
+      tmMark = TMMap[move.name.zh];
+    }
+    return {
+      id: move.id,
+      name: move.name,
+      type: move.type,
+      category: move.category,
+      power: move.power,
+      accuracy: move.accuracy,
+      pp: move.pp,
+      ...(tmMark ? { tm: tmMark } : {})
+    };
+  }).sort((a, b) => a.id - b.id);
+  await fs.writeFile(`${outDir}/moveList.json`, JSON.stringify(basicMoveList));
+  console.log(`Saved ${outDir}/moveList.json`);
+
   const moveOutDir = 'public/data/move';
   await fs.mkdir(moveOutDir, { recursive: true });
   for (const move of allMovesData.values()) {

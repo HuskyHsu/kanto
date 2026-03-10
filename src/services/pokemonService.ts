@@ -39,7 +39,7 @@ export const fetchMoveData = async (
 };
 
 export const fetchMoveList = async (): Promise<MoveList> => {
-  const response = await fetch(`${HOST}/data/base_move_list_200.json`);
+  const response = await fetch(`${HOST}/data/moveList.json`);
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }

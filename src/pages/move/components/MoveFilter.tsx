@@ -1,5 +1,28 @@
 import { PokemonTypes } from '@/components/pokemon';
+import { POKEMON_TYPES } from '@/lib/constants/pokemon';
 import { cn } from '@/lib/utils';
+
+export const categoryMap = {
+  water: 'Special',
+  grass: 'Special',
+  fire: 'Special',
+  ice: 'Special',
+  electric: 'Special',
+  psychic: 'Special',
+  dragon: 'Special',
+  dark: 'Special',
+
+  fighting: 'Physical',
+  poison: 'Physical',
+  ground: 'Physical',
+  flying: 'Physical',
+  bug: 'Physical',
+  rock: 'Physical',
+  ghost: 'Physical',
+  steel: 'Physical',
+  fairy: 'Physical',
+  normal: 'Physical',
+} as const;
 
 interface MoveFilterProps {
   selectedType: string | null;
@@ -18,27 +41,14 @@ export default function MoveFilter({
   isTM,
   onTMChange,
 }: MoveFilterProps) {
-  // All 18 Pokemon types
-  const allTypes = [
-    'Normal',
-    'Fire',
-    'Water',
-    'Electric',
-    'Grass',
-    'Ice',
-    'Fighting',
-    'Poison',
-    'Ground',
-    'Flying',
-    'Psychic',
-    'Bug',
-    'Rock',
-    'Ghost',
-    'Dragon',
-    'Dark',
-    'Steel',
-    'Fairy',
-  ];
+  // All 18 Pokemon types mapped by physical/special
+  const physicalTypes = POKEMON_TYPES.filter(
+    (type) => categoryMap[type.toLowerCase() as keyof typeof categoryMap] === 'Physical'
+  );
+  const specialTypes = POKEMON_TYPES.filter(
+    (type) => categoryMap[type.toLowerCase() as keyof typeof categoryMap] === 'Special'
+  );
+
 
   const categories = ['Physical', 'Special', 'Status'];
 
@@ -52,33 +62,72 @@ export default function MoveFilter({
 
   return (
     <div className='mb-6 space-y-4'>
-      <h2 className='text-lg font-semibold text-slate-700 mb-2 flex items-center'>
-        <img src={`${import.meta.env.BASE_URL}images/type/Move.png`} className='w-6 h-6 mr-2' />
+      <h2 className='-ml-2 text-sm font-semibold text-slate-700 mb-2 flex items-center font-press-start'>
+        <img
+          src={`${import.meta.env.BASE_URL}images/type/Move_.png`}
+          className='w-10 h-10'
+        />
         Type Filter
       </h2>
-      <div className='flex flex-wrap gap-2 items-center'>
-        {allTypes.map((type) => {
-          const isSelected = selectedType === type;
-          const shouldFade = selectedType !== null && !isSelected;
+      <div className='flex flex-col gap-3'>
+        <div className='flex flex-wrap gap-2 items-center'>
+          <div className='w-full sm:w-20 shrink-0 text-xs font-semibold text-slate-500 font-press-start flex items-center gap-1 opacity-70' title='Physical'>
+            <PokemonTypes types={['Physical']} className='w-6 h-6' />
+            <span className='scale-75 origin-left'>Physical</span>
+          </div>
+          {physicalTypes.map((type) => {
+            const isSelected = selectedType === type;
+            const shouldFade = selectedType !== null && !isSelected;
 
-          return (
-            <button
-              key={type}
-              onClick={() => toggleType(type)}
-              className={cn(
-                'flex items-center justify-center rounded-lg transition-all duration-100',
-                shouldFade ? 'opacity-30' : 'opacity-100',
-                'hover:scale-110 active:scale-90',
-              )}
-              title={type}
-            >
-              <PokemonTypes types={[type]} className='w-8 h-8' />
-            </button>
-          );
-        })}
+            return (
+              <button
+                key={type}
+                onClick={() => toggleType(type)}
+                className={cn(
+                  'flex items-center justify-center rounded-lg transition-all duration-100',
+                  shouldFade ? 'opacity-30' : 'opacity-100',
+                  'hover:scale-110 active:scale-90',
+                )}
+                title={type}
+              >
+                <PokemonTypes types={[type]} className='w-8 h-8' />
+              </button>
+            );
+          })}
+        </div>
+
+        <div className='flex flex-wrap gap-2 items-center'>
+          <div className='w-full sm:w-20 shrink-0 text-xs font-semibold text-slate-500 font-press-start flex items-center gap-1 opacity-70' title='Special'>
+            <PokemonTypes types={['Special']} className='w-6 h-6' />
+            <span className='scale-75 origin-left'>Special</span>
+          </div>
+          {specialTypes.map((type) => {
+            const isSelected = selectedType === type;
+            const shouldFade = selectedType !== null && !isSelected;
+
+            return (
+              <button
+                key={type}
+                onClick={() => toggleType(type)}
+                className={cn(
+                  'flex items-center justify-center rounded-lg transition-all duration-100',
+                  shouldFade ? 'opacity-30' : 'opacity-100',
+                  'hover:scale-110 active:scale-90',
+                )}
+                title={type}
+              >
+                <PokemonTypes types={[type]} className='w-8 h-8' />
+              </button>
+            );
+          })}
+        </div>
       </div>
-      <h2 className='text-lg font-semibold text-slate-700 mb-2 flex items-center'>
-        <img src={`${import.meta.env.BASE_URL}images/type/Move.png`} className='w-6 h-6 mr-2' />
+
+      <h2 className='-ml-2 text-sm font-semibold text-slate-700 mb-2 flex items-center font-press-start'>
+        <img
+          src={`${import.meta.env.BASE_URL}images/type/Move_.png`}
+          className='w-10 h-10'
+        />
         Category Filter
       </h2>
       <div className='flex flex-wrap gap-2 items-center'>
@@ -104,29 +153,31 @@ export default function MoveFilter({
         })}
       </div>
 
-      <div className='flex gap-2 items-center mt-4'>
+      <div className='flex gap-3 items-center font-press-start'>
         <div className='flex flex-col justify-center h-10'>
           <button
             type='button'
             onClick={() => onTMChange(!isTM)}
             className={cn(
-              'relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ease-in-out',
-              'focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
-              isTM ? 'bg-green-600' : 'bg-slate-300',
+              'relative inline-flex h-6 w-10 items-center border-2 border-[#34925e] rounded-md',
+              'transition-colors duration-100 ease-linear cursor-pointer',
+              'focus:outline-none shadow-[2px_2px_0_0_rgba(52,146,94,0.3)]',
+              isTM ? 'bg-[#34925e]' : 'bg-white',
             )}
             role='switch'
             aria-checked={isTM}
           >
             <span
               className={cn(
-                'inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ease-in-out',
-                isTM ? 'translate-x-6' : 'translate-x-1',
+                'inline-block h-[14px] w-[14px] transform transition-transform duration-100 ease-linear rounded-xs',
+                isTM ? 'translate-x-[18px] bg-white' : 'translate-x-[4px] bg-[#34925e]',
               )}
             />
           </button>
         </div>
-        <span className='font-semibold text-slate-700'>TM</span>
+        <span className='text-[10px] text-slate-700 font-semibold Kantoleading-none'>TM</span>
       </div>
+
     </div>
   );
 }
