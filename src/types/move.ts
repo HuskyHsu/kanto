@@ -6,6 +6,7 @@ export interface Move {
   type: string;
   category: 'Physical' | 'Special' | 'Status';
   power: number;
+  accuracy?: number;
   pp: number;
   tm?: string | number;
 }

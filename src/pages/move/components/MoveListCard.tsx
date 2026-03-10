@@ -37,13 +37,14 @@ export default function MoveListCard({
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className='w-1/12'>✓</TableHead>
-                <TableHead className='w-3/12'>TM</TableHead>
-                <TableHead className='w-4/12'>Name</TableHead>
-                <TableHead className='w-1/12'>Type</TableHead>
-                <TableHead className='w-1/12'>Cat.</TableHead>
-                <TableHead className='w-1/12'>Att.</TableHead>
-                <TableHead className='w-1/12'>PP</TableHead>
+                <TableHead className='px-0 w-1/12 min-w-[40px]'>✓</TableHead>
+                <TableHead className='px-0 w-2/12'>TM</TableHead>
+                <TableHead className='px-0 w-4/12'>Name</TableHead>
+                <TableHead className='px-1 w-1/12'>Type</TableHead>
+                <TableHead className='px-1 w-1/12'>Cat.</TableHead>
+                <TableHead className='px-1 w-1/12'>Att.</TableHead>
+                <TableHead className='px-1 w-1/12'>Acc.</TableHead>
+                <TableHead className='px-1 w-1/12'>PP</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -51,7 +52,7 @@ export default function MoveListCard({
                 const isSelected = selectedMoveIds.includes(move.id);
                 return (
                   <MoveRow key={move.id} moveId={move.id} colSpan={7}>
-                    <TableCell onClick={(e) => e.stopPropagation()}>
+                    <TableCell className='px-0' onClick={(e) => e.stopPropagation()}>
                       <div className='flex justify-center'>
                         <Checkbox
                           checked={isSelected}
@@ -74,18 +75,19 @@ export default function MoveListCard({
                       <br />
                       {displayLanguage === 'ja' ? move.name.ja : move.name.en}
                     </TableCell>
-                    <TableCell>
+                    <TableCell className='px-0'>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[move.type]} />
                       </div>
                     </TableCell>
-                    <TableCell>
+                    <TableCell className='px-0'>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[move.category]} />
                       </div>
                     </TableCell>
-                    <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
-                    <TableCell>{move.pp}</TableCell>
+                    <TableCell className='px-0'>{move.power <= 0 ? '—' : move.power}</TableCell>
+                    <TableCell className='px-0'>{move.accuracy ?? '—'}</TableCell>
+                    <TableCell className='px-0'>{move.pp}</TableCell>
                   </MoveRow>
                 );
               })}
