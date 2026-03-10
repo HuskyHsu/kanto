@@ -103,7 +103,7 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
         <h5 className='font-semibold text-sm mb-3 text-muted-foreground uppercase tracking-wider pl-1'>
           {source} <span className='text-xs opacity-70'>({list.length})</span>
         </h5>
-        <div className='flex flex-wrap gap-x-2 gap-y-4'>
+        <div className='flex flex-wrap gap-x-2 gap-y-4 justify-center'>
           {list.map((pm, idx) => (
             <PokemonIconLink
               key={`${pm.pid}-${idx}`}

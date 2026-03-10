@@ -2,13 +2,14 @@ import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from '@/components/ui/table';
+import { useLanguage } from '@/contexts/LanguageContext';
 import MoveRow from '@/pages/pokemon/components/MoveRow';
 import type { MoveList } from '@/types/move';
 
@@ -23,6 +24,7 @@ export default function MoveListCard({
   selectedMoveIds,
   onToggleMove,
 }: MoveListCardProps) {
+  const { displayLanguage } = useLanguage();
   const isSelectionFull = selectedMoveIds.length >= 6;
 
   return (
@@ -35,13 +37,13 @@ export default function MoveListCard({
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className='w-[50px]'>Select</TableHead>
-                <TableHead className='w-2/12'>TM</TableHead>
-                <TableHead className='w-3/12'>Name</TableHead>
+                <TableHead className='w-1/12'>✓</TableHead>
+                <TableHead className='w-3/12'>TM</TableHead>
+                <TableHead className='w-4/12'>Name</TableHead>
                 <TableHead className='w-1/12'>Type</TableHead>
-                <TableHead className='w-2/12'>Cat.</TableHead>
-                <TableHead className='w-2/12'>Att.</TableHead>
-                <TableHead className='w-2/12'>PP</TableHead>
+                <TableHead className='w-1/12'>Cat.</TableHead>
+                <TableHead className='w-1/12'>Att.</TableHead>
+                <TableHead className='w-1/12'>PP</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -58,8 +60,8 @@ export default function MoveListCard({
                         />
                       </div>
                     </TableCell>
-                    <TableCell>{move.tm || '—'}</TableCell>
-                    <TableCell>
+                    <TableCell className='px-0'>{move.tm || '—'}</TableCell>
+                    <TableCell className='px-0'>
                       <a
                         href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
                         target='_blank'
@@ -69,6 +71,8 @@ export default function MoveListCard({
                       >
                         {move.name.zh}
                       </a>
+                      <br />
+                      {displayLanguage === 'ja' ? move.name.ja : move.name.en}
                     </TableCell>
                     <TableCell>
                       <div className='flex justify-center'>
