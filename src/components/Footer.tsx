@@ -1,6 +1,6 @@
 import { ReleaseNotesModal } from '@/components/ReleaseNotesModal';
 import { useManualReleaseChecker } from '@/hooks/useManualReleaseChecker';
-import { ExternalLink, FileText, Github } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 export const Footer = () => {
   const { releases, showModal, isLoading, checkRelease, closeModal } = useManualReleaseChecker();
@@ -33,15 +33,6 @@ export const Footer = () => {
 
             {/* Center - Links */}
             <div className='flex items-center gap-6 text-sm'>
-              <button
-                onClick={checkRelease}
-                disabled={isLoading}
-                className='flex items-center gap-1 text-[#134e4a] hover:text-[#0d9488] transition-colors disabled:opacity-50 cursor-pointer'
-              >
-                <FileText size={16} />
-                {isLoading ? 'Loading...' : 'Release Notes'}
-              </button>
-
               <a
                 href='https://github.com/HuskyHsu/kanto'
                 target='_blank'

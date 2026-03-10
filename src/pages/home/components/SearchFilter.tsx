@@ -105,9 +105,9 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
   }, []);
 
   return (
-    <div className='mb-4 font-press-start'>
+    <div className='mb-4'>
       <div className='flex items-center justify-between mb-2'>
-        <h2 className='-ml-2 flex items-center text-sm font-semibold text-slate-700'>
+        <h2 className='-ml-2 flex items-center text-sm font-semibold text-slate-700 font-press-start'>
           <img
             src={`${import.meta.env.BASE_URL}images/type/PokemonBall_.png`}
             className='w-10 h-10'
@@ -141,10 +141,10 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
           onCompositionEnd={handleCompositionEnd}
           placeholder='Name, Ability, or ID...'
           className='
-            w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg
+            w-full pl-10 pr-10 py-2 border-gray-300 rounded-lg
             focus:ring-2 focus:ring-blue-500 focus:border-blue-500
-            transition-colors duration-200 outline-none
-            bg-white text-slate-700 placeholder-gray-400 text-[10px] tracking-tighter
+            outline-none font-medium
+            bg-white text-gray-700 placeholder-gray-400 tracking-tighter
           '
         />
         {inputValue && (
