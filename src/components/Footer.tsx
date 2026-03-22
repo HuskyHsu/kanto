@@ -3,7 +3,7 @@ import { useManualReleaseChecker } from '@/hooks/useManualReleaseChecker';
 import { ExternalLink, Github } from 'lucide-react';
 
 export const Footer = () => {
-  const { releases, showModal, isLoading, checkRelease, closeModal } = useManualReleaseChecker();
+  const { releases, showModal, closeModal } = useManualReleaseChecker();
 
   return (
     <>
