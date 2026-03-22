@@ -57,7 +57,9 @@ const getMoveData = async (mid) => {
 
   const formattedMove = {
     id: rawData.id,
-    type: rawData.type.name.charAt(0).toUpperCase() + rawData.type.name.slice(1),
+    type: [186, 204, 236].includes(rawData.id)
+      ? 'Normal'
+      : rawData.type.name.charAt(0).toUpperCase() + rawData.type.name.slice(1),
     category: rawData.damage_class.name === 'status' ? 'Status' : categoryMap[rawData.type.name],
     power: rawData.power,
     accuracy: rawData.accuracy,
@@ -263,8 +265,22 @@ const processStats = (rawStats) => {
   );
 };
 
-const processTypes = (rawTypes) => {
-  return rawTypes.map((t) => t.type.name.charAt(0).toUpperCase() + t.type.name.slice(1));
+const processTypes = (pid, rawTypes) => {
+  const types = rawTypes.map((t) => t.type.name.charAt(0).toUpperCase() + t.type.name.slice(1));
+
+  // Gen 3 manual corrections (Fairy type didn't exist)
+  if ([35, 36, 173].includes(pid)) return ['Normal']; // Clefairy, Clefable, Cleffa
+  if ([39, 40, 174].includes(pid)) return ['Normal']; // Jigglypuff, Wigglytuff, Igglybuff
+  if (pid === 122) return ['Psychic']; // Mr. Mime
+  if (pid === 175) return ['Normal']; // Togepi
+  if (pid === 176) return ['Normal', 'Flying']; // Togetic
+  if ([183, 184].includes(pid)) return ['Water']; // Marill, Azumarill
+  if (pid === 298) return ['Normal']; // Azurill
+  if ([209, 210].includes(pid)) return ['Normal']; // Snubbull, Granbull
+  if ([280, 281, 282].includes(pid)) return ['Psychic']; // Ralts, Kirlia, Gardevoir
+  if (pid === 303) return ['Steel']; // Mawile
+
+  return types;
 };
 
 const processSpecies = async (speciesData) => {
@@ -296,7 +312,7 @@ const buildEvolutionTree = async (node) => {
   const pokemonData = await getPokemonData(pid);
 
   const speciesProcessed = await processSpecies(speciesData);
-  const types = processTypes(pokemonData.types);
+  const types = processTypes(pid, pokemonData.types);
 
   const result = {
     pid: pid,
@@ -404,7 +420,7 @@ const processPokemon = async (pid) => {
   const moveMap = await processMoves(data.moves);
   const abilities = await processAbilities(data.abilities);
   const stats = processStats(data.stats);
-  const types = processTypes(data.types);
+  const types = processTypes(pid, data.types);
   const species = await processSpecies(speciesData);
 
   const findValidEvolutionRoot = (node) => {
