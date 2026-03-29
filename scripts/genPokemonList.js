@@ -61,7 +61,7 @@ const getMoveData = async (mid) => {
       ? 'Normal'
       : rawData.type.name.charAt(0).toUpperCase() + rawData.type.name.slice(1),
     category: rawData.damage_class.name === 'status' ? 'Status' : categoryMap[rawData.type.name],
-    power: rawData.power,
+    power: rawData.id === 91 ? 60 : rawData.power,
     accuracy: rawData.accuracy,
     pp: rawData.pp,
     name: {
