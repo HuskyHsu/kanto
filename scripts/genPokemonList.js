@@ -512,6 +512,12 @@ const main = async () => {
     return pids;
   };
 
+  // Snapshot native level-up moves for each pokemon before inheritance
+  const nativeLevelUpMovesMap = new Map();
+  for (const [pid, pm] of pmMap.entries()) {
+    nativeLevelUpMovesMap.set(pid, (pm.levelUpMoves || []).map((m) => ({ ...m })));
+  }
+
   const processedChains = new Set();
   for (const pm of pmMap.values()) {
     if (!pm.evolution) continue;
@@ -541,87 +547,110 @@ const main = async () => {
     }
 
     // 2. Propagate levelUpMoves, TMMoves, HTMMoves, tutorMoves down the evolution tree
-    const propagateMovesDown = (node, parentPm) => {
+    const propagateMovesDown = (node, ancestors = []) => {
       const currentPm = pmMap.get(node.pid);
-      if (currentPm && parentPm) {
-        // Inherit levelUpMoves
-        if (parentPm.levelUpMoves) {
-          const existingIds = new Set(currentPm.levelUpMoves.map((m) => m.id));
-          for (const m of parentPm.levelUpMoves) {
-            if (!existingIds.has(m.id)) {
-              const newLevel = m.level > 0 ? -m.level : m.level;
-              currentPm.levelUpMoves.push({
-                ...m,
-                level: newLevel,
-                isPreEvo: true,
-                preEvoName: m.preEvoName || parentPm.name,
-              });
+      if (currentPm) {
+        if (ancestors.length > 0) {
+          // 2a. Match preEvoLevels for currentPm's native levelUpMoves
+          for (const move of currentPm.levelUpMoves) {
+            const preEvoLevels = [];
+            for (const anc of ancestors) {
+              const ancNative = nativeLevelUpMovesMap.get(anc.pid) || [];
+              const found = ancNative.find((am) => am.id === move.id);
+              if (found) {
+                preEvoLevels.push({
+                  pid: anc.pid,
+                  name: anc.name,
+                  level: found.level,
+                });
+              }
+            }
+            if (preEvoLevels.length > 0) {
+              move.preEvoLevels = preEvoLevels;
             }
           }
+
+          // 2b. Collect moves only learned by ancestors
+          const currentMoveIds = new Set(currentPm.levelUpMoves.map((m) => m.id));
+          const ancestorOnlyMoves = new Map();
+
+          for (const anc of ancestors) {
+            const ancNative = nativeLevelUpMovesMap.get(anc.pid) || [];
+            for (const am of ancNative) {
+              if (!currentMoveIds.has(am.id)) {
+                if (!ancestorOnlyMoves.has(am.id)) {
+                  ancestorOnlyMoves.set(am.id, {
+                    template: am,
+                    preEvoLevels: [],
+                    lastLearnedLevel: am.level,
+                    lastLearnedPm: anc,
+                  });
+                }
+                const record = ancestorOnlyMoves.get(am.id);
+                record.preEvoLevels.push({
+                  pid: anc.pid,
+                  name: anc.name,
+                  level: am.level,
+                });
+                record.lastLearnedLevel = am.level;
+                record.lastLearnedPm = anc;
+              }
+            }
+          }
+
+          for (const [, info] of ancestorOnlyMoves.entries()) {
+            const levelVal = info.lastLearnedLevel > 0 ? -info.lastLearnedLevel : info.lastLearnedLevel;
+            currentPm.levelUpMoves.push({
+              ...info.template,
+              level: levelVal,
+              isPreEvo: true,
+              preEvoName: info.lastLearnedPm.name,
+              preEvoLevels: info.preEvoLevels,
+            });
+          }
+
           currentPm.levelUpMoves.sort((a, b) => Math.abs(a.level) - Math.abs(b.level));
-        }
 
-        // Inherit TMMoves
-        if (parentPm.TMMoves) {
-          const existingIds = new Set(currentPm.TMMoves.map((m) => m.id));
-          for (const m of parentPm.TMMoves) {
-            if (!existingIds.has(m.id)) {
-              currentPm.TMMoves.push({
-                ...m,
-                isPreEvo: true,
-                preEvoName: m.preEvoName || parentPm.name,
-              });
+          // 2c. Inherit TMMoves, HTMMoves, tutorMoves across ancestors
+          const inheritOtherMoves = (field, sortFn) => {
+            const existingIds = new Set(currentPm[field].map((m) => m.id));
+            for (const anc of ancestors) {
+              const ancMoves = anc[field] || [];
+              for (const m of ancMoves) {
+                if (!existingIds.has(m.id)) {
+                  existingIds.add(m.id);
+                  currentPm[field].push({
+                    ...m,
+                    isPreEvo: true,
+                    preEvoName: m.preEvoName || anc.name,
+                  });
+                }
+              }
             }
-          }
-          currentPm.TMMoves.sort((a, b) => {
-            const aNum = parseInt(a.tm) || 0;
-            const bNum = parseInt(b.tm) || 0;
-            return aNum - bNum;
-          });
-        }
+            if (sortFn) {
+              currentPm[field].sort(sortFn);
+            }
+          };
 
-        // Inherit HTMMoves
-        if (parentPm.HTMMoves) {
-          const existingIds = new Set(currentPm.HTMMoves.map((m) => m.id));
-          for (const m of parentPm.HTMMoves) {
-            if (!existingIds.has(m.id)) {
-              currentPm.HTMMoves.push({
-                ...m,
-                isPreEvo: true,
-                preEvoName: m.preEvoName || parentPm.name,
-              });
-            }
-          }
-          currentPm.HTMMoves.sort((a, b) => {
+          inheritOtherMoves('TMMoves', (a, b) => (parseInt(a.tm) || 0) - (parseInt(b.tm) || 0));
+          inheritOtherMoves('HTMMoves', (a, b) => {
             const aNum = parseInt(a.tm?.replace('秘傳', '')) || 0;
             const bNum = parseInt(b.tm?.replace('秘傳0', '')) || 0;
             return aNum - bNum;
           });
+          inheritOtherMoves('tutorMoves');
         }
 
-        // Inherit tutorMoves
-        if (parentPm.tutorMoves) {
-          const existingIds = new Set(currentPm.tutorMoves.map((m) => m.id));
-          for (const m of parentPm.tutorMoves) {
-            if (!existingIds.has(m.id)) {
-              currentPm.tutorMoves.push({
-                ...m,
-                isPreEvo: true,
-                preEvoName: m.preEvoName || parentPm.name,
-              });
-            }
+        if (node.to) {
+          const nextAncestors = [...ancestors, currentPm];
+          for (const child of node.to) {
+            propagateMovesDown(child, nextAncestors);
           }
-        }
-      }
-
-      if (node.to) {
-        for (const child of node.to) {
-          propagateMovesDown(child, currentPm || parentPm);
         }
       }
     };
 
-    propagateMovesDown(pm.evolution, null);
+    propagateMovesDown(pm.evolution, []);
   }
 
   const basicInfoList = [];

@@ -78,6 +78,13 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
     setSelectedCategory((prev) => (prev === category ? null : category));
   };
 
+  const getLocalizedName = (name?: { zh: string; ja: string; en: string }) => {
+    if (!name) return '';
+    if (displayLanguage === 'ja') return name.ja;
+    if (displayLanguage === 'en') return name.en;
+    return name.zh;
+  };
+
   return (
     <Card className='lg:col-span-2 border-[3px] border-[#34925e] rounded-[10px] bg-white shadow-none'>
       <CardHeader>
@@ -142,7 +149,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-2/12 min-w-[60px]'>Lv</TableHead>
+                  <TableHead className='w-2/12 min-w-[65px]'>Lv</TableHead>
                   <TableHead className='w-3/12'>Name</TableHead>
                   <TableHead className='w-2/12'>Type</TableHead>
                   <TableHead className='w-2/12'>Cat.</TableHead>
@@ -153,22 +160,104 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
               </TableHeader>
               <TableBody>
                 {pokemon.levelUpMoves.filter(filterMove).map((move) => {
+                  const isPreEvoOnly = Boolean(move.isPreEvo || move.level < 0);
+                  const hasUsefulPreEvo =
+                    Boolean(move.preEvoLevels && move.preEvoLevels.length > 0) &&
+                    !(move.level === 1 && move.preEvoLevels?.every((p) => p.level === 1));
+
                   let from: React.ReactNode = '—';
-                  if (move.level < 0) {
+
+                  if (isPreEvoOnly) {
                     from = (
-                      <div className='flex flex-col text-[10px] leading-tight text-slate-500 font-bold font-sans'>
-                        <span>{move.preEvoName?.zh}</span>
-                        <span>Lv.{Math.abs(move.level)}</span>
+                      <div className='flex flex-col items-center justify-center gap-1 py-1 text-[10px] leading-tight font-sans text-slate-600'>
+                        {move.preEvoLevels && move.preEvoLevels.length > 0 ? (
+                          move.preEvoLevels.map((p) => (
+                            <span
+                              key={p.pid}
+                              className='inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-100/80 text-amber-950 border border-amber-300 whitespace-nowrap shadow-xs'
+                              title={`${p.name.zh} / ${p.name.ja} / ${p.name.en} Lv.${p.level}`}
+                            >
+                              <img
+                                src={`${import.meta.env.BASE_URL}images/pmIcon/${p.pid}.png`}
+                                alt={p.name.zh}
+                                className='w-5 h-5 shrink-0 [image-rendering:pixelated]'
+                              />
+                              <span className='font-bold text-amber-900'>Lv.{p.level}</span>
+                            </span>
+                          ))
+                        ) : (
+                          <span className='inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-100/80 text-amber-950 border border-amber-300 whitespace-nowrap font-semibold'>
+                            <span className='font-bold text-amber-900'>Lv.{Math.abs(move.level)}</span>
+                          </span>
+                        )}
                       </div>
                     );
-                  } else if (move.level > 1) {
-                    from = move.level;
-                  } else if (move.level === 0) {
-                    from = 'Evolve';
+                  } else {
+                    let currentLv: React.ReactNode = '—';
+                    if (move.level === 0) {
+                      currentLv = 'Evolve';
+                    } else if (move.level > 1) {
+                      currentLv = move.level;
+                    }
+
+                    from = (
+                      <div className='flex flex-col items-center justify-center py-1 gap-1'>
+                        <span
+                          className={cn(
+                            'font-bold text-sm font-sans',
+                            move.level === 0 ? 'text-emerald-700 text-xs' : 'text-slate-800',
+                          )}
+                        >
+                          {currentLv}
+                        </span>
+                        {hasUsefulPreEvo && move.preEvoLevels && (
+                          <div className='flex flex-col gap-1 text-[10px] leading-tight font-sans mt-0.5'>
+                            {move.preEvoLevels.map((p) => {
+                              const isEarlier =
+                                move.level > 1 && p.level > 1 && p.level < move.level;
+                              return (
+                                <span
+                                  key={p.pid}
+                                  className={cn(
+                                    'inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-sans font-medium whitespace-nowrap shadow-xs',
+                                    isEarlier
+                                      ? 'bg-emerald-50 text-emerald-800 border border-emerald-300 font-semibold'
+                                      : 'bg-slate-100 text-slate-600 border border-slate-200',
+                                  )}
+                                  title={
+                                    isEarlier
+                                      ? `${p.name.zh} 比目前形態早 ${move.level - p.level} 等學會`
+                                      : `${p.name.zh} Lv.${p.level}`
+                                  }
+                                >
+                                  <img
+                                    src={`${import.meta.env.BASE_URL}images/pmIcon/${p.pid}.png`}
+                                    alt={p.name.zh}
+                                    className='w-4 h-4 shrink-0 [image-rendering:pixelated]'
+                                  />
+                                  <span className='font-bold shrink-0'>
+                                    {p.level > 1 ? `Lv.${p.level}` : p.level === 0 ? 'Evolve' : '—'}
+                                  </span>
+                                </span>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    );
                   }
 
                   return (
-                    <MoveRow key={move.id} moveId={move.id} colSpan={7}>
+                    <MoveRow
+                      key={`${move.id}-${move.level}`}
+                      moveId={move.id}
+                      colSpan={7}
+                      className={
+                        isPreEvoOnly
+                          ? 'bg-amber-50/50 hover:bg-amber-100/60 border-l-[3px] border-amber-400'
+                          : undefined
+                      }
+                    >
                       <TableCell className='px-0'>{from}</TableCell>
                       <TableCell className='px-0'>
                         <a
@@ -226,7 +315,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                         move.tm
                       ) : (
                         <div className='flex flex-col text-[10px] leading-tight text-slate-500 font-bold font-sans'>
-                          <span>{move.preEvoName?.zh}</span>
+                          <span>{getLocalizedName(move.preEvoName)}</span>
                           <span>{move.tm}</span>
                         </div>
                       )}
@@ -435,7 +524,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                       {displayLanguage === 'ja' ? move.name.ja : move.name.en}
                       {move.isPreEvo && (
                         <div className='text-[10px] leading-tight text-slate-500 font-bold font-sans mt-1'>
-                          ({move.preEvoName?.zh} 教授)
+                          ({getLocalizedName(move.preEvoName)} 教授)
                         </div>
                       )}
                     </TableCell>

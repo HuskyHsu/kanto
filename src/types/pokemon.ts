@@ -32,8 +32,15 @@ export interface PokemonMove {
   preEvoName?: LanguageName;
 }
 
+export interface PreEvoLevel {
+  pid: number;
+  name: LanguageName;
+  level: number;
+}
+
 export interface LevelUpMove extends PokemonMove {
   level: number;
+  preEvoLevels?: PreEvoLevel[];
 }
 
 export interface TMMove extends PokemonMove {
