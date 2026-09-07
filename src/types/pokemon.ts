@@ -73,6 +73,7 @@ export interface DetailedPokemon extends Pokemon {
   eggMoves: PokemonMove[];
   tutorMoves: PokemonMove[];
   evolution?: EvolutionNode;
+  encounters?: import('./location').PokemonLocationEncounter[];
 }
 
 // Type weakness related types

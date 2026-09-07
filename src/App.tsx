@@ -3,6 +3,7 @@ import MainLayout from '@/layouts/MainLayout';
 import { Route, Routes } from 'react-router-dom';
 
 import Home from '@/pages/home';
+import LocationList from '@/pages/locations';
 import MoveList from '@/pages/move';
 import PokemonDetail from '@/pages/pokemon';
 
@@ -20,6 +21,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='pokemon/:link' element={<PokemonDetail />} />
           <Route path='moves' element={<MoveList />} />
+          <Route path='locations' element={<LocationList />} />
         </Route>
       </Routes>
 

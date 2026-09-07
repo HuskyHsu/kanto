@@ -1,8 +1,9 @@
-import { Cat, ChartPie, ChevronDown, ChevronUp, Split, Swords } from 'lucide-react';
+import { Cat, ChartPie, ChevronDown, ChevronUp, Compass, Split, Swords } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 interface QuickNavigationProps {
   hasEvolution: boolean;
+  hasEncounters?: boolean;
 }
 
 interface NavItem {
@@ -11,7 +12,7 @@ interface NavItem {
   icon: React.ComponentType<{ className?: string }>;
 }
 
-const QuickNavigation = ({ hasEvolution }: QuickNavigationProps) => {
+const QuickNavigation = ({ hasEvolution, hasEncounters }: QuickNavigationProps) => {
   const [activeSection, setActiveSection] = useState<string>('basic-info');
   const [isNearBottom, setIsNearBottom] = useState(false);
 
@@ -20,6 +21,7 @@ const QuickNavigation = ({ hasEvolution }: QuickNavigationProps) => {
     { id: 'moves', label: 'Moves', icon: Swords },
     { id: 'stats', label: 'Stats', icon: ChartPie },
     ...(hasEvolution ? [{ id: 'evolution', label: 'Evolution', icon: Split }] : []),
+    ...(hasEncounters ? [{ id: 'encounters', label: 'Encounters', icon: Compass }] : []),
   ];
 
   const scrollToSection = (sectionId: string) => {

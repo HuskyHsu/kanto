@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 import { PokemonIconLink, PokemonTypes } from '@/components/pokemon';
 import { TableCell, TableRow } from '@/components/ui/table';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { TYPE_EFFECTIVENESS_CHART } from '@/lib/constants/typeEffectiveness';
 import { cn } from '@/lib/utils';
 import { getMoveEffectiveness } from '@/lib/utils/typeWeakness';
@@ -18,7 +17,6 @@ interface MoveRowProps {
 }
 
 export default function MoveRow({ moveId, colSpan, className, children }: MoveRowProps) {
-  const { displayLanguage } = useLanguage();
   const [isExpanded, setIsExpanded] = useState(false);
   const [data, setData] = useState<ExpandedMoveData | null>(null);
   const [isLoading, setIsLoading] = useState(false);

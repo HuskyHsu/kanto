@@ -1,4 +1,5 @@
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import { LocationProvider } from '@/contexts/LocationContext';
 import { MoveProvider } from '@/contexts/MoveContext';
 import { PokemonProvider } from '@/contexts/PokemonContext';
 import { StrictMode } from 'react';
@@ -13,7 +14,9 @@ createRoot(document.getElementById('root')!).render(
       <LanguageProvider>
         <PokemonProvider>
           <MoveProvider>
-            <App />
+            <LocationProvider>
+              <App />
+            </LocationProvider>
           </MoveProvider>
         </PokemonProvider>
       </LanguageProvider>

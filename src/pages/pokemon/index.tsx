@@ -11,6 +11,7 @@ import type { DetailedPokemon } from '@/types/pokemon';
 import {
   BackButton,
   BasicInfo,
+  EncountersCard,
   EvolutionCard,
   MovesCard,
   PokemonNavigation,
@@ -140,8 +141,14 @@ function PokemonDetail() {
             <EvolutionCard pokemon={pokemon} onPokemonChange={handlePokemonChange} />
           </div>
         )}
+        <div id='encounters' className='col-span-1 md:col-span-2 order-5'>
+          <EncountersCard pokemon={pokemon} />
+        </div>
       </div>
-      <QuickNavigation hasEvolution={!!pokemon.evolution} />
+      <QuickNavigation
+        hasEvolution={!!pokemon.evolution}
+        hasEncounters={!!pokemon.encounters?.length}
+      />
     </div>
   );
 }
