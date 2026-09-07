@@ -115,6 +115,7 @@ export interface ExpandedMoveData {
   power: number;
   accuracy: number;
   pp: number;
+  description?: LanguageName;
   learnedBy: {
     levelUp: MinimalPokemon[];
     machine: MinimalPokemon[];

@@ -9,6 +9,7 @@ export interface Move {
   accuracy?: number;
   pp: number;
   tm?: string | number;
+  description?: LanguageName;
 }
 
 export type MoveList = Move[];

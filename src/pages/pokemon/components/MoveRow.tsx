@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import { PokemonIconLink, PokemonTypes } from '@/components/pokemon';
 import { TableCell, TableRow } from '@/components/ui/table';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { TYPE_EFFECTIVENESS_CHART } from '@/lib/constants/typeEffectiveness';
 import { cn } from '@/lib/utils';
 import { getMoveEffectiveness } from '@/lib/utils/typeWeakness';
@@ -17,6 +18,7 @@ interface MoveRowProps {
 }
 
 export default function MoveRow({ moveId, colSpan, className, children }: MoveRowProps) {
+  const { displayLanguage } = useLanguage();
   const [isExpanded, setIsExpanded] = useState(false);
   const [data, setData] = useState<ExpandedMoveData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -133,7 +135,7 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
       </TableRow>
       {isExpanded && (
         <TableRow className='bg-muted/30 hover:bg-muted/30'>
-          <TableCell colSpan={colSpan} className='p-4'>
+          <TableCell colSpan={colSpan} className='p-4 text-left whitespace-normal overflow-hidden'>
             {isLoading ? (
               <div className='flex justify-center py-8'>
                 <Loader2 className='w-6 h-6 animate-spin text-muted-foreground' />
@@ -142,6 +144,16 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
               <div className='text-center py-4 text-red-500'>{error}</div>
             ) : data ? (
               <div className='text-left'>
+                {data.description && (
+                  <div className='mb-6 last:mb-0'>
+                    <h5 className='font-semibold text-sm mb-3 text-muted-foreground uppercase tracking-wider pl-1'>
+                      Description
+                    </h5>
+                    <p className='text-sm text-slate-700 leading-relaxed pl-1 whitespace-normal break-words'>
+                      {data.description.zh || data.description.en}
+                    </p>
+                  </div>
+                )}
                 {renderEffectiveness(data.type, data.category)}
                 {renderPokemonList(data.learnedBy?.levelUp, 'Level Up')}
                 {renderPokemonList(data.learnedBy?.machine, 'TM Machine')}

@@ -34,24 +34,24 @@ export default function MoveListCard({
       </CardHeader>
       <CardContent className='px-0 md:px-6'>
         <div className='text-center'>
-          <Table>
+          <Table className='table-fixed w-full'>
             <TableHeader>
               <TableRow>
-                <TableHead className='px-0 w-1/12 min-w-[40px]'>✓</TableHead>
-                <TableHead className='px-0 w-2/12'>TM</TableHead>
-                <TableHead className='px-0 w-4/12'>Name</TableHead>
-                <TableHead className='px-1 w-1/12'>Type</TableHead>
-                <TableHead className='px-1 w-1/12'>Cat.</TableHead>
-                <TableHead className='px-1 w-1/12'>Att.</TableHead>
-                <TableHead className='px-1 w-1/12'>Acc.</TableHead>
-                <TableHead className='px-1 w-1/12'>PP</TableHead>
+                <TableHead className='px-0 w-[40px]'>✓</TableHead>
+                <TableHead className='px-1 w-[65px]'>TM</TableHead>
+                <TableHead className='px-2 w-auto'>Name</TableHead>
+                <TableHead className='px-1 w-[60px]'>Type</TableHead>
+                <TableHead className='px-1 w-[60px]'>Cat.</TableHead>
+                <TableHead className='px-1 w-[48px]'>Att.</TableHead>
+                <TableHead className='px-1 w-[48px]'>Acc.</TableHead>
+                <TableHead className='px-1 w-[48px]'>PP</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {moveList.map((move) => {
                 const isSelected = selectedMoveIds.includes(move.id);
                 return (
-                  <MoveRow key={move.id} moveId={move.id} colSpan={7}>
+                  <MoveRow key={move.id} moveId={move.id} colSpan={8}>
                     <TableCell className='px-0' onClick={(e) => e.stopPropagation()}>
                       <div className='flex justify-center'>
                         <Checkbox

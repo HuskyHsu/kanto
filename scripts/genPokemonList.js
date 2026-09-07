@@ -55,6 +55,28 @@ const getMoveData = async (mid) => {
     `scripts/cache/move/${mid}.json`,
   );
 
+  const cleanFlavorText = (text) => {
+    if (!text) return '';
+    return text.replace(/\xad\s*/g, '-').replace(/[\n\f]+/g, ' ').replace(/\s+/g, ' ').trim();
+  };
+
+  const frlgEntry = rawData.flavor_text_entries?.find(
+    (e) => e.version_group?.name === 'firered-leafgreen' && e.language?.name === 'en',
+  );
+  const fallbackEnEntry = rawData.flavor_text_entries?.find((e) => e.language?.name === 'en');
+  const zhEntry =
+    rawData.flavor_text_entries?.find((e) => e.language?.name === 'zh-hant') ||
+    rawData.flavor_text_entries?.find((e) => e.language?.name === 'zh-hans');
+  const jaEntry =
+    rawData.flavor_text_entries?.find((e) => e.language?.name === 'ja') ||
+    rawData.flavor_text_entries?.find((e) => e.language?.name === 'ja-hrkt');
+
+  const description = {
+    zh: cleanFlavorText(zhEntry?.flavor_text),
+    en: cleanFlavorText(frlgEntry?.flavor_text || fallbackEnEntry?.flavor_text),
+    ja: cleanFlavorText(jaEntry?.flavor_text),
+  };
+
   const formattedMove = {
     id: rawData.id,
     type: [186, 204, 236].includes(rawData.id)
@@ -72,6 +94,7 @@ const getMoveData = async (mid) => {
         rawData.names.find((n) => n.language.name === 'en')?.name ||
         rawData.name,
     },
+    description,
   };
 
   moveCache.set(mid, formattedMove);
@@ -721,6 +744,7 @@ const main = async () => {
       power: move.power,
       accuracy: move.accuracy,
       pp: move.pp,
+      description: move.description,
       ...(tmMark ? { tm: tmMark } : {})
     };
   }).sort((a, b) => a.id - b.id);

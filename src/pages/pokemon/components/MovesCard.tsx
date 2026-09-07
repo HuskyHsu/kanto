@@ -146,16 +146,16 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <h4 className='font-press-start text-sm mb-4 text-slate-700 bg-white inline-block px-4 py-2 border-2 border-[#34925e] rounded shadow-[2px_2px_0_0_#34925e]'>
               Level Up Moves
             </h4>
-            <Table>
+            <Table className='table-fixed w-full'>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-2/12 min-w-[65px]'>Lv</TableHead>
-                  <TableHead className='w-3/12'>Name</TableHead>
-                  <TableHead className='w-2/12'>Type</TableHead>
-                  <TableHead className='w-2/12'>Cat.</TableHead>
-                  <TableHead className='w-1/12'>Att.</TableHead>
-                  <TableHead className='w-1/12'>Acc.</TableHead>
-                  <TableHead className='w-1/12'>PP</TableHead>
+                  <TableHead className='w-[70px] min-w-[70px] px-1'>Lv</TableHead>
+                  <TableHead className='w-auto px-2'>Name</TableHead>
+                  <TableHead className='w-[60px] px-1'>Type</TableHead>
+                  <TableHead className='w-[60px] px-1'>Cat.</TableHead>
+                  <TableHead className='w-[48px] px-1'>Att.</TableHead>
+                  <TableHead className='w-[48px] px-1'>Acc.</TableHead>
+                  <TableHead className='w-[48px] px-1'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -295,21 +295,21 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <h4 className='font-press-start text-sm mb-4 text-slate-700 bg-white inline-block px-4 py-2 border-2 border-[#34925e] rounded shadow-[2px_2px_0_0_#34925e]'>
               TM Moves
             </h4>
-            <Table>
+            <Table className='table-fixed w-full'>
               <TableHeader>
                 <TableRow>
-                  <TableHead className='w-2/12 min-w-[60px]'>TM</TableHead>
-                  <TableHead className='w-3/12'>Name</TableHead>
-                  <TableHead className='w-2/12'>Type</TableHead>
-                  <TableHead className='w-2/12'>Cat.</TableHead>
-                  <TableHead className='w-1/12'>Att.</TableHead>
-                  <TableHead className='w-1/12'>Acc.</TableHead>
-                  <TableHead className='w-1/12'>PP</TableHead>
+                  <TableHead className='w-[70px] min-w-[70px] px-1'>TM</TableHead>
+                  <TableHead className='w-auto px-2'>Name</TableHead>
+                  <TableHead className='w-[60px] px-1'>Type</TableHead>
+                  <TableHead className='w-[60px] px-1'>Cat.</TableHead>
+                  <TableHead className='w-[48px] px-1'>Att.</TableHead>
+                  <TableHead className='w-[48px] px-1'>Acc.</TableHead>
+                  <TableHead className='w-[48px] px-1'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {[...pokemon.HTMMoves, ...pokemon.TMMoves].filter(filterMove).map((move) => (
-                  <MoveRow key={move.id} moveId={move.id} colSpan={6}>
+                  <MoveRow key={move.id} moveId={move.id} colSpan={7}>
                     <TableCell className='px-0'>
                       {!move.isPreEvo ? (
                         move.tm
@@ -404,15 +404,15 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                 </div>
               </details>
             )}
-            <Table>
+            <Table className='table-fixed w-full'>
               <TableHeader>
                 <TableRow>
-                  <TableHead className='w-3/12'>Name</TableHead>
-                  <TableHead className='w-2/12'>Type</TableHead>
-                  <TableHead className='w-2/12'>Cat.</TableHead>
-                  <TableHead className='w-1/12'>Att.</TableHead>
-                  <TableHead className='w-1/12'>Acc.</TableHead>
-                  <TableHead className='w-1/12'>PP</TableHead>
+                  <TableHead className='w-auto px-2'>Name</TableHead>
+                  <TableHead className='w-[60px] px-1'>Type</TableHead>
+                  <TableHead className='w-[60px] px-1'>Cat.</TableHead>
+                  <TableHead className='w-[48px] px-1'>Att.</TableHead>
+                  <TableHead className='w-[48px] px-1'>Acc.</TableHead>
+                  <TableHead className='w-[48px] px-1'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -497,15 +497,15 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                 </div>
               </details>
             )}
-            <Table>
+            <Table className='table-fixed w-full'>
               <TableHeader>
                 <TableRow>
-                  <TableHead className='w-3/12'>Name</TableHead>
-                  <TableHead className='w-2/12'>Type</TableHead>
-                  <TableHead className='w-2/12'>Cat.</TableHead>
-                  <TableHead className='w-1/12'>Att.</TableHead>
-                  <TableHead className='w-1/12'>Acc.</TableHead>
-                  <TableHead className='w-1/12'>PP</TableHead>
+                  <TableHead className='w-auto px-2'>Name</TableHead>
+                  <TableHead className='w-[60px] px-1'>Type</TableHead>
+                  <TableHead className='w-[60px] px-1'>Cat.</TableHead>
+                  <TableHead className='w-[48px] px-1'>Att.</TableHead>
+                  <TableHead className='w-[48px] px-1'>Acc.</TableHead>
+                  <TableHead className='w-[48px] px-1'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
