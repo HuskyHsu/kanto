@@ -45,7 +45,10 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
     }
   };
 
-  const renderEffectiveness = (type: string) => {
+  const renderEffectiveness = (type: string, category: string) => {
+    // Only physical and special moves have effectiveness against defenders; status moves do not
+    if (category === 'Status') return null;
+
     // Check if type is valid key of TYPE_EFFECTIVENESS_CHART
     if (!(type in TYPE_EFFECTIVENESS_CHART)) return null;
 
@@ -139,7 +142,7 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
               <div className='text-center py-4 text-red-500'>{error}</div>
             ) : data ? (
               <div className='text-left'>
-                {renderEffectiveness(data.type)}
+                {renderEffectiveness(data.type, data.category)}
                 {renderPokemonList(data.learnedBy?.levelUp, 'Level Up')}
                 {renderPokemonList(data.learnedBy?.machine, 'TM Machine')}
                 {renderPokemonList(data.learnedBy?.egg, 'Egg')}
