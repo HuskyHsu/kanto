@@ -8,7 +8,8 @@ export const fetchLocationsData = async (): Promise<GameLocation[]> => {
     return cachedLocations;
   }
 
-  const response = await fetch(`${HOST}/data/locations.json`);
+  const base = HOST.endsWith('/') ? HOST.slice(0, -1) : HOST;
+  const response = await fetch(`${base}/data/locations.json`);
 
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
