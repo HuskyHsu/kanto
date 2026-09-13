@@ -99,7 +99,7 @@ export default function SearchFilter({ searchKeyword, onSearchChange }: SearchFi
       <div className='flex items-center justify-between mb-2'>
         <h2 className='-ml-2 flex items-center text-sm font-semibold text-slate-700 font-press-start'>
           <img
-            src={`${import.meta.env.BASE_URL}images/type/PokemonBall_.png`}
+            src={`${import.meta.env.BASE_URL}images/type/TownMap.png`}
             className='w-10 h-10'
             alt='Ball icon'
           />

@@ -1,6 +1,7 @@
 import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loading } from '@/components/ui/Loading';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 import type { DetailedPokemon } from '@/types/pokemon';
 import type { JSX } from 'react';
@@ -30,6 +31,8 @@ type Render = {
 };
 
 export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) {
+  const { displayLanguage } = useLanguage();
+
   const renderData: Render[] = [
     {
       title: 'National ID',
@@ -72,18 +75,24 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
     {
       title: 'Abilities',
       Content: ({ pokemon }: ContentProps) => (
-        <div className='flex gap-2'>
-          {pokemon.abilities.map((ability) => (
-            <a
-              key={ability.en}
-              href={`https://wiki.52poke.com/zh-hant/${ability.zh}（特性）`}
-              target='_blank'
-              rel='noreferrer'
-              className='inline text-blue-800 underline'
-            >
-              {ability.zh}
-            </a>
-          ))}
+        <div className='flex flex-wrap gap-x-2 gap-y-1 justify-end'>
+          {pokemon.abilities.map((ability) => {
+            const subName = displayLanguage === 'en' ? ability.en : ability.ja;
+            return (
+              <a
+                key={ability.en}
+                href={`https://wiki.52poke.com/zh-hant/${ability.zh}（特性）`}
+                target='_blank'
+                rel='noreferrer'
+                className='inline-flex items-baseline gap-1 text-blue-800 hover:text-blue-900 group'
+              >
+                <span className='underline'>{ability.zh}</span>
+                <span className='text-xs text-slate-500 no-underline group-hover:text-slate-700 font-normal'>
+                  ({subName})
+                </span>
+              </a>
+            );
+          })}
         </div>
       ),
     },

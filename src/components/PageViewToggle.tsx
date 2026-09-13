@@ -1,6 +1,5 @@
 import { trackCustomEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
-import { MapPin } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function PageViewToggle() {
@@ -45,7 +44,10 @@ export default function PageViewToggle() {
                 : 'bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-50',
             )}
           >
-            <img src={`${import.meta.env.BASE_URL}images/type/PokemonBall_.png`} className='w-5 h-5' />
+            <img
+              src={`${import.meta.env.BASE_URL}images/type/PokemonBall_.png`}
+              className='w-5 h-5'
+            />
             Pokemon
           </button>
           <button
@@ -75,7 +77,7 @@ export default function PageViewToggle() {
                 : 'bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-50',
             )}
           >
-            <MapPin className='w-4 h-4' />
+            <img src={`${import.meta.env.BASE_URL}images/type/TownMap.png`} className='w-4 h-4' />
             Locations
           </button>
         </div>

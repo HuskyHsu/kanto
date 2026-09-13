@@ -17,41 +17,10 @@ interface EncountersCardProps {
   pokemon: DetailedPokemon;
 }
 
-const METHOD_ICONS: Record<string, string> = {
-  walk: '🌿',
-  surf: '🌊',
-  'old-rod': '🎣',
-  'good-rod': '🎣',
-  'super-rod': '🎣',
-  'rock-smash': '🪨',
-  gift: '🎁',
-  'gift-egg': '🥚',
-  static: '❗',
-  'only-one': '❗',
-  pokeflute: '🎶',
-  'npc-trade': '🔄',
-  trade: '🔄',
-  'roaming-grass': '🏃',
-  'colosseum-bonus-disc-jpn': '🎉',
-};
-
-const METHOD_NAMES: Record<string, { zh: string; en: string }> = {
-  walk: { zh: '草叢/走路', en: 'Walk' },
-  surf: { zh: '衝浪', en: 'Surf' },
-  'old-rod': { zh: '破舊釣竿', en: 'Old Rod' },
-  'good-rod': { zh: '好釣竿', en: 'Good Rod' },
-  'super-rod': { zh: '厲害釣竿', en: 'Super Rod' },
-  'rock-smash': { zh: '碎岩', en: 'Rock Smash' },
-  gift: { zh: '贈送/領取', en: 'Gift' },
-  'gift-egg': { zh: '贈送蛋', en: 'Gift Egg' },
-  static: { zh: '定點遭遇', en: 'Stationary' },
-  'only-one': { zh: '定點遭遇', en: 'Stationary' },
-  pokeflute: { zh: '寶可夢之笛', en: 'Poké Flute' },
-  'npc-trade': { zh: 'NPC交換', en: 'In-game Trade' },
-  trade: { zh: 'NPC交換', en: 'In-game Trade' },
-  'roaming-grass': { zh: '全境遊走', en: 'Roaming' },
-  'colosseum-bonus-disc-jpn': { zh: '特殊活動/連動', en: 'Special Event' },
-};
+import {
+  getEncounterMethodDisplayName,
+  METHOD_ICONS,
+} from '@/utils/encounterUtils';
 
 export default function EncountersCard({ pokemon }: EncountersCardProps) {
   const { displayLanguage } = useLanguage();
@@ -128,10 +97,11 @@ export default function EncountersCard({ pokemon }: EncountersCardProps) {
                     displayLanguage === 'en'
                       ? enc.areaName?.en || 'Area'
                       : enc.areaName?.zh || '全域';
-                  const methodName =
-                    displayLanguage === 'en'
-                      ? enc.methodName?.en || METHOD_NAMES[enc.method]?.en || enc.method
-                      : enc.methodName?.zh || METHOD_NAMES[enc.method]?.zh || enc.method;
+                  const methodName = getEncounterMethodDisplayName(
+                    enc.method,
+                    displayLanguage,
+                    enc.methodName,
+                  );
                   const icon = METHOD_ICONS[enc.method] || '📍';
 
                   return (

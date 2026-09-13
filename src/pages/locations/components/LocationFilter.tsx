@@ -53,7 +53,7 @@ export default function LocationFilter({
       <div>
         <h2 className='-ml-2 text-sm font-semibold text-slate-700 mb-2 flex items-center font-press-start'>
           <img
-            src={`${import.meta.env.BASE_URL}images/type/PokemonBall_.png`}
+            src={`${import.meta.env.BASE_URL}images/type/TownMap.png`}
             className='w-10 h-10'
             alt='Ball'
           />
@@ -84,7 +84,7 @@ export default function LocationFilter({
       <div>
         <h2 className='-ml-2 text-sm font-semibold text-slate-700 mb-2 flex items-center font-press-start'>
           <img
-            src={`${import.meta.env.BASE_URL}images/type/Move_.png`}
+            src={`${import.meta.env.BASE_URL}images/type/TownMap.png`}
             className='w-10 h-10'
             alt='Category'
           />
@@ -108,7 +108,7 @@ export default function LocationFilter({
       <div>
         <h2 className='-ml-2 text-sm font-semibold text-slate-700 mb-2 flex items-center font-press-start'>
           <img
-            src={`${import.meta.env.BASE_URL}images/type/Move_.png`}
+            src={`${import.meta.env.BASE_URL}images/type/TownMap.png`}
             className='w-10 h-10'
             alt='Version'
           />

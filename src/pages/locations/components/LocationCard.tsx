@@ -1,13 +1,5 @@
 import PokemonTypes from '@/components/pokemon/Types';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import type { GameLocation } from '@/types/location';
@@ -40,22 +32,11 @@ const SUB_REGION_LABELS: Record<string, string> = {
   special: '特殊',
 };
 
-const METHOD_ICONS: Record<string, string> = {
-  walk: '🌿',
-  surf: '🌊',
-  'old-rod': '🎣',
-  'good-rod': '🎣',
-  'super-rod': '🎣',
-  'rock-smash': '🪨',
-  gift: '🎁',
-  'only-one': '❗',
-  pokeflute: '🎶',
-  trade: '🔄',
-};
+import { groupEncountersByMethod } from '@/utils/encounterUtils';
 
 export default function LocationCard({
   location,
-  defaultExpanded = true,
+  defaultExpanded = false,
   versionFilter,
 }: LocationCardProps) {
   const { displayLanguage } = useLanguage();
@@ -107,12 +88,12 @@ export default function LocationCard({
       className='border-[2px] border-slate-200/90 rounded-[10px] bg-white shadow-xs overflow-hidden transition-all'
     >
       <CardHeader
+        className='flex flex-row items-center justify-between p-3.5 md:p-4 cursor-pointer hover:bg-slate-50/70 transition-colors'
         onClick={() => setIsExpanded(!isExpanded)}
-        className='p-3.5 md:p-4 cursor-pointer hover:bg-slate-50/80 transition-colors flex flex-row items-center justify-between gap-3'
       >
-        <div className='flex items-center gap-2.5 flex-wrap'>
+        <div className='flex items-center gap-2 flex-wrap'>
           <MapPin className='w-4 h-4 text-[#34925e] shrink-0' />
-          <h3 className='font-bold text-slate-900 text-base md:text-lg tracking-tight'>
+          <h3 className='font-bold text-slate-900 text-sm md:text-base'>
             {locName}
           </h3>
           {locSubName && (
@@ -139,34 +120,30 @@ export default function LocationCard({
           </div>
         </div>
 
-        <button
-          type='button'
-          className='text-slate-400 hover:text-slate-700 p-1'
-          aria-label={isExpanded ? 'Collapse' : 'Expand'}
-        >
-          {isExpanded ? (
-            <ChevronUp className='w-5 h-5' />
-          ) : (
-            <ChevronDown className='w-5 h-5' />
-          )}
-        </button>
+        <div className='text-slate-400 hover:text-slate-700'>
+          {isExpanded ? <ChevronUp className='w-4 h-4' /> : <ChevronDown className='w-4 h-4' />}
+        </div>
       </CardHeader>
 
       {isExpanded && (
-        <CardContent className='p-3 md:p-4 pt-0 border-t border-slate-100 space-y-4'>
+        <CardContent className='p-3 md:p-4 pt-0 border-t border-slate-100 space-y-5'>
           {filteredAreas.map((area, aIdx) => {
-            const areaDisplayName =
-              displayLanguage === 'en'
-                ? area.name.en || 'Area'
-                : area.name.zh || '全域';
+            const areaNameZh = area.name.zh || '全域';
+            const areaSubName = displayLanguage === 'en' ? area.name.en : area.name.ja;
+            const methodGroups = groupEncountersByMethod(area.encounters, displayLanguage);
 
             return (
-              <div key={`${location.id}-area-${aIdx}`} className='space-y-2 mt-3'>
+              <div key={`${location.id}-area-${aIdx}`} className='space-y-3.5 mt-3'>
                 {filteredAreas.length > 1 && (
-                  <div className='flex items-center gap-2 px-1'>
-                    <div className='w-1.5 h-1.5 rounded-full bg-[#34925e]' />
-                    <span className='text-xs font-semibold text-slate-700 uppercase tracking-wider'>
-                      {areaDisplayName}
+                  <div className='flex items-center gap-2 px-1 pt-1 pb-0.5 border-b border-slate-100'>
+                    <div className='w-2 h-2 rounded-full bg-[#34925e]' />
+                    <span className='text-xs sm:text-sm font-bold text-slate-800 tracking-wide'>
+                      {areaNameZh}
+                      {areaSubName && areaNameZh !== '全域' && areaSubName !== areaNameZh && (
+                        <span className='ml-1.5 font-normal text-slate-400 text-xs font-sans'>
+                          ({areaSubName})
+                        </span>
+                      )}
                     </span>
                     <span className='text-[10px] font-mono text-muted-foreground'>
                       ({area.encounters.length})
@@ -174,123 +151,132 @@ export default function LocationCard({
                   </div>
                 )}
 
-                <div className='overflow-x-auto rounded-lg border border-slate-200/80'>
-                  <Table className='table-fixed w-full text-sm'>
-                    <TableHeader className='bg-slate-50/80'>
-                      <TableRow>
-                        <TableHead className='w-[160px] md:w-[220px] font-semibold text-slate-700'>
-                          寶可夢 (Pokemon)
-                        </TableHead>
-                        <TableHead className='w-[80px] font-semibold text-slate-700 text-center'>
-                          屬性
-                        </TableHead>
-                        <TableHead className='w-[120px] font-semibold text-slate-700'>
-                          遭遇方式
-                        </TableHead>
-                        <TableHead className='w-[80px] font-semibold text-slate-700 text-center'>
-                          等級
-                        </TableHead>
-                        <TableHead className='w-[70px] font-semibold text-slate-700 text-right'>
-                          出現率
-                        </TableHead>
-                        <TableHead className='w-[80px] font-semibold text-slate-700 text-center'>
-                          版本
-                        </TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {area.encounters.map((enc, eIdx) => {
-                        const pmName = enc.name.zh;
-                        const pmSubName =
-                          displayLanguage === 'en' ? enc.name.en : enc.name.ja;
-                        const methodName =
-                          displayLanguage === 'en'
-                            ? enc.methodName?.en || enc.method
-                            : enc.methodName?.zh || enc.method;
-                        const icon = METHOD_ICONS[enc.method] || '📍';
+                <div className='space-y-4'>
+                  {methodGroups.map((group) => (
+                    <div
+                      key={`${location.id}-area-${aIdx}-${group.method}`}
+                      className='space-y-2'
+                    >
+                      {/* Method Group Header badge */}
+                      <div className='flex items-center gap-2 px-1'>
+                        <div className='inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100/90 border border-slate-200/70 text-xs font-semibold text-slate-700 font-sans shadow-2xs'>
+                          <span>{group.icon}</span>
+                          <span>{group.displayName}</span>
+                          <span className='text-[10px] font-mono font-normal text-slate-500'>
+                            ({group.encounters.length})
+                          </span>
+                        </div>
+                      </div>
 
-                        return (
-                          <TableRow
-                            key={`${enc.pid}-${enc.method}-${eIdx}`}
-                            className='hover:bg-slate-50/70 transition-colors'
-                          >
-                            {/* Pokemon Icon & Name */}
-                            <TableCell className='py-2'>
-                              <Link
-                                to={`/pokemon/${enc.pid}`}
-                                className='inline-flex items-center gap-2.5 text-slate-900 hover:text-emerald-700 font-sans group'
-                              >
-                                <div className='w-8 h-8 relative shrink-0 flex items-center justify-center'>
+                      {/* Card Grid for this method */}
+                      <div className='grid grid-cols-2 min-[540px]:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-2.5'>
+                        {group.encounters.map((enc, eIdx) => {
+                          const pmName = enc.name.zh;
+                          const pmSubName =
+                            displayLanguage === 'en' ? enc.name.en : enc.name.ja;
+
+                          return (
+                            <div
+                              key={`${enc.pid}-${enc.method}-${eIdx}`}
+                              className='group relative flex flex-col justify-between rounded-xl border border-slate-200/80 bg-white p-2.5 hover:border-emerald-400 hover:shadow-sm transition-all duration-200'
+                            >
+                              {/* Upper Area: Sprite & Corner Metadata */}
+                              <div className='relative w-full h-21 sm:h-23 flex items-center justify-center'>
+                                {/* Top-Left: Dex # */}
+                                <span className='absolute top-0 left-0 font-mono text-[10px] font-semibold text-slate-400 tracking-tight'>
+                                  #{enc.pid.toString().padStart(3, '0')}
+                                </span>
+
+                                {/* Top-Right: Version Badge (Only displayed when there is a version exclusive) */}
+                                {enc.version === 'firered' && (
+                                  <span className='absolute top-0 right-0 inline-flex items-center h-[18px] px-1.5 text-[9px] font-sans font-medium rounded bg-red-500 text-white shadow-2xs leading-none'>
+                                    火紅
+                                  </span>
+                                )}
+                                {enc.version === 'leafgreen' && (
+                                  <span className='absolute top-0 right-0 inline-flex items-center h-[18px] px-1.5 text-[9px] font-sans font-medium rounded bg-emerald-600 text-white shadow-2xs leading-none'>
+                                    葉綠
+                                  </span>
+                                )}
+
+                                {/* Centered Large Sprite */}
+                                <Link
+                                  to={`/pokemon/${enc.pid}`}
+                                  className='flex items-center justify-center p-1'
+                                >
                                   <img
                                     src={`${import.meta.env.BASE_URL}images/pmIcon/${enc.pid}.png`}
                                     alt={pmName}
-                                    className='w-7 h-7 object-contain group-hover:scale-110 transition-transform'
+                                    className='w-15 h-15 sm:w-16 sm:h-16 object-contain [image-rendering:pixelated] group-hover:scale-115 transition-transform duration-200'
                                     onError={(e) => {
                                       const target = e.target as HTMLImageElement;
                                       target.src = `${import.meta.env.BASE_URL}images/pmIcon8Bit/${enc.pid}.png`;
                                     }}
                                   />
-                                </div>
-                                <div className='flex flex-col'>
-                                  <span className='font-semibold text-xs leading-tight group-hover:underline'>
+                                </Link>
+
+                                {/* Bottom-Left: Level Badge */}
+                                <span className='absolute bottom-0 left-0 inline-flex items-center h-[18px] font-mono text-[9px] sm:text-[10px] font-medium px-1.5 rounded bg-slate-100 text-slate-700 leading-none'>
+                                  {enc.minLevel === enc.maxLevel
+                                    ? `Lv.${enc.minLevel}`
+                                    : `Lv.${enc.minLevel}~${enc.maxLevel}`}
+                                </span>
+
+                                {/* Bottom-Right: Rate Badge */}
+                                <span className='absolute bottom-0 right-0 inline-flex items-center h-[18px] font-mono text-[9px] sm:text-[10px] font-bold px-1.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200/70 leading-none'>
+                                  {enc.chance}%
+                                </span>
+                              </div>
+
+                              {/* Info Area Below Sprite with subtle divider */}
+                              <div className='mt-2 pt-1.5 border-t border-slate-100 flex flex-col gap-1'>
+                                {/* Name and Types in one line */}
+                                <div className='flex items-center justify-between gap-1'>
+                                  <Link
+                                    to={`/pokemon/${enc.pid}`}
+                                    className='font-bold text-slate-800 text-xs sm:text-sm hover:text-emerald-700 hover:underline truncate'
+                                    title={`${pmName} (${pmSubName})`}
+                                  >
                                     {pmName}
-                                  </span>
-                                  <span className='font-mono text-[10px] text-slate-400'>
-                                    #{enc.pid.toString().padStart(3, '0')}
-                                    {pmSubName ? ` (${pmSubName})` : ''}
-                                  </span>
+                                  </Link>
+                                  <div className='shrink-0'>
+                                    <PokemonTypes types={enc.types} className='w-3.5 h-3.5' />
+                                  </div>
                                 </div>
-                              </Link>
-                            </TableCell>
 
-                            {/* Types */}
-                            <TableCell className='text-center py-2'>
-                              <PokemonTypes types={enc.types} className='w-4 h-4' />
-                            </TableCell>
-
-                            {/* Method */}
-                            <TableCell className='text-xs text-slate-700 py-2'>
-                              <span className='inline-flex items-center gap-1.5'>
-                                <span>{icon}</span>
-                                <span>{methodName}</span>
-                              </span>
-                            </TableCell>
-
-                            {/* Level */}
-                            <TableCell className='text-center font-mono text-xs text-slate-700 py-2'>
-                              {enc.minLevel === enc.maxLevel
-                                ? `Lv.${enc.minLevel}`
-                                : `Lv.${enc.minLevel}~${enc.maxLevel}`}
-                            </TableCell>
-
-                            {/* Rate */}
-                            <TableCell className='text-right font-mono text-xs font-semibold text-emerald-700 py-2'>
-                              {enc.chance}%
-                            </TableCell>
-
-                            {/* Version Badge */}
-                            <TableCell className='text-center py-2'>
-                              {enc.version === 'both' && (
-                                <span className='inline-block px-1.5 py-0.5 text-[10px] font-sans font-medium rounded bg-slate-100 text-slate-700 border border-slate-200'>
-                                  雙版本
-                                </span>
-                              )}
-                              {enc.version === 'firered' && (
-                                <span className='inline-block px-1.5 py-0.5 text-[10px] font-sans font-medium rounded bg-red-100 text-red-700 border border-red-200'>
-                                  火紅
-                                </span>
-                              )}
-                              {enc.version === 'leafgreen' && (
-                                <span className='inline-block px-1.5 py-0.5 text-[10px] font-sans font-medium rounded bg-emerald-100 text-emerald-700 border border-emerald-200'>
-                                  葉綠
-                                </span>
-                              )}
-                            </TableCell>
-                          </TableRow>
-                        );
-                      })}
-                    </TableBody>
-                  </Table>
+                                {/* Trade Requirement Info (if NPC trade) */}
+                                {enc.tradeFor && (
+                                  <div className='flex items-center justify-start text-[10px] text-slate-500 pt-0.5'>
+                                    <Link
+                                      to={`/pokemon/${enc.tradeFor.pid}`}
+                                      className='inline-flex items-center gap-0.5 text-amber-700 hover:underline shrink-0 bg-amber-50 px-1 py-0.5 rounded border border-amber-200/60'
+                                      title={`需提供: ${enc.tradeFor.name.zh} (${enc.tradeFor.name.en})`}
+                                    >
+                                      <span className='text-amber-600 text-[9px]'>
+                                        {displayLanguage === 'en' ? 'w/' : '需:'}
+                                      </span>
+                                      <img
+                                        src={`${import.meta.env.BASE_URL}images/pmIcon/${enc.tradeFor.pid}.png`}
+                                        alt={enc.tradeFor.name.zh}
+                                        className='w-3 h-3 object-contain shrink-0'
+                                        onError={(e) => {
+                                          const target = e.target as HTMLImageElement;
+                                          target.src = `${import.meta.env.BASE_URL}images/pmIcon8Bit/${enc.tradeFor!.pid}.png`;
+                                        }}
+                                      />
+                                      <span className='truncate max-w-[55px] text-[9px] font-medium'>
+                                        {displayLanguage === 'en' ? enc.tradeFor.name.en : enc.tradeFor.name.zh}
+                                      </span>
+                                    </Link>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             );
