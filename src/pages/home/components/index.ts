@@ -4,7 +4,7 @@ export { default as EVFilter } from './EVFilter';
 export { default as EVToggle } from './EVToggle';
 export { default as FinalFormToggle } from './FinalFormToggle';
 export { PageContent } from './PageContent';
-export { PageHeader } from './PageHeader';
+export { PageHeader } from '@/components/PageHeader';
 export { default as PokedexToggle } from './PokedexToggle';
 export { SearchFilter } from './SearchFilter';
 export { default as ShinyToggle } from './ShinyToggle';

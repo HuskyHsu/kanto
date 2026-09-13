@@ -1,18 +1,26 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Languages } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-export function LanguageToggle() {
+interface LanguageToggleProps {
+  className?: string;
+}
+
+export function LanguageToggle({ className = '' }: LanguageToggleProps) {
   const { displayLanguage, toggleLanguage } = useLanguage();
 
   return (
     <button
       onClick={toggleLanguage}
-      className='flex items-center justify-center gap-2 p-2 h-10 min-w-10 rounded-full bg-white/80 backdrop-blur-md shadow-sm border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all cursor-pointer group'
-      title='Toggle Language Display (Zho/Ja or Zho/En)'
+      type='button'
+      className={cn(
+        'w-10 h-10 flex items-center justify-center rounded-lg bg-white border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50 shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:translate-y-px hover:translate-x-px hover:shadow-[1px_1px_0_0_rgba(203,213,225,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all cursor-pointer group flex-shrink-0',
+        className,
+      )}
+      title={`Switch Language (Current: ${displayLanguage.toUpperCase()})`}
+      aria-label={`Switch Language (Current: ${displayLanguage.toUpperCase()})`}
     >
-      <Languages size={20} className='text-blue-500 group-hover:scale-110 transition-transform' />
-      <span className='text-xs font-bold font-mono w-6 text-center select-none uppercase'>
-        {displayLanguage}
+      <span className='font-press-start text-[11px] font-bold text-blue-600 group-hover:scale-110 transition-transform select-none'>
+        {displayLanguage.toUpperCase()}
       </span>
     </button>
   );

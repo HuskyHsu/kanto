@@ -40,7 +40,7 @@ const tutorLocations: Record<string, string> = {
 };
 
 export default function MovesCard({ pokemon }: MovesCardProps) {
-  const { displayLanguage } = useLanguage();
+  const { displayLanguage, showSubtitle, toggleSubtitle } = useLanguage();
 
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -85,12 +85,74 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
     return name.zh;
   };
 
+  const renderMoveNameCell = (
+    move: {
+      name: { zh: string; ja: string; en: string };
+      isPreEvo?: boolean;
+      preEvoName?: { zh: string; ja: string; en: string };
+    },
+    extraPreEvoLabel?: string,
+  ) => {
+    const isJa = displayLanguage === 'ja';
+    const primaryName = isJa ? move.name.ja : move.name.en;
+    const secondaryName = move.name.zh;
+
+    return (
+      <TableCell className='px-1 text-left whitespace-normal break-words'>
+        <a
+          href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
+          target='_blank'
+          rel='noreferrer'
+          className={cn(
+            'text-[13px] sm:text-sm font-bold text-slate-900 hover:text-emerald-700 hover:underline block leading-tight break-words',
+            isJa && 'font-pixel-jp tracking-wide',
+          )}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {primaryName}
+        </a>
+        {showSubtitle && (
+          <span className='text-sm sm:text-[15px] text-slate-800 font-semibold font-sans tracking-normal block leading-snug break-words mt-0.5'>
+            {secondaryName}
+          </span>
+        )}
+        {move.isPreEvo && move.preEvoName && (
+          <div className='text-[10px] leading-tight text-slate-500 font-bold font-sans mt-1'>
+            ({getLocalizedName(move.preEvoName)}
+            {extraPreEvoLabel || ''})
+          </div>
+        )}
+      </TableCell>
+    );
+  };
+
   return (
     <Card className='lg:col-span-2 border-[3px] border-[#34925e] rounded-[10px] bg-white shadow-none'>
-      <CardHeader>
-        <CardTitle className='font-press-start text-lg uppercase tracking-wider text-slate-800 relative pl-4 before:content-[""] before:absolute before:left-0 before:top-[15%] before:h-[70%] before:w-1 before:bg-[#e05038]'>
+      <CardHeader className='flex flex-row items-center justify-between gap-2 pb-2'>
+        <CardTitle className='font-press-start text-base sm:text-lg uppercase tracking-wider text-slate-800 relative pl-4 before:content-[""] before:absolute before:left-0 before:top-[15%] before:h-[70%] before:w-1 before:bg-[#e05038]'>
           Moves
         </CardTitle>
+        <button
+          type='button'
+          onClick={toggleSubtitle}
+          className={cn(
+            'inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-md border transition-all cursor-pointer select-none',
+            showSubtitle
+              ? 'bg-emerald-50 text-emerald-800 border-emerald-400 shadow-xs hover:bg-emerald-100'
+              : 'bg-slate-100 text-slate-600 border-slate-300 hover:bg-slate-200',
+          )}
+          title='切換是否顯示雙語對照'
+        >
+          <span className='font-sans'>
+            {showSubtitle
+              ? displayLanguage === 'ja'
+                ? '雙語 (日+中)'
+                : '雙語 (英+中)'
+              : displayLanguage === 'ja'
+                ? '僅顯示日文'
+                : '僅顯示英文'}
+          </span>
+        </button>
       </CardHeader>
       <CardContent className='px-0 md:px-6 font-mono tracking-tighter'>
         <div className='mb-6 -mt-4 space-y-4 px-6 md:px-0'>
@@ -146,16 +208,16 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <h4 className='font-press-start text-sm mb-4 text-slate-700 bg-white inline-block px-4 py-2 border-2 border-[#34925e] rounded shadow-[2px_2px_0_0_#34925e]'>
               Level Up Moves
             </h4>
-            <Table className='table-fixed w-full'>
+            <Table className='table-fixed w-full min-w-[340px]'>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-[70px] min-w-[70px] px-1'>Lv</TableHead>
-                  <TableHead className='w-auto px-2'>Name</TableHead>
-                  <TableHead className='w-[60px] px-1'>Type</TableHead>
-                  <TableHead className='w-[60px] px-1'>Cat.</TableHead>
-                  <TableHead className='w-[48px] px-1'>Att.</TableHead>
-                  <TableHead className='w-[48px] px-1'>Acc.</TableHead>
-                  <TableHead className='w-[48px] px-1'>PP</TableHead>
+                  <TableHead className='w-[56px] min-w-[56px] px-1'>Lv</TableHead>
+                  <TableHead className='w-auto min-w-[95px] px-1 text-left'>Name</TableHead>
+                  <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Type</TableHead>
+                  <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Cat.</TableHead>
+                  <TableHead className='w-[38px] min-w-[38px] px-0.5 text-center'>Att.</TableHead>
+                  <TableHead className='w-[38px] min-w-[38px] px-0.5 text-center'>Acc.</TableHead>
+                  <TableHead className='w-[36px] min-w-[36px] px-0.5 text-center'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -187,7 +249,9 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                           ))
                         ) : (
                           <span className='inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-100/80 text-amber-950 border border-amber-300 whitespace-nowrap font-semibold'>
-                            <span className='font-bold text-amber-900'>Lv.{Math.abs(move.level)}</span>
+                            <span className='font-bold text-amber-900'>
+                              Lv.{Math.abs(move.level)}
+                            </span>
                           </span>
                         )}
                       </div>
@@ -258,34 +322,23 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                           : undefined
                       }
                     >
-                      <TableCell className='px-0'>{from}</TableCell>
-                      <TableCell className='px-0'>
-                        <a
-                          href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
-                          target='_blank'
-                          rel='noreferrer'
-                          className='inline text-blue-800 underline'
-                        >
-                          {move.name.zh}
-                        </a>
-                        <br />
-                        <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
-                          {displayLanguage === 'ja' ? move.name.ja : move.name.en}
-                        </span>
-                      </TableCell>
-                      <TableCell>
+                      <TableCell className='px-0 text-center'>{from}</TableCell>
+                      {renderMoveNameCell(move)}
+                      <TableCell className='px-0.5 text-center'>
                         <div className='flex justify-center'>
                           <PokemonTypes types={[move.type]} />
                         </div>
                       </TableCell>
-                      <TableCell>
+                      <TableCell className='px-0.5 text-center'>
                         <div className='flex justify-center'>
                           <PokemonTypes types={[move.category]} />
                         </div>
                       </TableCell>
-                      <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
-                      <TableCell>{move.accuracy ?? '—'}</TableCell>
-                      <TableCell>{move.pp}</TableCell>
+                      <TableCell className='px-0.5 text-center'>
+                        {move.power <= 0 ? '—' : move.power}
+                      </TableCell>
+                      <TableCell className='px-0.5 text-center'>{move.accuracy ?? '—'}</TableCell>
+                      <TableCell className='px-0.5 text-center'>{move.pp}</TableCell>
                     </MoveRow>
                   );
                 })}
@@ -297,22 +350,22 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <h4 className='font-press-start text-sm mb-4 text-slate-700 bg-white inline-block px-4 py-2 border-2 border-[#34925e] rounded shadow-[2px_2px_0_0_#34925e]'>
               TM Moves
             </h4>
-            <Table className='table-fixed w-full'>
+            <Table className='table-fixed w-full min-w-[340px]'>
               <TableHeader>
                 <TableRow>
-                  <TableHead className='w-[70px] min-w-[70px] px-1'>TM</TableHead>
-                  <TableHead className='w-auto px-2'>Name</TableHead>
-                  <TableHead className='w-[60px] px-1'>Type</TableHead>
-                  <TableHead className='w-[60px] px-1'>Cat.</TableHead>
-                  <TableHead className='w-[48px] px-1'>Att.</TableHead>
-                  <TableHead className='w-[48px] px-1'>Acc.</TableHead>
-                  <TableHead className='w-[48px] px-1'>PP</TableHead>
+                  <TableHead className='w-[56px] min-w-[56px] px-1'>TM</TableHead>
+                  <TableHead className='w-auto min-w-[95px] px-1 text-left'>Name</TableHead>
+                  <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Type</TableHead>
+                  <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Cat.</TableHead>
+                  <TableHead className='w-[38px] min-w-[38px] px-0.5 text-center'>Att.</TableHead>
+                  <TableHead className='w-[38px] min-w-[38px] px-0.5 text-center'>Acc.</TableHead>
+                  <TableHead className='w-[36px] min-w-[36px] px-0.5 text-center'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {[...pokemon.HTMMoves, ...pokemon.TMMoves].filter(filterMove).map((move) => (
                   <MoveRow key={move.id} moveId={move.id} colSpan={7}>
-                    <TableCell className='px-0'>
+                    <TableCell className='px-0 text-center'>
                       {!move.isPreEvo ? (
                         move.tm
                       ) : (
@@ -322,33 +375,22 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                         </div>
                       )}
                     </TableCell>
-                    <TableCell className='px-0'>
-                      <a
-                        href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
-                        target='_blank'
-                        rel='noreferrer'
-                        className='inline text-blue-800 underline'
-                      >
-                        {move.name.zh}
-                      </a>
-                      <br />
-                      <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
-                        {displayLanguage === 'ja' ? move.name.ja : move.name.en}
-                      </span>
-                    </TableCell>
-                    <TableCell>
+                    {renderMoveNameCell(move)}
+                    <TableCell className='px-0.5 text-center'>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[move.type]} />
                       </div>
                     </TableCell>
-                    <TableCell>
+                    <TableCell className='px-0.5 text-center'>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[move.category]} />
                       </div>
                     </TableCell>
-                    <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
-                    <TableCell>{move.accuracy ?? '—'}</TableCell>
-                    <TableCell>{move.pp}</TableCell>
+                    <TableCell className='px-0.5 text-center'>
+                      {move.power <= 0 ? '—' : move.power}
+                    </TableCell>
+                    <TableCell className='px-0.5 text-center'>{move.accuracy ?? '—'}</TableCell>
+                    <TableCell className='px-0.5 text-center'>{move.pp}</TableCell>
                   </MoveRow>
                 ))}
               </TableBody>
@@ -408,47 +450,36 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                 </div>
               </details>
             )}
-            <Table className='table-fixed w-full'>
+            <Table className='table-fixed w-full min-w-[300px]'>
               <TableHeader>
                 <TableRow>
-                  <TableHead className='w-auto px-2'>Name</TableHead>
-                  <TableHead className='w-[60px] px-1'>Type</TableHead>
-                  <TableHead className='w-[60px] px-1'>Cat.</TableHead>
-                  <TableHead className='w-[48px] px-1'>Att.</TableHead>
-                  <TableHead className='w-[48px] px-1'>Acc.</TableHead>
-                  <TableHead className='w-[48px] px-1'>PP</TableHead>
+                  <TableHead className='w-auto min-w-[110px] px-1 text-left'>Name</TableHead>
+                  <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Type</TableHead>
+                  <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Cat.</TableHead>
+                  <TableHead className='w-[38px] min-w-[38px] px-0.5 text-center'>Att.</TableHead>
+                  <TableHead className='w-[38px] min-w-[38px] px-0.5 text-center'>Acc.</TableHead>
+                  <TableHead className='w-[36px] min-w-[36px] px-0.5 text-center'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {pokemon.eggMoves.filter(filterMove).map((move) => (
                   <MoveRow key={move.id} moveId={move.id} colSpan={6}>
-                    <TableCell className='px-0'>
-                      <a
-                        href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
-                        target='_blank'
-                        rel='noreferrer'
-                        className='inline text-blue-800 underline'
-                      >
-                        {move.name.zh}
-                      </a>
-                      <br />
-                      <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
-                        {displayLanguage === 'ja' ? move.name.ja : move.name.en}
-                      </span>
-                    </TableCell>
-                    <TableCell>
+                    {renderMoveNameCell(move)}
+                    <TableCell className='px-0.5 text-center'>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[move.type]} />
                       </div>
                     </TableCell>
-                    <TableCell>
+                    <TableCell className='px-0.5 text-center'>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[move.category]} />
                       </div>
                     </TableCell>
-                    <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
-                    <TableCell>{move.accuracy ?? '—'}</TableCell>
-                    <TableCell>{move.pp}</TableCell>
+                    <TableCell className='px-0.5 text-center'>
+                      {move.power <= 0 ? '—' : move.power}
+                    </TableCell>
+                    <TableCell className='px-0.5 text-center'>{move.accuracy ?? '—'}</TableCell>
+                    <TableCell className='px-0.5 text-center'>{move.pp}</TableCell>
                   </MoveRow>
                 ))}
               </TableBody>
@@ -503,52 +534,36 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                 </div>
               </details>
             )}
-            <Table className='table-fixed w-full'>
+            <Table className='table-fixed w-full min-w-[300px]'>
               <TableHeader>
                 <TableRow>
-                  <TableHead className='w-auto px-2'>Name</TableHead>
-                  <TableHead className='w-[60px] px-1'>Type</TableHead>
-                  <TableHead className='w-[60px] px-1'>Cat.</TableHead>
-                  <TableHead className='w-[48px] px-1'>Att.</TableHead>
-                  <TableHead className='w-[48px] px-1'>Acc.</TableHead>
-                  <TableHead className='w-[48px] px-1'>PP</TableHead>
+                  <TableHead className='w-auto min-w-[110px] px-1 text-left'>Name</TableHead>
+                  <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Type</TableHead>
+                  <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Cat.</TableHead>
+                  <TableHead className='w-[38px] min-w-[38px] px-0.5 text-center'>Att.</TableHead>
+                  <TableHead className='w-[38px] min-w-[38px] px-0.5 text-center'>Acc.</TableHead>
+                  <TableHead className='w-[36px] min-w-[36px] px-0.5 text-center'>PP</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {pokemon.tutorMoves.filter(filterMove).map((move) => (
                   <MoveRow key={move.id} moveId={move.id} colSpan={6}>
-                    <TableCell className='px-0'>
-                      <a
-                        href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
-                        target='_blank'
-                        rel='noreferrer'
-                        className='inline text-blue-800 underline'
-                      >
-                        {move.name.zh}
-                      </a>
-                      <br />
-                      <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
-                        {displayLanguage === 'ja' ? move.name.ja : move.name.en}
-                      </span>
-                      {move.isPreEvo && (
-                        <div className='text-[10px] leading-tight text-slate-500 font-bold font-sans mt-1'>
-                          ({getLocalizedName(move.preEvoName)} 教授)
-                        </div>
-                      )}
-                    </TableCell>
-                    <TableCell>
+                    {renderMoveNameCell(move, ' 教授')}
+                    <TableCell className='px-0.5 text-center'>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[move.type]} />
                       </div>
                     </TableCell>
-                    <TableCell>
+                    <TableCell className='px-0.5 text-center'>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[move.category]} />
                       </div>
                     </TableCell>
-                    <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
-                    <TableCell>{move.accuracy ?? '—'}</TableCell>
-                    <TableCell>{move.pp}</TableCell>
+                    <TableCell className='px-0.5 text-center'>
+                      {move.power <= 0 ? '—' : move.power}
+                    </TableCell>
+                    <TableCell className='px-0.5 text-center'>{move.accuracy ?? '—'}</TableCell>
+                    <TableCell className='px-0.5 text-center'>{move.pp}</TableCell>
                   </MoveRow>
                 ))}
               </TableBody>
