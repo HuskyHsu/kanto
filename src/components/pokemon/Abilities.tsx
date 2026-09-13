@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { cn } from '@/lib/utils';
 import type { Pokemon } from '@/types/pokemon';
 
 interface PokemonAbilitiesProps {
@@ -15,7 +16,9 @@ export default function PokemonAbilities({ abilities }: PokemonAbilitiesProps) {
           <span key={ability.en} className='leading-3.5 bg-red-700/30 rounded px-2 py-1'>
             {ability.zh}
             <br />
-            {displayLanguage === 'en' ? ability.en : ability.ja}
+            <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
+              {displayLanguage === 'en' ? ability.en : ability.ja}
+            </span>
           </span>
         );
       })}

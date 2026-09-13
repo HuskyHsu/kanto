@@ -3,6 +3,38 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+@font-face {
+  font-family: 'PixelMplus12';
+  src: url('./assets/fonts/PixelMplus12-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PixelMplus12';
+  src: url('./assets/fonts/PixelMplus12-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PixelMplus10';
+  src: url('./assets/fonts/PixelMplus10-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PixelMplus10';
+  src: url('./assets/fonts/PixelMplus10-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -100,6 +132,10 @@
   --font-sans:
     'Noto Sans TC', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-press-start:
+    'Press Start 2P', 'PixelMplus12', 'PixelMplus10', 'Noto Sans TC', sans-serif;
+  --font-pixel-jp:
+    'PixelMplus12', 'PixelMplus10', 'Noto Sans TC', sans-serif;
 }
 
 .dark {
@@ -145,7 +181,10 @@
     font-family: var(--font-sans);
   }
   .font-press-start {
-    font-family: 'Press Start 2P', 'Noto Sans TC', sans-serif;
+    font-family: 'Press Start 2P', 'PixelMplus12', 'PixelMplus10', 'Noto Sans TC', sans-serif;
+  }
+  .font-pixel-jp {
+    font-family: 'PixelMplus12', 'PixelMplus10', 'Noto Sans TC', sans-serif;
   }
 }
 

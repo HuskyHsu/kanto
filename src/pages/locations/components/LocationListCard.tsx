@@ -117,7 +117,12 @@ export default function LocationListCard({ locations, versionFilter }: LocationL
                   <MapPin className='w-4 h-4 text-[#34925e] shrink-0' />
                   <span className='font-bold text-slate-900 text-sm md:text-base'>{locName}</span>
                   {locSubName && (
-                    <span className='text-xs text-slate-400 font-sans hidden sm:inline'>
+                    <span
+                      className={cn(
+                        'text-xs text-slate-400 hidden sm:inline',
+                        displayLanguage === 'ja' ? 'font-pixel-jp' : 'font-sans',
+                      )}
+                    >
                       ({locSubName})
                     </span>
                   )}
@@ -160,7 +165,12 @@ export default function LocationListCard({ locations, versionFilter }: LocationL
                             <span className='text-xs sm:text-sm font-bold text-slate-800 tracking-wide'>
                               {areaNameZh}
                               {areaSubName && areaNameZh !== '全域' && areaSubName !== areaNameZh && (
-                                <span className='ml-1.5 font-normal text-slate-400 text-xs font-sans'>
+                                <span
+                                  className={cn(
+                                    'ml-1.5 font-normal text-slate-400 text-xs',
+                                    displayLanguage === 'ja' ? 'font-pixel-jp' : 'font-sans',
+                                  )}
+                                >
                                   ({areaSubName})
                                 </span>
                               )}

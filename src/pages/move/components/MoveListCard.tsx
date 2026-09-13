@@ -10,6 +10,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { cn } from '@/lib/utils';
 import MoveRow from '@/pages/pokemon/components/MoveRow';
 import type { MoveList } from '@/types/move';
 
@@ -73,7 +74,9 @@ export default function MoveListCard({
                         {move.name.zh}
                       </a>
                       <br />
-                      {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                      <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
+                        {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                      </span>
                     </TableCell>
                     <TableCell className='px-0'>
                       <div className='flex justify-center'>

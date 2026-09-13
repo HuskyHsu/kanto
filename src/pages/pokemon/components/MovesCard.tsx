@@ -269,7 +269,9 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                           {move.name.zh}
                         </a>
                         <br />
-                        {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                        <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
+                          {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                        </span>
                       </TableCell>
                       <TableCell>
                         <div className='flex justify-center'>
@@ -330,7 +332,9 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                         {move.name.zh}
                       </a>
                       <br />
-                      {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                      <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
+                        {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                      </span>
                     </TableCell>
                     <TableCell>
                       <div className='flex justify-center'>
@@ -428,7 +432,9 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                         {move.name.zh}
                       </a>
                       <br />
-                      {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                      <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
+                        {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                      </span>
                     </TableCell>
                     <TableCell>
                       <div className='flex justify-center'>
@@ -521,7 +527,9 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                         {move.name.zh}
                       </a>
                       <br />
-                      {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                      <span className={cn(displayLanguage === 'ja' && 'font-pixel-jp')}>
+                        {displayLanguage === 'ja' ? move.name.ja : move.name.en}
+                      </span>
                       {move.isPreEvo && (
                         <div className='text-[10px] leading-tight text-slate-500 font-bold font-sans mt-1'>
                           ({getLocalizedName(move.preEvoName)} 教授)

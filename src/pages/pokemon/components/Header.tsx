@@ -23,7 +23,7 @@ export default function PokemonHeader({ pokemon }: PokemonHeaderProps) {
           <div>
             <h1 className='text-4xl font-bold mb-2'>{pokemon.name.zh}</h1>
             <p className='text-xl'>
-              {pokemon.name.ja} / {pokemon.name.en}
+              <span className='font-pixel-jp'>{pokemon.name.ja}</span> / {pokemon.name.en}
             </p>
           </div>
         </div>

@@ -97,7 +97,12 @@ const Condition = ({ pm, className = '' }: { pm: EvolutionNode; className?: stri
             {prefix}
             {cond.item.zh}
           </span>
-          <span className='text-[9px] text-slate-400 font-sans tracking-tight'>
+          <span
+            className={cn(
+              'text-[9px] text-slate-400 tracking-tight',
+              displayLanguage === 'ja' ? 'font-pixel-jp' : 'font-sans',
+            )}
+          >
             {localizedItemName}
           </span>
         </span>

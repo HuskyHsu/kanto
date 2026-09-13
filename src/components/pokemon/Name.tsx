@@ -13,7 +13,9 @@ function PokemonName({ name }: PokemonNameProps) {
     <div className='text-center text-nowrap'>
       <div className={cn('text-xl')}>{name.zh}</div>
       {displayLanguage === 'en' && <div className={cn('text-sm')}>{name.en}</div>}
-      {displayLanguage === 'ja' && <div className={cn('text-sm')}>{name.ja}</div>}
+      {displayLanguage === 'ja' && (
+        <div className={cn('text-sm font-pixel-jp')}>{name.ja}</div>
+      )}
     </div>
   );
 }

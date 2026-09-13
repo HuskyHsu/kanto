@@ -8,6 +8,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { cn } from '@/lib/utils';
 import type { PokemonLocationEncounter } from '@/types/location';
 import type { DetailedPokemon } from '@/types/pokemon';
 import { Compass, Flame, Leaf, MapPin } from 'lucide-react';
@@ -60,7 +61,7 @@ export default function EncountersCard({ pokemon }: EncountersCardProps) {
           <div className='py-8 text-center text-muted-foreground flex flex-col items-center justify-center gap-2'>
             <Compass className='w-8 h-8 text-slate-300' />
             <p className='text-sm'>
-              此寶可夢在《火紅／葉綠》中無野生出沒資料（可能為御三家進化、化石復活、交換或活動取得）
+              此寶可夢在《火紅／葉綠》中無野生出沒資料（可能需捕捉進化前形態進化、初始御三家、化石復活、NPC交換或特殊活動取得）
             </p>
           </div>
         ) : (
@@ -114,7 +115,12 @@ export default function EncountersCard({ pokemon }: EncountersCardProps) {
                           <MapPin className='w-3.5 h-3.5 text-emerald-600 shrink-0' />
                           <span>{locName}</span>
                           {locSubName && (
-                            <span className='text-xs text-slate-400 font-sans hidden sm:inline'>
+                            <span
+                              className={cn(
+                                'text-xs text-slate-400 hidden sm:inline',
+                                displayLanguage === 'ja' ? 'font-pixel-jp' : 'font-sans',
+                              )}
+                            >
                               ({locSubName})
                             </span>
                           )}

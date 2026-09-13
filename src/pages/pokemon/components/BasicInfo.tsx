@@ -2,6 +2,7 @@ import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loading } from '@/components/ui/Loading';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { cn } from '@/lib/utils';
 
 import type { DetailedPokemon } from '@/types/pokemon';
 import type { JSX } from 'react';
@@ -66,7 +67,9 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
     },
     {
       title: 'Name(jp)',
-      Content: ({ pokemon }: ContentProps) => <>{pokemon.name.ja}</>,
+      Content: ({ pokemon }: ContentProps) => (
+        <span className='font-pixel-jp'>{pokemon.name.ja}</span>
+      ),
     },
     {
       title: 'Types',
@@ -87,7 +90,12 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
                 className='inline-flex items-baseline gap-1 text-blue-800 hover:text-blue-900 group'
               >
                 <span className='underline'>{ability.zh}</span>
-                <span className='text-xs text-slate-500 no-underline group-hover:text-slate-700 font-normal'>
+                <span
+                  className={cn(
+                    'text-xs text-slate-500 no-underline group-hover:text-slate-700 font-normal',
+                    displayLanguage === 'ja' && 'font-pixel-jp',
+                  )}
+                >
                   ({subName})
                 </span>
               </a>

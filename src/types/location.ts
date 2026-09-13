@@ -31,7 +31,7 @@ export interface EncounterBase {
 export interface PokemonLocationEncounter extends EncounterBase {
   locationId: string;
   locationName: LanguageName;
-  areaName?: { zh: string; en: string };
+  areaName?: { zh: string; en: string; ja?: string };
   region: 'kanto' | 'sevii' | string;
   subRegion: string;
   category: 'route' | 'dungeon' | 'city' | 'special';
@@ -44,7 +44,7 @@ export interface LocationPokemonEncounter extends EncounterBase {
 }
 
 export interface LocationArea {
-  name: { zh: string; en: string };
+  name: { zh: string; en: string; ja?: string };
   encounters: LocationPokemonEncounter[];
 }
 
