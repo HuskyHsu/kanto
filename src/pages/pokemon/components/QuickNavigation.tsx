@@ -25,6 +25,7 @@ const QuickNavigation = ({ hasEvolution, hasEncounters }: QuickNavigationProps) 
   ];
 
   const scrollToSection = (sectionId: string) => {
+    setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80; // Account for any fixed headers
@@ -59,26 +60,42 @@ const QuickNavigation = ({ hasEvolution, hasEncounters }: QuickNavigationProps) 
       const distanceFromBottom = documentHeight - (scrollY + windowHeight);
       setIsNearBottom(distanceFromBottom <= 30); // 30px threshold
 
-      // Find which section is currently in view
-      const sections = navItems.map((item) => document.getElementById(item.id));
-      const viewportHeight = window.innerHeight;
+      // If at the very bottom of the page, activate the last nav item
+      if (distanceFromBottom <= 50) {
+        if (navItems.length > 0) {
+          setActiveSection(navItems[navItems.length - 1].id);
+        }
+        return;
+      }
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
+      // Offset matching scrollToSection target
+      const targetOffset = 100;
+
+      // Find which section currently encompasses the targetOffset line
+      for (let i = 0; i < navItems.length; i++) {
+        const item = navItems[i];
+        const section = document.getElementById(item.id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (rect.top <= viewportHeight / 2) {
-            setActiveSection(navItems[i].id);
-            break;
+          if (rect.top <= targetOffset && rect.bottom > targetOffset) {
+            setActiveSection(item.id);
+            return;
           }
         }
+      }
+
+      // Fallback: If above all sections (e.g. at the top of the page)
+      const firstSection = document.getElementById(navItems[0]?.id);
+      if (firstSection && firstSection.getBoundingClientRect().top > targetOffset) {
+        setActiveSection(navItems[0].id);
+        return;
       }
     };
 
     // Set initial active section
     handleScroll();
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [navItems]);
 
