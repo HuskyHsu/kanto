@@ -100,7 +100,7 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
                   href={`https://wiki.52poke.com/zh-hant/${pokemon.name.zh}`}
                   target='_blank'
                   rel='noreferrer'
-                  className='font-bold text-slate-900 tracking-tight hover:text-emerald-700 hover:underline transition-colors'
+                  className='font-bold text-blue-600 underline underline-offset-2 tracking-tight hover:text-blue-800 transition-colors'
                   title='前往神奇寶貝百科'
                 >
                   {pokemon.name.zh}
@@ -109,7 +109,7 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
                   href={`https://www.serebii.net/pokedex-rs/${pokemon.pid.toString().padStart(3, '0')}.shtml`}
                   target='_blank'
                   rel='noreferrer'
-                  className='font-mono font-semibold text-slate-600 hover:text-emerald-700 hover:underline transition-colors'
+                  className='font-mono font-semibold text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors'
                   title='前往 Serebii.net'
                 >
                   {pokemon.name.en}
@@ -191,27 +191,7 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
                 </div>
               </div>
 
-              {/* Tile 2: Egg Groups (half row on mobile) */}
-              <div className='col-span-1 bg-slate-50/80 border border-slate-200 rounded-xl p-2 sm:p-3 flex flex-col justify-between gap-1 sm:gap-1.5'>
-                <span className='text-[10px] font-press-start uppercase text-slate-500 text-center sm:text-left'>
-                  Egg Groups
-                </span>
-                <div className='flex flex-wrap gap-1.5 justify-center sm:justify-start'>
-                  {pokemon.eggGroups.map((eggGroup) => (
-                    <a
-                      key={eggGroup}
-                      href={`https://wiki.52poke.com/zh-hant/${eggGroup}（蛋群）`}
-                      target='_blank'
-                      rel='noreferrer'
-                      className='inline-flex items-center text-xs text-blue-700 bg-white hover:bg-blue-50 px-2 py-0.5 sm:py-1 rounded border border-slate-200 font-medium transition-colors underline'
-                    >
-                      {eggGroup}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Tile 3: Gender Ratio (half row on mobile) */}
+              {/* Tile 2: Gender Ratio (half row on mobile) */}
               <div className='col-span-1 bg-slate-50/80 border border-slate-200 rounded-xl p-2 sm:p-3 flex flex-col justify-between gap-1 sm:gap-1.5'>
                 <span className='text-[10px] font-press-start uppercase text-slate-500 text-center sm:text-left'>
                   Gender Ratio
@@ -232,6 +212,26 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
                     </div>
                   </div>
                 )}
+              </div>
+
+              {/* Tile 3: Egg Groups (half row on mobile) */}
+              <div className='col-span-1 bg-slate-50/80 border border-slate-200 rounded-xl p-2 sm:p-3 flex flex-col justify-between gap-1 sm:gap-1.5'>
+                <span className='text-[10px] font-press-start uppercase text-slate-500 text-center sm:text-left'>
+                  Egg Groups
+                </span>
+                <div className='flex flex-wrap gap-1.5 justify-center sm:justify-start'>
+                  {pokemon.eggGroups.map((eggGroup) => (
+                    <a
+                      key={eggGroup}
+                      href={`https://wiki.52poke.com/zh-hant/${eggGroup}（蛋群）`}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='inline-flex items-center text-xs text-blue-700 bg-white hover:bg-blue-50 px-2 py-0.5 sm:py-1 rounded border border-slate-200 font-medium transition-colors underline'
+                    >
+                      {eggGroup}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

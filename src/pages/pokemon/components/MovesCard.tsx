@@ -99,22 +99,27 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
 
     return (
       <TableCell className='px-1 text-left whitespace-normal break-words'>
-        <a
-          href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
-          target='_blank'
-          rel='noreferrer'
+        <span
           className={cn(
-            'text-[13px] sm:text-sm font-bold text-slate-900 hover:text-emerald-700 hover:underline block leading-tight break-words',
+            'text-[13px] sm:text-sm font-bold text-slate-900 leading-tight break-words block',
             isJa && 'font-pixel-jp tracking-wide',
           )}
-          onClick={(e) => e.stopPropagation()}
         >
           {primaryName}
-        </a>
+        </span>
         {showSubtitle && (
-          <span className='text-sm sm:text-[15px] text-slate-800 font-semibold font-sans tracking-normal block leading-snug break-words mt-0.5'>
-            {secondaryName}
-          </span>
+          <div>
+            <a
+              href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
+              target='_blank'
+              rel='noreferrer'
+              className='inline-block text-sm sm:text-[15px] font-semibold font-sans tracking-normal text-blue-600 underline underline-offset-2 hover:text-blue-800 leading-snug break-words mt-0.5 transition-colors'
+              title='前往神奇寶貝百科'
+              onClick={(e) => e.stopPropagation()}
+            >
+              {secondaryName}
+            </a>
+          </div>
         )}
         {move.isPreEvo && move.preEvoName && (
           <div className='text-[10px] leading-tight text-slate-500 font-bold font-sans mt-1'>

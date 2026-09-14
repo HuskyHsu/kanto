@@ -85,22 +85,27 @@ export default function MoveListCard({
                     </TableCell>
                     <TableCell className='px-0 text-center'>{move.tm || '—'}</TableCell>
                     <TableCell className='px-1 text-left whitespace-normal break-words'>
-                      <a
-                        href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
-                        target='_blank'
-                        rel='noreferrer'
+                      <span
                         className={cn(
-                          'text-[13px] sm:text-sm font-bold text-slate-900 hover:text-emerald-700 hover:underline block leading-tight break-words',
+                          'text-[13px] sm:text-sm font-bold text-slate-900 leading-tight break-words block',
                           displayLanguage === 'ja' && 'font-pixel-jp tracking-wide',
                         )}
-                        onClick={(e) => e.stopPropagation()}
                       >
                         {displayLanguage === 'ja' ? move.name.ja : move.name.en}
-                      </a>
+                      </span>
                       {showSubtitle && (
-                        <span className='text-sm sm:text-[15px] text-slate-800 font-semibold font-sans tracking-normal block leading-snug break-words mt-0.5'>
-                          {move.name.zh}
-                        </span>
+                        <div>
+                          <a
+                            href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
+                            target='_blank'
+                            rel='noreferrer'
+                            className='inline-block text-sm sm:text-[15px] font-semibold font-sans tracking-normal text-blue-600 underline underline-offset-2 hover:text-blue-800 leading-snug break-words mt-0.5 transition-colors'
+                            title='前往神奇寶貝百科'
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            {move.name.zh}
+                          </a>
+                        </div>
                       )}
                     </TableCell>
                     <TableCell className='px-0.5 text-center'>
