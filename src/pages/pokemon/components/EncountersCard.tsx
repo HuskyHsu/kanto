@@ -52,8 +52,8 @@ export default function EncountersCard({ pokemon }: EncountersCardProps) {
     <Card className='col-span-1 md:col-span-2 border-[3px] border-[#34925e] rounded-[10px] bg-white shadow-none'>
       <CardHeader className='flex flex-row items-center justify-between flex-wrap gap-2.5 pb-3'>
         <div className='flex items-center gap-2 flex-wrap'>
-          <CardTitle className='font-press-start text-base sm:text-lg uppercase tracking-wider text-slate-800 relative pl-4 before:content-[""] before:absolute before:left-0 before:top-[15%] before:h-[70%] before:w-1 before:bg-[#e05038] flex items-center gap-2'>
-            <span>Encounter Locations</span>
+          <CardTitle className='font-press-start text-sm sm:text-lg uppercase tracking-wider text-slate-800 relative pl-4 before:content-[""] before:absolute before:left-0 before:top-[15%] before:h-[70%] before:w-1 before:bg-[#e05038] flex items-center gap-2 whitespace-nowrap'>
+            <span>Locations</span>
             <span className='text-xs font-mono font-normal text-muted-foreground'>
               ({filteredEncounters.length})
             </span>

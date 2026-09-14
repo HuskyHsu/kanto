@@ -19,9 +19,9 @@ const QuickNavigation = ({ hasEvolution, hasEncounters }: QuickNavigationProps) 
   const navItems: NavItem[] = [
     { id: 'basic-info', label: 'Basic Info', icon: Cat },
     { id: 'moves', label: 'Moves', icon: Swords },
-    { id: 'stats', label: 'Stats', icon: ChartPie },
     ...(hasEvolution ? [{ id: 'evolution', label: 'Evolution', icon: Split }] : []),
     ...(hasEncounters ? [{ id: 'encounters', label: 'Encounters', icon: Compass }] : []),
+    { id: 'stats', label: 'Stats', icon: ChartPie },
   ];
 
   const scrollToSection = (sectionId: string) => {

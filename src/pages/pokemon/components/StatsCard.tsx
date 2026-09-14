@@ -22,11 +22,13 @@ export default function StatsCard({ pokemon }: StatsCardProps) {
         <CardTitle className='text-sm mb-4 font-press-start text-slate-600'>
           Individual Values & Base points
         </CardTitle>
-        <div className='flex justify-center'>
-          <div className=''>
-            <div className='w-4/5 md:w-2/3 mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-12 gap-6 items-center'>
+          <div className='md:col-span-5 flex flex-col items-center justify-center'>
+            <div className='w-4/5 sm:w-2/3 md:w-full max-w-[340px] mx-auto'>
               <RadarChart stats={pokemon.base} EVs={pokemon.ev} />
             </div>
+          </div>
+          <div className='md:col-span-7 w-full'>
             <Statistic pokemon={pokemon} />
           </div>
         </div>

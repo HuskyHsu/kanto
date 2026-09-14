@@ -127,22 +127,22 @@ function PokemonDetail() {
       <BackButton />
       <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-        <div id='basic-info' className='order-1'>
+        <div id='basic-info' className='col-span-1 md:col-span-2'>
           <BasicInfo pokemon={pokemon} loading={loading} />
         </div>
-        <div id='stats' className='order-3 md:order-2'>
-          <StatsCard pokemon={pokemon} />
-        </div>
-        <div id='moves' className='col-span-1 md:col-span-2 order-2 md:order-3'>
+        <div id='moves' className='col-span-1 md:col-span-2'>
           <MovesCard pokemon={pokemon} />
         </div>
         {pokemon.evolution && (
-          <div id='evolution' className='col-span-1 md:col-span-2 order-4'>
+          <div id='evolution' className='col-span-1 md:col-span-2'>
             <EvolutionCard pokemon={pokemon} onPokemonChange={handlePokemonChange} />
           </div>
         )}
-        <div id='encounters' className='col-span-1 md:col-span-2 order-5'>
+        <div id='encounters' className='col-span-1 md:col-span-2'>
           <EncountersCard pokemon={pokemon} />
+        </div>
+        <div id='stats' className='col-span-1 md:col-span-2'>
+          <StatsCard pokemon={pokemon} />
         </div>
       </div>
       <QuickNavigation
