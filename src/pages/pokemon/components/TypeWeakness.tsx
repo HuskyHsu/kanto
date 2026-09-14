@@ -51,26 +51,26 @@ function TypeRate({ targetRate, types }: TypeRateProps) {
   const secondaryText = term.zh;
 
   return (
-    <div className='flex flex-col gap-1.5 p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs min-w-[140px] flex-1 sm:flex-initial'>
+    <div className='flex flex-col gap-1 p-2 sm:p-2.5 rounded-lg bg-white border border-slate-200/80 shadow-2xs min-w-[120px] sm:min-w-[140px] flex-1 sm:flex-initial'>
       <div className='flex items-center gap-1.5 flex-wrap'>
-        <span className={`px-2 py-0.5 rounded text-[10px] font-press-start font-bold ${badgeColor}`}>
+        <span className={`px-2 py-0.5 rounded text-[9px] sm:text-[10px] font-press-start font-bold ${badgeColor}`}>
           {targetRate}x
         </span>
         <span
           className={cn(
-            'text-[11px] text-slate-700 font-semibold',
-            isJa && 'font-pixel-jp text-[10px] tracking-wide',
+            'text-[10px] sm:text-[11px] text-slate-700 font-semibold',
+            isJa && 'font-pixel-jp text-[9px] sm:text-[10px] tracking-wide',
           )}
         >
           {primaryText}
         </span>
         {showSubtitle && (
-          <span className='text-[10px] text-slate-400 font-sans'>
+          <span className='text-[9px] sm:text-[10px] text-slate-400 font-sans'>
             ({secondaryText})
           </span>
         )}
       </div>
-      <div className='flex flex-wrap gap-1.5 pt-0.5'>
+      <div className='flex flex-wrap gap-1 pt-0.5'>
         {matchingTypes.map(({ type }) => (
           <PokemonTypes types={[type]} key={type} />
         ))}
@@ -81,7 +81,7 @@ function TypeRate({ targetRate, types }: TypeRateProps) {
 
 function Weakness({ types }: WeaknessDisplayProps) {
   return (
-    <div className='flex flex-wrap gap-3 items-start justify-center sm:justify-start'>
+    <div className='flex flex-wrap gap-2 sm:gap-3 items-start justify-center sm:justify-start'>
       {WEAKNESS_MULTIPLIERS.map((rate) => (
         <TypeRate targetRate={rate} types={types} key={rate} />
       ))}
