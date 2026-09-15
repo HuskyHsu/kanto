@@ -20,7 +20,7 @@ const STORAGE_KEYS = {
   LOCATION: 'kanto_companion_location',
 };
 
-const MAX_TEAM_SIZE = 12;
+export const MAX_TEAM_SIZE = 12;
 
 const CompanionContext = createContext<CompanionContextType | undefined>(undefined);
 

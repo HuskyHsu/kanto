@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useCompanion } from '@/contexts/CompanionContext';
+import { useCompanion, MAX_TEAM_SIZE } from '@/contexts/CompanionContext';
 import { usePokemonContext } from '@/contexts/PokemonContext';
 import { useLocationData } from '@/hooks/useLocationData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { Pokemon } from '@/types/pokemon';
 import { Plus, X, Search, Settings2, Check, Compass, MapPin } from 'lucide-react';
+import { PokemonIconLink } from '@/components/pokemon';
 import {
   METHOD_ICONS,
   METHOD_ORDER,
@@ -29,7 +29,6 @@ interface EncounterMethodSection {
 }
 
 export const TeamTab: React.FC = () => {
-  const navigate = useNavigate();
   const {
     team,
     removeFromTeam,
@@ -183,75 +182,80 @@ export const TeamTab: React.FC = () => {
     }
   };
 
-  // Render 12 fixed slots in 3 columns (3x4 Grid)
-  const renderTeamSlots = (max = 12) => {
-    const slots = [];
-    for (let i = 0; i < max; i++) {
-      const pid = team[i];
-      if (pid) {
-        const pm = pokemonMap.get(pid);
-        slots.push(
-          <div
-            key={`team-${pid}-${i}`}
-            className={`group relative aspect-square rounded-[8px] bg-white border-2 flex items-center justify-center p-0.5 transition-all ${
-              isEditing
-                ? 'border-amber-400 bg-amber-50/20 shadow-[1px_1px_0_0_rgba(251,191,36,0.5)]'
-                : 'border-slate-300 hover:border-[#34925e] shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
-            }`}
-            onClick={() => {
-              if (!isEditing) {
-                navigate(`/pokemon/${pid}`);
-              }
-            }}
-            title={pm ? `${pm.name.zh} #${pm.pid}` : undefined}
-          >
-            {/* Pokemon Sprite */}
-            <img
-              src={`${import.meta.env.BASE_URL}images/pmIcon/${pid}.png`}
-              alt='Pokemon'
-              className='w-10 h-10 object-contain [image-rendering:pixelated] group-hover:scale-110 transition-transform'
-              loading='lazy'
-            />
-
-            {/* Edit Delete Button (Only in edit mode) */}
-            {isEditing && (
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  removeFromTeam(pid);
-                  showToast('已移出隊伍');
-                }}
-                title='移出隊伍'
-                className='absolute -top-1.5 -right-1.5 w-4 h-4 rounded-[4px] bg-[#e05038] hover:bg-rose-700 text-white flex items-center justify-center border border-white shadow-xs cursor-pointer transition-transform hover:scale-110'
-              >
-                <X className='w-2.5 h-2.5 stroke-3' />
-              </button>
-            )}
-          </div>
-        );
-      } else {
-        slots.push(
-          <div
-            key={`team-empty-${i}`}
-            onClick={() => {
-              if (currentViewingPokemon && !isCurrentInTeam) {
-                handleAddCurrentViewing();
-              } else {
-                setIsSearching(true);
-              }
-            }}
-            className='aspect-square rounded-[8px] border-2 border-dashed border-slate-300 hover:border-[#34925e] bg-white/60 hover:bg-emerald-50/40 flex flex-col items-center justify-center cursor-pointer transition-all shadow-[1px_1px_0_0_rgba(203,213,225,0.6)] group'
-            title={
-              currentViewingPokemon && !isCurrentInTeam
-                ? `點擊將當前【${currentViewingPokemon.name.zh}】填入此位`
-                : '點擊搜尋添加'
-            }
-          >
-            <Plus className='w-3.5 h-3.5 text-slate-300 group-hover:text-[#34925e] transition-colors stroke-3' />
-          </div>
-        );
-      }
+  const handleRemoveFromTeam = (pid: number) => {
+    removeFromTeam(pid);
+    showToast('已移出隊伍');
+    if (team.length <= 1) {
+      setIsEditing(false);
     }
+  };
+
+  // Render team slots dynamically: existing members + 1 empty slot (up to MAX_TEAM_SIZE)
+  const renderTeamSlots = () => {
+    const slots = [];
+
+    // Render existing members
+    team.forEach((pid, i) => {
+      const pm = pokemonMap.get(pid);
+      slots.push(
+        <div
+          key={`team-${pid}-${i}`}
+          className={`group relative aspect-square rounded-[8px] bg-white border-2 flex items-center justify-center overflow-hidden transition-all ${
+            isEditing
+              ? 'border-amber-400 bg-amber-50/20 shadow-[1px_1px_0_0_rgba(251,191,36,0.5)]'
+              : 'border-slate-300 hover:border-[#34925e] shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
+          }`}
+          title={pm ? `${pm.name.zh} #${pm.pid}` : undefined}
+        >
+          {/* Pokemon Sprite via PokemonIconLink */}
+          <PokemonIconLink
+            pokemon={pm || { pid, name: { zh: `#${pid}`, en: `#${pid}`, ja: '' } }}
+            className='p-0 w-full h-full'
+            disableLink={isEditing}
+            fillBg
+          />
+
+          {/* Edit Delete Button (Only in edit mode) */}
+          {isEditing && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleRemoveFromTeam(pid);
+              }}
+              title='移出隊伍'
+              className='absolute -top-1.5 -right-1.5 w-4 h-4 rounded-[4px] bg-[#e05038] hover:bg-rose-700 text-white flex items-center justify-center border border-white shadow-xs cursor-pointer transition-transform hover:scale-110 z-30'
+            >
+              <X className='w-2.5 h-2.5 stroke-3' />
+            </button>
+          )}
+        </div>
+      );
+    });
+
+    // Render exactly one empty slot if team is not full
+    if (team.length < MAX_TEAM_SIZE) {
+      slots.push(
+        <div
+          key='team-empty-slot'
+          onClick={() => {
+            if (currentViewingPokemon && !isCurrentInTeam) {
+              handleAddCurrentViewing();
+            } else {
+              setIsSearching(true);
+            }
+          }}
+          className='aspect-square rounded-[8px] border-2 border-dashed border-slate-300 hover:border-[#34925e] bg-white/60 hover:bg-emerald-50/40 flex flex-col items-center justify-center cursor-pointer transition-all shadow-[1px_1px_0_0_rgba(203,213,225,0.6)] group'
+          title={
+            currentViewingPokemon && !isCurrentInTeam
+              ? `點擊將當前【${currentViewingPokemon.name.zh}】填入此位`
+              : '點擊搜尋添加'
+          }
+        >
+          <Plus className='w-3.5 h-3.5 text-slate-300 group-hover:text-[#34925e] transition-colors stroke-3' />
+        </div>
+      );
+    }
+
     return slots;
   };
 
@@ -268,11 +272,12 @@ export const TeamTab: React.FC = () => {
       {currentViewingPokemon && (
         <div className='bg-white border-2 border-[#34925e] rounded-[8px] p-2 flex flex-col gap-1.5 shadow-[2px_2px_0_0_rgba(52,146,94,0.2)]'>
           <div className='flex items-center gap-1.5 min-w-0'>
-            <div className='w-7 h-7 rounded-[4px] bg-slate-100 border border-slate-300 flex items-center justify-center p-0.5 shrink-0'>
-              <img
-                src={`${import.meta.env.BASE_URL}images/pmIcon/${currentViewingPokemon.pid}.png`}
-                alt={currentViewingPokemon.name.zh}
-                className='w-6 h-6 object-contain [image-rendering:pixelated]'
+            <div className='w-10 h-10 rounded-[4px] border border-slate-300 flex items-center justify-center shrink-0 overflow-hidden'>
+              <PokemonIconLink
+                pokemon={currentViewingPokemon}
+                className='p-0 w-full h-full'
+                disableLink
+                fillBg
               />
             </div>
             <span className='text-xs font-bold text-slate-800 truncate'>
@@ -321,11 +326,14 @@ export const TeamTab: React.FC = () => {
                   className='flex items-center justify-between p-1 hover:bg-slate-100 rounded-[4px] cursor-pointer text-xs'
                 >
                   <div className='flex items-center gap-1.5 truncate'>
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/pmIcon/${pm.pid}.png`}
-                      alt={pm.name.zh}
-                      className='w-6 h-6 object-contain [image-rendering:pixelated]'
-                    />
+                    <div className='w-8 h-8 flex items-center justify-center shrink-0 overflow-hidden scale-75 -my-1'>
+                      <PokemonIconLink
+                        pokemon={pm}
+                        className='p-0 w-full h-full'
+                        disableLink
+                        hideTypeBg
+                      />
+                    </div>
                     <span className='truncate font-medium text-slate-800'>{pm.name.zh}</span>
                   </div>
                   <Plus className='w-3.5 h-3.5 text-[#34925e] shrink-0 stroke-3' />
@@ -337,42 +345,47 @@ export const TeamTab: React.FC = () => {
       ) : null}
 
       {/* Edit Mode Switch */}
-      <div className='flex items-center justify-between px-1 pb-0.5 border-b border-slate-200'>
-        <span className='text-[10px] font-press-start text-slate-400'>
-          {isEditing ? 'EDITING' : 'READY'}
-        </span>
-        <button
-          onClick={() => setIsEditing(!isEditing)}
-          className={`flex items-center gap-1 px-1.5 py-0.5 rounded-[6px] text-[9px] font-press-start transition-all cursor-pointer ${
-            isEditing
-              ? 'bg-amber-100 text-amber-900 border-2 border-amber-400 shadow-[1px_1px_0_0_rgba(251,191,36,1)]'
-              : 'bg-white text-slate-600 border-2 border-slate-300 hover:border-slate-400 shadow-[1px_1px_0_0_rgba(203,213,225,1)] hover:translate-y-px hover:shadow-none'
-          }`}
-          title={isEditing ? '完成編輯' : '切換為刪除模式'}
-        >
-          {isEditing ? (
-            <>
-              <Check className='w-2.5 h-2.5 text-emerald-700 stroke-3' />
-              <span>DONE</span>
-            </>
-          ) : (
-            <>
-              <Settings2 className='w-2.5 h-2.5 text-slate-500' />
-              <span>EDIT</span>
-            </>
-          )}
-        </button>
-      </div>
+      {/* Edit Mode Switch (Only shown when team has members) */}
+      {team.length > 0 && (
+        <div className='flex items-center justify-between px-1 pb-0.5 border-b border-slate-200'>
+          <span className='text-[10px] font-press-start text-slate-400'>
+            {isEditing ? 'EDITING' : 'READY'}
+          </span>
+          <button
+            onClick={() => setIsEditing(!isEditing)}
+            className={`flex items-center gap-1 px-1.5 py-0.5 rounded-[6px] text-[9px] font-press-start transition-all cursor-pointer ${
+              isEditing
+                ? 'bg-amber-100 text-amber-900 border-2 border-amber-400 shadow-[1px_1px_0_0_rgba(251,191,36,1)]'
+                : 'bg-white text-slate-600 border-2 border-slate-300 hover:border-slate-400 shadow-[1px_1px_0_0_rgba(203,213,225,1)] hover:translate-y-px hover:shadow-none'
+            }`}
+            title={isEditing ? '完成編輯' : '切換為刪除模式'}
+          >
+            {isEditing ? (
+              <>
+                <Check className='w-2.5 h-2.5 text-emerald-700 stroke-3' />
+                <span>DONE</span>
+              </>
+            ) : (
+              <>
+                <Settings2 className='w-2.5 h-2.5 text-slate-500' />
+                <span>EDIT</span>
+              </>
+            )}
+          </button>
+        </div>
+      )}
 
-      {/* Section 1: 隊伍清單 (TEAM: 12 格 3x4 Grid) */}
+      {/* Section 1: 隊伍清單 (TEAM: 動態空格，上限 MAX_TEAM_SIZE) */}
       <div className='space-y-1'>
         <div className='flex items-center justify-between px-0.5'>
           <div className='flex items-center gap-1 text-[10px] font-press-start text-slate-700 uppercase'>
             <span className='w-1.5 h-1.5 rounded-full bg-[#34925e]'></span>
             <span>TEAM</span>
-            <span className='text-slate-400 font-mono text-[11px]'>({team.length}/12)</span>
+            <span className='text-slate-400 font-mono text-[11px]'>
+              ({team.length}/{MAX_TEAM_SIZE})
+            </span>
           </div>
-          {!isSearching && (
+          {!isSearching && team.length < MAX_TEAM_SIZE && (
             <button
               onClick={() => setIsSearching(true)}
               title='搜尋添加'
@@ -383,9 +396,9 @@ export const TeamTab: React.FC = () => {
           )}
         </div>
 
-        {/* 12 Slots in 3 Columns */}
+        {/* Dynamic Slots in 3 Columns */}
         <div className='grid grid-cols-3 gap-1.5'>
-          {renderTeamSlots(12)}
+          {renderTeamSlots()}
         </div>
       </div>
 
@@ -445,24 +458,25 @@ export const TeamTab: React.FC = () => {
 
                 {/* Encounters Grid for this Method (3 Columns) */}
                 <div className='grid grid-cols-3 gap-1.5'>
-                  {section.encounters.map((enc) => (
-                    <div
-                      key={`${section.method}-${enc.pid}`}
-                      onClick={() => navigate(`/pokemon/${enc.pid}`)}
-                      className='group relative aspect-square rounded-[8px] bg-white border-2 border-slate-300 hover:border-[#34925e] flex flex-col items-center justify-center p-0.5 transition-all shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
-                      title={`${enc.name.zh} #${enc.pid} (Lv.${enc.minLevel === enc.maxLevel ? enc.minLevel : `${enc.minLevel}-${enc.maxLevel}`}，機率: ${enc.chance}%)`}
-                    >
-                      <img
-                        src={`${import.meta.env.BASE_URL}images/pmIcon/${enc.pid}.png`}
-                        alt={enc.name.zh}
-                        className='w-10 h-10 object-contain [image-rendering:pixelated] group-hover:scale-110 transition-transform'
-                        loading='lazy'
-                      />
-                      <span className='absolute bottom-0.5 right-1 text-[8px] font-mono font-bold text-slate-400 group-hover:text-[#34925e]'>
-                        {enc.chance}%
-                      </span>
-                    </div>
-                  ))}
+                  {section.encounters.map((enc) => {
+                    const pm = pokemonMap.get(enc.pid) || { pid: enc.pid, name: enc.name };
+                    return (
+                      <div
+                        key={`${section.method}-${enc.pid}`}
+                        className='group relative aspect-square rounded-[8px] bg-white border-2 border-slate-300 hover:border-[#34925e] flex flex-col items-center justify-center overflow-hidden transition-all shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
+                        title={`${enc.name.zh} #${enc.pid} (Lv.${enc.minLevel === enc.maxLevel ? enc.minLevel : `${enc.minLevel}-${enc.maxLevel}`}，機率: ${enc.chance}%)`}
+                      >
+                        <PokemonIconLink
+                          pokemon={pm}
+                          className='p-0 w-full h-full'
+                          fillBg
+                        />
+                        <span className='absolute bottom-0.5 right-1 text-[8px] font-mono font-bold text-slate-500 group-hover:text-[#34925e] bg-white/80 px-0.5 rounded-xs z-20 pointer-events-none'>
+                          {enc.chance}%
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}

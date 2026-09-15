@@ -1,16 +1,24 @@
 import React, { useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useCompanion } from '@/contexts/CompanionContext';
+import { usePokemonContext } from '@/contexts/PokemonContext';
 import { useLocationData } from '@/hooks/useLocationData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { LocationPokemonEncounter } from '@/types/location';
+import type { Pokemon } from '@/types/pokemon';
 import { Compass, MapPin } from 'lucide-react';
+import { PokemonIconLink } from '@/components/pokemon';
 
 export const RadarTab: React.FC = () => {
-  const navigate = useNavigate();
   const { selectedLocationId, setSelectedLocationId } = useCompanion();
+  const { pokemonList } = usePokemonContext();
   const { locationList, loading } = useLocationData();
   const { displayLanguage } = useLanguage();
+
+  const pokemonMap = useMemo(() => {
+    const map = new Map<number, Pokemon>();
+    pokemonList.forEach((p) => map.set(p.pid, p));
+    return map;
+  }, [pokemonList]);
 
   // Current selected location
   const currentLocation = useMemo(() => {
@@ -83,24 +91,28 @@ export const RadarTab: React.FC = () => {
           </div>
 
           <div className='grid grid-cols-3 gap-1.5'>
-            {uniqueEncounters.map((enc) => (
-              <div
-                key={enc.pid}
-                onClick={() => navigate(`/pokemon/${enc.pid}`)}
-                className='group relative aspect-square rounded-[8px] bg-white border-2 border-slate-300 hover:border-[#34925e] flex flex-col items-center justify-center p-1 transition-all shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
-                title={`${enc.name.zh} #${enc.pid} (${enc.methodName?.zh || enc.method} ${enc.chance}%)`}
-              >
-                <img
-                  src={`${import.meta.env.BASE_URL}images/pmIcon/${enc.pid}.png`}
-                  alt={enc.name.zh}
-                  className='w-10 h-10 object-contain [image-rendering:pixelated] group-hover:scale-110 transition-transform'
-                  loading='lazy'
-                />
-                <span className='absolute bottom-0.5 right-1 text-[8px] font-mono font-bold text-slate-400 group-hover:text-[#34925e]'>
-                  {enc.chance}%
-                </span>
-              </div>
-            ))}
+            {uniqueEncounters.map((enc) => {
+              const pm = pokemonMap.get(enc.pid) || {
+                pid: enc.pid,
+                name: enc.name,
+              };
+              return (
+                <div
+                  key={enc.pid}
+                  className='group relative aspect-square rounded-[8px] bg-white border-2 border-slate-300 hover:border-[#34925e] flex flex-col items-center justify-center overflow-hidden transition-all shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
+                  title={`${enc.name.zh} #${enc.pid} (${enc.methodName?.zh || enc.method} ${enc.chance}%)`}
+                >
+                  <PokemonIconLink
+                    pokemon={pm}
+                    className='p-0 w-full h-full'
+                    fillBg
+                  />
+                  <span className='absolute bottom-0.5 right-1 text-[8px] font-mono font-bold text-slate-500 group-hover:text-[#34925e] bg-white/80 px-0.5 rounded-xs z-20 pointer-events-none'>
+                    {enc.chance}%
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       )}

@@ -1,11 +1,14 @@
 import React from 'react';
-import { useCompanion } from '@/contexts/CompanionContext';
+import { useCompanion, MAX_TEAM_SIZE } from '@/contexts/CompanionContext';
+import { usePokemonContext } from '@/contexts/PokemonContext';
 import { useLocationData } from '@/hooks/useLocationData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Sparkles, MapPin } from 'lucide-react';
+import { PokemonIconLink } from '@/components/pokemon';
 
 export const CompanionTrigger: React.FC = () => {
   const { team, selectedLocationId, isOpen, setIsOpen } = useCompanion();
+  const { pokemonList } = usePokemonContext();
   const { locationList } = useLocationData();
   const { displayLanguage } = useLanguage();
 
@@ -26,18 +29,25 @@ export const CompanionTrigger: React.FC = () => {
         {/* Sprites stack or Retro Pokeball icon */}
         {team.length > 0 ? (
           <div className='flex items-center -space-x-2 shrink-0'>
-            {team.slice(0, 3).map((pid) => (
-              <div
-                key={pid}
-                className='w-7 h-7 rounded-lg bg-slate-50 border-2 border-slate-300 flex items-center justify-center p-0.5 shadow-2xs group-hover:scale-105 transition-transform'
-              >
-                <img
-                  src={`${import.meta.env.BASE_URL}images/pmIcon/${pid}.png`}
-                  alt='Party icon'
-                  className='w-6 h-6 object-contain [image-rendering:pixelated]'
-                />
-              </div>
-            ))}
+            {team.slice(0, 3).map((pid) => {
+              const pm = pokemonList.find((p) => p.pid === pid) || {
+                pid,
+                name: { zh: '', en: '', ja: '' },
+              };
+              return (
+                <div
+                  key={pid}
+                  className='w-7 h-7 rounded-lg bg-slate-50 border-2 border-slate-300 flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform overflow-hidden'
+                >
+                  <PokemonIconLink
+                    pokemon={pm}
+                    className='p-0 w-full h-full scale-75'
+                    disableLink
+                    hideTypeBg
+                  />
+                </div>
+              );
+            })}
           </div>
         ) : (
           <div className='w-7 h-7 rounded-lg bg-emerald-50 border-2 border-[#34925e] flex items-center justify-center shrink-0'>
@@ -51,7 +61,9 @@ export const CompanionTrigger: React.FC = () => {
             <span className='font-press-start text-[10px] tracking-wide text-[#34925e]'>
               TEAM
             </span>
-            <span className='text-xs font-mono font-bold text-slate-700'>{team.length}/12</span>
+            <span className='text-xs font-mono font-bold text-slate-700'>
+              {team.length}/{MAX_TEAM_SIZE}
+            </span>
           </div>
           {locationName && (
             <div className='flex items-center gap-1 text-[11px] font-bold text-slate-500 truncate max-w-[120px]'>
