@@ -5,8 +5,28 @@ import { usePokemonContext } from '@/contexts/PokemonContext';
 import { useLocationData } from '@/hooks/useLocationData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { Pokemon } from '@/types/pokemon';
-import type { LocationPokemonEncounter } from '@/types/location';
 import { Plus, X, Search, Settings2, Check, Compass, MapPin } from 'lucide-react';
+import {
+  METHOD_ICONS,
+  METHOD_ORDER,
+  getEncounterMethodDisplayName,
+} from '@/utils/encounterUtils';
+
+interface AggregatedEncounter {
+  pid: number;
+  name: { zh: string; en: string; ja?: string };
+  chance: number;
+  minLevel: number;
+  maxLevel: number;
+}
+
+interface EncounterMethodSection {
+  method: string;
+  name: string;
+  icon: string;
+  totalChance: number;
+  encounters: AggregatedEncounter[];
+}
 
 export const TeamTab: React.FC = () => {
   const navigate = useNavigate();
@@ -48,7 +68,7 @@ export const TeamTab: React.FC = () => {
 
   const isCurrentInTeam = currentViewingPokemon ? isInTeam(currentViewingPokemon.pid) : false;
 
-  // Radar location & encounters
+  // Radar location
   const currentLocation = useMemo(() => {
     if (!locationList.length) return null;
     if (selectedLocationId) {
@@ -59,18 +79,74 @@ export const TeamTab: React.FC = () => {
     return route1 || locationList[0];
   }, [locationList, selectedLocationId]);
 
-  const uniqueEncounters = useMemo(() => {
+  // Group encounters by (Area + Method) if multiple areas exist (e.g. 1F - 草叢/走路, B1F - 草叢/走路)
+  const methodSections = useMemo((): EncounterMethodSection[] => {
     if (!currentLocation) return [];
-    const map = new Map<number, LocationPokemonEncounter>();
-    currentLocation.areas.forEach((area) => {
+
+    const hasMultipleAreas = currentLocation.areas.length > 1;
+    const sections: EncounterMethodSection[] = [];
+
+    currentLocation.areas.forEach((area, areaIdx) => {
+      const areaName = hasMultipleAreas ? area.name.zh || area.name.en || `${areaIdx + 1}F` : '';
+
+      // Group by method within this specific area
+      const methodMap = new Map<string, Map<number, AggregatedEncounter>>();
+
       area.encounters.forEach((enc) => {
-        if (!map.has(enc.pid)) {
-          map.set(enc.pid, enc);
+        const m = enc.method;
+        if (!methodMap.has(m)) {
+          methodMap.set(m, new Map<number, AggregatedEncounter>());
+        }
+        const pidMap = methodMap.get(m)!;
+        const existing = pidMap.get(enc.pid);
+
+        if (existing) {
+          existing.chance += enc.chance;
+          existing.minLevel = Math.min(existing.minLevel, enc.minLevel);
+          existing.maxLevel = Math.max(existing.maxLevel, enc.maxLevel);
+        } else {
+          pidMap.set(enc.pid, {
+            pid: enc.pid,
+            name: enc.name,
+            chance: enc.chance,
+            minLevel: enc.minLevel,
+            maxLevel: enc.maxLevel,
+          });
         }
       });
+
+      // Sort methods in this area by game order
+      const sortedMethods = Array.from(methodMap.entries()).sort((a, b) => {
+        const orderA = METHOD_ORDER[a[0]] ?? 99;
+        const orderB = METHOD_ORDER[b[0]] ?? 99;
+        return orderA - orderB;
+      });
+
+      sortedMethods.forEach(([method, pidMap]) => {
+        const encounters = Array.from(pidMap.values()).sort((a, b) => b.chance - a.chance);
+        const totalChance = encounters.reduce((sum, e) => sum + e.chance, 0);
+        const baseMethodName = getEncounterMethodDisplayName(method, displayLanguage);
+        const displayName = hasMultipleAreas ? `${areaName} - ${baseMethodName}` : baseMethodName;
+        const methodIcon = METHOD_ICONS[method] || '📍';
+
+        sections.push({
+          method: `${areaIdx}-${method}`,
+          name: displayName,
+          icon: methodIcon,
+          totalChance,
+          encounters,
+        });
+      });
     });
-    return Array.from(map.values());
-  }, [currentLocation]);
+
+    return sections;
+  }, [currentLocation, displayLanguage]);
+
+  const totalWildCount = useMemo(() => {
+    const pids = new Set<number>();
+    methodSections.forEach((sec) => sec.encounters.forEach((e) => pids.add(e.pid)));
+    return pids.size;
+  }, [methodSections]);
 
   // Filter search results
   const searchResults = useMemo(() => {
@@ -313,15 +389,15 @@ export const TeamTab: React.FC = () => {
         </div>
       </div>
 
-      {/* Section 2: 地圖雷達 (Radar: Location + 3xN Grid) */}
-      <div className='space-y-1.5 pt-2 border-t-2 border-slate-200'>
+      {/* Section 2: 地圖雷達 (Radar: Location + Grouped by Encounter Method) */}
+      <div className='space-y-2 pt-2 border-t-2 border-slate-200'>
         <div className='flex items-center justify-between px-0.5'>
           <div className='flex items-center gap-1 text-[10px] font-press-start text-slate-700 uppercase'>
             <Compass className='w-3 h-3 text-[#34925e]' />
             <span>RADAR</span>
           </div>
           <span className='text-[10px] font-mono text-slate-400'>
-            {uniqueEncounters.length} 隻
+            {totalWildCount} 種寶可夢
           </span>
         </div>
 
@@ -342,34 +418,52 @@ export const TeamTab: React.FC = () => {
           })}
         </select>
 
-        {/* Wild Encounters: 3xN Grid */}
+        {/* Wild Encounters Grouped by Method (Walk, Surf, Rods, etc.) */}
         {loadingLocation ? (
           <div className='text-center py-4 text-[10px] font-press-start text-slate-400'>
             LOADING...
           </div>
-        ) : !currentLocation || uniqueEncounters.length === 0 ? (
+        ) : !currentLocation || methodSections.length === 0 ? (
           <div className='text-center py-3 border-2 border-dashed border-slate-300 rounded-[8px] bg-white shadow-[1px_1px_0_0_rgba(203,213,225,0.6)]'>
             <MapPin className='w-4 h-4 text-slate-300 mx-auto mb-0.5' />
             <p className='text-[9px] font-press-start text-slate-400'>NO WILD PM</p>
           </div>
         ) : (
-          <div className='grid grid-cols-3 gap-1.5'>
-            {uniqueEncounters.map((enc) => (
-              <div
-                key={enc.pid}
-                onClick={() => navigate(`/pokemon/${enc.pid}`)}
-                className='group relative aspect-square rounded-[8px] bg-white border-2 border-slate-300 hover:border-[#34925e] flex flex-col items-center justify-center p-0.5 transition-all shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
-                title={`${enc.name.zh} #${enc.pid} (${enc.methodName?.zh || enc.method} ${enc.chance}%)`}
-              >
-                <img
-                  src={`${import.meta.env.BASE_URL}images/pmIcon/${enc.pid}.png`}
-                  alt={enc.name.zh}
-                  className='w-10 h-10 object-contain [image-rendering:pixelated] group-hover:scale-110 transition-transform'
-                  loading='lazy'
-                />
-                <span className='absolute bottom-0.5 right-1 text-[8px] font-mono font-bold text-slate-400 group-hover:text-[#34925e]'>
-                  {enc.chance}%
-                </span>
+          <div className='space-y-2.5'>
+            {methodSections.map((section) => (
+              <div key={section.method} className='space-y-1'>
+                {/* Method Sub-Header */}
+                <div className='flex items-center justify-between text-[10px] font-bold text-slate-700 bg-slate-100/90 px-1.5 py-0.5 rounded-[4px] border border-slate-200'>
+                  <span className='flex items-center gap-1'>
+                    <span>{section.icon}</span>
+                    <span>{section.name}</span>
+                  </span>
+                  <span className='font-mono text-[9px] text-slate-400 font-semibold'>
+                    {section.encounters.length} 隻 ({section.totalChance}%)
+                  </span>
+                </div>
+
+                {/* Encounters Grid for this Method (3 Columns) */}
+                <div className='grid grid-cols-3 gap-1.5'>
+                  {section.encounters.map((enc) => (
+                    <div
+                      key={`${section.method}-${enc.pid}`}
+                      onClick={() => navigate(`/pokemon/${enc.pid}`)}
+                      className='group relative aspect-square rounded-[8px] bg-white border-2 border-slate-300 hover:border-[#34925e] flex flex-col items-center justify-center p-0.5 transition-all shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
+                      title={`${enc.name.zh} #${enc.pid} (Lv.${enc.minLevel === enc.maxLevel ? enc.minLevel : `${enc.minLevel}-${enc.maxLevel}`}，機率: ${enc.chance}%)`}
+                    >
+                      <img
+                        src={`${import.meta.env.BASE_URL}images/pmIcon/${enc.pid}.png`}
+                        alt={enc.name.zh}
+                        className='w-10 h-10 object-contain [image-rendering:pixelated] group-hover:scale-110 transition-transform'
+                        loading='lazy'
+                      />
+                      <span className='absolute bottom-0.5 right-1 text-[8px] font-mono font-bold text-slate-400 group-hover:text-[#34925e]'>
+                        {enc.chance}%
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
