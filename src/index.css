@@ -207,4 +207,27 @@
     transform: scale(0.625); /* 40px / 64px to fit the w-10 h-10 container */
     image-rendering: pixelated;
   }
+
+  @keyframes slideLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate-slide-left {
+    animation: slideLeft 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out forwards;
+  }
 }

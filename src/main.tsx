@@ -1,3 +1,4 @@
+import { CompanionProvider } from '@/contexts/CompanionContext';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { LocationProvider } from '@/contexts/LocationContext';
 import { MoveProvider } from '@/contexts/MoveContext';
@@ -15,7 +16,9 @@ createRoot(document.getElementById('root')!).render(
         <PokemonProvider>
           <MoveProvider>
             <LocationProvider>
-              <App />
+              <CompanionProvider>
+                <App />
+              </CompanionProvider>
             </LocationProvider>
           </MoveProvider>
         </PokemonProvider>

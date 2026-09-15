@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import type { DetailedPokemon } from '@/types/pokemon';
 import { Sparkles } from 'lucide-react';
 import { TypeWeakness } from './TypeWeakness';
+import { TeamActionButton } from './TeamActionButton';
 
 interface BasicInfoProps {
   pokemon: DetailedPokemon;
@@ -31,10 +32,11 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
 
   return (
     <Card className='border-[3px] border-[#34925e] rounded-[10px] bg-white shadow-none'>
-      <CardHeader className='py-2.5 sm:py-4 px-3 sm:px-6'>
+      <CardHeader className='py-2.5 sm:py-4 px-3 sm:px-6 flex flex-row items-center justify-between gap-2'>
         <CardTitle className='flex items-center gap-2 font-press-start text-xs sm:text-lg uppercase tracking-wider text-slate-800 relative pl-3.5 sm:pl-4 before:content-[""] before:absolute before:left-0 before:top-[15%] before:h-[70%] before:w-1 before:bg-[#e05038]'>
           Basic Information
         </CardTitle>
+        <TeamActionButton pid={pokemon.pid} />
       </CardHeader>
 
       <CardContent className='space-y-3 sm:space-y-5 px-3 sm:px-6 pb-3 sm:pb-6'>

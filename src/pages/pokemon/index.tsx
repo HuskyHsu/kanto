@@ -8,6 +8,7 @@ import { trackCustomEvent, trackPageView } from '@/lib/analytics';
 import { fetchPokemonDetail } from '@/services/pokemonService';
 import type { DetailedPokemon } from '@/types/pokemon';
 
+import { useCompanion } from '@/contexts/CompanionContext';
 import {
   BackButton,
   BasicInfo,
@@ -16,10 +17,12 @@ import {
   MovesCard,
   PokemonNavigation,
   StatsCard,
+  TeamActionButton,
 } from './components';
 import QuickNavigation from './components/QuickNavigation';
 
 function PokemonDetail() {
+  const { setCurrentViewingPid } = useCompanion();
   const { link } = useParams<{ link: string }>();
   const location = useLocation();
   const previousLocationRef = useRef<string | null>(null);
@@ -28,11 +31,20 @@ function PokemonDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  useEffect(() => {
+    return () => {
+      setCurrentViewingPid(null);
+    };
+  }, [setCurrentViewingPid]);
+
   const loadPokemonDetail = async (pokemonLink: string) => {
     try {
       setLoading(true);
       const data = await fetchPokemonDetail(pokemonLink);
       setPokemon(data);
+      if (data) {
+        setCurrentViewingPid(data.pid);
+      }
       setError(null);
 
       // Track Pokemon detail page view
@@ -124,7 +136,10 @@ function PokemonDetail() {
 
   return (
     <div className='space-y-6'>
-      <BackButton />
+      <div className='flex items-center justify-between gap-3'>
+        <BackButton />
+        <TeamActionButton pid={pokemon.pid} />
+      </div>
       <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         <div id='basic-info' className='col-span-1 md:col-span-2'>

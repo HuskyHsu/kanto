@@ -1,3 +1,4 @@
+import { CompanionDrawer, CompanionTrigger } from '@/components/companion';
 import { Footer } from '@/components/Footer';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import PWAInstallButton from '@/components/PWAInstallButton';
@@ -24,6 +25,10 @@ function MainLayout() {
         <Outlet />
       </main>
       <Footer />
+
+      {/* Companion Dock & Drawer */}
+      <CompanionTrigger />
+      <CompanionDrawer />
     </div>
   );
 }
