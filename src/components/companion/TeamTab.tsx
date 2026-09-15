@@ -5,7 +5,7 @@ import { usePokemonContext } from '@/contexts/PokemonContext';
 import { useLocationData } from '@/hooks/useLocationData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { Pokemon } from '@/types/pokemon';
-import { Plus, X, Search, Settings2, Check, Compass, MapPin, ArrowUpToLine, Crown } from 'lucide-react';
+import { Plus, X, Search, Settings2, Check, Compass, MapPin, ArrowUpToLine } from 'lucide-react';
 import { PokemonIconLink } from '@/components/pokemon';
 import {
   METHOD_ICONS,
@@ -249,7 +249,7 @@ export const TeamTab: React.FC = () => {
           }}
           className={`group relative aspect-square rounded-[8px] border-2 flex items-center justify-center transition-all select-none ${
             isEditing
-              ? 'border-amber-400 bg-amber-50/20 shadow-[1px_1px_0_0_rgba(251,191,36,0.5)] cursor-grab active:cursor-grabbing'
+              ? 'border-amber-400 bg-amber-50/20 shadow-[1px_1px_0_0_rgba(251,191,36,0.5)] cursor-pointer hover:border-amber-500 hover:shadow-[2px_2px_0_0_rgba(251,191,36,0.8)]'
               : 'border-slate-300 hover:border-[#34925e] shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
           } ${dragOverIndex === i ? 'ring-2 ring-emerald-500 scale-105 z-20' : ''} ${
             draggedIndex === i ? 'opacity-40 scale-95' : ''
@@ -257,7 +257,7 @@ export const TeamTab: React.FC = () => {
           title={
             isEditing
               ? isLead
-                ? `${pm?.name.zh || pid} (排頭首位/隊長，可拖曳排序)`
+                ? `${pm?.name.zh || pid} (首位，可拖曳排序)`
                 : `${pm?.name.zh || pid} (點擊置頂，或拖曳排序)`
               : pm
                 ? `${pm.name.zh} #${pm.pid}`
@@ -274,29 +274,14 @@ export const TeamTab: React.FC = () => {
             />
           </div>
 
-          {/* Move to Top Button / Leader Crown in edit mode */}
-          {isEditing && (
-            isLead ? (
-              <div
-                title='隊長 / 排頭首位'
-                className='absolute -top-1.5 -left-1.5 w-5 h-5 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center border-2 border-white shadow-xs z-30 pointer-events-none'
-              >
-                <Crown className='w-2.5 h-2.5 fill-amber-900 text-amber-900' />
-              </div>
-            ) : (
-              <button
-                type='button'
-                onClick={(e) => {
-                  e.stopPropagation();
-                  moveToTop(pid);
-                  showToast(`已將【${pm?.name.zh || pid}】置頂！`);
-                }}
-                title='移至首位 (置頂)'
-                className='absolute -top-1.5 -left-1.5 w-5 h-5 rounded-full bg-amber-400 hover:bg-amber-500 text-slate-900 flex items-center justify-center border-2 border-white shadow-xs cursor-pointer transition-transform hover:scale-110 z-30'
-              >
-                <ArrowUpToLine className='w-2.5 h-2.5 stroke-3' />
-              </button>
-            )
+          {/* Move to Top Action Bar in edit mode (Only on other members, not the first one) */}
+          {isEditing && !isLead && (
+            <div
+              className='absolute bottom-0 inset-x-0 bg-amber-400 text-slate-900 text-[9px] font-bold py-0.5 flex items-center justify-center gap-0.5 rounded-b-[6px] shadow-xs group-hover:bg-amber-300 transition-colors z-20'
+            >
+              <ArrowUpToLine className='w-2.5 h-2.5 stroke-3' />
+              <span>置頂</span>
+            </div>
           )}
 
           {/* Edit Delete Button */}
