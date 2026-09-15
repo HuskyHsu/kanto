@@ -1,10 +1,11 @@
 import React, { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCompanion, MAX_TEAM_SIZE } from '@/contexts/CompanionContext';
 import { usePokemonContext } from '@/contexts/PokemonContext';
 import { useLocationData } from '@/hooks/useLocationData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { Pokemon } from '@/types/pokemon';
-import { Plus, X, Search, Settings2, Check, Compass, MapPin } from 'lucide-react';
+import { Plus, X, Search, Settings2, Check, Compass, MapPin, ArrowUpToLine, Crown } from 'lucide-react';
 import { PokemonIconLink } from '@/components/pokemon';
 import {
   METHOD_ICONS,
@@ -29,10 +30,13 @@ interface EncounterMethodSection {
 }
 
 export const TeamTab: React.FC = () => {
+  const navigate = useNavigate();
   const {
     team,
     removeFromTeam,
     addToTeam,
+    reorderTeam,
+    moveToTop,
     isInTeam,
     currentViewingPid,
     selectedLocationId,
@@ -46,6 +50,8 @@ export const TeamTab: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
+  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const showToast = (msg: string) => {
@@ -197,33 +203,112 @@ export const TeamTab: React.FC = () => {
     // Render existing members
     team.forEach((pid, i) => {
       const pm = pokemonMap.get(pid);
+      const isLead = i === 0;
       slots.push(
         <div
           key={`team-${pid}-${i}`}
-          className={`group relative aspect-square rounded-[8px] bg-white border-2 flex items-center justify-center overflow-hidden transition-all ${
+          draggable={true}
+          onDragStart={(e) => {
+            e.dataTransfer.effectAllowed = 'move';
+            setDraggedIndex(i);
+          }}
+          onDragOver={(e) => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            if (dragOverIndex !== i) {
+              setDragOverIndex(i);
+            }
+          }}
+          onDragLeave={() => {
+            if (dragOverIndex === i) {
+              setDragOverIndex(null);
+            }
+          }}
+          onDrop={(e) => {
+            e.preventDefault();
+            if (draggedIndex !== null && draggedIndex !== i) {
+              reorderTeam(draggedIndex, i);
+              showToast('順序已更新！');
+            }
+            setDraggedIndex(null);
+            setDragOverIndex(null);
+          }}
+          onDragEnd={() => {
+            setDraggedIndex(null);
+            setDragOverIndex(null);
+          }}
+          onClick={() => {
+            if (isEditing) {
+              if (i > 0) {
+                moveToTop(pid);
+                showToast(`已將【${pm?.name.zh || pid}】置頂！`);
+              }
+            } else {
+              navigate(`/pokemon/${pid}`);
+            }
+          }}
+          className={`group relative aspect-square rounded-[8px] border-2 flex items-center justify-center transition-all select-none ${
             isEditing
-              ? 'border-amber-400 bg-amber-50/20 shadow-[1px_1px_0_0_rgba(251,191,36,0.5)]'
+              ? 'border-amber-400 bg-amber-50/20 shadow-[1px_1px_0_0_rgba(251,191,36,0.5)] cursor-grab active:cursor-grabbing'
               : 'border-slate-300 hover:border-[#34925e] shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
+          } ${dragOverIndex === i ? 'ring-2 ring-emerald-500 scale-105 z-20' : ''} ${
+            draggedIndex === i ? 'opacity-40 scale-95' : ''
           }`}
-          title={pm ? `${pm.name.zh} #${pm.pid}` : undefined}
+          title={
+            isEditing
+              ? isLead
+                ? `${pm?.name.zh || pid} (排頭首位/隊長，可拖曳排序)`
+                : `${pm?.name.zh || pid} (點擊置頂，或拖曳排序)`
+              : pm
+                ? `${pm.name.zh} #${pm.pid}`
+                : undefined
+          }
         >
-          {/* Pokemon Sprite via PokemonIconLink */}
-          <PokemonIconLink
-            pokemon={pm || { pid, name: { zh: `#${pid}`, en: `#${pid}`, ja: '' } }}
-            className='p-0 w-full h-full'
-            disableLink={isEditing}
-            fillBg
-          />
+          {/* Inner Pokemon Sprite Box with clipped rounded corners */}
+          <div className='w-full h-full rounded-[6px] overflow-hidden flex items-center justify-center pointer-events-none'>
+            <PokemonIconLink
+              pokemon={pm || { pid, name: { zh: `#${pid}`, en: `#${pid}`, ja: '' } }}
+              className='p-0 w-full h-full'
+              disableLink
+              fillBg
+            />
+          </div>
 
-          {/* Edit Delete Button (Only in edit mode) */}
+          {/* Move to Top Button / Leader Crown in edit mode */}
+          {isEditing && (
+            isLead ? (
+              <div
+                title='隊長 / 排頭首位'
+                className='absolute -top-1.5 -left-1.5 w-5 h-5 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center border-2 border-white shadow-xs z-30 pointer-events-none'
+              >
+                <Crown className='w-2.5 h-2.5 fill-amber-900 text-amber-900' />
+              </div>
+            ) : (
+              <button
+                type='button'
+                onClick={(e) => {
+                  e.stopPropagation();
+                  moveToTop(pid);
+                  showToast(`已將【${pm?.name.zh || pid}】置頂！`);
+                }}
+                title='移至首位 (置頂)'
+                className='absolute -top-1.5 -left-1.5 w-5 h-5 rounded-full bg-amber-400 hover:bg-amber-500 text-slate-900 flex items-center justify-center border-2 border-white shadow-xs cursor-pointer transition-transform hover:scale-110 z-30'
+              >
+                <ArrowUpToLine className='w-2.5 h-2.5 stroke-3' />
+              </button>
+            )
+          )}
+
+          {/* Edit Delete Button */}
           {isEditing && (
             <button
+              type='button'
               onClick={(e) => {
                 e.stopPropagation();
                 handleRemoveFromTeam(pid);
               }}
               title='移出隊伍'
-              className='absolute -top-1.5 -right-1.5 w-4 h-4 rounded-[4px] bg-[#e05038] hover:bg-rose-700 text-white flex items-center justify-center border border-white shadow-xs cursor-pointer transition-transform hover:scale-110 z-30'
+              className='absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-[#e05038] hover:bg-rose-700 text-white flex items-center justify-center border-2 border-white shadow-xs cursor-pointer transition-transform hover:scale-110 z-30'
             >
               <X className='w-2.5 h-2.5 stroke-3' />
             </button>
@@ -348,9 +433,16 @@ export const TeamTab: React.FC = () => {
       {/* Edit Mode Switch (Only shown when team has members) */}
       {team.length > 0 && (
         <div className='flex items-center justify-between px-1 pb-0.5 border-b border-slate-200'>
-          <span className='text-[10px] font-press-start text-slate-400'>
-            {isEditing ? 'EDITING' : 'READY'}
-          </span>
+          <div className='flex items-center gap-1.5'>
+            <span className='text-[10px] font-press-start text-slate-400'>
+              {isEditing ? 'EDITING' : 'READY'}
+            </span>
+            {isEditing && (
+              <span className='text-[9px] text-amber-600 font-sans'>
+                (可拖曳或點擊置頂)
+              </span>
+            )}
+          </div>
           <button
             onClick={() => setIsEditing(!isEditing)}
             className={`flex items-center gap-1 px-1.5 py-0.5 rounded-[6px] text-[9px] font-press-start transition-all cursor-pointer ${

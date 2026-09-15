@@ -1,78 +1,80 @@
 import React from 'react';
 import { useCompanion, MAX_TEAM_SIZE } from '@/contexts/CompanionContext';
 import { usePokemonContext } from '@/contexts/PokemonContext';
-import { useLocationData } from '@/hooks/useLocationData';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Sparkles, MapPin } from 'lucide-react';
 import { PokemonIconLink } from '@/components/pokemon';
+import { cn } from '@/lib/utils';
 
-export const CompanionTrigger: React.FC = () => {
-  const { team, selectedLocationId, isOpen, setIsOpen } = useCompanion();
+const PokeballIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg
+    viewBox='0 0 24 24'
+    className={cn('w-5 h-5', className)}
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    {/* Red Top Half */}
+    <path
+      d='M2.05 12a10 10 0 0 1 19.9 0h-7.05a3 3 0 0 0-5.8 0H2.05z'
+      fill='#ef4444'
+    />
+    {/* White Bottom Half */}
+    <path
+      d='M2.05 12a10 10 0 0 0 19.9 0h-7.05a3 3 0 0 1-5.8 0H2.05z'
+      fill='#f8fafc'
+    />
+    {/* Outer Ring */}
+    <circle cx='12' cy='12' r='10' stroke='#334155' strokeWidth='1.8' />
+    {/* Center Divider Line */}
+    <line x1='2' y1='12' x2='22' y2='12' stroke='#334155' strokeWidth='1.8' />
+    {/* Center Button Outer */}
+    <circle cx='12' cy='12' r='3.2' fill='white' stroke='#334155' strokeWidth='1.8' />
+    {/* Center Button Inner */}
+    <circle cx='12' cy='12' r='1.2' fill='#334155' />
+  </svg>
+);
+
+interface CompanionTriggerProps {
+  className?: string;
+}
+
+export const CompanionTrigger: React.FC<CompanionTriggerProps> = ({ className = '' }) => {
+  const { team, setIsOpen } = useCompanion();
   const { pokemonList } = usePokemonContext();
-  const { locationList } = useLocationData();
-  const { displayLanguage } = useLanguage();
 
-  if (isOpen) return null;
-
-  const currentLocation = locationList.find((loc) => loc.id === selectedLocationId);
-  const locationName = currentLocation
-    ? currentLocation.name.zh || currentLocation.name[displayLanguage]
+  const firstPid = team[0];
+  const leadPokemon = firstPid
+    ? pokemonList.find((p) => p.pid === firstPid) || {
+        pid: firstPid,
+        name: { zh: '', en: '', ja: '' },
+      }
     : null;
 
   return (
-    <div className='fixed bottom-5 right-5 z-40'>
-      <button
-        onClick={() => setIsOpen(true)}
-        className='group flex items-center gap-2.5 px-3 py-2 bg-white border-[3px] border-[#34925e] rounded-[12px] shadow-[3px_3px_0_0_rgba(52,146,94,0.3)] hover:shadow-[3px_4px_0_0_rgba(52,146,94,0.45)] hover:-translate-y-0.5 active:translate-y-0.5 active:translate-x-0.5 active:shadow-none transition-all cursor-pointer'
-        title='開啟冒險助手 (隊伍快捷 / 當前地圖雷達)'
-      >
-        {/* Sprites stack or Retro Pokeball icon */}
-        {team.length > 0 ? (
-          <div className='flex items-center -space-x-2 shrink-0'>
-            {team.slice(0, 3).map((pid) => {
-              const pm = pokemonList.find((p) => p.pid === pid) || {
-                pid,
-                name: { zh: '', en: '', ja: '' },
-              };
-              return (
-                <div
-                  key={pid}
-                  className='w-7 h-7 rounded-lg bg-slate-50 border-2 border-slate-300 flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform overflow-hidden'
-                >
-                  <PokemonIconLink
-                    pokemon={pm}
-                    className='p-0 w-full h-full scale-75'
-                    disableLink
-                    hideTypeBg
-                  />
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div className='w-7 h-7 rounded-lg bg-emerald-50 border-2 border-[#34925e] flex items-center justify-center shrink-0'>
-            <Sparkles className='w-4 h-4 text-[#34925e]' />
-          </div>
-        )}
-
-        {/* Status text */}
-        <div className='flex flex-col text-left'>
-          <div className='flex items-center gap-1.5'>
-            <span className='font-press-start text-[10px] tracking-wide text-[#34925e]'>
-              TEAM
-            </span>
-            <span className='text-xs font-mono font-bold text-slate-700'>
-              {team.length}/{MAX_TEAM_SIZE}
-            </span>
-          </div>
-          {locationName && (
-            <div className='flex items-center gap-1 text-[11px] font-bold text-slate-500 truncate max-w-[120px]'>
-              <MapPin className='w-3 h-3 text-[#e05038] shrink-0' />
-              <span className='truncate'>{locationName}</span>
-            </div>
-          )}
+    <button
+      onClick={() => setIsOpen(true)}
+      type='button'
+      className={cn(
+        'w-10 h-10 flex items-center justify-center rounded-lg bg-white border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50 shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:translate-y-px hover:translate-x-px hover:shadow-[1px_1px_0_0_rgba(203,213,225,1)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all cursor-pointer group flex-shrink-0 relative',
+        className,
+      )}
+      title={
+        team.length > 0
+          ? `冒險助手 (${team.length}/${MAX_TEAM_SIZE})`
+          : '開啟冒險助手 (隊伍 / 雷達)'
+      }
+      aria-label='開啟冒險助手'
+    >
+      {leadPokemon ? (
+        <div className='w-full h-full flex items-center justify-center overflow-hidden scale-75'>
+          <PokemonIconLink
+            pokemon={leadPokemon}
+            className='p-0 w-full h-full'
+            disableLink
+            hideTypeBg
+          />
         </div>
-      </button>
-    </div>
+      ) : (
+        <PokeballIcon className='group-hover:rotate-12 transition-transform duration-200' />
+      )}
+    </button>
   );
 };

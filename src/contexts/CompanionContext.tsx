@@ -7,6 +7,8 @@ interface CompanionContextType {
   setIsOpen: (open: boolean) => void;
   addToTeam: (pid: number) => { success: boolean; message?: string };
   removeFromTeam: (pid: number) => void;
+  reorderTeam: (startIndex: number, endIndex: number) => void;
+  moveToTop: (pid: number) => void;
   setSelectedLocationId: (id: string | null) => void;
   isInTeam: (pid: number) => boolean;
   currentViewingPid: number | null;
@@ -98,6 +100,35 @@ export const CompanionProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     setTeam((prev) => prev.filter((id) => id !== pid));
   };
 
+  const reorderTeam = (startIndex: number, endIndex: number) => {
+    setTeam((prev) => {
+      if (
+        startIndex < 0 ||
+        startIndex >= prev.length ||
+        endIndex < 0 ||
+        endIndex >= prev.length ||
+        startIndex === endIndex
+      ) {
+        return prev;
+      }
+      const result = [...prev];
+      const [removed] = result.splice(startIndex, 1);
+      result.splice(endIndex, 0, removed);
+      return result;
+    });
+  };
+
+  const moveToTop = (pid: number) => {
+    setTeam((prev) => {
+      const index = prev.indexOf(pid);
+      if (index <= 0) return prev;
+      const result = [...prev];
+      const [removed] = result.splice(index, 1);
+      result.unshift(removed);
+      return result;
+    });
+  };
+
   return (
     <CompanionContext.Provider
       value={{
@@ -107,6 +138,8 @@ export const CompanionProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         setIsOpen,
         addToTeam,
         removeFromTeam,
+        reorderTeam,
+        moveToTop,
         setSelectedLocationId,
         isInTeam,
         currentViewingPid,

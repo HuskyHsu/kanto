@@ -15,9 +15,10 @@ function MainLayout() {
     >
       {/* Floating action bar: fixed on all screens so it is always accessible regardless of scroll position */}
       <div className='fixed top-3 right-4 sm:right-6 md:top-4 md:right-8 z-40 flex items-center gap-1.5 sm:gap-2'>
-        <ShareButton />
         <PWAInstallButton />
+        <ShareButton />
         <LanguageToggle />
+        <CompanionTrigger />
       </div>
 
       {/* <Navigation /> */}
@@ -26,8 +27,7 @@ function MainLayout() {
       </main>
       <Footer />
 
-      {/* Companion Dock & Drawer */}
-      <CompanionTrigger />
+      {/* Companion Drawer */}
       <CompanionDrawer />
     </div>
   );
