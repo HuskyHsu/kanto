@@ -17,7 +17,6 @@ import {
   MovesCard,
   PokemonNavigation,
   StatsCard,
-  TeamActionButton,
 } from './components';
 import QuickNavigation from './components/QuickNavigation';
 
@@ -136,10 +135,7 @@ function PokemonDetail() {
 
   return (
     <div className='space-y-6'>
-      <div className='flex items-center justify-between gap-3'>
-        <BackButton />
-        <TeamActionButton pid={pokemon.pid} />
-      </div>
+      <BackButton />
       <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         <div id='basic-info' className='col-span-1 md:col-span-2'>

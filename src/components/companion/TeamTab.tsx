@@ -2,26 +2,29 @@ import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCompanion } from '@/contexts/CompanionContext';
 import { usePokemonContext } from '@/contexts/PokemonContext';
+import { useLocationData } from '@/hooks/useLocationData';
+import { useLanguage } from '@/contexts/LanguageContext';
 import type { Pokemon } from '@/types/pokemon';
-import { Plus, X, ArrowDownUp, Search, Settings2, Check } from 'lucide-react';
+import type { LocationPokemonEncounter } from '@/types/location';
+import { Plus, X, Search, Settings2, Check, Compass, MapPin } from 'lucide-react';
 
 export const TeamTab: React.FC = () => {
   const navigate = useNavigate();
   const {
-    party,
-    box,
+    team,
     removeFromTeam,
-    moveToBox,
-    moveToParty,
-    addToParty,
-    addToBox,
+    addToTeam,
     isInTeam,
     currentViewingPid,
+    selectedLocationId,
+    setSelectedLocationId,
   } = useCompanion();
+
   const { pokemonList } = usePokemonContext();
+  const { locationList, loading: loadingLocation } = useLocationData();
+  const { displayLanguage } = useLanguage();
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [targetSlot, setTargetSlot] = useState<'party' | 'box'>('party');
   const [isSearching, setIsSearching] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -43,7 +46,31 @@ export const TeamTab: React.FC = () => {
     return pokemonMap.get(currentViewingPid) || null;
   }, [pokemonMap, currentViewingPid]);
 
-  const currentStatus = currentViewingPokemon ? isInTeam(currentViewingPokemon.pid) : null;
+  const isCurrentInTeam = currentViewingPokemon ? isInTeam(currentViewingPokemon.pid) : false;
+
+  // Radar location & encounters
+  const currentLocation = useMemo(() => {
+    if (!locationList.length) return null;
+    if (selectedLocationId) {
+      const found = locationList.find((loc) => loc.id === selectedLocationId);
+      if (found) return found;
+    }
+    const route1 = locationList.find((loc) => loc.id === 'route-1');
+    return route1 || locationList[0];
+  }, [locationList, selectedLocationId]);
+
+  const uniqueEncounters = useMemo(() => {
+    if (!currentLocation) return [];
+    const map = new Map<number, LocationPokemonEncounter>();
+    currentLocation.areas.forEach((area) => {
+      area.encounters.forEach((enc) => {
+        if (!map.has(enc.pid)) {
+          map.set(enc.pid, enc);
+        }
+      });
+    });
+    return Array.from(map.values());
+  }, [currentLocation]);
 
   // Filter search results
   const searchResults = useMemo(() => {
@@ -60,7 +87,7 @@ export const TeamTab: React.FC = () => {
   }, [pokemonList, searchQuery]);
 
   const handleSelectPokemon = (p: Pokemon) => {
-    const res = targetSlot === 'party' ? addToParty(p.pid) : addToBox(p.pid);
+    const res = addToTeam(p.pid);
     if (!res.success) {
       showToast(res.message || '加入失敗');
     } else {
@@ -70,36 +97,29 @@ export const TeamTab: React.FC = () => {
     }
   };
 
-  const handleAddCurrentViewing = (slot: 'party' | 'box' = 'party') => {
+  const handleAddCurrentViewing = () => {
     if (!currentViewingPokemon) return;
-    const res = slot === 'party' ? addToParty(currentViewingPokemon.pid) : addToBox(currentViewingPokemon.pid);
+    const res = addToTeam(currentViewingPokemon.pid);
     if (!res.success) {
-      if (slot === 'party') {
-        const boxRes = addToBox(currentViewingPokemon.pid);
-        if (boxRes.success) {
-          showToast('主力已滿，已加入備用！');
-          return;
-        }
-      }
       showToast(res.message || '加入失敗');
     } else {
-      showToast(slot === 'party' ? '已加入主力隊伍！' : '已加入備用！');
+      showToast('已加入隊伍！');
     }
   };
 
-  // Render 6 fixed slots (filled or empty)
-  const renderSlots = (slotType: 'party' | 'box', list: number[], max = 6) => {
+  // Render 12 fixed slots in 3 columns (3x4 Grid)
+  const renderTeamSlots = (max = 12) => {
     const slots = [];
     for (let i = 0; i < max; i++) {
-      const pid = list[i];
+      const pid = team[i];
       if (pid) {
         const pm = pokemonMap.get(pid);
         slots.push(
           <div
-            key={`${slotType}-${pid}-${i}`}
-            className={`group relative aspect-square rounded-[8px] bg-white border-2 flex items-center justify-center p-1 transition-all ${
+            key={`team-${pid}-${i}`}
+            className={`group relative aspect-square rounded-[8px] bg-white border-2 flex items-center justify-center p-0.5 transition-all ${
               isEditing
-                ? 'border-amber-400 bg-amber-50/20 shadow-[2px_2px_0_0_rgba(251,191,36,0.5)]'
+                ? 'border-amber-400 bg-amber-50/20 shadow-[1px_1px_0_0_rgba(251,191,36,0.5)]'
                 : 'border-slate-300 hover:border-[#34925e] shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
             }`}
             onClick={() => {
@@ -109,74 +129,49 @@ export const TeamTab: React.FC = () => {
             }}
             title={pm ? `${pm.name.zh} #${pm.pid}` : undefined}
           >
-            {/* Pokemon Sprite (Always clear, pixel rendering) */}
+            {/* Pokemon Sprite */}
             <img
               src={`${import.meta.env.BASE_URL}images/pmIcon/${pid}.png`}
               alt='Pokemon'
-              className='w-11 h-11 object-contain [image-rendering:pixelated] group-hover:scale-110 transition-transform'
+              className='w-10 h-10 object-contain [image-rendering:pixelated] group-hover:scale-110 transition-transform'
               loading='lazy'
             />
 
-            {/* Edit Controls (Only visible in edit mode) */}
+            {/* Edit Delete Button (Only in edit mode) */}
             {isEditing && (
-              <>
-                {/* Delete Button (Top Right) */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    removeFromTeam(pid, slotType);
-                    showToast('已移出隊伍');
-                  }}
-                  title='移出隊伍'
-                  className='absolute -top-1.5 -right-1.5 w-5 h-5 rounded-[4px] bg-[#e05038] hover:bg-rose-700 text-white flex items-center justify-center border border-white shadow-[1px_1px_0_0_rgba(0,0,0,0.2)] cursor-pointer transition-transform hover:scale-110'
-                >
-                  <X className='w-3 h-3 stroke-3' />
-                </button>
-
-                {/* Move Button (Bottom Left) */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (slotType === 'party') {
-                      const moved = moveToBox(pid);
-                      if (!moved) showToast('備用名單已滿');
-                      else showToast('已移至備用');
-                    } else {
-                      const moved = moveToParty(pid);
-                      if (!moved) showToast('主力名單已滿');
-                      else showToast('已移至主力');
-                    }
-                  }}
-                  title={slotType === 'party' ? '移至備用' : '移至主力'}
-                  className='absolute -bottom-1.5 -left-1.5 w-5 h-5 rounded-[4px] bg-slate-800 hover:bg-slate-900 text-amber-300 flex items-center justify-center border border-white shadow-[1px_1px_0_0_rgba(0,0,0,0.2)] cursor-pointer transition-transform hover:scale-110'
-                >
-                  <ArrowDownUp className='w-3 h-3' />
-                </button>
-              </>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  removeFromTeam(pid);
+                  showToast('已移出隊伍');
+                }}
+                title='移出隊伍'
+                className='absolute -top-1.5 -right-1.5 w-4 h-4 rounded-[4px] bg-[#e05038] hover:bg-rose-700 text-white flex items-center justify-center border border-white shadow-xs cursor-pointer transition-transform hover:scale-110'
+              >
+                <X className='w-2.5 h-2.5 stroke-3' />
+              </button>
             )}
           </div>
         );
       } else {
-        // Empty Slot with Retro Look
         slots.push(
           <div
-            key={`${slotType}-empty-${i}`}
+            key={`team-empty-${i}`}
             onClick={() => {
-              if (currentViewingPokemon && !currentStatus?.inParty && !currentStatus?.inBox) {
-                handleAddCurrentViewing(slotType);
+              if (currentViewingPokemon && !isCurrentInTeam) {
+                handleAddCurrentViewing();
               } else {
-                setTargetSlot(slotType);
                 setIsSearching(true);
               }
             }}
             className='aspect-square rounded-[8px] border-2 border-dashed border-slate-300 hover:border-[#34925e] bg-white/60 hover:bg-emerald-50/40 flex flex-col items-center justify-center cursor-pointer transition-all shadow-[1px_1px_0_0_rgba(203,213,225,0.6)] group'
             title={
-              currentViewingPokemon && !currentStatus?.inParty && !currentStatus?.inBox
+              currentViewingPokemon && !isCurrentInTeam
                 ? `點擊將當前【${currentViewingPokemon.name.zh}】填入此位`
                 : '點擊搜尋添加'
             }
           >
-            <Plus className='w-4 h-4 text-slate-300 group-hover:text-[#34925e] transition-colors stroke-3' />
+            <Plus className='w-3.5 h-3.5 text-slate-300 group-hover:text-[#34925e] transition-colors stroke-3' />
           </div>
         );
       }
@@ -185,7 +180,7 @@ export const TeamTab: React.FC = () => {
   };
 
   return (
-    <div className='p-2.5 space-y-3.5'>
+    <div className='p-2 space-y-3'>
       {/* Toast Notification */}
       {toastMessage && (
         <div className='text-center py-1 px-2 text-[10px] font-press-start bg-slate-800 text-[#34925e] rounded-[6px] border border-slate-700 shadow-md animate-fade-in'>
@@ -209,20 +204,16 @@ export const TeamTab: React.FC = () => {
             </span>
           </div>
 
-          {currentStatus?.inParty ? (
+          {isCurrentInTeam ? (
             <span className='text-[10px] text-center font-press-start text-[#34925e] bg-emerald-50 py-1 rounded-[4px] border border-emerald-200'>
-              ✓ PARTY
-            </span>
-          ) : currentStatus?.inBox ? (
-            <span className='text-[10px] text-center font-press-start text-sky-700 bg-sky-50 py-1 rounded-[4px] border border-sky-200'>
-              ✓ BOX
+              ✓ IN TEAM
             </span>
           ) : (
             <button
-              onClick={() => handleAddCurrentViewing('party')}
+              onClick={handleAddCurrentViewing}
               className='w-full py-1.5 px-2 text-[10px] font-press-start bg-[#34925e] hover:bg-[#2c7a4f] text-white rounded-[6px] border border-[#276e46] shadow-[2px_2px_0_0_rgba(39,110,70,1)] hover:shadow-[1px_1px_0_0_rgba(39,110,70,1)] hover:translate-y-px active:shadow-none flex items-center justify-center gap-1 transition-all cursor-pointer'
             >
-              <Plus className='w-3 h-3 stroke-3' /> 加入主力
+              <Plus className='w-3 h-3 stroke-3' /> 加入隊伍
             </button>
           )}
         </div>
@@ -232,7 +223,7 @@ export const TeamTab: React.FC = () => {
       {isSearching ? (
         <div className='bg-white border-2 border-slate-300 rounded-[8px] p-2 space-y-1.5 shadow-[2px_2px_0_0_rgba(203,213,225,1)]'>
           <div className='flex items-center justify-between text-[10px] font-bold text-slate-700'>
-            <span>新增至 {targetSlot === 'party' ? '主力' : '備用'}</span>
+            <span>新增至隊伍</span>
             <button onClick={() => setIsSearching(false)} className='text-slate-400 hover:text-slate-600'>
               <X className='w-3.5 h-3.5 stroke-3' />
             </button>
@@ -269,19 +260,19 @@ export const TeamTab: React.FC = () => {
         </div>
       ) : null}
 
-      {/* Global Mode Switch Header (Edit Mode vs Navigation Mode) */}
-      <div className='flex items-center justify-between px-1 pb-1 border-b border-slate-200'>
+      {/* Edit Mode Switch */}
+      <div className='flex items-center justify-between px-1 pb-0.5 border-b border-slate-200'>
         <span className='text-[10px] font-press-start text-slate-400'>
           {isEditing ? 'EDITING' : 'READY'}
         </span>
         <button
           onClick={() => setIsEditing(!isEditing)}
-          className={`flex items-center gap-1 px-2 py-0.5 rounded-[6px] text-[9px] font-press-start transition-all cursor-pointer ${
+          className={`flex items-center gap-1 px-1.5 py-0.5 rounded-[6px] text-[9px] font-press-start transition-all cursor-pointer ${
             isEditing
               ? 'bg-amber-100 text-amber-900 border-2 border-amber-400 shadow-[1px_1px_0_0_rgba(251,191,36,1)]'
               : 'bg-white text-slate-600 border-2 border-slate-300 hover:border-slate-400 shadow-[1px_1px_0_0_rgba(203,213,225,1)] hover:translate-y-px hover:shadow-none'
           }`}
-          title={isEditing ? '完成編輯' : '切換為移動/刪除模式'}
+          title={isEditing ? '完成編輯' : '切換為刪除模式'}
         >
           {isEditing ? (
             <>
@@ -297,58 +288,92 @@ export const TeamTab: React.FC = () => {
         </button>
       </div>
 
-      {/* Section 1: 主力隊伍 (Party) - 2x3 Grid */}
-      <div className='space-y-1.5'>
+      {/* Section 1: 隊伍清單 (TEAM: 12 格 3x4 Grid) */}
+      <div className='space-y-1'>
         <div className='flex items-center justify-between px-0.5'>
-          <div className='flex items-center gap-1.5 text-[10px] font-press-start text-slate-700 uppercase'>
+          <div className='flex items-center gap-1 text-[10px] font-press-start text-slate-700 uppercase'>
             <span className='w-1.5 h-1.5 rounded-full bg-[#34925e]'></span>
-            <span>PARTY</span>
-            <span className='text-slate-400 font-mono text-xs'>({party.length}/6)</span>
+            <span>TEAM</span>
+            <span className='text-slate-400 font-mono text-[11px]'>({team.length}/12)</span>
           </div>
           {!isSearching && (
             <button
-              onClick={() => {
-                setTargetSlot('party');
-                setIsSearching(true);
-              }}
+              onClick={() => setIsSearching(true)}
               title='搜尋添加'
-              className='p-1 text-slate-400 hover:text-[#34925e]'
+              className='p-0.5 text-slate-400 hover:text-[#34925e]'
             >
               <Search className='w-3 h-3 stroke-3' />
             </button>
           )}
         </div>
 
-        <div className='grid grid-cols-2 gap-2'>
-          {renderSlots('party', party)}
+        {/* 12 Slots in 3 Columns */}
+        <div className='grid grid-cols-3 gap-1.5'>
+          {renderTeamSlots(12)}
         </div>
       </div>
 
-      {/* Section 2: 備用箱子 (Box) - 2x3 Grid */}
-      <div className='space-y-1.5 pt-1.5 border-t border-slate-200'>
+      {/* Section 2: 地圖雷達 (Radar: Location + 3xN Grid) */}
+      <div className='space-y-1.5 pt-2 border-t-2 border-slate-200'>
         <div className='flex items-center justify-between px-0.5'>
-          <div className='flex items-center gap-1.5 text-[10px] font-press-start text-slate-700 uppercase'>
-            <span className='w-1.5 h-1.5 rounded-full bg-sky-500'></span>
-            <span>BOX</span>
-            <span className='text-slate-400 font-mono text-xs'>({box.length}/6)</span>
+          <div className='flex items-center gap-1 text-[10px] font-press-start text-slate-700 uppercase'>
+            <Compass className='w-3 h-3 text-[#34925e]' />
+            <span>RADAR</span>
           </div>
-          {!isSearching && (
-            <button
-              onClick={() => {
-                setTargetSlot('box');
-                setIsSearching(true);
-              }}
-              title='搜尋添加'
-              className='p-1 text-slate-400 hover:text-sky-600'
-            >
-              <Search className='w-3 h-3 stroke-3' />
-            </button>
-          )}
+          <span className='text-[10px] font-mono text-slate-400'>
+            {uniqueEncounters.length} 隻
+          </span>
         </div>
 
-        <div className='grid grid-cols-2 gap-2'>
-          {renderSlots('box', box)}
-        </div>
+        {/* Location Dropdown */}
+        <select
+          value={currentLocation?.id || ''}
+          onChange={(e) => setSelectedLocationId(e.target.value)}
+          className='w-full px-2 py-1 text-[11px] font-bold bg-white border-2 border-slate-300 rounded-[6px] shadow-[1px_1px_0_0_rgba(203,213,225,1)] text-slate-800 focus:outline-none focus:border-[#34925e] cursor-pointer truncate'
+        >
+          {locationList.map((loc) => {
+            const locName = loc.name.zh;
+            const subName = loc.name[displayLanguage] || loc.name.en;
+            return (
+              <option key={loc.id} value={loc.id}>
+                {loc.region === 'sevii' ? '七島 ' : ''}{locName} ({subName})
+              </option>
+            );
+          })}
+        </select>
+
+        {/* Wild Encounters: 3xN Grid */}
+        {loadingLocation ? (
+          <div className='text-center py-4 text-[10px] font-press-start text-slate-400'>
+            LOADING...
+          </div>
+        ) : !currentLocation || uniqueEncounters.length === 0 ? (
+          <div className='text-center py-3 border-2 border-dashed border-slate-300 rounded-[8px] bg-white shadow-[1px_1px_0_0_rgba(203,213,225,0.6)]'>
+            <MapPin className='w-4 h-4 text-slate-300 mx-auto mb-0.5' />
+            <p className='text-[9px] font-press-start text-slate-400'>NO WILD PM</p>
+          </div>
+        ) : (
+          <div className='grid grid-cols-3 gap-1.5'>
+            {uniqueEncounters.map((enc) => (
+              <div
+                key={enc.pid}
+                onClick={() => navigate(`/pokemon/${enc.pid}`)}
+                className='group relative aspect-square rounded-[8px] bg-white border-2 border-slate-300 hover:border-[#34925e] flex flex-col items-center justify-center p-0.5 transition-all shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
+                title={`${enc.name.zh} #${enc.pid} (${enc.methodName?.zh || enc.method} ${enc.chance}%)`}
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}images/pmIcon/${enc.pid}.png`}
+                  alt={enc.name.zh}
+                  className='w-10 h-10 object-contain [image-rendering:pixelated] group-hover:scale-110 transition-transform'
+                  loading='lazy'
+                />
+                <span className='absolute bottom-0.5 right-1 text-[8px] font-mono font-bold text-slate-400 group-hover:text-[#34925e]'>
+                  {enc.chance}%
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Sparkles, MapPin } from 'lucide-react';
 
 export const CompanionTrigger: React.FC = () => {
-  const { party, selectedLocationId, isOpen, setIsOpen } = useCompanion();
+  const { team, selectedLocationId, isOpen, setIsOpen } = useCompanion();
   const { locationList } = useLocationData();
   const { displayLanguage } = useLanguage();
 
@@ -24,9 +24,9 @@ export const CompanionTrigger: React.FC = () => {
         title='開啟冒險助手 (隊伍快捷 / 當前地圖雷達)'
       >
         {/* Sprites stack or Retro Pokeball icon */}
-        {party.length > 0 ? (
+        {team.length > 0 ? (
           <div className='flex items-center -space-x-2 shrink-0'>
-            {party.slice(0, 3).map((pid) => (
+            {team.slice(0, 3).map((pid) => (
               <div
                 key={pid}
                 className='w-7 h-7 rounded-lg bg-slate-50 border-2 border-slate-300 flex items-center justify-center p-0.5 shadow-2xs group-hover:scale-105 transition-transform'
@@ -51,7 +51,7 @@ export const CompanionTrigger: React.FC = () => {
             <span className='font-press-start text-[10px] tracking-wide text-[#34925e]'>
               TEAM
             </span>
-            <span className='text-xs font-mono font-bold text-slate-700'>{party.length}/6</span>
+            <span className='text-xs font-mono font-bold text-slate-700'>{team.length}/12</span>
           </div>
           {locationName && (
             <div className='flex items-center gap-1 text-[11px] font-bold text-slate-500 truncate max-w-[120px]'>
