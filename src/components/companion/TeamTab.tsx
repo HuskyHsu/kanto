@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCompanion, MAX_TEAM_SIZE } from '@/contexts/CompanionContext';
 import { usePokemonContext } from '@/contexts/PokemonContext';
@@ -53,6 +53,65 @@ export const TeamTab: React.FC = () => {
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+  // Touch Drag Tracking for Mobile
+  const touchStartRef = useRef<{
+    index: number;
+    startX: number;
+    startY: number;
+    isDragging: boolean;
+  } | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent, index: number) => {
+    if (!isEditing) return;
+    const touch = e.touches[0];
+    touchStartRef.current = {
+      index,
+      startX: touch.clientX,
+      startY: touch.clientY,
+      isDragging: false,
+    };
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isEditing || !touchStartRef.current) return;
+    const touch = e.touches[0];
+    const dx = touch.clientX - touchStartRef.current.startX;
+    const dy = touch.clientY - touchStartRef.current.startY;
+
+    // Start dragging once moved past a small threshold
+    if (!touchStartRef.current.isDragging && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
+      touchStartRef.current.isDragging = true;
+      setDraggedIndex(touchStartRef.current.index);
+    }
+
+    if (touchStartRef.current.isDragging) {
+      const elem = document.elementFromPoint(touch.clientX, touch.clientY);
+      const targetSlot = elem?.closest('[data-team-index]');
+      if (targetSlot) {
+        const targetIdx = Number(targetSlot.getAttribute('data-team-index'));
+        if (!isNaN(targetIdx) && targetIdx !== dragOverIndex) {
+          setDragOverIndex(targetIdx);
+        }
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (!isEditing) return;
+    if (
+      touchStartRef.current?.isDragging &&
+      draggedIndex !== null &&
+      dragOverIndex !== null &&
+      draggedIndex !== dragOverIndex
+    ) {
+      reorderTeam(draggedIndex, dragOverIndex);
+      showToast('順序已更新！');
+    }
+    touchStartRef.current = null;
+    setDraggedIndex(null);
+    setDragOverIndex(null);
+  };
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -207,7 +266,8 @@ export const TeamTab: React.FC = () => {
       slots.push(
         <div
           key={`team-${pid}-${i}`}
-          draggable={true}
+          data-team-index={i}
+          draggable={isEditing}
           onDragStart={(e) => {
             e.dataTransfer.effectAllowed = 'move';
             setDraggedIndex(i);
@@ -237,28 +297,35 @@ export const TeamTab: React.FC = () => {
             setDraggedIndex(null);
             setDragOverIndex(null);
           }}
+          onTouchStart={(e) => handleTouchStart(e, i)}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
           onClick={() => {
-            if (isEditing) {
-              if (i > 0) {
-                moveToTop(pid);
-                showToast(`已將【${pm?.name.zh || pid}】置頂！`);
-              }
-            } else {
+            if (!isEditing) {
               navigate(`/pokemon/${pid}`);
             }
           }}
+          style={
+            isEditing
+              ? {
+                  touchAction: 'none',
+                  WebkitTouchCallout: 'none',
+                  WebkitUserSelect: 'none',
+                }
+              : undefined
+          }
           className={`group relative aspect-square rounded-[8px] border-2 flex items-center justify-center transition-all select-none ${
             isEditing
-              ? 'border-amber-400 bg-amber-50/20 shadow-[1px_1px_0_0_rgba(251,191,36,0.5)] cursor-pointer hover:border-amber-500 hover:shadow-[2px_2px_0_0_rgba(251,191,36,0.8)]'
+              ? 'border-amber-400 bg-amber-50/20 shadow-[1px_1px_0_0_rgba(251,191,36,0.5)] cursor-grab active:cursor-grabbing'
               : 'border-slate-300 hover:border-[#34925e] shadow-[2px_2px_0_0_rgba(203,213,225,1)] hover:shadow-[2px_3px_0_0_rgba(52,146,94,0.35)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer'
-          } ${dragOverIndex === i ? 'ring-2 ring-emerald-500 scale-105 z-20' : ''} ${
-            draggedIndex === i ? 'opacity-40 scale-95' : ''
+          } ${dragOverIndex === i && draggedIndex !== i ? 'ring-3 ring-emerald-500 scale-105 z-30 shadow-lg' : ''} ${
+            draggedIndex === i ? 'opacity-40 scale-95 ring-2 ring-amber-400' : ''
           }`}
           title={
             isEditing
               ? isLead
                 ? `${pm?.name.zh || pid} (首位，可拖曳排序)`
-                : `${pm?.name.zh || pid} (點擊置頂，或拖曳排序)`
+                : `${pm?.name.zh || pid} (可拖曳排序，或點底部置頂)`
               : pm
                 ? `${pm.name.zh} #${pm.pid}`
                 : undefined
@@ -274,14 +341,24 @@ export const TeamTab: React.FC = () => {
             />
           </div>
 
-          {/* Move to Top Action Bar in edit mode (Only on other members, not the first one) */}
+          {/* Move to Top Action Button in edit mode (Only on other members, not the first one) */}
           {isEditing && !isLead && (
-            <div
-              className='absolute bottom-0 inset-x-0 bg-amber-400 text-slate-900 text-[9px] font-bold py-0.5 flex items-center justify-center gap-0.5 rounded-b-[6px] shadow-xs group-hover:bg-amber-300 transition-colors z-20'
+            <button
+              type='button'
+              onClick={(e) => {
+                e.stopPropagation();
+                moveToTop(pid);
+                showToast(`已將【${pm?.name.zh || pid}】置頂！`);
+              }}
+              onTouchEnd={(e) => {
+                e.stopPropagation();
+              }}
+              title='移至首位 (置頂)'
+              className='absolute bottom-0 inset-x-0 bg-amber-400 hover:bg-amber-500 active:bg-amber-600 text-slate-900 text-[9px] font-bold py-0.5 flex items-center justify-center gap-0.5 rounded-b-[6px] shadow-xs cursor-pointer z-20 transition-colors'
             >
               <ArrowUpToLine className='w-2.5 h-2.5 stroke-3' />
               <span>置頂</span>
-            </div>
+            </button>
           )}
 
           {/* Edit Delete Button */}
@@ -291,6 +368,9 @@ export const TeamTab: React.FC = () => {
               onClick={(e) => {
                 e.stopPropagation();
                 handleRemoveFromTeam(pid);
+              }}
+              onTouchEnd={(e) => {
+                e.stopPropagation();
               }}
               title='移出隊伍'
               className='absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-[#e05038] hover:bg-rose-700 text-white flex items-center justify-center border-2 border-white shadow-xs cursor-pointer transition-transform hover:scale-110 z-30'
@@ -424,7 +504,7 @@ export const TeamTab: React.FC = () => {
             </span>
             {isEditing && (
               <span className='text-[9px] text-amber-600 font-sans'>
-                (可拖曳或點擊置頂)
+                (拖曳換位，點置頂到首位)
               </span>
             )}
           </div>
