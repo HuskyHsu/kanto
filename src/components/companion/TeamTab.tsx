@@ -54,61 +54,97 @@ export const TeamTab: React.FC = () => {
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Touch Drag Tracking for Mobile
-  const touchStartRef = useRef<{
+  // Pointer Drag Tracking (Unified for Mobile Touch and Desktop Mouse)
+  const gridContainerRef = useRef<HTMLDivElement | null>(null);
+  const dragPointerRef = useRef<{
     index: number;
     startX: number;
     startY: number;
     isDragging: boolean;
+    pointerId: number;
   } | null>(null);
+  const wasDraggingRef = useRef<boolean>(false);
 
-  const handleTouchStart = (e: React.TouchEvent, index: number) => {
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>, index: number) => {
     if (!isEditing) return;
-    const touch = e.touches[0];
-    touchStartRef.current = {
+    if (e.button !== 0) return; // Only primary button/touch
+
+    dragPointerRef.current = {
       index,
-      startX: touch.clientX,
-      startY: touch.clientY,
+      startX: e.clientX,
+      startY: e.clientY,
       isDragging: false,
+      pointerId: e.pointerId,
     };
+    wasDraggingRef.current = false;
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isEditing || !touchStartRef.current) return;
-    const touch = e.touches[0];
-    const dx = touch.clientX - touchStartRef.current.startX;
-    const dy = touch.clientY - touchStartRef.current.startY;
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!isEditing || !dragPointerRef.current) return;
+    const dx = e.clientX - dragPointerRef.current.startX;
+    const dy = e.clientY - dragPointerRef.current.startY;
 
-    // Start dragging once moved past a small threshold
-    if (!touchStartRef.current.isDragging && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
-      touchStartRef.current.isDragging = true;
-      setDraggedIndex(touchStartRef.current.index);
+    if (!dragPointerRef.current.isDragging && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
+      dragPointerRef.current.isDragging = true;
+      wasDraggingRef.current = true;
+      setDraggedIndex(dragPointerRef.current.index);
+      try {
+        e.currentTarget.setPointerCapture(e.pointerId);
+      } catch {
+        // ignore if not supported
+      }
     }
 
-    if (touchStartRef.current.isDragging) {
-      const elem = document.elementFromPoint(touch.clientX, touch.clientY);
-      const targetSlot = elem?.closest('[data-team-index]');
-      if (targetSlot) {
-        const targetIdx = Number(targetSlot.getAttribute('data-team-index'));
-        if (!isNaN(targetIdx) && targetIdx !== dragOverIndex) {
-          setDragOverIndex(targetIdx);
+    if (dragPointerRef.current.isDragging && gridContainerRef.current) {
+      const slots = gridContainerRef.current.querySelectorAll<HTMLElement>('[data-team-index]');
+      let foundIndex: number | null = null;
+      for (let idx = 0; idx < slots.length; idx++) {
+        const rect = slots[idx].getBoundingClientRect();
+        if (
+          e.clientX >= rect.left &&
+          e.clientX <= rect.right &&
+          e.clientY >= rect.top &&
+          e.clientY <= rect.bottom
+        ) {
+          const teamIdx = Number(slots[idx].getAttribute('data-team-index'));
+          if (!isNaN(teamIdx)) {
+            foundIndex = teamIdx;
+            break;
+          }
         }
+      }
+      if (foundIndex !== null && foundIndex !== dragOverIndex) {
+        setDragOverIndex(foundIndex);
       }
     }
   };
 
-  const handleTouchEnd = () => {
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
     if (!isEditing) return;
-    if (
-      touchStartRef.current?.isDragging &&
-      draggedIndex !== null &&
-      dragOverIndex !== null &&
-      draggedIndex !== dragOverIndex
-    ) {
-      reorderTeam(draggedIndex, dragOverIndex);
-      showToast('順序已更新！');
+    if (dragPointerRef.current) {
+      if (
+        dragPointerRef.current.isDragging &&
+        draggedIndex !== null &&
+        dragOverIndex !== null &&
+        draggedIndex !== dragOverIndex
+      ) {
+        reorderTeam(draggedIndex, dragOverIndex);
+      }
+      try {
+        if (e.currentTarget.hasPointerCapture(dragPointerRef.current.pointerId)) {
+          e.currentTarget.releasePointerCapture(dragPointerRef.current.pointerId);
+        }
+      } catch {
+        // ignore
+      }
     }
-    touchStartRef.current = null;
+    dragPointerRef.current = null;
+    setDraggedIndex(null);
+    setDragOverIndex(null);
+  };
+
+  const handlePointerCancel = () => {
+    dragPointerRef.current = null;
     setDraggedIndex(null);
     setDragOverIndex(null);
   };
@@ -267,40 +303,13 @@ export const TeamTab: React.FC = () => {
         <div
           key={`team-${pid}-${i}`}
           data-team-index={i}
-          draggable={isEditing}
-          onDragStart={(e) => {
-            e.dataTransfer.effectAllowed = 'move';
-            setDraggedIndex(i);
-          }}
-          onDragOver={(e) => {
-            e.preventDefault();
-            e.dataTransfer.dropEffect = 'move';
-            if (dragOverIndex !== i) {
-              setDragOverIndex(i);
-            }
-          }}
-          onDragLeave={() => {
-            if (dragOverIndex === i) {
-              setDragOverIndex(null);
-            }
-          }}
-          onDrop={(e) => {
-            e.preventDefault();
-            if (draggedIndex !== null && draggedIndex !== i) {
-              reorderTeam(draggedIndex, i);
-              showToast('順序已更新！');
-            }
-            setDraggedIndex(null);
-            setDragOverIndex(null);
-          }}
-          onDragEnd={() => {
-            setDraggedIndex(null);
-            setDragOverIndex(null);
-          }}
-          onTouchStart={(e) => handleTouchStart(e, i)}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
+          draggable={false}
+          onPointerDown={(e) => handlePointerDown(e, i)}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerCancel}
           onClick={() => {
+            if (wasDraggingRef.current) return;
             if (!isEditing) {
               navigate(`/pokemon/${pid}`);
             }
@@ -345,13 +354,10 @@ export const TeamTab: React.FC = () => {
           {isEditing && !isLead && (
             <button
               type='button'
+              onPointerDown={(e) => e.stopPropagation()}
               onClick={(e) => {
                 e.stopPropagation();
                 moveToTop(pid);
-                showToast(`已將【${pm?.name.zh || pid}】置頂！`);
-              }}
-              onTouchEnd={(e) => {
-                e.stopPropagation();
               }}
               title='移至首位 (置頂)'
               className='absolute bottom-0 inset-x-0 bg-amber-400 hover:bg-amber-500 active:bg-amber-600 text-slate-900 text-[9px] font-bold py-0.5 flex items-center justify-center gap-0.5 rounded-b-[6px] shadow-xs cursor-pointer z-20 transition-colors'
@@ -365,12 +371,10 @@ export const TeamTab: React.FC = () => {
           {isEditing && (
             <button
               type='button'
+              onPointerDown={(e) => e.stopPropagation()}
               onClick={(e) => {
                 e.stopPropagation();
                 handleRemoveFromTeam(pid);
-              }}
-              onTouchEnd={(e) => {
-                e.stopPropagation();
               }}
               title='移出隊伍'
               className='absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-[#e05038] hover:bg-rose-700 text-white flex items-center justify-center border-2 border-white shadow-xs cursor-pointer transition-transform hover:scale-110 z-30'
@@ -410,10 +414,10 @@ export const TeamTab: React.FC = () => {
   };
 
   return (
-    <div className='p-2 space-y-3'>
-      {/* Toast Notification */}
+    <div className='relative p-2 space-y-3'>
+      {/* Toast Notification (Floating absolute to prevent screen jumping / layout shift) */}
       {toastMessage && (
-        <div className='text-center py-1 px-2 text-[10px] font-press-start bg-slate-800 text-[#34925e] rounded-[6px] border border-slate-700 shadow-md animate-fade-in'>
+        <div className='absolute top-2 left-1/2 -translate-x-1/2 py-1 px-3 text-[10px] font-press-start bg-slate-900/95 text-[#34925e] rounded-[6px] border border-slate-700 shadow-xl z-50 pointer-events-none animate-fade-in whitespace-nowrap'>
           {toastMessage}
         </div>
       )}
@@ -554,7 +558,7 @@ export const TeamTab: React.FC = () => {
         </div>
 
         {/* Dynamic Slots in 3 Columns */}
-        <div className='grid grid-cols-3 gap-1.5'>
+        <div ref={gridContainerRef} className='grid grid-cols-3 gap-1.5'>
           {renderTeamSlots()}
         </div>
       </div>
