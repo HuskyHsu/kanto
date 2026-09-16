@@ -13,6 +13,7 @@ import { cn } from '@/lib/utils';
 import type { DetailedPokemon } from '@/types/pokemon';
 import { useState } from 'react';
 import MoveRow from './MoveRow';
+import PreEvoMoveIcon from './PreEvoMoveIcon';
 
 interface MovesCardProps {
   pokemon: DetailedPokemon;
@@ -83,6 +84,52 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
     if (displayLanguage === 'ja') return name.ja;
     if (displayLanguage === 'en') return name.en;
     return name.zh;
+  };
+
+  const getUsefulPreEvoLevels = (
+    move: DetailedPokemon['levelUpMoves'][0],
+  ): {
+    pid: number;
+    name: { zh: string; ja: string; en: string };
+    level: number;
+    isEarlier?: boolean;
+  }[] => {
+    if (!move.preEvoLevels || move.preEvoLevels.length === 0) return [];
+
+    const isPreEvoOnly = Boolean(move.isPreEvo || move.level < 0);
+
+    if (isPreEvoOnly) {
+      // Deduplicate same levels: keep earliest evolutionary stage (first occurrence)
+      const seenLevels = new Set<number>();
+      const result = [];
+      for (const p of move.preEvoLevels) {
+        if (!seenLevels.has(p.level)) {
+          seenLevels.add(p.level);
+          result.push({ ...p, isEarlier: false });
+        }
+      }
+      return result;
+    }
+
+    // For regular moves learned by current Pokémon:
+    // Only show preEvo if it actually learned it EARLIER than current Pokémon's level:
+    // - If move.level > 1: p.level > 0 && p.level < move.level
+    // - If move.level === 1: only if base form learned it at p.level > 1 (e.g. Charmander Lv.7)
+    const seenLevels = new Set<number>();
+    const result = [];
+
+    for (const p of move.preEvoLevels) {
+      const isEarlier =
+        (move.level > 1 && p.level > 0 && p.level < move.level) ||
+        (move.level === 1 && p.level > 1);
+
+      if (isEarlier && !seenLevels.has(p.level)) {
+        seenLevels.add(p.level);
+        result.push({ ...p, isEarlier });
+      }
+    }
+
+    return result;
   };
 
   const renderMoveNameCell = (
@@ -216,7 +263,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table className='table-fixed w-full min-w-[340px]'>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-[56px] min-w-[56px] px-1'>Lv</TableHead>
+                  <TableHead className='w-[70px] min-w-[70px] px-0.5 text-center'>Lv</TableHead>
                   <TableHead className='w-auto min-w-[95px] px-1 text-left'>Name</TableHead>
                   <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Type</TableHead>
                   <TableHead className='w-[44px] min-w-[44px] px-0.5 text-center'>Cat.</TableHead>
@@ -228,35 +275,27 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
               <TableBody>
                 {pokemon.levelUpMoves.filter(filterMove).map((move) => {
                   const isPreEvoOnly = Boolean(move.isPreEvo || move.level < 0);
-                  const hasUsefulPreEvo =
-                    Boolean(move.preEvoLevels && move.preEvoLevels.length > 0) &&
-                    !(move.level === 1 && move.preEvoLevels?.every((p) => p.level === 1));
+                  const usefulPreEvos = getUsefulPreEvoLevels(move);
 
                   let from: React.ReactNode = '—';
 
                   if (isPreEvoOnly) {
                     from = (
-                      <div className='flex flex-col items-center justify-center gap-1 py-1 text-[10px] leading-tight font-sans text-slate-600'>
-                        {move.preEvoLevels && move.preEvoLevels.length > 0 ? (
-                          move.preEvoLevels.map((p) => (
-                            <span
+                      <div className='flex flex-row items-center justify-center gap-0.5 py-1'>
+                        {usefulPreEvos.length > 0 ? (
+                          usefulPreEvos.map((p) => (
+                            <PreEvoMoveIcon
                               key={p.pid}
-                              className='inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-100/80 text-amber-950 border border-amber-300 whitespace-nowrap shadow-xs'
-                              title={`${p.name.zh} / ${p.name.ja} / ${p.name.en} Lv.${p.level}`}
-                            >
-                              <img
-                                src={`${import.meta.env.BASE_URL}images/pmIcon/${p.pid}.png`}
-                                alt={p.name.zh}
-                                className='w-5 h-5 shrink-0 [image-rendering:pixelated]'
-                              />
-                              <span className='font-bold text-amber-900'>Lv.{p.level}</span>
-                            </span>
+                              pid={p.pid}
+                              level={p.level}
+                              name={p.name}
+                              isPreEvoOnly={true}
+                              size='sm'
+                            />
                           ))
                         ) : (
-                          <span className='inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-100/80 text-amber-950 border border-amber-300 whitespace-nowrap font-semibold'>
-                            <span className='font-bold text-amber-900'>
-                              Lv.{Math.abs(move.level)}
-                            </span>
+                          <span className='font-bold text-sm font-sans text-amber-800'>
+                            Lv.{Math.abs(move.level)}
                           </span>
                         )}
                       </div>
@@ -270,46 +309,28 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                     }
 
                     from = (
-                      <div className='flex flex-col items-center justify-center py-1 gap-1'>
+                      <div className='flex flex-col items-center justify-center py-0.5 gap-0.5'>
                         <span
                           className={cn(
-                            'font-bold text-sm font-sans',
+                            'font-bold text-sm font-sans leading-tight',
                             move.level === 0 ? 'text-emerald-700 text-xs' : 'text-slate-800',
                           )}
                         >
                           {currentLv}
                         </span>
-                        {hasUsefulPreEvo && move.preEvoLevels && (
-                          <div className='flex flex-col gap-1 text-[10px] leading-tight font-sans mt-0.5'>
-                            {move.preEvoLevels.map((p) => {
-                              const isEarlier =
-                                move.level > 1 && p.level > 1 && p.level < move.level;
-                              return (
-                                <span
-                                  key={p.pid}
-                                  className={cn(
-                                    'inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-sans font-medium whitespace-nowrap shadow-xs',
-                                    isEarlier
-                                      ? 'bg-emerald-50 text-emerald-800 border border-emerald-300 font-semibold'
-                                      : 'bg-slate-100 text-slate-600 border border-slate-200',
-                                  )}
-                                  title={
-                                    isEarlier
-                                      ? `${p.name.zh} 比目前形態早 ${move.level - p.level} 等學會`
-                                      : `${p.name.zh} Lv.${p.level}`
-                                  }
-                                >
-                                  <img
-                                    src={`${import.meta.env.BASE_URL}images/pmIcon/${p.pid}.png`}
-                                    alt={p.name.zh}
-                                    className='w-4 h-4 shrink-0 [image-rendering:pixelated]'
-                                  />
-                                  <span className='font-bold shrink-0'>
-                                    {p.level > 1 ? `Lv.${p.level}` : p.level === 0 ? 'Evolve' : '—'}
-                                  </span>
-                                </span>
-                              );
-                            })}
+                        {usefulPreEvos.length > 0 && (
+                          <div className='flex flex-row items-center justify-center gap-0.5'>
+                            {usefulPreEvos.map((p) => (
+                              <PreEvoMoveIcon
+                                key={p.pid}
+                                pid={p.pid}
+                                level={p.level}
+                                name={p.name}
+                                isEarlier={p.isEarlier}
+                                currentLevel={move.level}
+                                size='sm'
+                              />
+                            ))}
                           </div>
                         )}
                       </div>
